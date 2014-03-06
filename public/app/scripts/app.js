@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('publicApp', ['ngRoute'])
+angular.module('publicApp', ['ngRoute', 'google-maps'])
 	.config(function ($routeProvider) {
     $routeProvider
 			.when('/google_maps', {
