@@ -8,6 +8,6 @@ angular.module('publicApp', ['ngRoute', 'google-maps'])
 			  controller: 'GoogleMapsCtrl'
 			})
 			.otherwise({
-				redirectTo: '/'
+				redirectTo: '/google_maps'
 			})
 	});
