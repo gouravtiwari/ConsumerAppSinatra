@@ -2,6 +2,7 @@
 
 angular.module('publicApp')
   .controller('GoogleMapsCtrl', function ($scope, Data) {
+	  
 	  $scope.map = {
 	    center: {
 	        latitude: 45,
