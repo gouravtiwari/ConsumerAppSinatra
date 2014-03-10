@@ -134,6 +134,7 @@ body {
   min-height: 100px;
   margin-bottom: 50px;
 }
+
 .list{
   background-color: aliceblue;
   margin-top: 10px;
@@ -141,4 +142,11 @@ body {
 
 .content-container{
   margin-top: 40px;
+}
+
+.label {
+  width: 240px;
+  color: #aaa;
+  text-align: right;
+  display: inline-block;
 }

@@ -1,0 +1,147 @@
+{
+  "Header":{
+    "API_Version":"1.0",
+    "API_Name":"AdViews Product Category API",
+    "Date":"2014-02-24T21:54:55.595-05:00",
+    "MessageID":"193",
+    "Content_Type":"JSON"
+  },
+  "AdViews":{
+    "ProductCategory":[
+      {
+        "ProductCategoryName":"TOOTHBRUSH",
+        "PCCSubGroup":[
+          {
+            "PCCSubGroupName":"D121 DENTAL SUPPLIES & MOUTHWASHES",
+            "AdSpend":[
+              {
+                "Brand":"ARM & HAMMER TOOTH TUNES TOOTHBRUSH",
+                "NetworkTVAdSpend":"0",
+                "SpotTVAdSpend":"0",
+                "CableTVAdSpend":"820.788",
+                "NationalMagazineAdSpend":"0",
+                "SyndicatedTVAdSpend":"0",
+                "NationalInternetAdSpend":"0"
+              },
+              {
+                "Brand":"COLGATE SLIMSOFT TOOTHBRUSH",
+                "NetworkTVAdSpend":"1823.4",
+                "SpotTVAdSpend":"151.881",
+                "CableTVAdSpend":"985.147",
+                "NationalMagazineAdSpend":"0",
+                "SyndicatedTVAdSpend":"651.154",
+                "NationalInternetAdSpend":"0"
+              },
+              {
+                "Brand":"ORAL-B 3D WHITE TOOTHBRUSH",
+                "NetworkTVAdSpend":"0",
+                "SpotTVAdSpend":"0",
+                "CableTVAdSpend":"0",
+                "NationalMagazineAdSpend":"3179.391",
+                "SyndicatedTVAdSpend":"0",
+                "NationalInternetAdSpend":"0"
+              },
+              {
+                "Brand":"ORAL-B CROSSACTION TOOTHBRUSH",
+                "NetworkTVAdSpend":"0",
+                "SpotTVAdSpend":"0.057",
+                "CableTVAdSpend":"0",
+                "NationalMagazineAdSpend":"0",
+                "SyndicatedTVAdSpend":"0",
+                "NationalInternetAdSpend":"0"
+              },
+              {
+                "Brand":"ORAL-B PRO-HEALTH TOOTHBRUSH",
+                "NetworkTVAdSpend":"232.9",
+                "SpotTVAdSpend":"146.452",
+                "CableTVAdSpend":"3219.363",
+                "NationalMagazineAdSpend":"0",
+                "SyndicatedTVAdSpend":"106.34",
+                "NationalInternetAdSpend":"0"
+              },
+              {
+                "Brand":"SENSODYNE PRONAMEL TOOTHBRUSH",
+                "NetworkTVAdSpend":"4.5",
+                "SpotTVAdSpend":"0",
+                "CableTVAdSpend":"257.48",
+                "NationalMagazineAdSpend":"0",
+                "SyndicatedTVAdSpend":"0",
+                "NationalInternetAdSpend":"6.991"
+              },
+              {
+                "Brand":"ORAL-B STAGES TOOTHBRUSH",
+                "NetworkTVAdSpend":"0",
+                "SpotTVAdSpend":"0",
+                "CableTVAdSpend":"0",
+                "NationalMagazineAdSpend":"415.761",
+                "SyndicatedTVAdSpend":"0",
+                "NationalInternetAdSpend":"0"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "ProductCategoryName":"TOOTHBRUSH-ELECTRIC",
+        "PCCSubGroup":[
+          {
+            "PCCSubGroupName":"D121 DENTAL SUPPLIES & MOUTHWASHES",
+            "AdSpend":[
+              {
+                "Brand":"PHILIPS SONICARE TOOTHBRUSH-ELECTRIC",
+                "NetworkTVAdSpend":"76.5",
+                "SpotTVAdSpend":"4.663",
+                "CableTVAdSpend":"5671.209",
+                "NationalMagazineAdSpend":"0",
+                "SyndicatedTVAdSpend":"21.057",
+                "NationalInternetAdSpend":"174.209"
+              },
+              {
+                "Brand":"ARM & HAMMER SPINBRUSH TOOTHBRUSH-ELECTRIC",
+                "NetworkTVAdSpend":"2035.95",
+                "SpotTVAdSpend":"886.998",
+                "CableTVAdSpend":"2559.736",
+                "NationalMagazineAdSpend":"1536.948",
+                "SyndicatedTVAdSpend":"0",
+                "NationalInternetAdSpend":"0"
+              },
+              {
+                "Brand":"BRAUN ORAL-B TOOTHBRUSH-ELECTRIC",
+                "NetworkTVAdSpend":"0",
+                "SpotTVAdSpend":"0",
+                "CableTVAdSpend":"0",
+                "NationalMagazineAdSpend":"0",
+                "SyndicatedTVAdSpend":"0",
+                "NationalInternetAdSpend":"0.645"
+              },
+              {
+                "Brand":"ORAL-B CROSSACTION TOOTHBRUSH-ELECTRIC",
+                "NetworkTVAdSpend":"0",
+                "SpotTVAdSpend":"0",
+                "CableTVAdSpend":"0",
+                "NationalMagazineAdSpend":"0",
+                "SyndicatedTVAdSpend":"0",
+                "NationalInternetAdSpend":"4.102"
+              },
+              {
+                "Brand":"ORAL-B DEEP SWEEP TOOTHBRUSH-ELECTRIC",
+                "NetworkTVAdSpend":"3222.65",
+                "SpotTVAdSpend":"228.559",
+                "CableTVAdSpend":"4162.263",
+                "NationalMagazineAdSpend":"291.96",
+                "SyndicatedTVAdSpend":"528.404",
+                "NationalInternetAdSpend":"9.58"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "Summary":{
+    "NoOfRecords":"12",
+    "TotalNetworkTVAdSpend":"7395.9",
+    "TotalSpotTVAdSpend":"1418.61",
+    "TotalCableTVAdSpend":"17675.986"
+  }
+}
