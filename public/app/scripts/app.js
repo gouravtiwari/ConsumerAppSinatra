@@ -18,6 +18,7 @@ angular.module('publicApp', ['ngRoute', 'google-maps'])
 			.when('/ad_spend', {
 			  templateUrl: 'views/ad_spend.html',
 			  controller: 'AdSpendCtrl'
+			})
 			.when('/top_ten', {
 			  templateUrl: 'views/top_ten.html',
 			  controller: 'TopTenCtrl'
