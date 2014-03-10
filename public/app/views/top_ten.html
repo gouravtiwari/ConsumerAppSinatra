@@ -1,0 +1,16 @@
+<h2>Search Categories by their name:</h2>
+<!-- <input type="text" ng-model="input.CategoryName" class="inputName"> -->
+<select ng-model="categoryName" ng-options="category for category in categories"></select>
+<div>
+  <b><span class="categoryName">{{categoryName}}</span></b><br>
+  <div class="subCategory" ng-repeat="subCategory in SubCategory">
+    <br>
+    <b>SubCategory:</b> {{subCategory.SubCategoryName}}
+    <div class="demography" ng-repeat="demography in subCategory.Demographies">
+      <b>Demography:</b> {{demography.DemographyName}}
+      <div class="item" ng-repeat="item in demography.Items">
+        <b>Item#{{item.Rank}}:</b> {{item.Name}}
+      </div>
+    </div>
+  </div>
+</div>
