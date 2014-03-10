@@ -53,9 +53,16 @@ body {
 .head{
   position: relative;
   float: left;
-  width: 45%;
+  width: 100%;
   min-height: 20px;
-  padding-left: 10px;
+  padding: 0 0 10px 10px;
+}
+
+.head-data{
+  position: relative;
+  float: left;
+  width: 88%;
+  float: right;
 }
 
 .container {
