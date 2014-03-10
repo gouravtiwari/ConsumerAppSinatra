@@ -1,1 +1,33 @@
-<p>This is the market_share view.</p>
+<h2>Market Share by Manufacturer</h2>
+<div>
+  <input type="text" ng-model="category" placeholder="Category Name"><br><br>
+  <input type="text" ng-model="market" placeholder="Market Name"><br><br>
+  <input type="text" ng-model="period" placeholder="Period"><br><br>
+  <input type="text" ng-model="manufacturer" placeholder="manufacturer"><br><br>
+  Top results<br>
+  <input type="text" ng-model="top" placeholder="10"><br><br>
+  <input type="checkbox" ng-model="private_label" checked="checked"> Private Label<br><br>
+  Page Size <br>
+  <input type="text" ng-model="page_size" placeholder="10"><br><br>
+  Page Number<br>
+  <input type="text" ng-model="page_number" placeholder="1"><br><br>
+</div>
+<br>
+<div class="resultHolder">
+  <div class="period" ng-repeat="period in periods">
+    Period: <b><span>{{period.Period}}</span></b><br>
+    <div class="market" ng-repeat="market in period.Market">
+      Market: <span>{{market.MarketName}}</span><br>
+      <div class="category" ng-repeat="category in market.Category">
+        Category: <span>{{category.CategoryName}}</span><br><br>
+        <div class="manufacturer" ng-repeat="manufacturer in category.Manufacturer">
+          Manufacturer: <span>{{manufacturer.ManufacturerName}}</span><br>
+          TotalSalesDollar: <span>{{manufacturer.TotalSalesDollar}}</span><br>
+          TotalUnitsSold: <span>{{manufacturer.TotalUnitsSold}}</span><br>
+          DollarSharePercentage: <span>{{manufacturer.DollarSharePercentage}}</span><br><br>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+</div>

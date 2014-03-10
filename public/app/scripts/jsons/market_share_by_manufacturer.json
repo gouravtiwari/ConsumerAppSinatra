@@ -1,0 +1,94 @@
+{
+  "root":{
+    "Header":{
+      "API_Version":"1.0",
+      "API_Name":"RMS Measurement- $Share by Manufacture API",
+      "Date":"2014-02-28T12:17:30.278-05:00",
+      "MessageID":"6006",
+      "Content_Type":"JSON",
+      "Currency":"$"
+    },
+    "PeriodData":[
+      {
+        "Period":"1 W\/E 11\/02\/13",
+        "Market":[
+          {
+            "MarketName":"Oahu Food",
+            "Category":[
+              {
+                "CategoryName":"CEREAL-READY TO EAT",
+                "Manufacturer":[
+                  {
+                    "ManufacturerName":"GENERAL MILLS",
+                    "TotalSalesDollar":"49237.015",
+                    "TotalUnitsSold":"12114.62",
+                    "DollarSharePercentage":"24.62%"
+                  },
+                  {
+                    "ManufacturerName":"KELLOGG COMPANY",
+                    "TotalSalesDollar":"46440.334",
+                    "TotalUnitsSold":"10656.55",
+                    "DollarSharePercentage":"23.22%"
+                  },
+                  {
+                    "ManufacturerName":"MOM BRANDS CO",
+                    "TotalSalesDollar":"31934.753",
+                    "TotalUnitsSold":"8964.7",
+                    "DollarSharePercentage":"15.97%"
+                  },
+                  {
+                    "ManufacturerName":"POST HOLDINGS INC",
+                    "TotalSalesDollar":"23779.398",
+                    "TotalUnitsSold":"6658.31",
+                    "DollarSharePercentage":"11.89%"
+                  },
+                  {
+                    "ManufacturerName":"PRIVATE LABEL",
+                    "TotalSalesDollar":"23737.169",
+                    "TotalUnitsSold":"6183.66",
+                    "DollarSharePercentage":"11.87%"
+                  },
+                  {
+                    "ManufacturerName":"PEPSICO INC",
+                    "TotalSalesDollar":"15203.768",
+                    "TotalUnitsSold":"3691.8",
+                    "DollarSharePercentage":"7.6%"
+                  },
+                  {
+                    "ManufacturerName":"NATURE'S PATH FOODS INC.",
+                    "TotalSalesDollar":"2873.155",
+                    "TotalUnitsSold":"450.44",
+                    "DollarSharePercentage":"1.44%"
+                  },
+                  {
+                    "ManufacturerName":"BRIGHT FOOD GROUP CO LTD",
+                    "TotalSalesDollar":"1645.827",
+                    "TotalUnitsSold":"287.22",
+                    "DollarSharePercentage":"0.82%"
+                  },
+                  {
+                    "ManufacturerName":"ANAHOLA GRANOLA",
+                    "TotalSalesDollar":"1419.287",
+                    "TotalUnitsSold":"191.85",
+                    "DollarSharePercentage":"0.71%"
+                  },
+                  {
+                    "ManufacturerName":"NORTHERN GOLD FOODS LTD",
+                    "TotalSalesDollar":"961.258",
+                    "TotalUnitsSold":"257.72",
+                    "DollarSharePercentage":"0.48%"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "Summary":{
+      "PageNo":"1",
+      "PageSize":"10",
+      "TotalPages":"3"
+    }
+  }
+}
