@@ -13,4 +13,8 @@ angular.module('publicApp')
       $scope.product = api_data.Characteristics[0];
     });
 
+    Data.get_local('scripts/jsons/product_health.json').success(function(api_data){
+      $scope.product = api_data.Characteristics[0];
+    });
+
   });

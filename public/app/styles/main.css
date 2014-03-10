@@ -97,5 +97,6 @@ body {
 }
 
 .resultHolder {
-  min-height: 300px;
+  min-height: 100px;
+  margin-bottom: 50px;
 }
