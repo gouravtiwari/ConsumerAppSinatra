@@ -1,0 +1,73 @@
+{
+  "Header":{
+    "API_Version":"1.0",
+    "API_Name":"Product Search",
+    "Content_Type":"JSON",
+    "Message_ID":"185",
+    "Date":"2014-02-24T21:16:57.698-05:00"
+  },
+  "ProductDetails":[
+    {
+      "UPC":"0019100123939",
+      "Description":"PEPSI TIN",
+      "Item_Code":"957502977",
+      "Module":"BEVERAGE",
+      "Rank":"1"
+    },
+    {
+      "UPC":"0019100123939",
+      "Description":"PEPSI BOTTLE",
+      "Item_Code":"957502977",
+      "Module":"BEVERAGE",
+      "Rank":"2"
+    },
+    {
+      "UPC":"0019100123939",
+      "Description":"JERGENS ULTRA HEALING HAND AND BODY AND SKIN PRODUCT LIQUID  BOTTLE 10 FLUID OUNCE",
+      "Item_Code":"957502977",
+      "Module":"SKIN CARE",
+      "Rank":"16"
+    },
+    {
+      "UPC":"0019100123939",
+      "Description":"JERGENS ULTRA HEALING HAND AND BODY AND SKIN PRODUCT LIQUID  BOTTLE 10 FLUID OUNCE",
+      "Item_Code":"957502977",
+      "Module":"SKIN CARE",
+      "Rank":"16"
+    },
+    {
+      "UPC":"0019100111059",
+      "Description":"JERGENS ULTRA HEALING HAND AND BODY AND SKIN PRODUCT LIQUID  BOTTLE 24 FLUID OUNCE",
+      "Item_Code":"451257345",
+      "Module":"SKIN CARE",
+      "Rank":"17"
+    },
+    {
+      "UPC":"0019100108165",
+      "Description":"JERGENS ULTRA HEALING HAND AND BODY AND SKIN PRODUCT LIQUID  BOTTLE 24 FLUID OUNCE",
+      "Item_Code":"524378625",
+      "Module":"SKIN CARE",
+      "Rank":"18"
+    },
+    {
+      "UPC":"0070596009770",
+      "Description":"ULTRA GLOW HAND AND BODY AND SKIN PRODUCT OIL  BOTTLE 2 FLUID OUNCE",
+      "Item_Code":"888967170",
+      "Module":"SKIN CARE",
+      "Rank":"19"
+    },
+    {
+      "UPC":"0070596000906",
+      "Description":"ULTRA GLOW HAND AND BODY AND SKIN PRODUCT CREAM  JAR 3.9 OUNCE",
+      "Item_Code":"1700037632",
+      "Module":"SKIN CARE",
+      "Rank":"20"
+    }
+  ],
+  "Summary":{
+    "PageNo":"4",
+    "TotalPages":"3465",
+    "PageSize":"5",
+    "TotalRecords":"17327"
+  }
+} 

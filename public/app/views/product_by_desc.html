@@ -1,0 +1,8 @@
+<h2>Search Products by their description:</h2>
+<input type="text" ng-model="input.Description" class="inputDesc">
+<div>
+	<div class="product" ng-repeat="product in products | filter:input.Description">
+		<b><span class="productDesc">{{product.Description}}</span></b><br>
+		<b>Category:</b> {{product.Module}} | <b>Rank:</b> {{product.Rank}}
+	</div>
+</div>

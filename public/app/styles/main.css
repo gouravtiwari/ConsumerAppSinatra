@@ -31,8 +31,12 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 
+.container {
+  width: 1024px;
+}
+
 /* Customize container */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .container {
     max-width: 730px;
   }
@@ -79,3 +83,15 @@ body {
 }
 
 .angular-google-map-container { height: 400px; }
+
+.inputDesc {
+  height: 50px;
+  width: 70%;
+  font-size: 24px;
+}
+
+.product {
+  padding: 12px 16px;
+  font-size: 18px;
+  border-bottom: 1px solid #aaa;
+}
