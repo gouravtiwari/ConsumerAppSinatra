@@ -1,0 +1,53 @@
+{
+  "Header":{
+    "API_Version":"1.0",
+    "API_Name":"Store Reference API",
+    "Date":"2014-02-24T20:44:06.677-05:00",
+    "MessageID":"165",
+    "Content_Type":"JSON"
+  },
+  "StoreRefData":{
+    "Stores":[
+      {
+        "StoreName":"Big Y Supermarket",
+        "OwnerName":"Big Y Foods Inc",
+        "StoreCode":"1773803",
+        "StoreStatus":"Open Store",
+        "ScantrackCode":"5"
+      },
+      {
+        "StoreName":"Big Y Supermarket",
+        "OwnerName":"Big Y Foods Inc",
+        "StoreCode":"1834781",
+        "StoreStatus":"Open Store",
+        "ScantrackCode":"17"
+      },
+      {
+        "StoreName":"Big Y Supermarket",
+        "OwnerName":"Big Y Foods Inc",
+        "StoreCode":"941145",
+        "StoreStatus":"Open Store",
+        "ScantrackCode":"5"
+      },
+      {
+        "StoreName":"Big Y Supermarket",
+        "OwnerName":"Big Y Foods Inc",
+        "StoreCode":"2288737",
+        "StoreStatus":"Open Store",
+        "ScantrackCode":"31"
+      },
+      {
+        "StoreName":"Big Y Supermarket",
+        "OwnerName":"Big Y Foods Inc",
+        "StoreCode":"5741",
+        "StoreStatus":"Open Store",
+        "ScantrackCode":"17"
+      }
+    ]
+  },
+  "Summary":{
+    "PageNo":"2",
+    "PageSize":"5",
+    "TotalPages":"147"
+  }
+}

@@ -1,0 +1,12 @@
+<div>
+	Search Store: <input type="text" ng-model="storename">
+
+</div>
+<br>
+<div class="resultHolder">
+	<div class="list" ng-repeat="store in stores | filter:storename">
+		<b><span >{{store.StoreName}}</span></b><br>
+		Code: <span>{{store.StoreCode}}</span>
+	
+	</div>
+</div>

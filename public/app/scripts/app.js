@@ -11,6 +11,10 @@ angular.module('publicApp', ['ngRoute', 'google-maps'])
 			  templateUrl: 'views/product_by_desc.html',
 			  controller: 'ProductReferenceCtrl'
 			})
+			.when('/store_by_name', {
+			  templateUrl: 'views/store_by_name.html',
+			  controller: 'StoreCtrl'
+			})
 			.otherwise({
 				redirectTo: '/google_maps'
 			})
