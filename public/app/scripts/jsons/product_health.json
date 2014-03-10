@@ -1,0 +1,16 @@
+{
+  "Header":{
+    "API_Version":1.0,
+    "API_Name":"Health & Wellness Characteristics",
+    "Date":"2014-02-24T21:28:56.778-05:00",
+    "MessageID":"189",
+    "Content_Type":"JSON"
+  },
+  "Characteristics":[
+    {
+      "UPC_CODE":"0041670188278",
+      "VITAMIN_TYPE":"VITAMIN E",
+      "FORMULATION":"MOISTURIZE"
+    }
+  ]
+}

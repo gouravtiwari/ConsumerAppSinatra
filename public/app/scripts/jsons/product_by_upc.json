@@ -1,0 +1,28 @@
+{
+  "Header":{
+    "API_Version":1.0,
+    "API_Name":"Product Characteristics",
+    "Date":"2014-02-24T21:26:26-05:00",
+    "MessageID":"188",
+    "Content_Type":"JSON"
+  },
+  "Characteristics":[
+    {
+      "UPC_CODE":"0041670188278",
+      "BASE_SIZE":"4 FLUID OUNCE",
+      "BRAND_HIGH":"CTL BR",
+      "BRAND_LOW":"PRIVATE LABEL",
+      "BRAND_OWNER_HIGH":"NO COMPANY LISTED",
+      "BRAND_OWNER_LOW":"NO COMPANY LISTED",
+      "COMMON_CONSUMER_NAME":"HAND AND BODY AND SKIN PRODUCT",
+      "DEAL":"NON-DEAL",
+      "FORM":"OIL",
+      "MULTI":"1",
+      "PACKAGE_GENERAL_SHAPE":"BOTTLE",
+      "TOTAL_SIZE":"4 FLUID OUNCE",
+      "SCENT":"UNSCENTED",
+      "APPLICATION_AREA":"SKIN",
+      "TARGET_SKIN_CONDITION":"DRY SKIN"
+    }
+  ]
+}

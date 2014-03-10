@@ -95,3 +95,8 @@ body {
   font-size: 18px;
   border-bottom: 1px solid #aaa;
 }
+
+.resultHolder {
+  min-height: 100px;
+  margin-bottom: 50px;
+}

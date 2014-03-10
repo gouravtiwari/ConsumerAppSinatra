@@ -1,8 +1,33 @@
 <h2>Search Products by their description:</h2>
 <input type="text" ng-model="input.Description" class="inputDesc">
-<div>
+<div class="resultHolder">
 	<div class="product" ng-repeat="product in products | filter:input.Description">
 		<b><span class="productDesc">{{product.Description}}</span></b><br>
 		<b>Category:</b> {{product.Module}} | <b>Rank:</b> {{product.Rank}}
+	</div>
+</div>
+
+<h2>Search Products by UPC code:</h2>
+<input type="text" ng-model="input.UPC_CODE" class="inputDesc">
+<div class="resultHolder">
+	<div class="product">
+		<b><span class="productDesc">{{product.COMMON_CONSUMER_NAME}}</span></b><br>
+		<b>UPC:</b> {{product.UPC_CODE}}<br>
+		<b>Brand:</b> {{product.BRAND_OWNER_HIGH}}<br>
+		<b>Size:</b> {{product.BASE_SIZE}}<br>
+		<b>Package:</b> {{product.PACKAGE_GENERAL_SHAPE}}<br>
+		<b>Application Area:</b> {{product.APPLICATION_AREA}}<br>
+		<b>Target Skin Condition:</b> {{product.TARGET_SKIN_CONDITION}}<br>
+	</div>
+</div>
+
+<h2>Products Health Lookup using UPC code:</h2>
+<input type="text" ng-model="input.UPC_CODE" class="inputDesc">
+<div class="resultHolder">
+	<div class="product">
+		<b><span class="productDesc">{{product.COMMON_CONSUMER_NAME}}</span></b><br>
+		<b>UPC:</b> {{product.UPC_CODE}}<br>
+		<b>VITAMIN_TYPE:</b> {{product.VITAMIN_TYPE}}<br>
+		<b>FORMULATION:</b> {{product.FORMULATION}}<br>
 	</div>
 </div>
