@@ -23,6 +23,10 @@ angular.module('publicApp', ['ngRoute', 'google-maps'])
 			  templateUrl: 'views/top_ten.html',
 			  controller: 'TopTenCtrl'
 			})
+			.when('/audience', {
+			  templateUrl: 'views/audience.html',
+			  controller: 'AudienceCtrl'
+			})
 			.otherwise({
 				redirectTo: '/google_maps'
 			})
