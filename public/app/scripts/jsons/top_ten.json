@@ -1,0 +1,184 @@
+{
+  "Header":{
+    "API_Version":1.0,
+    "API_Name":"TopTen",
+    "Date":"2014-02-26T18:58:16.011-05:00",
+    "MessageID":"3033",
+    "Content_Type":"JSON"
+  },
+  "Category":[
+    {
+      "CategoryName":"Movies",
+      "SubCategory":[
+        {
+          "SubCategoryName":"Action Home Video",
+          "Demographies":[
+            {
+              "DemographyName":"All",
+              "Items":[
+                {
+                  "Name":"Riddick",
+                  "Rank":1,
+                  "Sales":"104425",
+                  "ReleaseYear":"2013",
+                  "Distributor":"UNIVERSAL HOME ENTERTAINMENT"
+                },
+                {
+                  "Name":"Machete Kills",
+                  "Rank":2,
+                  "Sales":"63567",
+                  "ReleaseYear":"2013",
+                  "Distributor":"UNIVERSAL HOME ENTERTAINMENT"
+                },
+                {
+                  "Name":"Fast & Furious 6",
+                  "Rank":3,
+                  "Sales":"26289",
+                  "ReleaseYear":"2013",
+                  "Distributor":"UNIVERSAL HOME ENTERTAINMENT"
+                },
+                {
+                  "Name":"The Lone Ranger",
+                  "Rank":4,
+                  "Sales":"22589",
+                  "ReleaseYear":"2013",
+                  "Distributor":"DISNEY\/BUENA VISTA HOME VIDEO"
+                },
+                {
+                  "Name":"Wolverine",
+                  "Rank":5,
+                  "Sales":"20836",
+                  "ReleaseYear":"2013",
+                  "Distributor":"TWENTIETH CENTURY FOX HOME ENT"
+                },
+                {
+                  "Name":"Man Of Steel",
+                  "Rank":6,
+                  "Sales":"18700",
+                  "ReleaseYear":"2013",
+                  "Distributor":"WARNER HOME VIDEO"
+                },
+                {
+                  "Name":"Robocop",
+                  "Rank":7,
+                  "Sales":"18577",
+                  "ReleaseYear":"1987",
+                  "Distributor":"TWENTIETH CENTURY FOX HOME ENT"
+                },
+                {
+                  "Name":"Red 2",
+                  "Rank":8,
+                  "Sales":"17987",
+                  "ReleaseYear":"2013",
+                  "Distributor":"LIONSGATE"
+                },
+                {
+                  "Name":"Hobbit: An Unexpected Journey",
+                  "Rank":9,
+                  "Sales":"17354",
+                  "ReleaseYear":"2012",
+                  "Distributor":"WARNER HOME VIDEO"
+                },
+                {
+                  "Name":"Red",
+                  "Rank":10,
+                  "Sales":"13433",
+                  "ReleaseYear":"2010",
+                  "Distributor":"LIONSGATE"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "SubCategoryName":"Box Office",
+          "Demographies":[
+            {
+              "DemographyName":"All",
+              "Items":[
+                {
+                  "Name":"Ride Along",
+                  "Rank":1,
+                  "Sales":null,
+                  "ReleaseYear":"2014",
+                  "Distributor":"Universal"
+                },
+                {
+                  "Name":"Lone Survivor",
+                  "Rank":2,
+                  "Sales":null,
+                  "ReleaseYear":"2014",
+                  "Distributor":"Universal"
+                },
+                {
+                  "Name":"The Nut Job",
+                  "Rank":3,
+                  "Sales":null,
+                  "ReleaseYear":"2014",
+                  "Distributor":"Open Road Films"
+                },
+                {
+                  "Name":"Frozen",
+                  "Rank":4,
+                  "Sales":null,
+                  "ReleaseYear":"2014",
+                  "Distributor":"Disney"
+                },
+                {
+                  "Name":"Jack Ryan: Shadow Recruit",
+                  "Rank":5,
+                  "Sales":null,
+                  "ReleaseYear":"2014",
+                  "Distributor":"Paramount"
+                },
+                {
+                  "Name":"I, Frankenstein",
+                  "Rank":6,
+                  "Sales":null,
+                  "ReleaseYear":"2014",
+                  "Distributor":"Lionsgate"
+                },
+                {
+                  "Name":"American Hustle",
+                  "Rank":7,
+                  "Sales":null,
+                  "ReleaseYear":"2014",
+                  "Distributor":"Sony"
+                },
+                {
+                  "Name":"The Wolf Of Wall Street",
+                  "Rank":8,
+                  "Sales":null,
+                  "ReleaseYear":"2014",
+                  "Distributor":"Paramount"
+                },
+                {
+                  "Name":"August: Osage County",
+                  "Rank":9,
+                  "Sales":null,
+                  "ReleaseYear":"2014",
+                  "Distributor":"Weinstein Co."
+                },
+                {
+                  "Name":"Devil's Due",
+                  "Rank":10,
+                  "Sales":null,
+                  "ReleaseYear":"2014",
+                  "Distributor":"Fox"
+                }
+              ]
+            }
+          ]
+        },
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "Summary":{
+    "TotalSubCategory":"2",
+    "TotalDemographies":"1"
+  }
+}
