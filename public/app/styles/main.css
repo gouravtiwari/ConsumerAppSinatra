@@ -31,6 +31,33 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 
+.retailer-info{
+  position: relative;
+  float: left;
+  width: 30%;
+}
+
+.map-container{
+  position: relative;
+  float: left;
+  width: 70%;
+}
+
+.retailer-info li{
+  list-style: none;
+  position: relative;
+  float: left;
+  width: 100%;
+}
+
+.head{
+  position: relative;
+  float: left;
+  width: 45%;
+  min-height: 20px;
+  padding-left: 10px;
+}
+
 .container {
   width: 1024px;
 }
