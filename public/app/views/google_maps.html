@@ -1,17 +1,16 @@
 <div class="retailer-info">
 	<li ng-repeat='retailer in retailers'>
-		<div class="head">Retailer</div>
-		<div class="head">{{retailer.RetailerName}}</div>
-		<div class="head"></div>
-		<div class="head">{{retailer.Locations.Line1}}</div>
-		<div class="head"></div>
-		<div class="head">{{retailer.Locations.City}}</div>
-		<div class="head"></div>
-		<div class="head">{{retailer.Locations.Country}}</div>
+		<div class="head">
+			<img ng-src="{{retailer.icon.icon}}"/>
+			<div class="head-data">
+		  	{{retailer.RetailerName}}, {{retailer.Locations.Line1}}, {{retailer.Locations.City}}, {{retailer.Locations.State}}, {{retailer.Locations.Country}}
+			</div>
+		</div>
 	</li>
 </div>
 <div class="map-container">
+	{{location.icon}}
 	<google-map center="map.center" draggable="true" zoom="map.zoom">
-		<marker coords='location' ng-repeat="location in locations"></marker>
+		<marker coords='location' options='location.icon' ng-repeat="location in locations"></marker>
 	</google-map>
 </div>	
