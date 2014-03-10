@@ -1,0 +1,20 @@
+<!-- Inputs -->
+<h2>Search by category:</h2>
+<input type="text" ng-model="input.category" class="inputDesc">
+
+<!-- Result -->
+<div ng-repeat="category in ProductCategory">
+	<h3><b>Products Category: </b>{{category.ProductCategoryName}}</h3>
+	<div class="resultHolder" ng-repeat="subcategory in category.PCCSubGroup">
+		<h4><b>Sub Category: </b>{{subcategory.PCCSubGroupName}}</h4>
+		<div class="product" ng-repeat="adspend in subcategory.AdSpend">
+			<b>Brand: </b><span class="productDesc">{{adspend.Brand}}</span><br>
+			<span class="label">NetworkTVAdSpend:</span> {{adspend.NetworkTVAdSpend}}<br>
+			<span class="label">SpotTVAdSpend:</span> {{adspend.SpotTVAdSpend}}<br>
+			<span class="label">CableTVAdSpend:</span> {{adspend.CableTVAdSpend}}<br>
+			<span class="label">NationalMagazineAdSpend:</span> {{adspend.NationalMagazineAdSpend}}<br>
+			<span class="label">SyndicatedTVAdSpend:</span> {{adspend.SyndicatedTVAdSpend}}<br>
+			<span class="label">NationalInternetAdSpend:</span> {{adspend.NationalInternetAdSpend}}<br>
+		</div>
+	</div>
+</div>

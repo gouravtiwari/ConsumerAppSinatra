@@ -131,3 +131,10 @@ body {
   background-color: aliceblue;
   margin-top: 10px;
 }
+
+.label {
+  width: 240px;
+  color: #aaa;
+  text-align: right;
+  display: inline-block;
+}
