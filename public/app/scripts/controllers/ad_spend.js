@@ -7,4 +7,8 @@ angular.module('publicApp')
       $scope.ProductCategory = api_data.AdViews.ProductCategory;
     });
 
+    Data.get_local('scripts/jsons/adspend_by_brand.json').success(function(api_data){
+      $scope.BrandArray = api_data.AdSpend.Brand;
+    });
+
   });

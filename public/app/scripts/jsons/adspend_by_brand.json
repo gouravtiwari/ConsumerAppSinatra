@@ -1,0 +1,109 @@
+{
+  "Header":{
+    "API_Version":"1.0",
+    "API_Name":"AdViews Product Brand API ",
+    "Date":"2014-02-24T21:56:16.921-05:00",
+    "MessageID":"195",
+    "Content_Type":"JSON"
+  },
+  "AdSpend":{
+    "Brand":[
+      {
+        "BrandName":"AVEENO POSITIVELY RADIANT MOISTURIZER-FACIAL",
+        "ProductCategory":[
+          {
+            "PCCSubgroup":"D111 SKIN CARE CREAMS, LOTIONS & OILS",
+            "ProductCategoryName":"MOISTURIZER-FACIAL",
+            "NetworkTVAdSpend":"3636.75",
+            "SpotTVAdSpend":"94.682",
+            "CableTVAdSpend":"1224.081",
+            "NationalMagazineAdSpend":"1224.081",
+            "SyndicatedTVAdSpend":"1316.162",
+            "NationalInternetAdSpend":"0"
+          }
+        ]
+      },
+      {
+        "BrandName":"AVEENO ACTIVE NATURALS MOISTURIZER",
+        "ProductCategory":[
+          {
+            "PCCSubgroup":"D111 SKIN CARE CREAMS, LOTIONS & OILS",
+            "ProductCategoryName":"MOISTURIZER",
+            "NetworkTVAdSpend":"0",
+            "SpotTVAdSpend":"0",
+            "CableTVAdSpend":"0",
+            "NationalMagazineAdSpend":"0",
+            "SyndicatedTVAdSpend":"0",
+            "NationalInternetAdSpend":"0"
+          }
+        ]
+      },
+      {
+        "BrandName":"AVEENO ECZEMA CARE MOISTURIZER-BODY",
+        "ProductCategory":[
+          {
+            "PCCSubgroup":"D111 SKIN CARE CREAMS, LOTIONS & OILS",
+            "ProductCategoryName":"MOISTURIZER-BODY",
+            "NetworkTVAdSpend":"0",
+            "SpotTVAdSpend":"0",
+            "CableTVAdSpend":"0",
+            "NationalMagazineAdSpend":"0",
+            "SyndicatedTVAdSpend":"0",
+            "NationalInternetAdSpend":"0"
+          }
+        ]
+      },
+      {
+        "BrandName":"AVEENO MOISTURIZER-BODY",
+        "ProductCategory":[
+          {
+            "PCCSubgroup":"D111 SKIN CARE CREAMS, LOTIONS & OILS",
+            "ProductCategoryName":"MOISTURIZER-BODY",
+            "NetworkTVAdSpend":"0",
+            "SpotTVAdSpend":"0",
+            "CableTVAdSpend":"0",
+            "NationalMagazineAdSpend":"0",
+            "SyndicatedTVAdSpend":"0",
+            "NationalInternetAdSpend":"0"
+          }
+        ]
+      },
+      {
+        "BrandName":"AVEENO DAILY MOISTURIZING MOISTURIZER-BODY",
+        "ProductCategory":[
+          {
+            "PCCSubgroup":"D111 SKIN CARE CREAMS, LOTIONS & OILS",
+            "ProductCategoryName":"MOISTURIZER-BODY",
+            "NetworkTVAdSpend":"2738.25",
+            "SpotTVAdSpend":"59.855",
+            "CableTVAdSpend":"1791.013",
+            "NationalMagazineAdSpend":"1791.013",
+            "SyndicatedTVAdSpend":"1309.066",
+            "NationalInternetAdSpend":"0"
+          }
+        ]
+      },
+      {
+        "BrandName":"AVEENO POSITIVELY RADIANT MOISTURIZER-BODY",
+        "ProductCategory":[
+          {
+            "PCCSubgroup":"D111 SKIN CARE CREAMS, LOTIONS & OILS",
+            "ProductCategoryName":"MOISTURIZER-BODY",
+            "NetworkTVAdSpend":"0",
+            "SpotTVAdSpend":"0.119",
+            "CableTVAdSpend":"0",
+            "NationalMagazineAdSpend":"0",
+            "SyndicatedTVAdSpend":"0",
+            "NationalInternetAdSpend":"0"
+          }
+        ]
+      }
+    ]
+  },
+  "Summary":{
+    "NoOfRecords":"6",
+    "TotalNetworkTVAdSpend":"6375",
+    "TotalSpotTVAdSpend":"154.656",
+    "TotalCableTVAdSpend":"3015.094"
+  }
+}
