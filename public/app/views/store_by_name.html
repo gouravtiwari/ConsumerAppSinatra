@@ -1,12 +1,15 @@
 <div>
-	Search Store: <input type="text" ng-model="storename">
-
+	Search Store: 
+	<input type="text" ng-model="storename" ng-show="select_type=='Store Name'" placeholder="Store name">
+	 <input type="text" ng-model="ownername" ng-show="select_type=='Owner Name'" placeholder="Owner Name">
+	<select ng-model="select_type" ng-options="c for c in options"></select>
 </div>
 <br>
 <div class="resultHolder">
-	<div class="list" ng-repeat="store in stores | filter:storename">
+	<div class="list" ng-repeat="store in stores | filter:{StoreName:storename, OwnerName:ownername}">
 		<b><span >{{store.StoreName}}</span></b><br>
-		Code: <span>{{store.StoreCode}}</span>
+		Code: <span>{{store.StoreCode}}</span><br>
+		Owner: <span>{{store.OwnerName}}</span>
 	
 	</div>
 </div>
