@@ -1,0 +1,206 @@
+{
+  "Header":{
+    "API_Version":"1.0",
+    "API_Name":"StoreAvailability",
+    "Date":"2014-02-28T12:03:04.001-05:00",
+    "MessageID":"6012",
+    "Content_Type":"JSON"
+  },
+  "Product":{
+    "Brand":"GENERAL MILLS",
+    "Category":"CEREAL-READY TO EAT",
+    "Manufacturer":"GENERAL MILLS",
+    "ProductName":"General Mills Honey Nut Cheerios Honey Nut 12.25 Ounce",
+    "Size":"12.25 OUNCE",
+    "BarCode":"0016000275270",
+    "Availability":[
+      {
+        "Retailer":[
+          {
+            "RetailerName":"Walgreens",
+            "StoreId":"WGN45411",
+            "Locations":{
+              "Phone":"(281)457-0067",
+              "Latitude":"29.7896",
+              "Longitude":"-95.1568",
+              "Line1":"14806 Woodforest Blvd",
+              "City":"Channelview",
+              "State":"TX",
+              "ZipCode":"77530",
+              "Country":"USA"
+            },
+            "StoreName":"Walgreens",
+            "StoreNumber":"2692",
+            "Distance":"0.34"
+          },
+          {
+            "RetailerName":"Walgreens",
+            "StoreId":"WGN78742",
+            "Locations":{
+              "Phone":"(281)458-4234",
+              "Latitude":"29.8066",
+              "Longitude":"-95.1729",
+              "Line1":"15111 Wallisville Rd",
+              "City":"Houston",
+              "State":"TX",
+              "ZipCode":"77049",
+              "Country":"USA"
+            },
+            "StoreName":"Walgreens",
+            "StoreNumber":"6182",
+            "Distance":"1.29"
+          },
+          {
+            "RetailerName":"Walgreens",
+            "StoreId":"WGN62357",
+            "Locations":{
+              "Phone":"(713)455-9942",
+              "Latitude":"29.7926",
+              "Longitude":"-95.1873",
+              "Line1":"388 Uvalde Rd",
+              "City":"Houston",
+              "State":"TX",
+              "ZipCode":"77015",
+              "Country":"USA"
+            },
+            "StoreName":"Walgreens",
+            "StoreNumber":"4647",
+            "Distance":"1.5"
+          }
+        ]
+      },
+      {
+        "Retailer":[
+          {
+            "RetailerName":"Family Dollar",
+            "StoreId":"FYD171009",
+            "Locations":{
+              "Phone":"(281)457-1538",
+              "Latitude":"29.7958",
+              "Longitude":"-95.1416",
+              "Line1":"1220 Dell Dale St",
+              "City":"Channelview",
+              "State":"TX",
+              "ZipCode":"77530",
+              "Country":"USA"
+            },
+            "StoreName":"Family Dollar",
+            "StoreNumber":"9218",
+            "Distance":"1.3"
+          },
+          {
+            "RetailerName":"Family Dollar",
+            "StoreId":"FYD21502",
+            "Locations":{
+              "Phone":"(713)453-2424",
+              "Latitude":"29.7861",
+              "Longitude":"-95.1867",
+              "Line1":"565 Uvalde Rd Ste B",
+              "City":"Houston",
+              "State":"TX",
+              "ZipCode":"77015",
+              "Country":"USA"
+            },
+            "StoreName":"Family Dollar",
+            "StoreNumber":"6355",
+            "Distance":"1.49"
+          },
+          {
+            "RetailerName":"Dollar General",
+            "StoreId":"DOL24707",
+            "Locations":{
+              "Phone":"(713)330-9685",
+              "Latitude":"29.8044",
+              "Longitude":"-95.1821",
+              "Line1":"15 Uvalde Rd",
+              "City":"Houston",
+              "State":"TX",
+              "ZipCode":"77015",
+              "Country":"USA"
+            },
+            "StoreName":"Dollar General",
+            "StoreNumber":"1135",
+            "Distance":"1.53"
+          },
+          {
+            "RetailerName":"Family Dollar",
+            "StoreId":"FYD20088",
+            "Locations":{
+              "Phone":"(281)436-1190",
+              "Latitude":"29.8073",
+              "Longitude":"-95.1826",
+              "Line1":"5613 Uvalde Rd",
+              "City":"Houston",
+              "State":"TX",
+              "ZipCode":"77049",
+              "Country":"USA"
+            },
+            "StoreName":"Family Dollar",
+            "StoreNumber":"5216",
+            "Distance":"1.68"
+          },
+          {
+            "RetailerName":"Dollar General",
+            "StoreId":"DOL43133",
+            "Locations":{
+              "Phone":"(281)457-2430",
+              "Latitude":"29.787",
+              "Longitude":"-95.1249",
+              "Line1":"777B Sheldon Rd",
+              "City":"Channelview",
+              "State":"TX",
+              "ZipCode":"77530",
+              "Country":"USA"
+            },
+            "StoreName":"Dollar General",
+            "StoreNumber":"9055",
+            "Distance":"2.26"
+          },
+          {
+            "RetailerName":"Family Dollar",
+            "StoreId":"FYD22645",
+            "Locations":{
+              "Phone":"(713)453-6813",
+              "Latitude":"29.7908",
+              "Longitude":"-95.2024",
+              "Line1":"514 Normandy St",
+              "City":"Houston",
+              "State":"TX",
+              "ZipCode":"77015",
+              "Country":"USA"
+            },
+            "StoreName":"Family Dollar",
+            "StoreNumber":"6914",
+            "Distance":"2.4"
+          },
+          {
+            "RetailerName":"Family Dollar",
+            "StoreId":"FYD21680",
+            "Locations":{
+              "Phone":"(281)862-2211",
+              "Latitude":"29.779",
+              "Longitude":"-95.1247",
+              "Line1":"443 Sheldon Rd",
+              "City":"Channelview",
+              "State":"TX",
+              "ZipCode":"77530",
+              "Country":"USA"
+            },
+            "StoreName":"Family Dollar",
+            "StoreNumber":"3664",
+            "Distance":"2.4"
+          }
+        ]
+      }
+    ]
+  },
+  "Summary":{
+    "PageNo":"1",
+    "TotalPages":"6",
+    "PageSize":"10",
+    "TotalRetailers":"5",
+    "TotalStores":"60",
+    "NearestResult":"0.34",
+    "FarthestResult":"9.99"
+  }
+}

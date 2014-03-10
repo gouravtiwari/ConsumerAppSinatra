@@ -1,4 +1,17 @@
-<p>This is the google_maps view.</p>
-<google-map center="map.center" zoom="map.zoom">
-	<marker coords='map.center'></marker>
-</google-map>
+<div class="retailer-info">
+	<li ng-repeat='retailer in retailers'>
+		<div class="head">Retailer</div>
+		<div class="head">{{retailer.RetailerName}}</div>
+		<div class="head"></div>
+		<div class="head">{{retailer.Locations.Line1}}</div>
+		<div class="head"></div>
+		<div class="head">{{retailer.Locations.City}}</div>
+		<div class="head"></div>
+		<div class="head">{{retailer.Locations.Country}}</div>
+	</li>
+</div>
+<div class="map-container">
+	<google-map center="map.center" draggable="true" zoom="map.zoom">
+		<marker coords='location' ng-repeat="location in locations"></marker>
+	</google-map>
+</div>	
