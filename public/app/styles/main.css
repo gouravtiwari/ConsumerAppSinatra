@@ -134,9 +134,14 @@ body {
   min-height: 100px;
   margin-bottom: 50px;
 }
+
 .list{
   background-color: aliceblue;
   margin-top: 10px;
+}
+
+.content-container{
+  margin-top: 40px;
 }
 
 .label {
