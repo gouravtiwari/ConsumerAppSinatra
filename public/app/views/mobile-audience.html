@@ -1,0 +1,24 @@
+<!-- Inputs -->
+<h2>Compare Mobile Audience between iOS and Andriod</h2>
+
+<!-- Result -->
+<div class="product" ng-repeat="app in andriod.AppDetails">
+	<h3><b>App Name: </b>{{app.AppName}}</h3>
+	<span class="label">UniqueAudience: </span>{{app.UniqueAudience}}<br>
+	<span class="label">ActiveReach: </span>{{app.ActiveReach}}<br>
+	<span class="label">TotalDurationMin: </span>{{app.TotalDurationMin}}<br>
+	<span class="label">TotalVisits: </span>{{app.TotalVisits}}<br>
+	<span class="label">VisitsPerPerson: </span>{{app.VisitsPerPerson}}<br>
+	<span class="label">MalePercentage: </span>{{app.MalePercentage}}<br>
+	<span class="label">FemalePercentage: </span>{{app.FemalePercentage}}<br>
+	<div ng-repeat="(k, v) in app.AgeBreakPercentage">
+		<span class="label">{{k}}: </span>{{v}}<br>
+	</div>
+	<div ng-repeat="(k, v) in app.IncomePercentage_in_Dollar">
+		<span class="label">{{k}}: </span>{{v}}<br>
+	</div>
+	<div ng-repeat="(k, v) in app.RacePercentage">
+		<span class="label">{{k}}: </span>{{v}}<br>
+	</div>
+	
+</div>

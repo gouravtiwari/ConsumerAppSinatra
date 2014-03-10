@@ -1,0 +1,57 @@
+{
+  "Header":{
+    "API_Version":"1.0",
+    "API_Name":"EMM Mobile Audience API",
+    "Date":"2014-02-26T12:46:05.395-05:00",
+    "MessageID":"2008",
+    "Content_Type":"JSON",
+    "Currency":"$"
+  },
+  "AppResponse":{
+    "AppDetails":[
+      {
+        "AppName":"Google Currents",
+        "UniqueAudience":"1153296",
+        "ActiveReach":"1.44",
+        "TotalDurationMin":"46503049",
+        "TotalVisits":"16853864",
+        "VisitsPerPerson":"15",
+        "MalePercentage":"89.9",
+        "FemalePercentage":"10.1",
+        "AgeBreakPercentage":{
+          "Age18_24":"26.05",
+          "Age25_34":"22.4",
+          "Age35_44":"35.73",
+          "Age45_54":"5.69",
+          "Age55_More":"10.13"
+        },
+        "IncomePercentage_in_Dollar":{
+          "IncomeUpt_15000":"2.22",
+          "Income15000_24999":"0.06",
+          "Income25000_34999":"24.26",
+          "Income35000_49999":"3.37",
+          "Income50000_74999":"10.12",
+          "Income75000_99999":"42.09",
+          "Income100000_124999":"16.61",
+          "Income125000_149999":"1.28",
+          "Income150000_199999":"0",
+          "Income200000_249999":"0",
+          "IncomeGt_250000":"0"
+        },
+        "RacePercentage":{
+          "White":"60.49",
+          "Black_OR_African_American":"6.45",
+          "Asian_OR_Pacific_Islander":"6.54",
+          "NativeAmerican_OR_AlaskanNative":"8.84",
+          "MixedRacial":"15.01",
+          "OtherRace":"2.67",
+          "Hispanic":"5.99",
+          "NotHispanic":"94.01"
+        }
+      }
+    ]
+  },
+  "Summary":{
+    "PlatformName":"android"
+  }
+}
