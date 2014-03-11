@@ -1,0 +1,11 @@
+<h3>Search Segments by address</h3>
+Address : <input type="text" ng-model="input.address">
+City : <input type="text" ng-model="input.city"><br><br>
+State : <input type="text" ng-model="input.state">
+Zip Code : <input type="text" ng-model="input.zipcode">
+<button ng-click = "search(input)">Search</button>
+<div class="resultHolder">
+	<div class="list" ng-repeat = "seg in segments">
+		<span>{{seg.SegSystem}}</span>
+	</div>
+</div>

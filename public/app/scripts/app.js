@@ -35,10 +35,14 @@ angular.module('publicApp', ['ngRoute', 'google-maps'])
 			  templateUrl: 'views/market_share.html',
 			  controller: 'MarketShareCtrl'
 			})
-.when('/program_rankings', {
-  templateUrl: 'views/program_rankings.html',
-  controller: 'ProgramRankingsCtrl'
-})
+			.when('/program_rankings', {
+			  templateUrl: 'views/program_rankings.html',
+			  controller: 'ProgramRankingsCtrl'
+			})
+			.when('/segmentation', {
+			  templateUrl: 'views/segmentation.html',
+			  controller: 'SegmentCtrl'
+			})
 			.otherwise({
 				redirectTo: '/google_maps'
 			})

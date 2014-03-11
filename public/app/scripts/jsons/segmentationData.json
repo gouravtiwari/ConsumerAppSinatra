@@ -1,0 +1,60 @@
+{ 
+ "Header":{ 
+ "API_Version":"1.0", 
+ "API_Name":"My Best Segment", 
+ "Date":"2014-02-25T15:48:52.095-05:00", 
+ "Content-Type":"JSON", 
+ "MessageID":"1147" 
+ }, 
+ "Address":{ 
+ "BGCode":"510131016032", 
+ "PRIZMZ6":"04", 
+ "PRIZMZ6Level":"3", 
+ "address":"1525 WILSON BLVD", 
+ "cbsaCode":"47900", 
+ "city":"ARLINGTON", 
+ "country":"USA", 
+ "countyCode":"51013", 
+ "dmaCode":"511", 
+ "dmaLevel":"B", 
+ "latitude":"38.894758", 
+ "longitude":"-77.075331", 
+ "matchCode":"S80", 
+ "matching":"exact",  
+ "mcdCode":"5101390072", 
+ "mcdLevel":"B", 
+ "placeCode":"5103000", 
+ "placeLevel":"B", 
+ "stateCode":"51", 
+ "stateName":"VA", 
+ "tdzCode":"222", 
+ "tractCode":"51013101603", 
+ "zip4":"22209-2411", 
+ "zipCode":"22209" 
+ }, 
+ "Segments":[ 
+ { 
+ "SegmentDetails":[ 
+ { 
+ "SegSystem":"PRIZMNE", 
+ "SegmentCode":"4", 
+ "SegmentName":"Young Digerati", 
+ "DemographicsTraits":{ 
+ "Urbanicity":"1 Urban", 
+ "Income":"1 Wealthy", 
+ "IncomeProducingAssets":"2 Elite", 
+ "AgeRanges":"3 Age 25-44", 
+ "PresenceofKids":"3 Family Mix", 
+ "Homeownership":"4 Mix, Renters", 
+ "EmploymentLevels":"1 Management", 
+ "EducationLevels":"1 Graduate Plus", 
+ "EthnicDiversity":"3 White, Asian, Hispanic, Mix" 
+ } 
+ } 
+ ] 
+ } 
+ ], 
+ "Summary":{ 
+ "Level":"Z6" 
+ } 
+} 
