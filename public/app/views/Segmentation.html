@@ -5,7 +5,9 @@ State : <input type="text" ng-model="input.state">
 Zip Code : <input type="text" ng-model="input.zipcode">
 <button ng-click = "search(input)">Search</button>
 <div class="resultHolder">
-	<div class="list" ng-repeat = "seg in segments">
-		<span>{{seg.SegSystem}}</span>
+	<div class="list" ng-repeat = "seg in segment">
+		Segment System : <span><b>{{seg.SegSystem}}</b></span><br>
+		Segment Name: <span><b>{{seg.SegmentName}}</b></span><br>
+		Segment code: <span><b>{{seg.SegmentCode}}</b></span>
 	</div>
 </div>
