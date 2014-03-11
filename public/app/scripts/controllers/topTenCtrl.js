@@ -4,7 +4,6 @@ angular.module('publicApp')
   .controller('TopTenCtrl', function ($scope, Data) {
     $scope.categories = ['Movies', 'Television', 'Books', 'Mobile Apps', 'Video Games', 'Websites', 'Products', 'Music and Twitter TV'];
     $scope.$watch('categoryName', function() {
-      console.log('hi')
       if ($scope.resultCategories != undefined){
         for (var i = 0; i<$scope.resultCategories.length; i++) {
           if ($scope.resultCategories[i].CategoryName == $scope.categoryName){
@@ -20,5 +19,4 @@ angular.module('publicApp')
       $scope.resultCategories = api_data.Category;
       $scope.categoryName = $scope.categories[0];
     });
-
   });
