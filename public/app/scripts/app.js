@@ -3,6 +3,9 @@
 angular.module('publicApp', ['ngRoute', 'google-maps'])
 	.config(function ($routeProvider) {
     $routeProvider
+    	.when('/', {
+			  templateUrl: 'views/landing_page.html'
+			})
 			.when('/google_maps', {
 			  templateUrl: 'views/google_maps.html',
 			  controller: 'GoogleMapsCtrl'
@@ -44,6 +47,6 @@ angular.module('publicApp', ['ngRoute', 'google-maps'])
 			  controller: 'SegmentCtrl'
 			})
 			.otherwise({
-				redirectTo: '/google_maps'
+				redirectTo: '/'
 			})
 	});
