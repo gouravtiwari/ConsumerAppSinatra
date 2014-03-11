@@ -1,1 +1,12 @@
-<p>This is the program_rankings view.</p>
+<!-- Inputs -->
+<h2>National TV Program Ratings</h2>
+
+<!-- Result -->
+<div class="program" ng-repeat="program in programs">
+  <h4><b>Program: </b>{{program.ProgramName}}</h4>
+  <span class="label">Demographic: </span>{{program.Demographic}}<br>
+  <span class="label">Originator: </span>{{program.Originator}}<br>
+  <span class="label">US AA PERC: </span>{{program.US_AA_PERC}}<br>
+  <span class="label">US Projection: </span>{{program.USProjection}}<br>
+  <span class="label">Total Duration: </span>{{program.TotalDuration}}<br>
+</div>

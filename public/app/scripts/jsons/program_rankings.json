@@ -1,0 +1,200 @@
+{
+  "Header":{
+    "API_Version":"1.0",
+    "API_Name":"National TV Program Rankings API",
+    "Date":"2014-02-26T16:22:54.445-05:00",
+    "MessageID":"3007",
+    "Content_Type":"JSON"
+  },
+  "NationalTVRanking":{
+    "Programs":[
+      {
+        "ProgramName":"NBA BETWEEN GAMES SHOW",
+        "Demographic":"M2-11",
+        "Originator":"TURNER NETWORK TELEVISION",
+        "US_AA_PERC":"1.590037317",
+        "USProjection":"24000",
+        "TotalDuration":"3"
+      },
+      {
+        "ProgramName":"TNT WEEKDAY MOVIES",
+        "Demographic":"M2-11",
+        "Originator":"TURNER NETWORK TELEVISION",
+        "US_AA_PERC":"0.992399087",
+        "USProjection":"17000",
+        "TotalDuration":"542"
+      },
+      {
+        "ProgramName":"NBA BASKETBALL",
+        "Demographic":"M2-11",
+        "Originator":"TURNER NETWORK TELEVISION",
+        "US_AA_PERC":"0.874832903",
+        "USProjection":"27000",
+        "TotalDuration":"2828"
+      },
+      {
+        "ProgramName":"WIZARD OF OZ",
+        "Demographic":"M2-11",
+        "Originator":"TURNER NETWORK TELEVISION",
+        "US_AA_PERC":"0.422860327",
+        "USProjection":"41000",
+        "TotalDuration":"405"
+      },
+      {
+        "ProgramName":"WIZARD OF OZ",
+        "Demographic":"M2-11",
+        "Originator":"TURNER NETWORK TELEVISION",
+        "US_AA_PERC":"0.417565336",
+        "USProjection":"7000",
+        "TotalDuration":"405"
+      },
+      {
+        "ProgramName":"NBA PRE-GAME SHOW",
+        "Demographic":"M2-11",
+        "Originator":"TURNER NETWORK TELEVISION",
+        "US_AA_PERC":"0.407858194",
+        "USProjection":"5000",
+        "TotalDuration":"129"
+      },
+      {
+        "ProgramName":"SOURCE CODE",
+        "Demographic":"M2-11",
+        "Originator":"TURNER NETWORK TELEVISION",
+        "US_AA_PERC":"0.393056693",
+        "USProjection":"3000",
+        "TotalDuration":"240"
+      },
+      {
+        "ProgramName":"NBA BASKETBALL",
+        "Demographic":"M2-11",
+        "Originator":"TURNER NETWORK TELEVISION",
+        "US_AA_PERC":"0.388618612",
+        "USProjection":"26000",
+        "TotalDuration":"2828"
+      },
+      {
+        "ProgramName":"WIZARD OF OZ",
+        "Demographic":"M2-11",
+        "Originator":"TURNER NETWORK TELEVISION",
+        "US_AA_PERC":"0.380928765",
+        "USProjection":"77000",
+        "TotalDuration":"405"
+      },
+      {
+        "ProgramName":"NBA TIP-OFF",
+        "Demographic":"M2-11",
+        "Originator":"TURNER NETWORK TELEVISION",
+        "US_AA_PERC":"0.374464252",
+        "USProjection":"48000",
+        "TotalDuration":"69"
+      },
+      {
+        "ProgramName":"NBA BASKETBALL",
+        "Demographic":"M2-11",
+        "Originator":"TURNER NETWORK TELEVISION",
+        "US_AA_PERC":"0.372970995",
+        "USProjection":"3000",
+        "TotalDuration":"2828"
+      },
+      {
+        "ProgramName":"TNT WEEKDAY MOVIES",
+        "Demographic":"M2-11",
+        "Originator":"TURNER NETWORK TELEVISION",
+        "US_AA_PERC":"0.370037022",
+        "USProjection":"8000",
+        "TotalDuration":"542"
+      },
+      {
+        "ProgramName":"DAYAFTER THNKSGVNG MOVIES",
+        "Demographic":"M2-11",
+        "Originator":"TURNER NETWORK TELEVISION",
+        "US_AA_PERC":"0.369867938",
+        "USProjection":"3000",
+        "TotalDuration":"480"
+      },
+      {
+        "ProgramName":"WIZARD OF OZ",
+        "Demographic":"M2-11",
+        "Originator":"TURNER NETWORK TELEVISION",
+        "US_AA_PERC":"0.3679918",
+        "USProjection":"25000",
+        "TotalDuration":"405"
+      },
+      {
+        "ProgramName":"WIZARD OF OZ",
+        "Demographic":"M2-11",
+        "Originator":"TURNER NETWORK TELEVISION",
+        "US_AA_PERC":"0.36738998",
+        "USProjection":"5000",
+        "TotalDuration":"405"
+      },
+      {
+        "ProgramName":"RIZZOLI & ISLES",
+        "Demographic":"M2-11",
+        "Originator":"TURNER NETWORK TELEVISION",
+        "US_AA_PERC":"0.365953009",
+        "USProjection":"6000",
+        "TotalDuration":"420"
+      },
+      {
+        "ProgramName":"SOURCE CODE",
+        "Demographic":"M2-11",
+        "Originator":"TURNER NETWORK TELEVISION",
+        "US_AA_PERC":"0.364474721",
+        "USProjection":"6000",
+        "TotalDuration":"240"
+      },
+      {
+        "ProgramName":"DAYAFTER THNKSGVNG MOVIES",
+        "Demographic":"M2-11",
+        "Originator":"TURNER NETWORK TELEVISION",
+        "US_AA_PERC":"0.364472749",
+        "USProjection":"14000",
+        "TotalDuration":"480"
+      },
+      {
+        "ProgramName":"NBA BASKETBALL",
+        "Demographic":"M2-11",
+        "Originator":"TURNER NETWORK TELEVISION",
+        "US_AA_PERC":"0.345996579",
+        "USProjection":"15000",
+        "TotalDuration":"2828"
+      },
+      {
+        "ProgramName":"WIZARD OF OZ",
+        "Demographic":"M2-11",
+        "Originator":"TURNER NETWORK TELEVISION",
+        "US_AA_PERC":"0.345944013",
+        "USProjection":"45000",
+        "TotalDuration":"405"
+      },
+      {
+        "ProgramName":"NBA BETWEEN GAMES SHOW",
+        "Demographic":"M2-11",
+        "Originator":"TURNER NETWORK TELEVISION",
+        "US_AA_PERC":"0.344996499",
+        "USProjection":"13000",
+        "TotalDuration":"3"
+      },
+      {
+        "ProgramName":"NBA BASKETBALL",
+        "Demographic":"M2-11",
+        "Originator":"TURNER NETWORK TELEVISION",
+        "US_AA_PERC":"0.334184943",
+        "USProjection":"5000",
+        "TotalDuration":"2828"
+      },
+      {
+        "ProgramName":"INSIDE THE NBA P\/B HYUNDA",
+        "Demographic":"M2-11",
+        "Originator":"TURNER NETWORK TELEVISION",
+        "US_AA_PERC":"0.217897194",
+        "USProjection":"10000",
+        "TotalDuration":"488"
+      }
+    ]
+  },
+  "Summary":{
+    "TotalNoOfRecords":23
+  }
+}
