@@ -4,7 +4,8 @@ angular.module('publicApp')
 	 
    $scope.options = [
     "Store Name",
-    "Owner Name"
+    "Owner Name",
+    "Location"
    ]
    $scope.select_type = $scope.options[0];
 

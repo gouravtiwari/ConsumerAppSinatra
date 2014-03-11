@@ -1,15 +1,25 @@
 <div>
-	Search Store: 
-	<input type="text" ng-model="storename" ng-show="select_type=='Store Name'" placeholder="Store name">
-	 <input type="text" ng-model="ownername" ng-show="select_type=='Owner Name'" placeholder="Owner Name">
+	<b>Search Store:</b> 
+	<input type="text" ng-model="search.storename" ng-show="select_type=='Store Name'" placeholder="Store name">
+	 <input type="text" ng-model="search.ownername" ng-show="select_type=='Owner Name'" placeholder="Owner Name">
+	 <div id="location_input" ng-show="select_type=='Location'">
+	 	State FIPS Code: <input type="text" ng-model="stateFIPS">
+	 	Country FIPS Code: <input type="text" ng-model="countryFIPS"><br><br>
+	 	Zip Code: <input type="text" ng-model="zipcode">
+	 	City: <input type="text" ng-model="city">
+	 	Street Address:<input type="text" ng-model="streetaddress"><br><br>
+	 	Latitude: <input type="text" ng-model="lat">
+	 	Longitude: <input type="text" ng-model="lng">
+	 	Radius: <input type="text" ng-model="radius">
+	 </div>
 	<select ng-model="select_type" ng-options="c for c in options"></select>
 </div>
 <br>
 <div class="resultHolder">
-	<div class="list" ng-repeat="store in stores | filter:{StoreName:storename, OwnerName:ownername}">
+	<div class="list" ng-repeat="store in stores | filter:{StoreName:search.storename, OwnerName:search.ownername}">
 		<b><span >{{store.StoreName}}</span></b><br>
 		Code: <span>{{store.StoreCode}}</span><br>
 		Owner: <span>{{store.OwnerName}}</span>
-	
+		
 	</div>
 </div>
