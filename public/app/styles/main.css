@@ -24,6 +24,12 @@ header {
   background-size: 100% 100%;
 }
 
+.analysePage {
+  height: 768px;
+  background: url('../images/analyse.jpg') no-repeat;
+  background-size: 100% 100%;
+}
+
 .go {
   position: relative;
   top: 120px;
