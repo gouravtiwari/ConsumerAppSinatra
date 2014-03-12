@@ -6,6 +6,10 @@ angular.module('publicApp', ['ngRoute', 'google-maps'])
     	.when('/', {
 			  templateUrl: 'views/landing_page.html'
 			})
+			.when('/nav_page', {
+			  templateUrl: 'views/nav_page.html',
+			  controller: 'NavPageCtrl'
+			})
 			.when('/google_maps', {
 			  templateUrl: 'views/google_maps.html',
 			  controller: 'GoogleMapsCtrl'
