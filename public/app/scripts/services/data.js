@@ -6,8 +6,8 @@ angular.module('publicApp')
     var Data = {
 
         cache: {},
-        add_data_to_cache:  function (base_url, api_data) {
-            this.cache[base_url] = api_data;
+        add_data_to_cache:  function (url_calling, api_data) {
+            this.cache[url_calling] = api_data;
             console.log('$$$$$$$$$ CACHE $$$$$$$$$$$');
             console.log(this.cache);
         },
@@ -46,7 +46,7 @@ angular.module('publicApp')
             console.log(url_calling);
             window.recent_api_url = url_calling
             var base_url = url_calling.split('?')[0], cached_data, promise;
-            cached_data = this.in_cache(base_url);
+            cached_data = this.in_cache(url_calling);
             if(cached_data && base_url != '/api/bkg_progress') {
                 console.log('$$$$$$$$ FOUND IN CACHE $$$$$$$$$');
                 promise = {
@@ -61,7 +61,7 @@ angular.module('publicApp')
                 var that = this;
                 promise.success(function(api_data){
                     if(base_url != '/api/bkg_progress') {
-                        that.add_data_to_cache(base_url, api_data)
+                        that.add_data_to_cache(url_calling, api_data)
                     }
                 }); 
             }

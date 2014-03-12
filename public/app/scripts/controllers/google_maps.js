@@ -13,7 +13,8 @@ angular.module('publicApp')
 		
     var parameter_obj = 'product_id=' + '0016000275270' + '&' +
                         'lat=' + '29.7907' + '&' +
-                        'long=' + '-95.1621' + '&';
+                        'long=' + '-95.1621' + '&' +
+                        'distance=' + '5' + '&';
 
     //Data.get_local('scripts/jsons/product_availability.json').success(function(api_data){
     Data.get_json('StoreAvailability/v1', parameter_obj).success(function(api_data){

@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('publicApp', ['google-maps'])
+var app = angular.module('publicApp', ['google-maps', 'ui.bootstrap'])
 	.config(function ($routeProvider) {
     $routeProvider
     	.when('/', {

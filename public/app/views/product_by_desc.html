@@ -1,12 +1,16 @@
 <div>
-<h2>Search Products by their description:</h2>
-<input type="text" ng-model="input.Description" class="inputDesc">
-<div class="resultHolder">
-	<div class="product" ng-repeat="product in products | filter:input.Description">
-		<b><span class="productDesc">{{product.Description}}</span></b><br>
-		<b>Category:</b> {{product.Module}} | <b>Rank:</b> {{product.Rank}}
+<div class="productSearch">
+	<h2>Search Products by their description:</h2>
+	<input type="text" ng-model="productDescription" class="inputDesc">
+	<input type='button' class='btn' ng-click='by_desc()'>
+	<div class="resultHolder">
+		<div class="product" ng-repeat="product in products">
+			<b><span class="productDesc">{{product.Description}}</span></b><br>
+			<b>Category:</b> {{product.Module}} | <b>Rank:</b> {{product.Rank}}
+		</div>
 	</div>
-</div>
+	<pagination direction-links="false" boundary-links="true" total-items="totalItems" page="currentPage"></pagination>
+</div>	
 
 <h2>Search Products by UPC code:</h2>
 <input type="text" ng-model="input.UPC_CODE" class="inputDesc">
