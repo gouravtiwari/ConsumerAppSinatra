@@ -11,7 +11,8 @@ angular.module('publicApp')
 	    zoom: 12
 		};
 
-		Data.get_local('scripts/jsons/product_availability.json').success(function(api_data){
+		//Data.get_local('scripts/jsons/product_availability.json').success(function(api_data){
+    Data.get_json('StoreAvailability/v1').success(function(api_data){
       $scope.locations = [];
       $scope.retailers = [];
       var iconNo = 0;
@@ -25,7 +26,8 @@ angular.module('publicApp')
       			position.longitude = api_data.Product.Availability[i].Retailer[j].Locations.Longitude;
       			position.icon = {icon: "https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld="+iconNo+"|ff0000|000000"}
       			$scope.locations.push(position);
-      			$scope.map.center = position;
+      			$scope.map.center.latitude = position.latitude;
+            $scope.map.center.longitude = position.longitude;
       	}
       }
     });

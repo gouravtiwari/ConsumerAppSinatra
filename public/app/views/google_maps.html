@@ -10,7 +10,6 @@
 	</li>
 </div>
 <div class="map-container">
-	{{location.icon}}
 	<google-map center="map.center" draggable="true" zoom="map.zoom">
 		<marker coords='location' options='location.icon' ng-repeat="location in locations"></marker>
 	</google-map>

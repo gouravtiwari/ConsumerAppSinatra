@@ -11,20 +11,34 @@ angular.module('publicApp')
             console.log('$$$$$$$$$ CACHE $$$$$$$$$$$');
             console.log(this.cache);
         },
+
         in_cache: function (base_url) {
             return this.cache[base_url] || null;
         },
+
         empty_cache: function () {
             console.log('$$$$$$$$$ CACHE EMPTIED $$$$$$$$$$$');
             this.cache = {};
         },
 
         get_plain_query_url: function (path){
-            return this.settings.base_url+'/api/'+path;
+            return 'https://nielsen.api.tibco.com/'+path;
         },
 
         get_query_url:  function (path){
             return this.get_plain_query_url(path)+'?'+this.get_query_params();
+        },
+
+        get_query_params : function (){
+            //var settings = this.settings;
+            return 'product_id=' + '0016000275270' + '&' +
+                'lat=' + '29.7907' + '&' +
+                'long=' + '-95.1621' + '&' +
+                'apikey=' + '3359-3a99eff0-e18d-43c2-aad1-5bab4701f6ec';
+        },
+
+        get_query_part : function (){
+
         },
 
         get_base_json: function(path){
