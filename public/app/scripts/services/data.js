@@ -25,8 +25,8 @@ angular.module('publicApp')
             return 'https://nielsen.api.tibco.com/'+path;
         },
 
-        get_query_url:  function (path){
-            return this.get_plain_query_url(path)+'?'+this.get_query_params();
+        get_query_url:  function (path, param_path){
+            return this.get_plain_query_url(path)+'?'+param_path;
         },
 
         get_query_params : function (){
@@ -35,10 +35,6 @@ angular.module('publicApp')
                 'lat=' + '29.7907' + '&' +
                 'long=' + '-95.1621' + '&' +
                 'apikey=' + '3359-3a99eff0-e18d-43c2-aad1-5bab4701f6ec';
-        },
-
-        get_query_part : function (){
-
         },
 
         get_base_json: function(path){
@@ -81,8 +77,8 @@ angular.module('publicApp')
             return promise
         },
 
-        get_json: function(url_part){
-            return this.get_promise(this.get_query_url(url_part));
+        get_json: function(url_part, param_path){
+            return this.get_promise(this.get_query_url(url_part, param_path));
         },
         
         get_local: function(path){

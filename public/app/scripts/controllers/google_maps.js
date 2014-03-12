@@ -10,9 +10,14 @@ angular.module('publicApp')
 	    },
 	    zoom: 12
 		};
+		
+    var parameter_obj = 'product_id=' + '0016000275270' + '&' +
+                        'lat=' + '29.7907' + '&' +
+                        'long=' + '-95.1621' + '&' +
+                        'apikey=' + '3359-3a99eff0-e18d-43c2-aad1-5bab4701f6ec';
 
-		//Data.get_local('scripts/jsons/product_availability.json').success(function(api_data){
-    Data.get_json('StoreAvailability/v1').success(function(api_data){
+    //Data.get_local('scripts/jsons/product_availability.json').success(function(api_data){
+    Data.get_json('StoreAvailability/v1', parameter_obj).success(function(api_data){
       $scope.locations = [];
       $scope.retailers = [];
       var iconNo = 0;
@@ -29,7 +34,19 @@ angular.module('publicApp')
       			$scope.map.center.latitude = position.latitude;
             $scope.map.center.longitude = position.longitude;
       	}
-      }
+      }  
     });
+    
+    function getLocation(){
+      if (navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(showPosition);
+      }
+      else{
+        x.innerHTML="Geolocation is not supported by this browser.";
+      }
+    }
 
+    function showPosition(position){
+      $scope.geolocation = {'lat': position.coords.latitude, 'long': position.coords.longitude};    
+    }
   });
