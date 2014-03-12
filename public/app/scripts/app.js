@@ -50,6 +50,10 @@ var app = angular.module('publicApp', ['google-maps'])
 			  templateUrl: 'views/segmentation.html',
 			  controller: 'SegmentCtrl'
 			})
+			.when('/market_analysis', {
+			  templateUrl: 'views/market_analysis.html',
+			  controller: 'MarketAnalysisCtrl'
+			})
 			.otherwise({
 				redirectTo: '/'
 			})

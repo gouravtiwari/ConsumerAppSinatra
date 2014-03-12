@@ -15,4 +15,12 @@ angular.module('publicApp')
     	{title: 'Recent <br/> Search', url: '/recent_search'}
     ];
 
+    $scope.analyses = [
+    	{name: 'Market <br/> Share', url: '/market_share'},
+    	{name: 'Online Audience', url: '/audience'},
+    	{name: 'Mobile Audience', url: '/mobile-audience'},
+    	{name: 'Ad <br/> Spend', url: '/ad_spend'},
+    	{name: 'TV Programs Rankings', url: '/program_rankings'}
+    ];
+
   });
