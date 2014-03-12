@@ -42,7 +42,7 @@
           <li><a href="#/program_rankings">TV Programs Rankings</a></li>
         </ul>
       </nav> -->
-      <div ng-view class="content-container"></div>
+      <div ng-view class="view-animate-container" ng-animate="{enter: 'view-enter', leave: 'view-leave'}"></div>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -64,8 +64,15 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <!-- !!!! NOTE - TECH DEBT!!!!
+      V1.1.5 USED FOR ANGULAR ANIMATION.
+      NEED TO FIND OUT WHY V1.2 DOESN'T SUPPORT ANIMATION.
+      MAY BE DIFFERENT WAY OF IMPLEMENTATION.
+      NEED TO REVISIT THIS PIECE -->
+    <script src="http://code.angularjs.org/1.1.5/angular.min.js"></script>
+    <!-- COMMENTED AS ANGULAR V1.1.5 HAS BUILT IN ROUTE SERVICE 
+    <script src="bower_components/angular-route/angular-route.min.js"></script> 
+    -->
     <script src='bower_components/underscore/underscore.js'></script>
     <script src='bower_components/angular-google-maps/dist/angular-google-maps.min.js'></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>

@@ -1,7 +1,9 @@
-<div class="landingPage">
-	<nav>
-		<div class="navTile" ng-repeat="tile in navTiles" ng-click="go(tile.url)">
-			<span class="tileTitle" ng-bind-html="tile.title | unsafe"></span>
-		</div>
-	</nav>
+<div>
+	<div class="landingPage">
+		<nav>
+			<div class="navTile" ng-repeat="tile in navTiles" ng-click="go(tile.url)">
+				<span class="tileTitle" ng-bind-html-unsafe="tile.title"></span>
+			</div>
+		</nav>
+	</div>
 </div>

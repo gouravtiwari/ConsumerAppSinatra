@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('publicApp', ['ngRoute', 'google-maps'])
+var app = angular.module('publicApp', ['google-maps'])
 	.config(function ($routeProvider) {
     $routeProvider
     	.when('/', {
@@ -57,6 +57,7 @@ var app = angular.module('publicApp', ['ngRoute', 'google-maps'])
 
 app.filter('unsafe', ['$sce', function ($sce) {
     return function (val) {
+    	console.log(val)
       return $sce.trustAsHtml(val);
     };
 }]);
