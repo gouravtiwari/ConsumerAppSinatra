@@ -21,6 +21,7 @@ header {
 .landingPage {
   height: 768px;
   background: url('../images/smartmartbg.png') no-repeat;
+  background-size: 100% 100%;
 }
 
 .go {
@@ -189,7 +190,7 @@ nav {
 }
 
 .container {
-  width: 1024px;
+  width: 100%;
   overflow: hidden;
 }
 
