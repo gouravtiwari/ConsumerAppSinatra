@@ -26,7 +26,7 @@ angular.module('publicApp')
         },
 
         get_query_url:  function (path, param_path){
-            return this.get_plain_query_url(path)+'?'+param_path;
+            return this.get_plain_query_url(path)+'?'+param_path+'apikey=' + '3359-3a99eff0-e18d-43c2-aad1-5bab4701f6ec';
         },
 
         get_query_params : function (){
