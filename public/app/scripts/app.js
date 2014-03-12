@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('publicApp', ['ngRoute', 'google-maps'])
+var app = angular.module('publicApp', ['ngRoute', 'google-maps'])
 	.config(function ($routeProvider) {
     $routeProvider
     	.when('/', {
@@ -54,3 +54,9 @@ angular.module('publicApp', ['ngRoute', 'google-maps'])
 				redirectTo: '/'
 			})
 	});
+
+app.filter('unsafe', ['$sce', function ($sce) {
+    return function (val) {
+      return $sce.trustAsHtml(val);
+    };
+}]);
