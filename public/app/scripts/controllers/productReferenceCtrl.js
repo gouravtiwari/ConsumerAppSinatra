@@ -16,7 +16,7 @@ angular.module('publicApp')
     $scope.currentPage = 1;
 
     $scope.by_desc = function(){
-      var parameter_obj = 'search=' + $scope.productDescription + '&' +
+      var parameter_obj = '?search=' + $scope.productDescription + '&' +
                           'pageno=' + $scope.currentPage + '&';
       Data.get_json('Products/v1', parameter_obj).success(function(api_data){
       //Data.get_local('scripts/jsons/product_by_desc.json').success(function(api_data){

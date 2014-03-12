@@ -23,4 +23,6 @@ angular.module('publicApp')
     	{name: 'TV Programs Rankings', url: '/program_rankings'}
     ];
 
+    $scope.input = {};
+
   });

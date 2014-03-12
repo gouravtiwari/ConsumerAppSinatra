@@ -1,9 +1,14 @@
 <div>
-<!-- Inputs -->
-<h2>Compare Mobile Audience between iOS and Andriod</h2>
-
+	<h2>Mobile Audience</h2>
+	<!-- Inputs -->
+	<b>Platform:</b>
+	<select ng-model="input.platform" placeholder="Select Platform"
+ 		ng-options="platform for platform in input.platforms">
+  </select>
+  <b># of Top Apps:</b> <input type="number" ng-model="input.appCount" />
+  <button class="btn btn-primary" ng-click="search()">Search</button>
 <!-- Result -->
-<div class="product" ng-repeat="app in andriod.AppDetails">
+<div class="product" ng-repeat="app in AppDetails">
 	<h3><b>App Name: </b>{{app.AppName}}</h3>
 	<span class="label">UniqueAudience: </span>{{app.UniqueAudience}}<br>
 	<span class="label">ActiveReach: </span>{{app.ActiveReach}}<br>
@@ -12,13 +17,13 @@
 	<span class="label">VisitsPerPerson: </span>{{app.VisitsPerPerson}}<br>
 	<span class="label">MalePercentage: </span>{{app.MalePercentage}}<br>
 	<span class="label">FemalePercentage: </span>{{app.FemalePercentage}}<br>
-	<div ng-repeat="(k, v) in app.AgeBreakPercentage">
+	<div ng-repeat="(k, v) in app.AgeBreakPercentage track by $index">
 		<span class="label">{{k}}: </span>{{v}}<br>
 	</div>
-	<div ng-repeat="(k, v) in app.IncomePercentage_in_Dollar">
+	<div ng-repeat="(k, v) in app.IncomePercentage_in_Dollar track by $index">
 		<span class="label">{{k}}: </span>{{v}}<br>
 	</div>
-	<div ng-repeat="(k, v) in app.RacePercentage">
+	<div ng-repeat="(k, v) in app.RacePercentage track by $index">
 		<span class="label">{{k}}: </span>{{v}}<br>
 	</div>
 	
