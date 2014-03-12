@@ -1,10 +1,128 @@
 /* Space out content a bit */
+
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  font-family: 'Century Gothic';
+}
+
+header {
+  height: 45px;
+  padding: 5px 16px;
+  font-size: 26px;
+  line-height: 30px;
+  background: #000;
+  color: #fff;
+}
+
+.lightBlue {
+  color: lightskyblue;
+}
+
+.landingPage {
+  height: 768px;
+  background: url('../images/smartmartbg.png') no-repeat;
+}
+
+.go {
+  position: relative;
+  top: 120px;
+  width: 120px;
+  font-size: 80px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.cartIcon {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: url('../images/cartIcon.jpg') no-repeat;
+  background-size: 100% 100%;
+}
+
+@-webkit-keyframes rotateY {
+  from{
+    -webkit-transform: rotateY(0deg);
+  }
+  to{
+    -webkit-transform: rotateY(360deg);
+  }
+}
+@-moz-keyframes rotateY {
+  from{
+    -moz-transform: rotateY(0deg);
+  }
+  to{
+    -moz-transform: rotateY(360deg);
+  }
+}
+@-ms-keyframes rotateY {
+  from{
+    -ms-transform: rotateY(0deg);
+  }
+  to{
+    -ms-transform: rotateY(360deg);
+  }
+}
+@-o-keyframes rotateY {
+  from{
+    -o-transform: rotateY(0deg);
+  }
+  to{
+    -o-transform: rotateY(360deg);
+  }
+}
+@keyframes rotateY {
+  from{
+    transform: rotateY(0deg);
+  }
+  to{
+    transform: rotateY(360deg);
+  }
+}
+
+.rotating {
+  -webkit-animation: rotateY 4s linear infinite;
+  -moz-animation: rotateY 4s linear infinite;
+  -ms-animation: rotateY 4s linear infinite;
+  -o-animation: rotateY 4s linear infinite;
+  animation: rotateY 4s linear infinite;
+}
+
+.marginAuto {
+  margin: auto;
+}
+
+nav {
+  position: relative;
+  top: 100px;
+  width: 825px;
+  margin: auto; 
+  
+}
+
+.navTile {
+  float: left;
+  margin: 0 5px 5px 0; 
+  width: 160px;
+  height: 160px;
+  border-radius: 4px;
+  font-size: 22px;
+  font-style: italic;
+  background: rgba(0,0,0,.6);
+  color: #fff;
+  display: table;
+  text-align: center;
+  cursor: pointer;
+}
+
+.tileTitle {
+  vertical-align: middle;
+  display: table-cell;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
+
 .header,
 .marketing,
 .footer {
@@ -13,10 +131,13 @@ body {
 }
 
 /* Custom page header */
+
 .header {
   border-bottom: 1px solid #e5e5e5;
 }
+
 /* Make the masthead heading the same height as the navigation */
+
 .header h3 {
   margin-top: 0;
   margin-bottom: 0;
@@ -25,32 +146,33 @@ body {
 }
 
 /* Custom page footer */
+
 .footer {
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
 
-.retailer-info{
+.retailer-info {
   position: relative;
   float: left;
   width: 30%;
 }
 
-.map-container{
+.map-container {
   position: relative;
   float: left;
   width: 70%;
 }
 
-.retailer-info li{
+.retailer-info li {
   list-style: none;
   position: relative;
   float: left;
   width: 100%;
 }
 
-.head{
+.head {
   position: relative;
   float: left;
   width: 100%;
@@ -58,7 +180,7 @@ body {
   padding: 0 0 10px 10px;
 }
 
-.head-data{
+.head-data {
   position: relative;
   float: left;
   width: 88%;
@@ -67,56 +189,71 @@ body {
 
 .container {
   width: 1024px;
+  overflow: hidden;
 }
 
 /* Customize container */
+
 @media (max-width: 768px) {
   .container {
     max-width: 730px;
   }
 }
+
 .container-narrow > hr {
   margin: 30px 0;
 }
 
 /* Main marketing message and sign up button */
+
 .jumbotron {
   text-align: center;
   border-bottom: 1px solid #e5e5e5;
 }
+
 .jumbotron .btn {
   font-size: 21px;
   padding: 14px 24px;
 }
 
 /* Supporting marketing content */
+
 .marketing {
   margin: 40px 0;
 }
+
 .marketing p + h4 {
   margin-top: 28px;
 }
 
 /* Responsive: Portrait tablets and up */
+
 @media screen and (min-width: 768px) {
   /* Remove the padding we set earlier */
+
   .header,
   .marketing,
   .footer {
     padding-left: 0;
     padding-right: 0;
   }
+
   /* Space out the masthead */
+
   .header {
     margin-bottom: 30px;
   }
+
   /* Remove the bottom border on the jumbotron for visual effect */
+
   .jumbotron {
     border-bottom: 0;
   }
 }
 
-.angular-google-map-container { height: 400px; }
+.angular-google-map-container {
+  height: 400px;
+}
 
 .inputDesc {
   height: 50px;
@@ -135,13 +272,12 @@ body {
   margin-bottom: 50px;
 }
 
-.list{
+.list {
   background-color: aliceblue;
   margin-top: 10px;
 }
 
-.content-container{
-  margin-top: 40px;
+.content-container {
 }
 
 .label {
@@ -149,4 +285,39 @@ body {
   color: #aaa;
   text-align: right;
   display: inline-block;
+}
+
+.view-leave, .view-enter {
+  -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) .8s;
+  -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) .8s;
+  -ms-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) .8s;
+  -o-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) .8s;
+  transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) .8s;
+}
+ 
+.view-animate-container {
+  position:relative;
+  height:700px;
+}
+ 
+.view-animate-container > * {
+  display:block;
+  width:100%;
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+}
+ 
+.view-enter {
+  left:100%;
+}
+.view-enter.view-enter-active {
+  left:0;
+}
+ 
+.view-leave { }
+.view-leave.view-leave-active {
+  left:-100%;
 }
