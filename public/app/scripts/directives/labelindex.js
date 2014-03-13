@@ -7,9 +7,12 @@ angular.module('publicApp')
       restrict: 'E',
       replace: true,
       link: function postLink(scope, element, attrs) {
-        console.log(attrs.android)
-        console.log('hey dude what up')
-        scope.result = parseFloat((parseFloat(attrs.android) - parseFloat(attrs.ios))/parseFloat(attrs.android)*100).toFixed(2);
+      	if(attrs.reverse == 'true'){
+      		scope.result = parseFloat((attrs.ios - attrs.android)/attrs.android*100).toFixed(2);		
+      	}
+      	else{
+      		scope.result = parseFloat((attrs.android - attrs.ios)/attrs.android*100).toFixed(2);
+      	}
         if (scope.result > 0) {
         	scope.colorClass = 'green';
         }
