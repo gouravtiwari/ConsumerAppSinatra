@@ -11,13 +11,6 @@ angular.module('publicApp')
     	Data.get_json('EMM/v1/android/', parameter_obj).success(function(api_data){
     		$scope.android = api_data.AppResponse.AppDetails;
     		console.log($scope.android.length)
-    		for (var i=0; i<5000; i++){
-	    		if($scope.ios[i].AppName == $scope.android[i].AppName){
-	    			console.log($scope.ios[i].AppName)
-	    			console.log($scope.android[i].AppName)
-	    		}
-	    	}
-	    	console.log('Babaji ka thullu')
     	});
     
     });
