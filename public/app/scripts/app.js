@@ -54,6 +54,10 @@ var app = angular.module('publicApp', ['google-maps', 'ui.bootstrap'])
 			  templateUrl: 'views/market_analysis.html',
 			  controller: 'MarketAnalysisCtrl'
 			})
+			.when('/compare', {
+			  templateUrl: 'views/compare.html',
+			  controller: 'CompareCtrl'
+			})
 			.otherwise({
 				redirectTo: '/'
 			})
