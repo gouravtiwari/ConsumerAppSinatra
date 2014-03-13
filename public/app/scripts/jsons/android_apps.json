@@ -1,0 +1,4017 @@
+{
+"Header": {
+"API_Version": "1.0",
+"API_Name": "EMM Mobile Audience API",
+"Date": "2014-03-13T06:30:45.085-04:00",
+"MessageID": "59015",
+"Content_Type": "XML",
+"Currency": "$"
+},
+"AppResponse": {
+"AppDetails": [
+{
+"AppName": "Google Play Music",
+"UniqueAudience": "21196062",
+"ActiveReach": "26.4",
+"TotalDurationMin": "627063037",
+"TotalVisits": "446116253",
+"VisitsPerPerson": "21",
+"MalePercentage": "65.06",
+"FemalePercentage": "34.94",
+"AgeBreakPercentage": {
+"Age18_24": "36.95",
+"Age25_34": "28.8",
+"Age35_44": "16.16",
+"Age45_54": "12.38",
+"Age55_More": "5.7"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "18.3",
+"Income15000_24999": "15.63",
+"Income25000_34999": "9.03",
+"Income35000_49999": "11.06",
+"Income50000_74999": "17.62",
+"Income75000_99999": "14",
+"Income100000_124999": "5.23",
+"Income125000_149999": "1.8",
+"Income150000_199999": "6.82",
+"Income200000_249999": "0.47",
+"IncomeGt_250000": "0.04"
+},
+"RacePercentage": {
+"White": "53.97",
+"Black_OR_African_American": "29.22",
+"Asian_OR_Pacific_Islander": "2.1",
+"NativeAmerican_OR_AlaskanNative": "1.05",
+"MixedRacial": "11",
+"OtherRace": "2.67",
+"Hispanic": "20.1",
+"NotHispanic": "79.9"
+}
+},
+{
+"AppName": "Twitter",
+"UniqueAudience": "20618330",
+"ActiveReach": "25.68",
+"TotalDurationMin": "2378689029",
+"TotalVisits": "1567571684",
+"VisitsPerPerson": "76",
+"MalePercentage": "61.02",
+"FemalePercentage": "38.98",
+"AgeBreakPercentage": {
+"Age18_24": "39.78",
+"Age25_34": "18.18",
+"Age35_44": "17.73",
+"Age45_54": "20.45",
+"Age55_More": "3.85"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "19.03",
+"Income15000_24999": "14.9",
+"Income25000_34999": "8.09",
+"Income35000_49999": "13.86",
+"Income50000_74999": "15.58",
+"Income75000_99999": "7.27",
+"Income100000_124999": "5.42",
+"Income125000_149999": "5.26",
+"Income150000_199999": "6.1",
+"Income200000_249999": "2.42",
+"IncomeGt_250000": "2.05"
+},
+"RacePercentage": {
+"White": "62.35",
+"Black_OR_African_American": "17.29",
+"Asian_OR_Pacific_Islander": "4.6",
+"NativeAmerican_OR_AlaskanNative": "0.11",
+"MixedRacial": "4.16",
+"OtherRace": "11.48",
+"Hispanic": "42.51",
+"NotHispanic": "57.49"
+}
+},
+{
+"AppName": "Instagram",
+"UniqueAudience": "19743661",
+"ActiveReach": "24.59",
+"TotalDurationMin": "3640813330",
+"TotalVisits": "2002621094",
+"VisitsPerPerson": "101",
+"MalePercentage": "34.71",
+"FemalePercentage": "65.29",
+"AgeBreakPercentage": {
+"Age18_24": "39.21",
+"Age25_34": "32.69",
+"Age35_44": "12.68",
+"Age45_54": "12.7",
+"Age55_More": "2.72"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "17.82",
+"Income15000_24999": "19.16",
+"Income25000_34999": "14.67",
+"Income35000_49999": "13.68",
+"Income50000_74999": "13.77",
+"Income75000_99999": "5.52",
+"Income100000_124999": "6.54",
+"Income125000_149999": "1.54",
+"Income150000_199999": "6.99",
+"Income200000_249999": "0.15",
+"IncomeGt_250000": "0.16"
+},
+"RacePercentage": {
+"White": "37.54",
+"Black_OR_African_American": "35.59",
+"Asian_OR_Pacific_Islander": "6.6",
+"NativeAmerican_OR_AlaskanNative": "0.39",
+"MixedRacial": "9.91",
+"OtherRace": "9.97",
+"Hispanic": "37.61",
+"NotHispanic": "62.39"
+}
+},
+{
+"AppName": "AccuWeather - Weather for Life",
+"UniqueAudience": "19618995",
+"ActiveReach": "24.44",
+"TotalDurationMin": "169090337",
+"TotalVisits": "235343249",
+"VisitsPerPerson": "12",
+"MalePercentage": "44.49",
+"FemalePercentage": "55.51",
+"AgeBreakPercentage": {
+"Age18_24": "10.49",
+"Age25_34": "17.18",
+"Age35_44": "18.14",
+"Age45_54": "22.73",
+"Age55_More": "31.47"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "5.5",
+"Income15000_24999": "8.63",
+"Income25000_34999": "7.13",
+"Income35000_49999": "15.24",
+"Income50000_74999": "22.58",
+"Income75000_99999": "17.89",
+"Income100000_124999": "9.04",
+"Income125000_149999": "8.62",
+"Income150000_199999": "4.22",
+"Income200000_249999": "0.38",
+"IncomeGt_250000": "0.77"
+},
+"RacePercentage": {
+"White": "73.84",
+"Black_OR_African_American": "16.6",
+"Asian_OR_Pacific_Islander": "4.92",
+"NativeAmerican_OR_AlaskanNative": "0.69",
+"MixedRacial": "2.39",
+"OtherRace": "1.57",
+"Hispanic": "15.16",
+"NotHispanic": "84.84"
+}
+},
+{
+"AppName": "Amazon Mobile",
+"UniqueAudience": "18229442",
+"ActiveReach": "22.71",
+"TotalDurationMin": "638875688",
+"TotalVisits": "240619000",
+"VisitsPerPerson": "13",
+"MalePercentage": "59.43",
+"FemalePercentage": "40.57",
+"AgeBreakPercentage": {
+"Age18_24": "27.89",
+"Age25_34": "33.13",
+"Age35_44": "24.11",
+"Age45_54": "7",
+"Age55_More": "7.88"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "12.3",
+"Income15000_24999": "10.28",
+"Income25000_34999": "13",
+"Income35000_49999": "14.85",
+"Income50000_74999": "23.47",
+"Income75000_99999": "14.19",
+"Income100000_124999": "3.92",
+"Income125000_149999": "5.06",
+"Income150000_199999": "2.45",
+"Income200000_249999": "0.2",
+"IncomeGt_250000": "0.27"
+},
+"RacePercentage": {
+"White": "63.03",
+"Black_OR_African_American": "12.14",
+"Asian_OR_Pacific_Islander": "2.34",
+"NativeAmerican_OR_AlaskanNative": "0.32",
+"MixedRacial": "7.07",
+"OtherRace": "15.09",
+"Hispanic": "34.56",
+"NotHispanic": "65.44"
+}
+},
+{
+"AppName": "Pandora Radio",
+"UniqueAudience": "17860652",
+"ActiveReach": "22.25",
+"TotalDurationMin": "2833520091",
+"TotalVisits": "1228421614",
+"VisitsPerPerson": "69",
+"MalePercentage": "42.96",
+"FemalePercentage": "57.04",
+"AgeBreakPercentage": {
+"Age18_24": "38.68",
+"Age25_34": "28.18",
+"Age35_44": "11.96",
+"Age45_54": "11.4",
+"Age55_More": "9.77"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "15.6",
+"Income15000_24999": "13.1",
+"Income25000_34999": "7.3",
+"Income35000_49999": "18.58",
+"Income50000_74999": "13.4",
+"Income75000_99999": "9.55",
+"Income100000_124999": "2.83",
+"Income125000_149999": "7.26",
+"Income150000_199999": "11.95",
+"Income200000_249999": "0.42",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "50.54",
+"Black_OR_African_American": "29.74",
+"Asian_OR_Pacific_Islander": "4.23",
+"NativeAmerican_OR_AlaskanNative": "0.44",
+"MixedRacial": "7.35",
+"OtherRace": "7.7",
+"Hispanic": "39.76",
+"NotHispanic": "60.24"
+}
+},
+{
+"AppName": "Facebook Messenger",
+"UniqueAudience": "16999197",
+"ActiveReach": "21.18",
+"TotalDurationMin": "670519572",
+"TotalVisits": "615535320",
+"VisitsPerPerson": "36",
+"MalePercentage": "38.63",
+"FemalePercentage": "61.37",
+"AgeBreakPercentage": {
+"Age18_24": "19.31",
+"Age25_34": "27.83",
+"Age35_44": "20.29",
+"Age45_54": "16.36",
+"Age55_More": "16.21"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "13.29",
+"Income15000_24999": "11.37",
+"Income25000_34999": "12.66",
+"Income35000_49999": "16.24",
+"Income50000_74999": "17.47",
+"Income75000_99999": "9.78",
+"Income100000_124999": "3.27",
+"Income125000_149999": "8.31",
+"Income150000_199999": "2.79",
+"Income200000_249999": "0.41",
+"IncomeGt_250000": "4.4"
+},
+"RacePercentage": {
+"White": "67.08",
+"Black_OR_African_American": "20.8",
+"Asian_OR_Pacific_Islander": "2.78",
+"NativeAmerican_OR_AlaskanNative": "0.61",
+"MixedRacial": "4.89",
+"OtherRace": "3.84",
+"Hispanic": "13.97",
+"NotHispanic": "86.03"
+}
+},
+{
+"AppName": "eBay Mobile",
+"UniqueAudience": "15040348",
+"ActiveReach": "18.74",
+"TotalDurationMin": "921971691",
+"TotalVisits": "441197155",
+"VisitsPerPerson": "29",
+"MalePercentage": "54.54",
+"FemalePercentage": "45.46",
+"AgeBreakPercentage": {
+"Age18_24": "18.69",
+"Age25_34": "25.87",
+"Age35_44": "33.48",
+"Age45_54": "13.81",
+"Age55_More": "8.15"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "13.59",
+"Income15000_24999": "13.19",
+"Income25000_34999": "9.53",
+"Income35000_49999": "17.37",
+"Income50000_74999": "21.31",
+"Income75000_99999": "10.39",
+"Income100000_124999": "6.47",
+"Income125000_149999": "1.41",
+"Income150000_199999": "1.03",
+"Income200000_249999": "2.34",
+"IncomeGt_250000": "3.35"
+},
+"RacePercentage": {
+"White": "67.11",
+"Black_OR_African_American": "17.86",
+"Asian_OR_Pacific_Islander": "2.06",
+"NativeAmerican_OR_AlaskanNative": "0.33",
+"MixedRacial": "7.96",
+"OtherRace": "4.69",
+"Hispanic": "29.36",
+"NotHispanic": "70.64"
+}
+},
+{
+"AppName": "Yahoo Mail",
+"UniqueAudience": "14676904",
+"ActiveReach": "18.28",
+"TotalDurationMin": "1916051529",
+"TotalVisits": "1822123852",
+"VisitsPerPerson": "124",
+"MalePercentage": "43.1",
+"FemalePercentage": "56.9",
+"AgeBreakPercentage": {
+"Age18_24": "7.26",
+"Age25_34": "15.56",
+"Age35_44": "21.3",
+"Age45_54": "27.09",
+"Age55_More": "28.78"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "6.73",
+"Income15000_24999": "16.09",
+"Income25000_34999": "9.87",
+"Income35000_49999": "16.39",
+"Income50000_74999": "15.81",
+"Income75000_99999": "13.13",
+"Income100000_124999": "8.52",
+"Income125000_149999": "7.59",
+"Income150000_199999": "5.3",
+"Income200000_249999": "0.29",
+"IncomeGt_250000": "0.28"
+},
+"RacePercentage": {
+"White": "61.83",
+"Black_OR_African_American": "25.65",
+"Asian_OR_Pacific_Islander": "2.15",
+"NativeAmerican_OR_AlaskanNative": "0.68",
+"MixedRacial": "2.97",
+"OtherRace": "6.73",
+"Hispanic": "17.11",
+"NotHispanic": "82.89"
+}
+},
+{
+"AppName": "Dropbox",
+"UniqueAudience": "12943879",
+"ActiveReach": "16.12",
+"TotalDurationMin": "69479910",
+"TotalVisits": "82828389",
+"VisitsPerPerson": "6",
+"MalePercentage": "56.99",
+"FemalePercentage": "43.01",
+"AgeBreakPercentage": {
+"Age18_24": "15.16",
+"Age25_34": "27.83",
+"Age35_44": "23.42",
+"Age45_54": "16.5",
+"Age55_More": "17.08"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "10.41",
+"Income15000_24999": "15.68",
+"Income25000_34999": "13.06",
+"Income35000_49999": "10.67",
+"Income50000_74999": "22.77",
+"Income75000_99999": "7.26",
+"Income100000_124999": "5.22",
+"Income125000_149999": "7.95",
+"Income150000_199999": "4.19",
+"Income200000_249999": "2.78",
+"IncomeGt_250000": "0.01"
+},
+"RacePercentage": {
+"White": "62.09",
+"Black_OR_African_American": "21.03",
+"Asian_OR_Pacific_Islander": "9.75",
+"NativeAmerican_OR_AlaskanNative": "0.24",
+"MixedRacial": "2.78",
+"OtherRace": "4.11",
+"Hispanic": "14.62",
+"NotHispanic": "85.38"
+}
+},
+{
+"AppName": "Adobe Reader",
+"UniqueAudience": "12790672",
+"ActiveReach": "15.93",
+"TotalDurationMin": "144839944",
+"TotalVisits": "84784831",
+"VisitsPerPerson": "7",
+"MalePercentage": "54.07",
+"FemalePercentage": "45.93",
+"AgeBreakPercentage": {
+"Age18_24": "32.78",
+"Age25_34": "16.75",
+"Age35_44": "14.33",
+"Age45_54": "20.82",
+"Age55_More": "15.33"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "11.52",
+"Income15000_24999": "7.11",
+"Income25000_34999": "19",
+"Income35000_49999": "9.54",
+"Income50000_74999": "12.27",
+"Income75000_99999": "11.4",
+"Income100000_124999": "6.48",
+"Income125000_149999": "13.39",
+"Income150000_199999": "6.11",
+"Income200000_249999": "2.96",
+"IncomeGt_250000": "0.21"
+},
+"RacePercentage": {
+"White": "67.7",
+"Black_OR_African_American": "14.82",
+"Asian_OR_Pacific_Islander": "14.11",
+"NativeAmerican_OR_AlaskanNative": "0.24",
+"MixedRacial": "0.72",
+"OtherRace": "2.4",
+"Hispanic": "9.34",
+"NotHispanic": "90.66"
+}
+},
+{
+"AppName": "Netflix",
+"UniqueAudience": "12121569",
+"ActiveReach": "15.1",
+"TotalDurationMin": "589731885",
+"TotalVisits": "163103185",
+"VisitsPerPerson": "13",
+"MalePercentage": "37.04",
+"FemalePercentage": "62.96",
+"AgeBreakPercentage": {
+"Age18_24": "15.18",
+"Age25_34": "35.57",
+"Age35_44": "25.7",
+"Age45_54": "10.48",
+"Age55_More": "13.07"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "11.24",
+"Income15000_24999": "14.38",
+"Income25000_34999": "11.88",
+"Income35000_49999": "13.21",
+"Income50000_74999": "19.82",
+"Income75000_99999": "15.06",
+"Income100000_124999": "7.77",
+"Income125000_149999": "4.79",
+"Income150000_199999": "1.51",
+"Income200000_249999": "0.08",
+"IncomeGt_250000": "0.26"
+},
+"RacePercentage": {
+"White": "63.4",
+"Black_OR_African_American": "20.35",
+"Asian_OR_Pacific_Islander": "3.33",
+"NativeAmerican_OR_AlaskanNative": "0.33",
+"MixedRacial": "7.68",
+"OtherRace": "4.92",
+"Hispanic": "17.07",
+"NotHispanic": "82.93"
+}
+},
+{
+"AppName": "The Weather Channel",
+"UniqueAudience": "11016009",
+"ActiveReach": "13.72",
+"TotalDurationMin": "529653027",
+"TotalVisits": "284524620",
+"VisitsPerPerson": "26",
+"MalePercentage": "66.16",
+"FemalePercentage": "33.84",
+"AgeBreakPercentage": {
+"Age18_24": "2.7",
+"Age25_34": "17.57",
+"Age35_44": "21.92",
+"Age45_54": "19.68",
+"Age55_More": "38.14"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "8.52",
+"Income15000_24999": "6.04",
+"Income25000_34999": "17.58",
+"Income35000_49999": "14.98",
+"Income50000_74999": "19.91",
+"Income75000_99999": "7.53",
+"Income100000_124999": "8.65",
+"Income125000_149999": "5.1",
+"Income150000_199999": "10.88",
+"Income200000_249999": "0.35",
+"IncomeGt_250000": "0.46"
+},
+"RacePercentage": {
+"White": "85.61",
+"Black_OR_African_American": "3.15",
+"Asian_OR_Pacific_Islander": "0.74",
+"NativeAmerican_OR_AlaskanNative": "1.56",
+"MixedRacial": "5.47",
+"OtherRace": "3.46",
+"Hispanic": "23.01",
+"NotHispanic": "76.99"
+}
+},
+{
+"AppName": "Groupon",
+"UniqueAudience": "10655564",
+"ActiveReach": "13.27",
+"TotalDurationMin": "228346871",
+"TotalVisits": "94620841",
+"VisitsPerPerson": "9",
+"MalePercentage": "34.4",
+"FemalePercentage": "65.6",
+"AgeBreakPercentage": {
+"Age18_24": "21.47",
+"Age25_34": "33.74",
+"Age35_44": "23.71",
+"Age45_54": "17.1",
+"Age55_More": "3.97"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "6.23",
+"Income15000_24999": "12.4",
+"Income25000_34999": "16.08",
+"Income35000_49999": "9.68",
+"Income50000_74999": "26.09",
+"Income75000_99999": "13.32",
+"Income100000_124999": "6.45",
+"Income125000_149999": "3.87",
+"Income150000_199999": "5.02",
+"Income200000_249999": "0.19",
+"IncomeGt_250000": "0.67"
+},
+"RacePercentage": {
+"White": "55.76",
+"Black_OR_African_American": "18.28",
+"Asian_OR_Pacific_Islander": "7.15",
+"NativeAmerican_OR_AlaskanNative": "0.37",
+"MixedRacial": "10.19",
+"OtherRace": "8.25",
+"Hispanic": "32.77",
+"NotHispanic": "67.23"
+}
+},
+{
+"AppName": "PayPal",
+"UniqueAudience": "10509484",
+"ActiveReach": "13.09",
+"TotalDurationMin": "112899705",
+"TotalVisits": "78142781",
+"VisitsPerPerson": "7",
+"MalePercentage": "50.44",
+"FemalePercentage": "49.56",
+"AgeBreakPercentage": {
+"Age18_24": "15.58",
+"Age25_34": "19.38",
+"Age35_44": "23.57",
+"Age45_54": "22.23",
+"Age55_More": "19.24"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "19.62",
+"Income15000_24999": "8.3",
+"Income25000_34999": "11.07",
+"Income35000_49999": "22.24",
+"Income50000_74999": "16.29",
+"Income75000_99999": "7.6",
+"Income100000_124999": "7.24",
+"Income125000_149999": "2.38",
+"Income150000_199999": "3.82",
+"Income200000_249999": "1.07",
+"IncomeGt_250000": "0.36"
+},
+"RacePercentage": {
+"White": "62.68",
+"Black_OR_African_American": "25.48",
+"Asian_OR_Pacific_Islander": "3.42",
+"NativeAmerican_OR_AlaskanNative": "0.35",
+"MixedRacial": "2.42",
+"OtherRace": "5.65",
+"Hispanic": "30.34",
+"NotHispanic": "69.66"
+}
+},
+{
+"AppName": "Kindle",
+"UniqueAudience": "10435591",
+"ActiveReach": "13",
+"TotalDurationMin": "710895226",
+"TotalVisits": "160887166",
+"VisitsPerPerson": "15",
+"MalePercentage": "23.41",
+"FemalePercentage": "76.59",
+"AgeBreakPercentage": {
+"Age18_24": "10.93",
+"Age25_34": "20.36",
+"Age35_44": "20.44",
+"Age45_54": "20.15",
+"Age55_More": "28.12"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "10.22",
+"Income15000_24999": "15.51",
+"Income25000_34999": "10.29",
+"Income35000_49999": "9.47",
+"Income50000_74999": "20.14",
+"Income75000_99999": "10.09",
+"Income100000_124999": "4.28",
+"Income125000_149999": "15.12",
+"Income150000_199999": "0.03",
+"Income200000_249999": "0.23",
+"IncomeGt_250000": "4.62"
+},
+"RacePercentage": {
+"White": "66.47",
+"Black_OR_African_American": "23.07",
+"Asian_OR_Pacific_Islander": "1.72",
+"NativeAmerican_OR_AlaskanNative": "0.36",
+"MixedRacial": "2.43",
+"OtherRace": "5.95",
+"Hispanic": "5.17",
+"NotHispanic": "94.83"
+}
+},
+{
+"AppName": "Pinterest",
+"UniqueAudience": "9920853",
+"ActiveReach": "12.36",
+"TotalDurationMin": "664866453",
+"TotalVisits": "226032041",
+"VisitsPerPerson": "23",
+"MalePercentage": "6.98",
+"FemalePercentage": "93.02",
+"AgeBreakPercentage": {
+"Age18_24": "23.26",
+"Age25_34": "38.54",
+"Age35_44": "24.02",
+"Age45_54": "10.32",
+"Age55_More": "3.85"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "2.26",
+"Income15000_24999": "12.8",
+"Income25000_34999": "20.06",
+"Income35000_49999": "15.97",
+"Income50000_74999": "25.37",
+"Income75000_99999": "10.6",
+"Income100000_124999": "3.2",
+"Income125000_149999": "7.64",
+"Income150000_199999": "1.97",
+"Income200000_249999": "0.15",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "76.09",
+"Black_OR_African_American": "9.33",
+"Asian_OR_Pacific_Islander": "2.37",
+"NativeAmerican_OR_AlaskanNative": "0.47",
+"MixedRacial": "7.98",
+"OtherRace": "3.77",
+"Hispanic": "26.59",
+"NotHispanic": "73.41"
+}
+},
+{
+"AppName": "Lookout Security & Antivirus",
+"UniqueAudience": "9658514",
+"ActiveReach": "12.03",
+"TotalDurationMin": "33563358",
+"TotalVisits": "45346110",
+"VisitsPerPerson": "5",
+"MalePercentage": "47.46",
+"FemalePercentage": "52.54",
+"AgeBreakPercentage": {
+"Age18_24": "12.09",
+"Age25_34": "13.87",
+"Age35_44": "26.1",
+"Age45_54": "25.46",
+"Age55_More": "22.48"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "11.97",
+"Income15000_24999": "9.16",
+"Income25000_34999": "12.07",
+"Income35000_49999": "14.74",
+"Income50000_74999": "23.62",
+"Income75000_99999": "6.8",
+"Income100000_124999": "8.75",
+"Income125000_149999": "5.07",
+"Income150000_199999": "7.82",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "61.07",
+"Black_OR_African_American": "27.33",
+"Asian_OR_Pacific_Islander": "1.77",
+"NativeAmerican_OR_AlaskanNative": "0.55",
+"MixedRacial": "4.32",
+"OtherRace": "4.95",
+"Hispanic": "23.3",
+"NotHispanic": "76.7"
+}
+},
+{
+"AppName": "Flipboard",
+"UniqueAudience": "9049205",
+"ActiveReach": "11.27",
+"TotalDurationMin": "332316038",
+"TotalVisits": "113198806",
+"VisitsPerPerson": "13",
+"MalePercentage": "83.83",
+"FemalePercentage": "16.17",
+"AgeBreakPercentage": {
+"Age18_24": "32.72",
+"Age25_34": "19.49",
+"Age35_44": "18.29",
+"Age45_54": "11.41",
+"Age55_More": "18.1"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "6.15",
+"Income15000_24999": "7.77",
+"Income25000_34999": "7.7",
+"Income35000_49999": "14.34",
+"Income50000_74999": "19.22",
+"Income75000_99999": "13.75",
+"Income100000_124999": "17.77",
+"Income125000_149999": "2.87",
+"Income150000_199999": "8.73",
+"Income200000_249999": "1.18",
+"IncomeGt_250000": "0.52"
+},
+"RacePercentage": {
+"White": "72.6",
+"Black_OR_African_American": "16.07",
+"Asian_OR_Pacific_Islander": "5.88",
+"NativeAmerican_OR_AlaskanNative": "0.73",
+"MixedRacial": "2.25",
+"OtherRace": "2.47",
+"Hispanic": "10.68",
+"NotHispanic": "89.32"
+}
+},
+{
+"AppName": "Quickoffice",
+"UniqueAudience": "8875164",
+"ActiveReach": "11.06",
+"TotalDurationMin": "57776379",
+"TotalVisits": "45930389",
+"VisitsPerPerson": "5",
+"MalePercentage": "57.65",
+"FemalePercentage": "42.35",
+"AgeBreakPercentage": {
+"Age18_24": "19.95",
+"Age25_34": "19.43",
+"Age35_44": "25.54",
+"Age45_54": "14.51",
+"Age55_More": "20.57"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "8.5",
+"Income15000_24999": "14.5",
+"Income25000_34999": "7.56",
+"Income35000_49999": "12.55",
+"Income50000_74999": "16.67",
+"Income75000_99999": "11.91",
+"Income100000_124999": "19.39",
+"Income125000_149999": "5.26",
+"Income150000_199999": "2.95",
+"Income200000_249999": "0.71",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "70.88",
+"Black_OR_African_American": "18.42",
+"Asian_OR_Pacific_Islander": "5.7",
+"NativeAmerican_OR_AlaskanNative": "0.15",
+"MixedRacial": "2.54",
+"OtherRace": "2.32",
+"Hispanic": "20.35",
+"NotHispanic": "79.65"
+}
+},
+{
+"AppName": "Amazon AppStore",
+"UniqueAudience": "8858586",
+"ActiveReach": "11.03",
+"TotalDurationMin": "114315232",
+"TotalVisits": "116266351",
+"VisitsPerPerson": "13",
+"MalePercentage": "67.73",
+"FemalePercentage": "32.27",
+"AgeBreakPercentage": {
+"Age18_24": "7.91",
+"Age25_34": "23.25",
+"Age35_44": "21.94",
+"Age45_54": "22.8",
+"Age55_More": "24.1"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "3.44",
+"Income15000_24999": "4.1",
+"Income25000_34999": "19.42",
+"Income35000_49999": "25.29",
+"Income50000_74999": "25.54",
+"Income75000_99999": "15.87",
+"Income100000_124999": "2.78",
+"Income125000_149999": "1.56",
+"Income150000_199999": "0.17",
+"Income200000_249999": "1.49",
+"IncomeGt_250000": "0.33"
+},
+"RacePercentage": {
+"White": "72.59",
+"Black_OR_African_American": "13.36",
+"Asian_OR_Pacific_Islander": "1.99",
+"NativeAmerican_OR_AlaskanNative": "0.25",
+"MixedRacial": "4.09",
+"OtherRace": "7.73",
+"Hispanic": "20.54",
+"NotHispanic": "79.46"
+}
+},
+{
+"AppName": "Google Currents",
+"UniqueAudience": "1153296",
+"ActiveReach": "1.44",
+"TotalDurationMin": "46503049",
+"TotalVisits": "16853864",
+"VisitsPerPerson": "15",
+"MalePercentage": "89.9",
+"FemalePercentage": "10.1",
+"AgeBreakPercentage": {
+"Age18_24": "26.05",
+"Age25_34": "22.4",
+"Age35_44": "35.73",
+"Age45_54": "5.69",
+"Age55_More": "10.13"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "2.22",
+"Income15000_24999": "0.06",
+"Income25000_34999": "24.26",
+"Income35000_49999": "3.37",
+"Income50000_74999": "10.12",
+"Income75000_99999": "42.09",
+"Income100000_124999": "16.61",
+"Income125000_149999": "1.28",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "60.49",
+"Black_OR_African_American": "6.45",
+"Asian_OR_Pacific_Islander": "6.54",
+"NativeAmerican_OR_AlaskanNative": "8.84",
+"MixedRacial": "15.01",
+"OtherRace": "2.67",
+"Hispanic": "5.99",
+"NotHispanic": "94.01"
+}
+},
+{
+"AppName": "Life360 Family Tracker",
+"UniqueAudience": "1151925",
+"ActiveReach": "1.43",
+"TotalDurationMin": "21064068",
+"TotalVisits": "18501599",
+"VisitsPerPerson": "16",
+"MalePercentage": "33.47",
+"FemalePercentage": "66.53",
+"AgeBreakPercentage": {
+"Age18_24": "15.29",
+"Age25_34": "34.76",
+"Age35_44": "12.81",
+"Age45_54": "36.38",
+"Age55_More": "0.76"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "3.58",
+"Income15000_24999": "3.09",
+"Income25000_34999": "6.08",
+"Income35000_49999": "18.77",
+"Income50000_74999": "26.07",
+"Income75000_99999": "9.49",
+"Income100000_124999": "7.83",
+"Income125000_149999": "25.11",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "64.64",
+"Black_OR_African_American": "25.47",
+"Asian_OR_Pacific_Islander": "1.16",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "1.8",
+"OtherRace": "6.93",
+"Hispanic": "19.51",
+"NotHispanic": "80.49"
+}
+},
+{
+"AppName": "Period Tracker Lite",
+"UniqueAudience": "1145102",
+"ActiveReach": "1.43",
+"TotalDurationMin": "6383587",
+"TotalVisits": "8265250",
+"VisitsPerPerson": "7",
+"MalePercentage": "0",
+"FemalePercentage": "100",
+"AgeBreakPercentage": {
+"Age18_24": "42.44",
+"Age25_34": "39.38",
+"Age35_44": "16.92",
+"Age45_54": "1.26",
+"Age55_More": "0"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "19.43",
+"Income15000_24999": "10.52",
+"Income25000_34999": "8.5",
+"Income35000_49999": "5.89",
+"Income50000_74999": "24.22",
+"Income75000_99999": "0.73",
+"Income100000_124999": "21.7",
+"Income125000_149999": "0.69",
+"Income150000_199999": "8.33",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "80.34",
+"Black_OR_African_American": "14.59",
+"Asian_OR_Pacific_Islander": "0",
+"NativeAmerican_OR_AlaskanNative": "3.94",
+"MixedRacial": "0.16",
+"OtherRace": "0.98",
+"Hispanic": "23.19",
+"NotHispanic": "76.81"
+}
+},
+{
+"AppName": "ÂµTorrent Beta - Torrent App",
+"UniqueAudience": "1142536",
+"ActiveReach": "1.42",
+"TotalDurationMin": "16904213",
+"TotalVisits": "26430143",
+"VisitsPerPerson": "23",
+"MalePercentage": "74.25",
+"FemalePercentage": "25.75",
+"AgeBreakPercentage": {
+"Age18_24": "12.2",
+"Age25_34": "36.68",
+"Age35_44": "20.17",
+"Age45_54": "28.53",
+"Age55_More": "2.42"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "32.77",
+"Income15000_24999": "7.96",
+"Income25000_34999": "17.17",
+"Income35000_49999": "6.63",
+"Income50000_74999": "6.74",
+"Income75000_99999": "25.54",
+"Income100000_124999": "0.29",
+"Income125000_149999": "2.9",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "63.5",
+"Black_OR_African_American": "28.34",
+"Asian_OR_Pacific_Islander": "7.72",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0.07",
+"OtherRace": "0.35",
+"Hispanic": "0.86",
+"NotHispanic": "99.14"
+}
+},
+{
+"AppName": "NFL.com Fantasy Football",
+"UniqueAudience": "1138959",
+"ActiveReach": "1.42",
+"TotalDurationMin": "85259063",
+"TotalVisits": "62678930",
+"VisitsPerPerson": "55",
+"MalePercentage": "90.42",
+"FemalePercentage": "9.58",
+"AgeBreakPercentage": {
+"Age18_24": "0.83",
+"Age25_34": "29.63",
+"Age35_44": "59.06",
+"Age45_54": "5.42",
+"Age55_More": "5.05"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "1.55",
+"Income15000_24999": "4.8",
+"Income25000_34999": "6.47",
+"Income35000_49999": "4.5",
+"Income50000_74999": "19.75",
+"Income75000_99999": "52.93",
+"Income100000_124999": "5.78",
+"Income125000_149999": "4.22",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "88.27",
+"Black_OR_African_American": "6.55",
+"Asian_OR_Pacific_Islander": "4.62",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0.56",
+"OtherRace": "0",
+"Hispanic": "63.64",
+"NotHispanic": "36.36"
+}
+},
+{
+"AppName": "Advanced Mobile Care",
+"UniqueAudience": "1138418",
+"ActiveReach": "1.42",
+"TotalDurationMin": "18647031",
+"TotalVisits": "23307067",
+"VisitsPerPerson": "20",
+"MalePercentage": "73.74",
+"FemalePercentage": "26.26",
+"AgeBreakPercentage": {
+"Age18_24": "3.2",
+"Age25_34": "21.2",
+"Age35_44": "14.94",
+"Age45_54": "11.99",
+"Age55_More": "48.67"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "18.66",
+"Income15000_24999": "7.4",
+"Income25000_34999": "3.63",
+"Income35000_49999": "6.95",
+"Income50000_74999": "23.05",
+"Income75000_99999": "13.21",
+"Income100000_124999": "5.35",
+"Income125000_149999": "0",
+"Income150000_199999": "11.14",
+"Income200000_249999": "0",
+"IncomeGt_250000": "10.63"
+},
+"RacePercentage": {
+"White": "66.56",
+"Black_OR_African_American": "9.47",
+"Asian_OR_Pacific_Islander": "0",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "13.34",
+"OtherRace": "10.63",
+"Hispanic": "25.25",
+"NotHispanic": "74.75"
+}
+},
+{
+"AppName": "HBO GO",
+"UniqueAudience": "1137174",
+"ActiveReach": "1.42",
+"TotalDurationMin": "17625591",
+"TotalVisits": "5597750",
+"VisitsPerPerson": "5",
+"MalePercentage": "65.14",
+"FemalePercentage": "34.86",
+"AgeBreakPercentage": {
+"Age18_24": "10.7",
+"Age25_34": "43.59",
+"Age35_44": "27.91",
+"Age45_54": "7.68",
+"Age55_More": "10.12"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "0.28",
+"Income15000_24999": "8.02",
+"Income25000_34999": "6.25",
+"Income35000_49999": "20.68",
+"Income50000_74999": "21.36",
+"Income75000_99999": "4.52",
+"Income100000_124999": "15.78",
+"Income125000_149999": "16.75",
+"Income150000_199999": "6.36",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "75.18",
+"Black_OR_African_American": "17.18",
+"Asian_OR_Pacific_Islander": "0",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "5.92",
+"OtherRace": "1.73",
+"Hispanic": "20.27",
+"NotHispanic": "79.73"
+}
+},
+{
+"AppName": "MATERIAL (BETA)",
+"UniqueAudience": "1134059",
+"ActiveReach": "1.41",
+"TotalDurationMin": "2046107",
+"TotalVisits": "2203179",
+"VisitsPerPerson": "2",
+"MalePercentage": "66.17",
+"FemalePercentage": "33.83",
+"AgeBreakPercentage": {
+"Age18_24": "6.72",
+"Age25_34": "36.85",
+"Age35_44": "23.05",
+"Age45_54": "18.1",
+"Age55_More": "15.28"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "5.64",
+"Income15000_24999": "15.32",
+"Income25000_34999": "12.8",
+"Income35000_49999": "27.36",
+"Income50000_74999": "16.23",
+"Income75000_99999": "17.34",
+"Income100000_124999": "5.31",
+"Income125000_149999": "0",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "51.89",
+"Black_OR_African_American": "34.2",
+"Asian_OR_Pacific_Islander": "6.88",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "2.99",
+"OtherRace": "4.04",
+"Hispanic": "8.67",
+"NotHispanic": "91.33"
+}
+},
+{
+"AppName": "BBM",
+"UniqueAudience": "1130302",
+"ActiveReach": "1.41",
+"TotalDurationMin": "117075610",
+"TotalVisits": "89189792",
+"VisitsPerPerson": "79",
+"MalePercentage": "20.96",
+"FemalePercentage": "79.04",
+"AgeBreakPercentage": {
+"Age18_24": "9.43",
+"Age25_34": "74.13",
+"Age35_44": "7",
+"Age45_54": "9.43",
+"Age55_More": "0.01"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "1.66",
+"Income15000_24999": "1.64",
+"Income25000_34999": "0.12",
+"Income35000_49999": "9.03",
+"Income50000_74999": "69.7",
+"Income75000_99999": "4.41",
+"Income100000_124999": "0.23",
+"Income125000_149999": "12.23",
+"Income150000_199999": "0",
+"Income200000_249999": "0.97",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "6.7",
+"Black_OR_African_American": "87.97",
+"Asian_OR_Pacific_Islander": "0.49",
+"NativeAmerican_OR_AlaskanNative": "0.02",
+"MixedRacial": "0.01",
+"OtherRace": "4.81",
+"Hispanic": "4.81",
+"NotHispanic": "95.19"
+}
+},
+{
+"AppName": "OpenTable",
+"UniqueAudience": "1127809",
+"ActiveReach": "1.4",
+"TotalDurationMin": "4737965",
+"TotalVisits": "3574970",
+"VisitsPerPerson": "3",
+"MalePercentage": "62.11",
+"FemalePercentage": "37.89",
+"AgeBreakPercentage": {
+"Age18_24": "0.19",
+"Age25_34": "26.93",
+"Age35_44": "11.72",
+"Age45_54": "34.55",
+"Age55_More": "26.61"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "0.56",
+"Income15000_24999": "2.71",
+"Income25000_34999": "23.01",
+"Income35000_49999": "2.07",
+"Income50000_74999": "30.47",
+"Income75000_99999": "5.91",
+"Income100000_124999": "19.81",
+"Income125000_149999": "10.59",
+"Income150000_199999": "4.87",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "71.1",
+"Black_OR_African_American": "21.58",
+"Asian_OR_Pacific_Islander": "4.37",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "2.95",
+"OtherRace": "0",
+"Hispanic": "18.58",
+"NotHispanic": "81.42"
+}
+},
+{
+"AppName": "Chrome Beta",
+"UniqueAudience": "1126662",
+"ActiveReach": "1.4",
+"TotalDurationMin": "343268344",
+"TotalVisits": "195014469",
+"VisitsPerPerson": "173",
+"MalePercentage": "81.9",
+"FemalePercentage": "18.1",
+"AgeBreakPercentage": {
+"Age18_24": "29.43",
+"Age25_34": "27.08",
+"Age35_44": "19.42",
+"Age45_54": "11.35",
+"Age55_More": "12.72"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "11.04",
+"Income15000_24999": "1.57",
+"Income25000_34999": "8.07",
+"Income35000_49999": "3.78",
+"Income50000_74999": "9.43",
+"Income75000_99999": "48.94",
+"Income100000_124999": "0.39",
+"Income125000_149999": "14.72",
+"Income150000_199999": "2.06",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "70.59",
+"Black_OR_African_American": "11.51",
+"Asian_OR_Pacific_Islander": "0",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "10.37",
+"OtherRace": "7.53",
+"Hispanic": "15.39",
+"NotHispanic": "84.61"
+}
+},
+{
+"AppName": "DISH Anywhere",
+"UniqueAudience": "1122391",
+"ActiveReach": "1.4",
+"TotalDurationMin": "17850128",
+"TotalVisits": "5696019",
+"VisitsPerPerson": "5",
+"MalePercentage": "83.17",
+"FemalePercentage": "16.83",
+"AgeBreakPercentage": {
+"Age18_24": "0",
+"Age25_34": "9.41",
+"Age35_44": "24.63",
+"Age45_54": "37.38",
+"Age55_More": "28.58"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "1.45",
+"Income15000_24999": "5.64",
+"Income25000_34999": "5.78",
+"Income35000_49999": "27.8",
+"Income50000_74999": "9.28",
+"Income75000_99999": "7.29",
+"Income100000_124999": "0",
+"Income125000_149999": "38.9",
+"Income150000_199999": "3.72",
+"Income200000_249999": "0.15",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "73.84",
+"Black_OR_African_American": "22.03",
+"Asian_OR_Pacific_Islander": "0.52",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0.15",
+"OtherRace": "3.47",
+"Hispanic": "9.07",
+"NotHispanic": "90.93"
+}
+},
+{
+"AppName": "T-Mobile TV with Mobile HD",
+"UniqueAudience": "1121367",
+"ActiveReach": "1.4",
+"TotalDurationMin": "5453100",
+"TotalVisits": "2521919",
+"VisitsPerPerson": "2",
+"MalePercentage": "65.41",
+"FemalePercentage": "34.59",
+"AgeBreakPercentage": {
+"Age18_24": "6.17",
+"Age25_34": "17.19",
+"Age35_44": "45.01",
+"Age45_54": "17.55",
+"Age55_More": "14.09"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "12.36",
+"Income15000_24999": "13.9",
+"Income25000_34999": "5.4",
+"Income35000_49999": "4.19",
+"Income50000_74999": "14.55",
+"Income75000_99999": "0.67",
+"Income100000_124999": "48.56",
+"Income125000_149999": "0.18",
+"Income150000_199999": "0.04",
+"Income200000_249999": "0.14",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "8.61",
+"Black_OR_African_American": "79.11",
+"Asian_OR_Pacific_Islander": "0.29",
+"NativeAmerican_OR_AlaskanNative": "0.67",
+"MixedRacial": "9.47",
+"OtherRace": "1.86",
+"Hispanic": "14.29",
+"NotHispanic": "85.71"
+}
+},
+{
+"AppName": "JunoWallet GiftCards",
+"UniqueAudience": "1121295",
+"ActiveReach": "1.4",
+"TotalDurationMin": "98002370",
+"TotalVisits": "33188145",
+"VisitsPerPerson": "30",
+"MalePercentage": "92.99",
+"FemalePercentage": "7.01",
+"AgeBreakPercentage": {
+"Age18_24": "4.2",
+"Age25_34": "5.88",
+"Age35_44": "87.64",
+"Age45_54": "2.24",
+"Age55_More": "0.04"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "1.24",
+"Income15000_24999": "2.07",
+"Income25000_34999": "0.28",
+"Income35000_49999": "83.57",
+"Income50000_74999": "11.11",
+"Income75000_99999": "0.25",
+"Income100000_124999": "0.68",
+"Income125000_149999": "0.8",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "95.86",
+"Black_OR_African_American": "3.53",
+"Asian_OR_Pacific_Islander": "0.09",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0.53",
+"OtherRace": "0",
+"Hispanic": "2.42",
+"NotHispanic": "97.58"
+}
+},
+{
+"AppName": "OverDrive Media Console",
+"UniqueAudience": "1121102",
+"ActiveReach": "1.4",
+"TotalDurationMin": "149221153",
+"TotalVisits": "40933679",
+"VisitsPerPerson": "37",
+"MalePercentage": "8.73",
+"FemalePercentage": "91.27",
+"AgeBreakPercentage": {
+"Age18_24": "0.73",
+"Age25_34": "6.34",
+"Age35_44": "19.51",
+"Age45_54": "16.44",
+"Age55_More": "56.98"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "7.24",
+"Income15000_24999": "0.99",
+"Income25000_34999": "9.89",
+"Income35000_49999": "0.42",
+"Income50000_74999": "57.72",
+"Income75000_99999": "6.79",
+"Income100000_124999": "9.14",
+"Income125000_149999": "3.47",
+"Income150000_199999": "2.34",
+"Income200000_249999": "0",
+"IncomeGt_250000": "2"
+},
+"RacePercentage": {
+"White": "38.21",
+"Black_OR_African_American": "57.6",
+"Asian_OR_Pacific_Islander": "0.29",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "3.89",
+"OtherRace": "0",
+"Hispanic": "0.18",
+"NotHispanic": "99.82"
+}
+},
+{
+"AppName": "Word Search Puzzle",
+"UniqueAudience": "1117147",
+"ActiveReach": "1.39",
+"TotalDurationMin": "108194858",
+"TotalVisits": "24916923",
+"VisitsPerPerson": "22",
+"MalePercentage": "73.33",
+"FemalePercentage": "26.67",
+"AgeBreakPercentage": {
+"Age18_24": "7",
+"Age25_34": "12.49",
+"Age35_44": "11.78",
+"Age45_54": "6.25",
+"Age55_More": "62.48"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "3.37",
+"Income15000_24999": "3.02",
+"Income25000_34999": "52.98",
+"Income35000_49999": "7.85",
+"Income50000_74999": "13.72",
+"Income75000_99999": "3.17",
+"Income100000_124999": "3.72",
+"Income125000_149999": "1.55",
+"Income150000_199999": "10.62",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "88.9",
+"Black_OR_African_American": "1.03",
+"Asian_OR_Pacific_Islander": "1.06",
+"NativeAmerican_OR_AlaskanNative": "1.01",
+"MixedRacial": "6.5",
+"OtherRace": "1.5",
+"Hispanic": "56.44",
+"NotHispanic": "43.56"
+}
+},
+{
+"AppName": "Jackpot Bingo - Free Casino",
+"UniqueAudience": "1112844",
+"ActiveReach": "1.39",
+"TotalDurationMin": "47842634",
+"TotalVisits": "15783448",
+"VisitsPerPerson": "14",
+"MalePercentage": "32.1",
+"FemalePercentage": "67.9",
+"AgeBreakPercentage": {
+"Age18_24": "4.42",
+"Age25_34": "14.15",
+"Age35_44": "20.94",
+"Age45_54": "7.42",
+"Age55_More": "53.07"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "11.28",
+"Income15000_24999": "20.45",
+"Income25000_34999": "8.87",
+"Income35000_49999": "10.61",
+"Income50000_74999": "23.2",
+"Income75000_99999": "18.12",
+"Income100000_124999": "7.03",
+"Income125000_149999": "0.43",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "51.74",
+"Black_OR_African_American": "43.18",
+"Asian_OR_Pacific_Islander": "0",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "1",
+"OtherRace": "4.09",
+"Hispanic": "4.18",
+"NotHispanic": "95.82"
+}
+},
+{
+"AppName": "Daily Bible",
+"UniqueAudience": "1111515",
+"ActiveReach": "1.38",
+"TotalDurationMin": "14768843",
+"TotalVisits": "20847127",
+"VisitsPerPerson": "19",
+"MalePercentage": "20.71",
+"FemalePercentage": "79.29",
+"AgeBreakPercentage": {
+"Age18_24": "1.36",
+"Age25_34": "24.41",
+"Age35_44": "6.81",
+"Age45_54": "13.74",
+"Age55_More": "53.68"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "17.61",
+"Income15000_24999": "6.82",
+"Income25000_34999": "7.25",
+"Income35000_49999": "4.16",
+"Income50000_74999": "27.26",
+"Income75000_99999": "2.72",
+"Income100000_124999": "26.86",
+"Income125000_149999": "7.33",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "62.07",
+"Black_OR_African_American": "19.85",
+"Asian_OR_Pacific_Islander": "1.3",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "15.67",
+"OtherRace": "1.11",
+"Hispanic": "0.98",
+"NotHispanic": "99.02"
+}
+},
+{
+"AppName": "WebMD",
+"UniqueAudience": "1104455",
+"ActiveReach": "1.38",
+"TotalDurationMin": "6732267",
+"TotalVisits": "2096880",
+"VisitsPerPerson": "2",
+"MalePercentage": "30.67",
+"FemalePercentage": "69.33",
+"AgeBreakPercentage": {
+"Age18_24": "21.11",
+"Age25_34": "24.86",
+"Age35_44": "31.03",
+"Age45_54": "15.66",
+"Age55_More": "7.35"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "10.82",
+"Income15000_24999": "12.29",
+"Income25000_34999": "11.33",
+"Income35000_49999": "20.39",
+"Income50000_74999": "29.71",
+"Income75000_99999": "12.84",
+"Income100000_124999": "1.75",
+"Income125000_149999": "0.1",
+"Income150000_199999": "0.77",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "58.94",
+"Black_OR_African_American": "18.26",
+"Asian_OR_Pacific_Islander": "1.03",
+"NativeAmerican_OR_AlaskanNative": "0.17",
+"MixedRacial": "11.88",
+"OtherRace": "9.72",
+"Hispanic": "40.67",
+"NotHispanic": "59.33"
+}
+},
+{
+"AppName": "Motorola Services",
+"UniqueAudience": "1100768",
+"ActiveReach": "1.37",
+"TotalDurationMin": "242533",
+"TotalVisits": "1180325",
+"VisitsPerPerson": "1",
+"MalePercentage": "43.14",
+"FemalePercentage": "56.86",
+"AgeBreakPercentage": {
+"Age18_24": "12.4",
+"Age25_34": "8.34",
+"Age35_44": "17.53",
+"Age45_54": "15",
+"Age55_More": "46.73"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "4.03",
+"Income15000_24999": "4.56",
+"Income25000_34999": "6.01",
+"Income35000_49999": "17.07",
+"Income50000_74999": "11.56",
+"Income75000_99999": "25.88",
+"Income100000_124999": "2.35",
+"Income125000_149999": "11.65",
+"Income150000_199999": "7.81",
+"Income200000_249999": "9.07",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "84.23",
+"Black_OR_African_American": "12.27",
+"Asian_OR_Pacific_Islander": "1.01",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0.64",
+"OtherRace": "1.85",
+"Hispanic": "1.85",
+"NotHispanic": "98.15"
+}
+},
+{
+"AppName": "docomo Address Book",
+"UniqueAudience": "1099923",
+"ActiveReach": "1.37",
+"TotalDurationMin": "33681892",
+"TotalVisits": "59885988",
+"VisitsPerPerson": "54",
+"MalePercentage": "33.14",
+"FemalePercentage": "66.86",
+"AgeBreakPercentage": {
+"Age18_24": "62.9",
+"Age25_34": "18.2",
+"Age35_44": "15.97",
+"Age45_54": "2.75",
+"Age55_More": "0.17"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "0.9",
+"Income15000_24999": "1.13",
+"Income25000_34999": "3.72",
+"Income35000_49999": "1.43",
+"Income50000_74999": "69.41",
+"Income75000_99999": "2.76",
+"Income100000_124999": "13.66",
+"Income125000_149999": "6.99",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "96.41",
+"Black_OR_African_American": "0.47",
+"Asian_OR_Pacific_Islander": "2.06",
+"NativeAmerican_OR_AlaskanNative": "0.14",
+"MixedRacial": "0.88",
+"OtherRace": "0.04",
+"Hispanic": "62.72",
+"NotHispanic": "37.28"
+}
+},
+{
+"AppName": "Scanner Radio",
+"UniqueAudience": "1096612",
+"ActiveReach": "1.37",
+"TotalDurationMin": "10089741",
+"TotalVisits": "6993669",
+"VisitsPerPerson": "6",
+"MalePercentage": "42.5",
+"FemalePercentage": "57.5",
+"AgeBreakPercentage": {
+"Age18_24": "0",
+"Age25_34": "26.79",
+"Age35_44": "33.53",
+"Age45_54": "19.08",
+"Age55_More": "20.61"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "34.62",
+"Income15000_24999": "11.33",
+"Income25000_34999": "3.73",
+"Income35000_49999": "8.74",
+"Income50000_74999": "32.24",
+"Income75000_99999": "9.23",
+"Income100000_124999": "0",
+"Income125000_149999": "0",
+"Income150000_199999": "0",
+"Income200000_249999": "0.11",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "88.93",
+"Black_OR_African_American": "7.29",
+"Asian_OR_Pacific_Islander": "0",
+"NativeAmerican_OR_AlaskanNative": "1.86",
+"MixedRacial": "0",
+"OtherRace": "1.92",
+"Hispanic": "4.75",
+"NotHispanic": "95.25"
+}
+},
+{
+"AppName": "Jewels Star",
+"UniqueAudience": "1095092",
+"ActiveReach": "1.36",
+"TotalDurationMin": "98789217",
+"TotalVisits": "19576249",
+"VisitsPerPerson": "18",
+"MalePercentage": "81.11",
+"FemalePercentage": "18.89",
+"AgeBreakPercentage": {
+"Age18_24": "1.2",
+"Age25_34": "22.54",
+"Age35_44": "0.44",
+"Age45_54": "54.78",
+"Age55_More": "21.04"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "56.08",
+"Income15000_24999": "0.15",
+"Income25000_34999": "1.47",
+"Income35000_49999": "21.73",
+"Income50000_74999": "2.44",
+"Income75000_99999": "5.45",
+"Income100000_124999": "10.42",
+"Income125000_149999": "0.08",
+"Income150000_199999": "2.18",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "40.98",
+"Black_OR_African_American": "1.28",
+"Asian_OR_Pacific_Islander": "0",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "6.48",
+"OtherRace": "51.26",
+"Hispanic": "68.29",
+"NotHispanic": "31.71"
+}
+},
+{
+"AppName": "Scramble With Friends Free",
+"UniqueAudience": "1089292",
+"ActiveReach": "1.36",
+"TotalDurationMin": "101975611",
+"TotalVisits": "26720063",
+"VisitsPerPerson": "25",
+"MalePercentage": "41.27",
+"FemalePercentage": "58.73",
+"AgeBreakPercentage": {
+"Age18_24": "2.53",
+"Age25_34": "17.46",
+"Age35_44": "35.07",
+"Age45_54": "14.88",
+"Age55_More": "30.06"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "8.56",
+"Income15000_24999": "14.01",
+"Income25000_34999": "4.33",
+"Income35000_49999": "9.91",
+"Income50000_74999": "32.61",
+"Income75000_99999": "12.68",
+"Income100000_124999": "10.14",
+"Income125000_149999": "5.09",
+"Income150000_199999": "2.67",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "55.46",
+"Black_OR_African_American": "14.1",
+"Asian_OR_Pacific_Islander": "23.82",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "6.61",
+"OtherRace": "0",
+"Hispanic": "0.17",
+"NotHispanic": "99.83"
+}
+},
+{
+"AppName": "LinkedIn Pulse",
+"UniqueAudience": "1084894",
+"ActiveReach": "1.35",
+"TotalDurationMin": "87245439",
+"TotalVisits": "28794314",
+"VisitsPerPerson": "27",
+"MalePercentage": "90.32",
+"FemalePercentage": "9.68",
+"AgeBreakPercentage": {
+"Age18_24": "17.63",
+"Age25_34": "36.28",
+"Age35_44": "20.91",
+"Age45_54": "14.94",
+"Age55_More": "10.25"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "6.8",
+"Income15000_24999": "8.32",
+"Income25000_34999": "31.43",
+"Income35000_49999": "5.09",
+"Income50000_74999": "20.06",
+"Income75000_99999": "3.42",
+"Income100000_124999": "15.41",
+"Income125000_149999": "6.39",
+"Income150000_199999": "0",
+"Income200000_249999": "3.1",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "57.8",
+"Black_OR_African_American": "12.38",
+"Asian_OR_Pacific_Islander": "5.32",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0",
+"OtherRace": "24.5",
+"Hispanic": "24.41",
+"NotHispanic": "75.59"
+}
+},
+{
+"AppName": "cPRO craigslist",
+"UniqueAudience": "1084307",
+"ActiveReach": "1.35",
+"TotalDurationMin": "70451562",
+"TotalVisits": "32103070",
+"VisitsPerPerson": "30",
+"MalePercentage": "40.56",
+"FemalePercentage": "59.44",
+"AgeBreakPercentage": {
+"Age18_24": "10.56",
+"Age25_34": "17.61",
+"Age35_44": "52.83",
+"Age45_54": "7.83",
+"Age55_More": "11.17"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "8.52",
+"Income15000_24999": "6.38",
+"Income25000_34999": "4.37",
+"Income35000_49999": "23.08",
+"Income50000_74999": "21.65",
+"Income75000_99999": "7.57",
+"Income100000_124999": "0",
+"Income125000_149999": "0.16",
+"Income150000_199999": "28.29",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "92.56",
+"Black_OR_African_American": "1.48",
+"Asian_OR_Pacific_Islander": "5.93",
+"NativeAmerican_OR_AlaskanNative": "0.01",
+"MixedRacial": "0.02",
+"OtherRace": "0",
+"Hispanic": "21.56",
+"NotHispanic": "78.44"
+}
+},
+{
+"AppName": "Shazam Encore",
+"UniqueAudience": "1082923",
+"ActiveReach": "1.35",
+"TotalDurationMin": "8481085",
+"TotalVisits": "6674681",
+"VisitsPerPerson": "6",
+"MalePercentage": "41.04",
+"FemalePercentage": "58.96",
+"AgeBreakPercentage": {
+"Age18_24": "13.21",
+"Age25_34": "17.8",
+"Age35_44": "14.83",
+"Age45_54": "28.43",
+"Age55_More": "25.73"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "4.04",
+"Income15000_24999": "12.95",
+"Income25000_34999": "28",
+"Income35000_49999": "11.29",
+"Income50000_74999": "28.72",
+"Income75000_99999": "12.7",
+"Income100000_124999": "0.95",
+"Income125000_149999": "0",
+"Income150000_199999": "0",
+"Income200000_249999": "1.34",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "76.22",
+"Black_OR_African_American": "11.21",
+"Asian_OR_Pacific_Islander": "6.35",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "4",
+"OtherRace": "2.22",
+"Hispanic": "32.87",
+"NotHispanic": "67.13"
+}
+},
+{
+"AppName": "4 Pics 1 Word by Lotum",
+"UniqueAudience": "1079555",
+"ActiveReach": "1.34",
+"TotalDurationMin": "16569052",
+"TotalVisits": "6974469",
+"VisitsPerPerson": "6",
+"MalePercentage": "39.55",
+"FemalePercentage": "60.45",
+"AgeBreakPercentage": {
+"Age18_24": "13.78",
+"Age25_34": "13.14",
+"Age35_44": "40.24",
+"Age45_54": "27.23",
+"Age55_More": "5.6"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "34.91",
+"Income15000_24999": "15.77",
+"Income25000_34999": "3.44",
+"Income35000_49999": "8.43",
+"Income50000_74999": "12.11",
+"Income75000_99999": "8.35",
+"Income100000_124999": "12.56",
+"Income125000_149999": "0.62",
+"Income150000_199999": "3.8",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "81.54",
+"Black_OR_African_American": "13.47",
+"Asian_OR_Pacific_Islander": "3.05",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "1.94",
+"OtherRace": "0",
+"Hispanic": "7.77",
+"NotHispanic": "92.23"
+}
+},
+{
+"AppName": "Slots Deluxe - Slot Machines",
+"UniqueAudience": "1076872",
+"ActiveReach": "1.34",
+"TotalDurationMin": "51665004",
+"TotalVisits": "16594394",
+"VisitsPerPerson": "15",
+"MalePercentage": "16.95",
+"FemalePercentage": "83.05",
+"AgeBreakPercentage": {
+"Age18_24": "2.64",
+"Age25_34": "10.51",
+"Age35_44": "7.03",
+"Age45_54": "66.94",
+"Age55_More": "12.88"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "11.11",
+"Income15000_24999": "3.38",
+"Income25000_34999": "57.33",
+"Income35000_49999": "12.1",
+"Income50000_74999": "2.72",
+"Income75000_99999": "13.33",
+"Income100000_124999": "0.01",
+"Income125000_149999": "0.02",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "92.45",
+"Black_OR_African_American": "4.2",
+"Asian_OR_Pacific_Islander": "0.22",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0",
+"OtherRace": "3.12",
+"Hispanic": "3.49",
+"NotHispanic": "96.51"
+}
+},
+{
+"AppName": "UPS Mobile",
+"UniqueAudience": "1074315",
+"ActiveReach": "1.34",
+"TotalDurationMin": "18722615",
+"TotalVisits": "12686604",
+"VisitsPerPerson": "12",
+"MalePercentage": "43.15",
+"FemalePercentage": "56.85",
+"AgeBreakPercentage": {
+"Age18_24": "4.39",
+"Age25_34": "26.51",
+"Age35_44": "15.87",
+"Age45_54": "49.85",
+"Age55_More": "3.38"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "0.82",
+"Income15000_24999": "0.79",
+"Income25000_34999": "11.73",
+"Income35000_49999": "4.21",
+"Income50000_74999": "27.08",
+"Income75000_99999": "1.48",
+"Income100000_124999": "0",
+"Income125000_149999": "2.67",
+"Income150000_199999": "51.23",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "24.23",
+"Black_OR_African_American": "55.81",
+"Asian_OR_Pacific_Islander": "0.15",
+"NativeAmerican_OR_AlaskanNative": "0.77",
+"MixedRacial": "0",
+"OtherRace": "19.04",
+"Hispanic": "30.27",
+"NotHispanic": "69.73"
+}
+},
+{
+"AppName": "Samsung Media Hub",
+"UniqueAudience": "1068879",
+"ActiveReach": "1.33",
+"TotalDurationMin": "1834968",
+"TotalVisits": "6445312",
+"VisitsPerPerson": "6",
+"MalePercentage": "66.83",
+"FemalePercentage": "33.17",
+"AgeBreakPercentage": {
+"Age18_24": "15.65",
+"Age25_34": "24.39",
+"Age35_44": "45.67",
+"Age45_54": "12.26",
+"Age55_More": "2.02"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "10.78",
+"Income15000_24999": "15.8",
+"Income25000_34999": "31.97",
+"Income35000_49999": "14.42",
+"Income50000_74999": "18.88",
+"Income75000_99999": "2.65",
+"Income100000_124999": "4.95",
+"Income125000_149999": "0.54",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "42.77",
+"Black_OR_African_American": "36.09",
+"Asian_OR_Pacific_Islander": "5.6",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0.38",
+"OtherRace": "15.16",
+"Hispanic": "18.34",
+"NotHispanic": "81.66"
+}
+},
+{
+"AppName": "TheChive",
+"UniqueAudience": "1065867",
+"ActiveReach": "1.33",
+"TotalDurationMin": "93828532",
+"TotalVisits": "28656009",
+"VisitsPerPerson": "27",
+"MalePercentage": "95.01",
+"FemalePercentage": "4.99",
+"AgeBreakPercentage": {
+"Age18_24": "2.48",
+"Age25_34": "31.03",
+"Age35_44": "28.78",
+"Age45_54": "37.71",
+"Age55_More": "0"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "2.6",
+"Income15000_24999": "2.85",
+"Income25000_34999": "4.58",
+"Income35000_49999": "21.38",
+"Income50000_74999": "23.63",
+"Income75000_99999": "13.18",
+"Income100000_124999": "22.54",
+"Income125000_149999": "2.5",
+"Income150000_199999": "5.57",
+"Income200000_249999": "1.17",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "96.29",
+"Black_OR_African_American": "0.28",
+"Asian_OR_Pacific_Islander": "1.01",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0",
+"OtherRace": "2.43",
+"Hispanic": "33.27",
+"NotHispanic": "66.73"
+}
+},
+{
+"AppName": "OkCupid",
+"UniqueAudience": "1058337",
+"ActiveReach": "1.32",
+"TotalDurationMin": "165874082",
+"TotalVisits": "82310263",
+"VisitsPerPerson": "78",
+"MalePercentage": "77.35",
+"FemalePercentage": "22.65",
+"AgeBreakPercentage": {
+"Age18_24": "24.12",
+"Age25_34": "22.96",
+"Age35_44": "11.15",
+"Age45_54": "40.54",
+"Age55_More": "1.24"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "11.28",
+"Income15000_24999": "2.56",
+"Income25000_34999": "2.41",
+"Income35000_49999": "5.04",
+"Income50000_74999": "27.82",
+"Income75000_99999": "42.38",
+"Income100000_124999": "1.77",
+"Income125000_149999": "4.96",
+"Income150000_199999": "1.79",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "78.25",
+"Black_OR_African_American": "5.57",
+"Asian_OR_Pacific_Islander": "8.61",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "7.57",
+"OtherRace": "0",
+"Hispanic": "39.67",
+"NotHispanic": "60.33"
+}
+},
+{
+"AppName": "Xfinity TV Remote",
+"UniqueAudience": "1055587",
+"ActiveReach": "1.31",
+"TotalDurationMin": "10871069",
+"TotalVisits": "4289947",
+"VisitsPerPerson": "4",
+"MalePercentage": "40.27",
+"FemalePercentage": "59.73",
+"AgeBreakPercentage": {
+"Age18_24": "7.22",
+"Age25_34": "14.99",
+"Age35_44": "15.28",
+"Age45_54": "25.43",
+"Age55_More": "37.08"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "21.57",
+"Income15000_24999": "27.02",
+"Income25000_34999": "17.62",
+"Income35000_49999": "2.05",
+"Income50000_74999": "18.57",
+"Income75000_99999": "11.15",
+"Income100000_124999": "1.94",
+"Income125000_149999": "0.08",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "71.39",
+"Black_OR_African_American": "3.99",
+"Asian_OR_Pacific_Islander": "0.49",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "1.6",
+"OtherRace": "22.53",
+"Hispanic": "33.94",
+"NotHispanic": "66.06"
+}
+},
+{
+"AppName": "vzw htctbolt device showcase",
+"UniqueAudience": "1054700",
+"ActiveReach": "1.31",
+"TotalDurationMin": "520374",
+"TotalVisits": "2188715",
+"VisitsPerPerson": "2",
+"MalePercentage": "50.32",
+"FemalePercentage": "49.68",
+"AgeBreakPercentage": {
+"Age18_24": "1.81",
+"Age25_34": "6.88",
+"Age35_44": "17.16",
+"Age45_54": "26.79",
+"Age55_More": "47.36"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "4.31",
+"Income15000_24999": "7.1",
+"Income25000_34999": "2.57",
+"Income35000_49999": "25.66",
+"Income50000_74999": "30.05",
+"Income75000_99999": "4.09",
+"Income100000_124999": "2.1",
+"Income125000_149999": "0",
+"Income150000_199999": "19.11",
+"Income200000_249999": "4.71",
+"IncomeGt_250000": "0.31"
+},
+"RacePercentage": {
+"White": "84.1",
+"Black_OR_African_American": "4.34",
+"Asian_OR_Pacific_Islander": "0.45",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "11.11",
+"OtherRace": "0",
+"Hispanic": "14.35",
+"NotHispanic": "85.65"
+}
+},
+{
+"AppName": "TMZ",
+"UniqueAudience": "1046938",
+"ActiveReach": "1.3",
+"TotalDurationMin": "58324604",
+"TotalVisits": "30263082",
+"VisitsPerPerson": "29",
+"MalePercentage": "41.26",
+"FemalePercentage": "58.74",
+"AgeBreakPercentage": {
+"Age18_24": "4.02",
+"Age25_34": "59.16",
+"Age35_44": "33.18",
+"Age45_54": "1.9",
+"Age55_More": "1.74"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "3.99",
+"Income15000_24999": "17.63",
+"Income25000_34999": "10.41",
+"Income35000_49999": "14.58",
+"Income50000_74999": "21.11",
+"Income75000_99999": "8.5",
+"Income100000_124999": "8.66",
+"Income125000_149999": "13.55",
+"Income150000_199999": "1.56",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "79.88",
+"Black_OR_African_American": "12.32",
+"Asian_OR_Pacific_Islander": "0",
+"NativeAmerican_OR_AlaskanNative": "2.71",
+"MixedRacial": "4.62",
+"OtherRace": "0.46",
+"Hispanic": "16.74",
+"NotHispanic": "83.26"
+}
+},
+{
+"AppName": "Dumb Ways to Die",
+"UniqueAudience": "1042911",
+"ActiveReach": "1.3",
+"TotalDurationMin": "19258594",
+"TotalVisits": "5727579",
+"VisitsPerPerson": "5",
+"MalePercentage": "26.74",
+"FemalePercentage": "73.26",
+"AgeBreakPercentage": {
+"Age18_24": "56.45",
+"Age25_34": "29.65",
+"Age35_44": "10.13",
+"Age45_54": "3.77",
+"Age55_More": "0"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "6.46",
+"Income15000_24999": "28.9",
+"Income25000_34999": "9.94",
+"Income35000_49999": "11.31",
+"Income50000_74999": "32.54",
+"Income75000_99999": "2.53",
+"Income100000_124999": "2.89",
+"Income125000_149999": "0",
+"Income150000_199999": "5.43",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "39.26",
+"Black_OR_African_American": "37.18",
+"Asian_OR_Pacific_Islander": "4.47",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "14.36",
+"OtherRace": "4.73",
+"Hispanic": "47.43",
+"NotHispanic": "52.57"
+}
+},
+{
+"AppName": "Slot City",
+"UniqueAudience": "1038704",
+"ActiveReach": "1.29",
+"TotalDurationMin": "127292904",
+"TotalVisits": "33786085",
+"VisitsPerPerson": "33",
+"MalePercentage": "45.5",
+"FemalePercentage": "54.5",
+"AgeBreakPercentage": {
+"Age18_24": "1.21",
+"Age25_34": "2.99",
+"Age35_44": "14.56",
+"Age45_54": "37.65",
+"Age55_More": "43.59"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "5.87",
+"Income15000_24999": "7.26",
+"Income25000_34999": "7.87",
+"Income35000_49999": "29.13",
+"Income50000_74999": "28.27",
+"Income75000_99999": "21.61",
+"Income100000_124999": "0",
+"Income125000_149999": "0",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "58.79",
+"Black_OR_African_American": "36.7",
+"Asian_OR_Pacific_Islander": "0.47",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "1.28",
+"OtherRace": "2.76",
+"Hispanic": "6",
+"NotHispanic": "94"
+}
+},
+{
+"AppName": "RunKeeper - GPS Track Running Walking Cycling",
+"UniqueAudience": "1037082",
+"ActiveReach": "1.29",
+"TotalDurationMin": "32425303",
+"TotalVisits": "14947648",
+"VisitsPerPerson": "14",
+"MalePercentage": "12.83",
+"FemalePercentage": "87.17",
+"AgeBreakPercentage": {
+"Age18_24": "7.07",
+"Age25_34": "32.5",
+"Age35_44": "53.32",
+"Age45_54": "1.35",
+"Age55_More": "5.75"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "3.93",
+"Income15000_24999": "8.08",
+"Income25000_34999": "2.81",
+"Income35000_49999": "47.52",
+"Income50000_74999": "20.85",
+"Income75000_99999": "5.19",
+"Income100000_124999": "5.81",
+"Income125000_149999": "0",
+"Income150000_199999": "5.79",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "42.61",
+"Black_OR_African_American": "8.76",
+"Asian_OR_Pacific_Islander": "46.85",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0",
+"OtherRace": "1.78",
+"Hispanic": "69.83",
+"NotHispanic": "30.17"
+}
+},
+{
+"AppName": "Flow Free",
+"UniqueAudience": "1036101",
+"ActiveReach": "1.29",
+"TotalDurationMin": "23372342",
+"TotalVisits": "6052025",
+"VisitsPerPerson": "6",
+"MalePercentage": "32.27",
+"FemalePercentage": "67.73",
+"AgeBreakPercentage": {
+"Age18_24": "8.08",
+"Age25_34": "25.51",
+"Age35_44": "4.15",
+"Age45_54": "34.33",
+"Age55_More": "27.93"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "13.13",
+"Income15000_24999": "5.28",
+"Income25000_34999": "17.96",
+"Income35000_49999": "16.89",
+"Income50000_74999": "12.77",
+"Income75000_99999": "20.59",
+"Income100000_124999": "9.87",
+"Income125000_149999": "0.68",
+"Income150000_199999": "2.83",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "76.6",
+"Black_OR_African_American": "8.37",
+"Asian_OR_Pacific_Islander": "3.19",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "3.17",
+"OtherRace": "8.67",
+"Hispanic": "10.29",
+"NotHispanic": "89.71"
+}
+},
+{
+"AppName": "Slots - Pharaoh's Way",
+"UniqueAudience": "1033884",
+"ActiveReach": "1.29",
+"TotalDurationMin": "157695767",
+"TotalVisits": "42448307",
+"VisitsPerPerson": "41",
+"MalePercentage": "66.7",
+"FemalePercentage": "33.3",
+"AgeBreakPercentage": {
+"Age18_24": "0.29",
+"Age25_34": "5.76",
+"Age35_44": "2.93",
+"Age45_54": "33.22",
+"Age55_More": "57.81"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "29.45",
+"Income15000_24999": "12.72",
+"Income25000_34999": "1.91",
+"Income35000_49999": "26.29",
+"Income50000_74999": "17.18",
+"Income75000_99999": "12.42",
+"Income100000_124999": "0",
+"Income125000_149999": "0.03",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "30.24",
+"Black_OR_African_American": "37.49",
+"Asian_OR_Pacific_Islander": "0",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "2.2",
+"OtherRace": "30.08",
+"Hispanic": "31.16",
+"NotHispanic": "68.84"
+}
+},
+{
+"AppName": "U.S. Bank",
+"UniqueAudience": "1032964",
+"ActiveReach": "1.29",
+"TotalDurationMin": "17716572",
+"TotalVisits": "12341499",
+"VisitsPerPerson": "12",
+"MalePercentage": "42.11",
+"FemalePercentage": "57.89",
+"AgeBreakPercentage": {
+"Age18_24": "20.38",
+"Age25_34": "15.96",
+"Age35_44": "26.67",
+"Age45_54": "23.56",
+"Age55_More": "13.43"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "14.03",
+"Income15000_24999": "15.65",
+"Income25000_34999": "13.4",
+"Income35000_49999": "13.61",
+"Income50000_74999": "23.66",
+"Income75000_99999": "4.42",
+"Income100000_124999": "1.12",
+"Income125000_149999": "6.22",
+"Income150000_199999": "7.89",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "82.16",
+"Black_OR_African_American": "7.08",
+"Asian_OR_Pacific_Islander": "0",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "2.01",
+"OtherRace": "8.75",
+"Hispanic": "13.99",
+"NotHispanic": "86.01"
+}
+},
+{
+"AppName": "OfficeSuite Pro (PDF & HD)",
+"UniqueAudience": "1029484",
+"ActiveReach": "1.28",
+"TotalDurationMin": "6506739",
+"TotalVisits": "4419093",
+"VisitsPerPerson": "4",
+"MalePercentage": "88.63",
+"FemalePercentage": "11.37",
+"AgeBreakPercentage": {
+"Age18_24": "45.2",
+"Age25_34": "16.2",
+"Age35_44": "10.81",
+"Age45_54": "5.05",
+"Age55_More": "22.74"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "2.05",
+"Income15000_24999": "2.06",
+"Income25000_34999": "5.3",
+"Income35000_49999": "41.22",
+"Income50000_74999": "13.41",
+"Income75000_99999": "30",
+"Income100000_124999": "0",
+"Income125000_149999": "3.14",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "2.81"
+},
+"RacePercentage": {
+"White": "49.73",
+"Black_OR_African_American": "10.1",
+"Asian_OR_Pacific_Islander": "0.5",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "36.85",
+"OtherRace": "2.81",
+"Hispanic": "39.66",
+"NotHispanic": "60.34"
+}
+},
+{
+"AppName": "Samsung Hub",
+"UniqueAudience": "1025784",
+"ActiveReach": "1.28",
+"TotalDurationMin": "1572635",
+"TotalVisits": "4176132",
+"VisitsPerPerson": "4",
+"MalePercentage": "61.99",
+"FemalePercentage": "38.01",
+"AgeBreakPercentage": {
+"Age18_24": "4.58",
+"Age25_34": "8.61",
+"Age35_44": "15.34",
+"Age45_54": "50.65",
+"Age55_More": "20.82"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "4.24",
+"Income15000_24999": "1.87",
+"Income25000_34999": "25.87",
+"Income35000_49999": "21.89",
+"Income50000_74999": "8.66",
+"Income75000_99999": "12.79",
+"Income100000_124999": "9.75",
+"Income125000_149999": "14.2",
+"Income150000_199999": "0",
+"Income200000_249999": "0.73",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "55.12",
+"Black_OR_African_American": "19.15",
+"Asian_OR_Pacific_Islander": "1.83",
+"NativeAmerican_OR_AlaskanNative": "8.61",
+"MixedRacial": "15.11",
+"OtherRace": "0.18",
+"Hispanic": "12.26",
+"NotHispanic": "87.74"
+}
+},
+{
+"AppName": "My Days - Period & Ovulation",
+"UniqueAudience": "1023171",
+"ActiveReach": "1.27",
+"TotalDurationMin": "5362375",
+"TotalVisits": "6870674",
+"VisitsPerPerson": "7",
+"MalePercentage": "0.72",
+"FemalePercentage": "99.28",
+"AgeBreakPercentage": {
+"Age18_24": "20.59",
+"Age25_34": "33.15",
+"Age35_44": "29.56",
+"Age45_54": "2.39",
+"Age55_More": "14.31"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "10.97",
+"Income15000_24999": "6.09",
+"Income25000_34999": "12.47",
+"Income35000_49999": "7.1",
+"Income50000_74999": "36.17",
+"Income75000_99999": "24.31",
+"Income100000_124999": "2.17",
+"Income125000_149999": "0",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0.7"
+},
+"RacePercentage": {
+"White": "79.16",
+"Black_OR_African_American": "16.41",
+"Asian_OR_Pacific_Islander": "3.76",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0.67",
+"OtherRace": "0",
+"Hispanic": "22.71",
+"NotHispanic": "77.29"
+}
+},
+{
+"AppName": "Temple Run",
+"UniqueAudience": "1020389",
+"ActiveReach": "1.27",
+"TotalDurationMin": "8421078",
+"TotalVisits": "3769944",
+"VisitsPerPerson": "4",
+"MalePercentage": "30.35",
+"FemalePercentage": "69.65",
+"AgeBreakPercentage": {
+"Age18_24": "7.1",
+"Age25_34": "8.29",
+"Age35_44": "28.43",
+"Age45_54": "38.7",
+"Age55_More": "17.47"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "2.32",
+"Income15000_24999": "2.01",
+"Income25000_34999": "8.44",
+"Income35000_49999": "12.93",
+"Income50000_74999": "29.8",
+"Income75000_99999": "0.92",
+"Income100000_124999": "30.33",
+"Income125000_149999": "2.65",
+"Income150000_199999": "4.97",
+"Income200000_249999": "5.63",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "81.61",
+"Black_OR_African_American": "2.54",
+"Asian_OR_Pacific_Islander": "5.49",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "4.54",
+"OtherRace": "5.82",
+"Hispanic": "16.72",
+"NotHispanic": "83.28"
+}
+},
+{
+"AppName": "American Express",
+"UniqueAudience": "1019196",
+"ActiveReach": "1.27",
+"TotalDurationMin": "13401330",
+"TotalVisits": "6125100",
+"VisitsPerPerson": "6",
+"MalePercentage": "85.26",
+"FemalePercentage": "14.74",
+"AgeBreakPercentage": {
+"Age18_24": "62.38",
+"Age25_34": "13.69",
+"Age35_44": "7.1",
+"Age45_54": "6.49",
+"Age55_More": "10.34"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "4.16",
+"Income15000_24999": "1.76",
+"Income25000_34999": "1.58",
+"Income35000_49999": "4.83",
+"Income50000_74999": "68.78",
+"Income75000_99999": "2.82",
+"Income100000_124999": "2.85",
+"Income125000_149999": "1.76",
+"Income150000_199999": "11.46",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "94.65",
+"Black_OR_African_American": "0.84",
+"Asian_OR_Pacific_Islander": "3.21",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0.37",
+"OtherRace": "0.93",
+"Hispanic": "7.25",
+"NotHispanic": "92.75"
+}
+},
+{
+"AppName": "Cozi Family Organizer",
+"UniqueAudience": "1014550",
+"ActiveReach": "1.26",
+"TotalDurationMin": "28957763",
+"TotalVisits": "16719366",
+"VisitsPerPerson": "16",
+"MalePercentage": "12.05",
+"FemalePercentage": "87.95",
+"AgeBreakPercentage": {
+"Age18_24": "3.27",
+"Age25_34": "13.04",
+"Age35_44": "50.19",
+"Age45_54": "24.39",
+"Age55_More": "9.11"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "0.4",
+"Income15000_24999": "10.91",
+"Income25000_34999": "1.11",
+"Income35000_49999": "12.75",
+"Income50000_74999": "32.68",
+"Income75000_99999": "22.69",
+"Income100000_124999": "0.29",
+"Income125000_149999": "1.9",
+"Income150000_199999": "17.26",
+"Income200000_249999": "0.01",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "69.46",
+"Black_OR_African_American": "6.05",
+"Asian_OR_Pacific_Islander": "2.81",
+"NativeAmerican_OR_AlaskanNative": "1.77",
+"MixedRacial": "19.91",
+"OtherRace": "0",
+"Hispanic": "14.81",
+"NotHispanic": "85.19"
+}
+},
+{
+"AppName": "Angry Birds Rio Free",
+"UniqueAudience": "1004728",
+"ActiveReach": "1.25",
+"TotalDurationMin": "14400471",
+"TotalVisits": "4497032",
+"VisitsPerPerson": "4",
+"MalePercentage": "19",
+"FemalePercentage": "81",
+"AgeBreakPercentage": {
+"Age18_24": "0.11",
+"Age25_34": "12.13",
+"Age35_44": "28.21",
+"Age45_54": "26.7",
+"Age55_More": "32.85"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "13.5",
+"Income15000_24999": "7.96",
+"Income25000_34999": "0.63",
+"Income35000_49999": "30.7",
+"Income50000_74999": "34.45",
+"Income75000_99999": "9.05",
+"Income100000_124999": "0.51",
+"Income125000_149999": "2.46",
+"Income150000_199999": "0.58",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0.16"
+},
+"RacePercentage": {
+"White": "72.72",
+"Black_OR_African_American": "15.32",
+"Asian_OR_Pacific_Islander": "0.24",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0.14",
+"OtherRace": "11.58",
+"Hispanic": "12.48",
+"NotHispanic": "87.52"
+}
+},
+{
+"AppName": "Etsy",
+"UniqueAudience": "1002226",
+"ActiveReach": "1.25",
+"TotalDurationMin": "29423813",
+"TotalVisits": "10485198",
+"VisitsPerPerson": "10",
+"MalePercentage": "49.07",
+"FemalePercentage": "50.93",
+"AgeBreakPercentage": {
+"Age18_24": "11.79",
+"Age25_34": "32.55",
+"Age35_44": "49.66",
+"Age45_54": "5.45",
+"Age55_More": "0.55"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "0.37",
+"Income15000_24999": "4.67",
+"Income25000_34999": "5.16",
+"Income35000_49999": "16.01",
+"Income50000_74999": "68.73",
+"Income75000_99999": "2.89",
+"Income100000_124999": "0",
+"Income125000_149999": "1.09",
+"Income150000_199999": "0",
+"Income200000_249999": "1.08",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "95.25",
+"Black_OR_African_American": "3.56",
+"Asian_OR_Pacific_Islander": "0",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "1.2",
+"OtherRace": "0",
+"Hispanic": "54.81",
+"NotHispanic": "45.19"
+}
+},
+{
+"AppName": "PlayStation Official App",
+"UniqueAudience": "998066",
+"ActiveReach": "1.24",
+"TotalDurationMin": "9244811",
+"TotalVisits": "7509681",
+"VisitsPerPerson": "8",
+"MalePercentage": "97.45",
+"FemalePercentage": "2.55",
+"AgeBreakPercentage": {
+"Age18_24": "53.95",
+"Age25_34": "32.65",
+"Age35_44": "9.63",
+"Age45_54": "3.77",
+"Age55_More": "0"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "24.7",
+"Income15000_24999": "15.37",
+"Income25000_34999": "3.79",
+"Income35000_49999": "24.32",
+"Income50000_74999": "14.55",
+"Income75000_99999": "10.26",
+"Income100000_124999": "1.3",
+"Income125000_149999": "0",
+"Income150000_199999": "5.71",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "38.51",
+"Black_OR_African_American": "20.47",
+"Asian_OR_Pacific_Islander": "9.24",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "15.68",
+"OtherRace": "16.1",
+"Hispanic": "30.1",
+"NotHispanic": "69.9"
+}
+},
+{
+"AppName": "SportCaster",
+"UniqueAudience": "992984",
+"ActiveReach": "1.24",
+"TotalDurationMin": "48763769",
+"TotalVisits": "28035726",
+"VisitsPerPerson": "28",
+"MalePercentage": "82.03",
+"FemalePercentage": "17.97",
+"AgeBreakPercentage": {
+"Age18_24": "1.79",
+"Age25_34": "9.25",
+"Age35_44": "27.93",
+"Age45_54": "3.47",
+"Age55_More": "57.55"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "2.13",
+"Income15000_24999": "18.09",
+"Income25000_34999": "27.23",
+"Income35000_49999": "8.97",
+"Income50000_74999": "1.88",
+"Income75000_99999": "15.96",
+"Income100000_124999": "5.67",
+"Income125000_149999": "12.67",
+"Income150000_199999": "0",
+"Income200000_249999": "7.41",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "74.61",
+"Black_OR_African_American": "20.25",
+"Asian_OR_Pacific_Islander": "0.8",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0.47",
+"OtherRace": "3.86",
+"Hispanic": "3.86",
+"NotHispanic": "96.14"
+}
+},
+{
+"AppName": "Solitaire by Ken Magic",
+"UniqueAudience": "991699",
+"ActiveReach": "1.24",
+"TotalDurationMin": "387034602",
+"TotalVisits": "143682396",
+"VisitsPerPerson": "145",
+"MalePercentage": "79.61",
+"FemalePercentage": "20.39",
+"AgeBreakPercentage": {
+"Age18_24": "4.68",
+"Age25_34": "3.8",
+"Age35_44": "2.05",
+"Age45_54": "12.36",
+"Age55_More": "77.11"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "11.26",
+"Income15000_24999": "0.63",
+"Income25000_34999": "4.45",
+"Income35000_49999": "0.15",
+"Income50000_74999": "2.97",
+"Income75000_99999": "3.39",
+"Income100000_124999": "68.18",
+"Income125000_149999": "0",
+"Income150000_199999": "8.96",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "99.52",
+"Black_OR_African_American": "0.27",
+"Asian_OR_Pacific_Islander": "0.14",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0.07",
+"OtherRace": "0",
+"Hispanic": "4.74",
+"NotHispanic": "95.26"
+}
+},
+{
+"AppName": "Jo-Ann",
+"UniqueAudience": "990639",
+"ActiveReach": "1.23",
+"TotalDurationMin": "3890620",
+"TotalVisits": "3348599",
+"VisitsPerPerson": "3",
+"MalePercentage": "6.95",
+"FemalePercentage": "93.05",
+"AgeBreakPercentage": {
+"Age18_24": "3.28",
+"Age25_34": "43.63",
+"Age35_44": "12.06",
+"Age45_54": "9.68",
+"Age55_More": "31.36"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "1.01",
+"Income15000_24999": "7.91",
+"Income25000_34999": "11.59",
+"Income35000_49999": "11.62",
+"Income50000_74999": "27.38",
+"Income75000_99999": "10.69",
+"Income100000_124999": "9.8",
+"Income125000_149999": "20",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "99.01",
+"Black_OR_African_American": "0.12",
+"Asian_OR_Pacific_Islander": "0",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0.87",
+"OtherRace": "0",
+"Hispanic": "6.73",
+"NotHispanic": "93.27"
+}
+},
+{
+"AppName": "Merriam-Webster Dictionary",
+"UniqueAudience": "987836",
+"ActiveReach": "1.23",
+"TotalDurationMin": "24163046",
+"TotalVisits": "8401747",
+"VisitsPerPerson": "9",
+"MalePercentage": "28.62",
+"FemalePercentage": "71.38",
+"AgeBreakPercentage": {
+"Age18_24": "8.48",
+"Age25_34": "1.32",
+"Age35_44": "0.36",
+"Age45_54": "62.18",
+"Age55_More": "27.65"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "6.5",
+"Income15000_24999": "4.36",
+"Income25000_34999": "1.11",
+"Income35000_49999": "0.18",
+"Income50000_74999": "23.43",
+"Income75000_99999": "51.13",
+"Income100000_124999": "7.86",
+"Income125000_149999": "5.01",
+"Income150000_199999": "0",
+"Income200000_249999": "0.42",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "73.24",
+"Black_OR_African_American": "20.18",
+"Asian_OR_Pacific_Islander": "0.26",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "6.19",
+"OtherRace": "0.11",
+"Hispanic": "5.9",
+"NotHispanic": "94.1"
+}
+},
+{
+"AppName": "Fidelity Investments",
+"UniqueAudience": "984103",
+"ActiveReach": "1.23",
+"TotalDurationMin": "9916432",
+"TotalVisits": "7274156",
+"VisitsPerPerson": "7",
+"MalePercentage": "95.06",
+"FemalePercentage": "4.94",
+"AgeBreakPercentage": {
+"Age18_24": "58.42",
+"Age25_34": "14.98",
+"Age35_44": "3.35",
+"Age45_54": "11.22",
+"Age55_More": "12.03"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "8.9",
+"Income15000_24999": "0",
+"Income25000_34999": "6.95",
+"Income35000_49999": "11.53",
+"Income50000_74999": "14.5",
+"Income75000_99999": "5.25",
+"Income100000_124999": "1.91",
+"Income125000_149999": "50.96",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "75.56",
+"Black_OR_African_American": "10.46",
+"Asian_OR_Pacific_Islander": "12.99",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0",
+"OtherRace": "0.99",
+"Hispanic": "0.76",
+"NotHispanic": "99.24"
+}
+},
+{
+"AppName": "Ruzzle Free",
+"UniqueAudience": "983457",
+"ActiveReach": "1.23",
+"TotalDurationMin": "62267670",
+"TotalVisits": "18608005",
+"VisitsPerPerson": "19",
+"MalePercentage": "13.58",
+"FemalePercentage": "86.42",
+"AgeBreakPercentage": {
+"Age18_24": "1.16",
+"Age25_34": "19.95",
+"Age35_44": "29.82",
+"Age45_54": "5.61",
+"Age55_More": "43.46"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "5.34",
+"Income15000_24999": "44.29",
+"Income25000_34999": "16.88",
+"Income35000_49999": "12.8",
+"Income50000_74999": "19.53",
+"Income75000_99999": "0.75",
+"Income100000_124999": "0",
+"Income125000_149999": "0",
+"Income150000_199999": "0",
+"Income200000_249999": "0.41",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "36.65",
+"Black_OR_African_American": "63.34",
+"Asian_OR_Pacific_Islander": "0",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0.02",
+"OtherRace": "0",
+"Hispanic": "16.54",
+"NotHispanic": "83.46"
+}
+},
+{
+"AppName": "Smart Voice Recorder",
+"UniqueAudience": "975001",
+"ActiveReach": "1.21",
+"TotalDurationMin": "23602976",
+"TotalVisits": "8799110",
+"VisitsPerPerson": "9",
+"MalePercentage": "75.04",
+"FemalePercentage": "24.96",
+"AgeBreakPercentage": {
+"Age18_24": "13.1",
+"Age25_34": "25.72",
+"Age35_44": "3.16",
+"Age45_54": "14.61",
+"Age55_More": "43.41"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "8.07",
+"Income15000_24999": "0.69",
+"Income25000_34999": "0.9",
+"Income35000_49999": "0.54",
+"Income50000_74999": "21.97",
+"Income75000_99999": "26.87",
+"Income100000_124999": "0.11",
+"Income125000_149999": "4.29",
+"Income150000_199999": "0",
+"Income200000_249999": "34.46",
+"IncomeGt_250000": "2.11"
+},
+"RacePercentage": {
+"White": "58.67",
+"Black_OR_African_American": "37.89",
+"Asian_OR_Pacific_Islander": "0.01",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "2.22",
+"OtherRace": "1.21",
+"Hispanic": "26.33",
+"NotHispanic": "73.67"
+}
+},
+{
+"AppName": "Ingress",
+"UniqueAudience": "971519",
+"ActiveReach": "1.21",
+"TotalDurationMin": "64426972",
+"TotalVisits": "26719267",
+"VisitsPerPerson": "28",
+"MalePercentage": "95.14",
+"FemalePercentage": "4.86",
+"AgeBreakPercentage": {
+"Age18_24": "11.35",
+"Age25_34": "78.14",
+"Age35_44": "10.39",
+"Age45_54": "0.12",
+"Age55_More": "0"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "1.48",
+"Income15000_24999": "15.51",
+"Income25000_34999": "0.1",
+"Income35000_49999": "0.37",
+"Income50000_74999": "8.61",
+"Income75000_99999": "6.16",
+"Income100000_124999": "0.24",
+"Income125000_149999": "3.02",
+"Income150000_199999": "63.87",
+"Income200000_249999": "0.18",
+"IncomeGt_250000": "0.44"
+},
+"RacePercentage": {
+"White": "30.4",
+"Black_OR_African_American": "64.62",
+"Asian_OR_Pacific_Islander": "2.66",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0.18",
+"OtherRace": "2.14",
+"Hispanic": "2.07",
+"NotHispanic": "97.93"
+}
+},
+{
+"AppName": "Megapolis",
+"UniqueAudience": "968991",
+"ActiveReach": "1.21",
+"TotalDurationMin": "335909201",
+"TotalVisits": "77335064",
+"VisitsPerPerson": "80",
+"MalePercentage": "56.08",
+"FemalePercentage": "43.92",
+"AgeBreakPercentage": {
+"Age18_24": "2",
+"Age25_34": "13.47",
+"Age35_44": "70.37",
+"Age45_54": "9.3",
+"Age55_More": "4.86"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "37.66",
+"Income15000_24999": "15.87",
+"Income25000_34999": "1.24",
+"Income35000_49999": "5.47",
+"Income50000_74999": "3.06",
+"Income75000_99999": "2.16",
+"Income100000_124999": "18.31",
+"Income125000_149999": "0",
+"Income150000_199999": "0",
+"Income200000_249999": "16.22",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "49.68",
+"Black_OR_African_American": "10.11",
+"Asian_OR_Pacific_Islander": "4.41",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "28.94",
+"OtherRace": "6.86",
+"Hispanic": "35.8",
+"NotHispanic": "64.2"
+}
+},
+{
+"AppName": "Application Manager",
+"UniqueAudience": "966632",
+"ActiveReach": "1.2",
+"TotalDurationMin": "7939917",
+"TotalVisits": "21020920",
+"VisitsPerPerson": "22",
+"MalePercentage": "33.65",
+"FemalePercentage": "66.35",
+"AgeBreakPercentage": {
+"Age18_24": "36.51",
+"Age25_34": "9.83",
+"Age35_44": "22.79",
+"Age45_54": "29.83",
+"Age55_More": "1.04"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "22.96",
+"Income15000_24999": "5.79",
+"Income25000_34999": "12.39",
+"Income35000_49999": "8.44",
+"Income50000_74999": "50.11",
+"Income75000_99999": "0.3",
+"Income100000_124999": "0",
+"Income125000_149999": "0.01",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "63.03",
+"Black_OR_African_American": "10.49",
+"Asian_OR_Pacific_Islander": "6.7",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0.26",
+"OtherRace": "19.52",
+"Hispanic": "58.12",
+"NotHispanic": "41.88"
+}
+},
+{
+"AppName": "Expedia",
+"UniqueAudience": "966114",
+"ActiveReach": "1.2",
+"TotalDurationMin": "6582884",
+"TotalVisits": "4226486",
+"VisitsPerPerson": "4",
+"MalePercentage": "63.14",
+"FemalePercentage": "36.86",
+"AgeBreakPercentage": {
+"Age18_24": "5.74",
+"Age25_34": "42.02",
+"Age35_44": "20.69",
+"Age45_54": "7.57",
+"Age55_More": "23.97"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "1.22",
+"Income15000_24999": "1.29",
+"Income25000_34999": "11.52",
+"Income35000_49999": "2.91",
+"Income50000_74999": "7.31",
+"Income75000_99999": "54.02",
+"Income100000_124999": "0",
+"Income125000_149999": "4.31",
+"Income150000_199999": "9.52",
+"Income200000_249999": "7.91",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "60.86",
+"Black_OR_African_American": "0.2",
+"Asian_OR_Pacific_Islander": "0.49",
+"NativeAmerican_OR_AlaskanNative": "1.23",
+"MixedRacial": "37.21",
+"OtherRace": "0",
+"Hispanic": "60.01",
+"NotHispanic": "39.99"
+}
+},
+{
+"AppName": "The Home Depot",
+"UniqueAudience": "963358",
+"ActiveReach": "1.2",
+"TotalDurationMin": "7235280",
+"TotalVisits": "3357374",
+"VisitsPerPerson": "3",
+"MalePercentage": "34.86",
+"FemalePercentage": "65.14",
+"AgeBreakPercentage": {
+"Age18_24": "0.2",
+"Age25_34": "18.52",
+"Age35_44": "45.23",
+"Age45_54": "10.78",
+"Age55_More": "25.27"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "0.37",
+"Income15000_24999": "1.44",
+"Income25000_34999": "21.28",
+"Income35000_49999": "18.38",
+"Income50000_74999": "8.89",
+"Income75000_99999": "13.82",
+"Income100000_124999": "2.99",
+"Income125000_149999": "0.46",
+"Income150000_199999": "32.38",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "86.66",
+"Black_OR_African_American": "6.1",
+"Asian_OR_Pacific_Islander": "7.23",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0.01",
+"OtherRace": "0",
+"Hispanic": "0",
+"NotHispanic": "100"
+}
+},
+{
+"AppName": "Verizon FiOS Mobile",
+"UniqueAudience": "962761",
+"ActiveReach": "1.2",
+"TotalDurationMin": "18667880",
+"TotalVisits": "8195401",
+"VisitsPerPerson": "9",
+"MalePercentage": "88.13",
+"FemalePercentage": "11.87",
+"AgeBreakPercentage": {
+"Age18_24": "56.03",
+"Age25_34": "4.61",
+"Age35_44": "3.82",
+"Age45_54": "10.54",
+"Age55_More": "25"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "0.05",
+"Income15000_24999": "0.4",
+"Income25000_34999": "0.57",
+"Income35000_49999": "59.98",
+"Income50000_74999": "4.34",
+"Income75000_99999": "3.97",
+"Income100000_124999": "3.85",
+"Income125000_149999": "7.37",
+"Income150000_199999": "0",
+"Income200000_249999": "19.37",
+"IncomeGt_250000": "0.09"
+},
+"RacePercentage": {
+"White": "21.58",
+"Black_OR_African_American": "21.31",
+"Asian_OR_Pacific_Islander": "0",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "57.02",
+"OtherRace": "0.09",
+"Hispanic": "59.73",
+"NotHispanic": "40.27"
+}
+},
+{
+"AppName": "Huffington Post for Android",
+"UniqueAudience": "962286",
+"ActiveReach": "1.2",
+"TotalDurationMin": "60005820",
+"TotalVisits": "17350468",
+"VisitsPerPerson": "18",
+"MalePercentage": "56.43",
+"FemalePercentage": "43.57",
+"AgeBreakPercentage": {
+"Age18_24": "1.04",
+"Age25_34": "53.04",
+"Age35_44": "18.31",
+"Age45_54": "15.15",
+"Age55_More": "12.45"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "2.05",
+"Income15000_24999": "0.07",
+"Income25000_34999": "9.25",
+"Income35000_49999": "6.98",
+"Income50000_74999": "64.26",
+"Income75000_99999": "12.76",
+"Income100000_124999": "0.27",
+"Income125000_149999": "0",
+"Income150000_199999": "0",
+"Income200000_249999": "4.35",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "69.11",
+"Black_OR_African_American": "13.32",
+"Asian_OR_Pacific_Islander": "0.24",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "2.41",
+"OtherRace": "14.92",
+"Hispanic": "15.16",
+"NotHispanic": "84.84"
+}
+},
+{
+"AppName": "NHL GameCenterâ„¢",
+"UniqueAudience": "962127",
+"ActiveReach": "1.2",
+"TotalDurationMin": "26253770",
+"TotalVisits": "25667150",
+"VisitsPerPerson": "27",
+"MalePercentage": "96.03",
+"FemalePercentage": "3.97",
+"AgeBreakPercentage": {
+"Age18_24": "12.12",
+"Age25_34": "9.3",
+"Age35_44": "23.67",
+"Age45_54": "28.94",
+"Age55_More": "25.98"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "10.7",
+"Income15000_24999": "0",
+"Income25000_34999": "0",
+"Income35000_49999": "26.31",
+"Income50000_74999": "20.01",
+"Income75000_99999": "4.4",
+"Income100000_124999": "3.5",
+"Income125000_149999": "30.95",
+"Income150000_199999": "4.13",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "96.97",
+"Black_OR_African_American": "0",
+"Asian_OR_Pacific_Islander": "0",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0",
+"OtherRace": "3.03",
+"Hispanic": "3.03",
+"NotHispanic": "96.97"
+}
+},
+{
+"AppName": "AT&T U-verse Mobile",
+"UniqueAudience": "960943",
+"ActiveReach": "1.2",
+"TotalDurationMin": "35476401",
+"TotalVisits": "23062483",
+"VisitsPerPerson": "24",
+"MalePercentage": "95",
+"FemalePercentage": "5",
+"AgeBreakPercentage": {
+"Age18_24": "0.3",
+"Age25_34": "4.78",
+"Age35_44": "16.1",
+"Age45_54": "2.45",
+"Age55_More": "76.37"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "4.47",
+"Income15000_24999": "0.19",
+"Income25000_34999": "1.77",
+"Income35000_49999": "13.71",
+"Income50000_74999": "64.52",
+"Income75000_99999": "11.23",
+"Income100000_124999": "0",
+"Income125000_149999": "1.07",
+"Income150000_199999": "1.19",
+"Income200000_249999": "1.86",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "80.41",
+"Black_OR_African_American": "17.93",
+"Asian_OR_Pacific_Islander": "1.27",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0.05",
+"OtherRace": "0.34",
+"Hispanic": "13.75",
+"NotHispanic": "86.25"
+}
+},
+{
+"AppName": "Yahoo Weather",
+"UniqueAudience": "958141",
+"ActiveReach": "1.19",
+"TotalDurationMin": "10361434",
+"TotalVisits": "11988120",
+"VisitsPerPerson": "13",
+"MalePercentage": "29.17",
+"FemalePercentage": "70.83",
+"AgeBreakPercentage": {
+"Age18_24": "21.25",
+"Age25_34": "14.34",
+"Age35_44": "13.39",
+"Age45_54": "11.46",
+"Age55_More": "39.57"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "5.4",
+"Income15000_24999": "7.75",
+"Income25000_34999": "40.96",
+"Income35000_49999": "0.91",
+"Income50000_74999": "8.99",
+"Income75000_99999": "8.6",
+"Income100000_124999": "24.53",
+"Income125000_149999": "0.02",
+"Income150000_199999": "2.85",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "71.87",
+"Black_OR_African_American": "9.27",
+"Asian_OR_Pacific_Islander": "14.11",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0",
+"OtherRace": "4.75",
+"Hispanic": "18.14",
+"NotHispanic": "81.86"
+}
+},
+{
+"AppName": "RadarNow! beta",
+"UniqueAudience": "954787",
+"ActiveReach": "1.19",
+"TotalDurationMin": "4114471",
+"TotalVisits": "5124918",
+"VisitsPerPerson": "5",
+"MalePercentage": "88.45",
+"FemalePercentage": "11.55",
+"AgeBreakPercentage": {
+"Age18_24": "3.7",
+"Age25_34": "11.36",
+"Age35_44": "1.94",
+"Age45_54": "62.35",
+"Age55_More": "20.63"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "0.13",
+"Income15000_24999": "2.51",
+"Income25000_34999": "1.11",
+"Income35000_49999": "8.52",
+"Income50000_74999": "43.9",
+"Income75000_99999": "16.51",
+"Income100000_124999": "26.11",
+"Income125000_149999": "0.27",
+"Income150000_199999": "0.95",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "73.69",
+"Black_OR_African_American": "0.57",
+"Asian_OR_Pacific_Islander": "2.55",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "21.97",
+"OtherRace": "1.21",
+"Hispanic": "12.97",
+"NotHispanic": "87.03"
+}
+},
+{
+"AppName": "Wifi Analyzer",
+"UniqueAudience": "954394",
+"ActiveReach": "1.19",
+"TotalDurationMin": "3135964",
+"TotalVisits": "3325179",
+"VisitsPerPerson": "3",
+"MalePercentage": "99.94",
+"FemalePercentage": "0.06",
+"AgeBreakPercentage": {
+"Age18_24": "3.89",
+"Age25_34": "19.98",
+"Age35_44": "15.3",
+"Age45_54": "15.64",
+"Age55_More": "45.19"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "0",
+"Income15000_24999": "26.77",
+"Income25000_34999": "0.45",
+"Income35000_49999": "20.76",
+"Income50000_74999": "22.45",
+"Income75000_99999": "19.64",
+"Income100000_124999": "0.82",
+"Income125000_149999": "1.25",
+"Income150000_199999": "0",
+"Income200000_249999": "7.86",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "74.6",
+"Black_OR_African_American": "23.32",
+"Asian_OR_Pacific_Islander": "1.23",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0",
+"OtherRace": "0.85",
+"Hispanic": "21.88",
+"NotHispanic": "78.12"
+}
+},
+{
+"AppName": "Sudoku Free By Genina.com",
+"UniqueAudience": "954345",
+"ActiveReach": "1.19",
+"TotalDurationMin": "167187059",
+"TotalVisits": "27806802",
+"VisitsPerPerson": "29",
+"MalePercentage": "51.76",
+"FemalePercentage": "48.24",
+"AgeBreakPercentage": {
+"Age18_24": "5.44",
+"Age25_34": "5.42",
+"Age35_44": "12.72",
+"Age45_54": "38.63",
+"Age55_More": "37.8"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "0.5",
+"Income15000_24999": "3.72",
+"Income25000_34999": "13.56",
+"Income35000_49999": "7.03",
+"Income50000_74999": "19.59",
+"Income75000_99999": "14.32",
+"Income100000_124999": "33.64",
+"Income125000_149999": "0",
+"Income150000_199999": "0.95",
+"Income200000_249999": "6.71",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "92.34",
+"Black_OR_African_American": "0.25",
+"Asian_OR_Pacific_Islander": "0.36",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0",
+"OtherRace": "7.05",
+"Hispanic": "7.41",
+"NotHispanic": "92.59"
+}
+},
+{
+"AppName": "WhitePages",
+"UniqueAudience": "953683",
+"ActiveReach": "1.19",
+"TotalDurationMin": "7707163",
+"TotalVisits": "5448406",
+"VisitsPerPerson": "6",
+"MalePercentage": "28.63",
+"FemalePercentage": "71.37",
+"AgeBreakPercentage": {
+"Age18_24": "0.04",
+"Age25_34": "5.85",
+"Age35_44": "13.09",
+"Age45_54": "35.95",
+"Age55_More": "45.07"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "18.13",
+"Income15000_24999": "7.93",
+"Income25000_34999": "23.58",
+"Income35000_49999": "25.29",
+"Income50000_74999": "14.92",
+"Income75000_99999": "6.16",
+"Income100000_124999": "3.34",
+"Income125000_149999": "0.65",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "84.55",
+"Black_OR_African_American": "6.84",
+"Asian_OR_Pacific_Islander": "6.93",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "1.68",
+"OtherRace": "0",
+"Hispanic": "20.24",
+"NotHispanic": "79.76"
+}
+},
+{
+"AppName": "ooVoo Video Chat",
+"UniqueAudience": "949195",
+"ActiveReach": "1.18",
+"TotalDurationMin": "18940926",
+"TotalVisits": "15492153",
+"VisitsPerPerson": "16",
+"MalePercentage": "49.43",
+"FemalePercentage": "50.57",
+"AgeBreakPercentage": {
+"Age18_24": "14.18",
+"Age25_34": "8.42",
+"Age35_44": "16.81",
+"Age45_54": "60.31",
+"Age55_More": "0.29"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "7.76",
+"Income15000_24999": "43.7",
+"Income25000_34999": "11.9",
+"Income35000_49999": "16.05",
+"Income50000_74999": "6.99",
+"Income75000_99999": "2.14",
+"Income100000_124999": "0.1",
+"Income125000_149999": "11.36",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "57.76",
+"Black_OR_African_American": "35.25",
+"Asian_OR_Pacific_Islander": "0.78",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "3.49",
+"OtherRace": "2.73",
+"Hispanic": "51.41",
+"NotHispanic": "48.59"
+}
+},
+{
+"AppName": "LINE",
+"UniqueAudience": "945499",
+"ActiveReach": "1.18",
+"TotalDurationMin": "208966246",
+"TotalVisits": "164365579",
+"VisitsPerPerson": "174",
+"MalePercentage": "88.33",
+"FemalePercentage": "11.67",
+"AgeBreakPercentage": {
+"Age18_24": "37.35",
+"Age25_34": "30.95",
+"Age35_44": "23.06",
+"Age45_54": "7.15",
+"Age55_More": "1.49"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "10.6",
+"Income15000_24999": "15.68",
+"Income25000_34999": "25.58",
+"Income35000_49999": "1.85",
+"Income50000_74999": "29.53",
+"Income75000_99999": "4.87",
+"Income100000_124999": "10.3",
+"Income125000_149999": "0.7",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0.89"
+},
+"RacePercentage": {
+"White": "68.85",
+"Black_OR_African_American": "3.86",
+"Asian_OR_Pacific_Islander": "20.02",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0.35",
+"OtherRace": "6.92",
+"Hispanic": "10.56",
+"NotHispanic": "89.44"
+}
+},
+{
+"AppName": "Kobo",
+"UniqueAudience": "944787",
+"ActiveReach": "1.18",
+"TotalDurationMin": "11812052",
+"TotalVisits": "4013811",
+"VisitsPerPerson": "4",
+"MalePercentage": "30.88",
+"FemalePercentage": "69.12",
+"AgeBreakPercentage": {
+"Age18_24": "3.57",
+"Age25_34": "10.76",
+"Age35_44": "11.02",
+"Age45_54": "56.68",
+"Age55_More": "17.97"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "0.98",
+"Income15000_24999": "7.16",
+"Income25000_34999": "2.56",
+"Income35000_49999": "4.56",
+"Income50000_74999": "53.73",
+"Income75000_99999": "5.42",
+"Income100000_124999": "6.22",
+"Income125000_149999": "19.37",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "37.45",
+"Black_OR_African_American": "56.26",
+"Asian_OR_Pacific_Islander": "3.04",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "3.26",
+"OtherRace": "0",
+"Hispanic": "3.19",
+"NotHispanic": "96.81"
+}
+},
+{
+"AppName": "Verizon My FiOS",
+"UniqueAudience": "944617",
+"ActiveReach": "1.18",
+"TotalDurationMin": "15660000",
+"TotalVisits": "15333090",
+"VisitsPerPerson": "16",
+"MalePercentage": "9.85",
+"FemalePercentage": "90.15",
+"AgeBreakPercentage": {
+"Age18_24": "0.54",
+"Age25_34": "2.48",
+"Age35_44": "63.5",
+"Age45_54": "28.8",
+"Age55_More": "4.69"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "0.05",
+"Income15000_24999": "0.09",
+"Income25000_34999": "1.3",
+"Income35000_49999": "7.42",
+"Income50000_74999": "6.28",
+"Income75000_99999": "0.04",
+"Income100000_124999": "9.74",
+"Income125000_149999": "75.08",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "86.18",
+"Black_OR_African_American": "13.71",
+"Asian_OR_Pacific_Islander": "0",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0.1",
+"OtherRace": "0",
+"Hispanic": "12.49",
+"NotHispanic": "87.51"
+}
+},
+{
+"AppName": "NQ Mobile Security & Antivirus",
+"UniqueAudience": "944246",
+"ActiveReach": "1.18",
+"TotalDurationMin": "13291234",
+"TotalVisits": "7875938",
+"VisitsPerPerson": "8",
+"MalePercentage": "85.67",
+"FemalePercentage": "14.33",
+"AgeBreakPercentage": {
+"Age18_24": "14.77",
+"Age25_34": "2.41",
+"Age35_44": "7.37",
+"Age45_54": "6.2",
+"Age55_More": "69.24"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "2.88",
+"Income15000_24999": "15.86",
+"Income25000_34999": "0.59",
+"Income35000_49999": "69.53",
+"Income50000_74999": "6.65",
+"Income75000_99999": "4.33",
+"Income100000_124999": "0",
+"Income125000_149999": "0.16",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "11.88",
+"Black_OR_African_American": "80.46",
+"Asian_OR_Pacific_Islander": "2.72",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "0.37",
+"OtherRace": "4.57",
+"Hispanic": "14.82",
+"NotHispanic": "85.18"
+}
+},
+{
+"AppName": "Roku",
+"UniqueAudience": "942201",
+"ActiveReach": "1.17",
+"TotalDurationMin": "40520916",
+"TotalVisits": "26422116",
+"VisitsPerPerson": "28",
+"MalePercentage": "68.71",
+"FemalePercentage": "31.29",
+"AgeBreakPercentage": {
+"Age18_24": "47.06",
+"Age25_34": "11.63",
+"Age35_44": "35.19",
+"Age45_54": "1.36",
+"Age55_More": "4.76"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "0.26",
+"Income15000_24999": "0.93",
+"Income25000_34999": "4.65",
+"Income35000_49999": "10.01",
+"Income50000_74999": "49.46",
+"Income75000_99999": "1.1",
+"Income100000_124999": "0",
+"Income125000_149999": "0",
+"Income150000_199999": "4.49",
+"Income200000_249999": "0.19",
+"IncomeGt_250000": "28.93"
+},
+"RacePercentage": {
+"White": "85.44",
+"Black_OR_African_American": "5.03",
+"Asian_OR_Pacific_Islander": "0.29",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "8.11",
+"OtherRace": "1.12",
+"Hispanic": "25.07",
+"NotHispanic": "74.93"
+}
+},
+{
+"AppName": "Regal Cinemas",
+"UniqueAudience": "942183",
+"ActiveReach": "1.17",
+"TotalDurationMin": "4829529",
+"TotalVisits": "4312766",
+"VisitsPerPerson": "5",
+"MalePercentage": "47.19",
+"FemalePercentage": "52.81",
+"AgeBreakPercentage": {
+"Age18_24": "9.13",
+"Age25_34": "61.96",
+"Age35_44": "7.12",
+"Age45_54": "11.91",
+"Age55_More": "9.87"
+},
+"IncomePercentage_in_Dollar": {
+"IncomeUpt_15000": "8.55",
+"Income15000_24999": "9.28",
+"Income25000_34999": "5.29",
+"Income35000_49999": "15.59",
+"Income50000_74999": "36.29",
+"Income75000_99999": "18.81",
+"Income100000_124999": "5.65",
+"Income125000_149999": "0.54",
+"Income150000_199999": "0",
+"Income200000_249999": "0",
+"IncomeGt_250000": "0"
+},
+"RacePercentage": {
+"White": "68.91",
+"Black_OR_African_American": "25.63",
+"Asian_OR_Pacific_Islander": "1.82",
+"NativeAmerican_OR_AlaskanNative": "0",
+"MixedRacial": "3.64",
+"OtherRace": "0",
+"Hispanic": "27.16",
+"NotHispanic": "72.84"
+}
+}
+]
+},
+"Summary": {
+"PlatformName": "android"
+}
+}
