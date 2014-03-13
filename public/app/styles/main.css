@@ -310,6 +310,7 @@ nav {
 .view-animate-container {
   position:relative;
   height:750px;
+  overflow: scroll;
 }
  
 .view-animate-container > * {
