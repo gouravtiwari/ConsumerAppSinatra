@@ -33,10 +33,14 @@ header {
 .go {
   position: relative;
   top: 120px;
-  width: 580px;
+  width: 650px;
   font-size: 80px;
+  height: 120px;
   color: #fff;
   cursor: pointer;
+  text-align: center;
+  background: rgba(0,0,0,.4);
+  border-radius: 60px;
 }
 
 .cartIcon {
@@ -306,6 +310,7 @@ nav {
 .view-animate-container {
   position:relative;
   height:750px;
+  overflow: scroll;
 }
  
 .view-animate-container > * {
