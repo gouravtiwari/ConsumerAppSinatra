@@ -9,10 +9,9 @@ angular.module('publicApp')
 
   	$scope.search = function(){
   		var platform = $scope.input.platform.toLowerCase(),
-  			parameter_obj = platform  + '?' +
-        	'numberofresults=' + $scope.input.appCount + '&';
+  			parameter_obj = {"numberofresults": $scope.input.appCount};
 
-      Data.get_json('EMM/v1/', parameter_obj).success(function(api_data){
+      Data.get_json('EMM/v1/' + platform, parameter_obj).success(function(api_data){
       //Data.get_local('scripts/jsons/mobile_audience_ios.json').success(function(api_data){
         $scope.AppDetails = api_data.AppResponse.AppDetails;
       });
