@@ -1,1 +1,57 @@
+<div>
 <p>This is the compare view.</p>
+<select ng-model="input.appname" placeholder="Select Platform"
+ 		ng-options="appname for appname in appnames">
+</select>
+<div class='row compare'>
+	<div class='col-md-6'>
+		<ul>
+
+			<li><div class="head">Unique Audience</div> {{maindata.android.UniqueAudience}} <div class="labelIndex"></div></li>
+			<li><div class="head">Active Reach</div> {{maindata.android.ActiveReach}} <div class="labelIndex"></div></li>
+			<li><div class="head">Total Duration Mins</div> {{maindata.android.TotalDurationMin}} <div class="labelIndex"></div></li>
+			<li><div class="head">Total Visits</div> {{maindata.android.TotalVisits}} <div class="labelIndex"></div></li>
+			<li><div class="head">Visits Per Person</div> {{maindata.android.VisitsPerPerson}} <div class="labelIndex"></div></li>
+			<li><div class="head">Male Percentage</div> {{maindata.android.MalePercentage}} <div class="labelIndex"></div></li>
+			<li><div class="head">Female Percentage</div> {{maindata.android.FemalePercentage}} <div class="labelIndex"></div></li>
+			<br>
+			
+			<h2>Age group</h2>
+			
+			<li ng-repeat='(k, v) in maindata.android.AgeBreakPercentage  track by $index'><div class="head">{{k}}</div> {{v}} <div class="labelIndex"></div></li>
+			<br>
+
+			<h2>Income range</h2>
+			<li ng-repeat='(k, v) in maindata.android.IncomePercentage_in_Dollar  track by $index'><div class="head">{{k}}</div> {{v}} <div class="labelIndex"></div></li>
+			<br>
+
+			<h2>Race Percentage</h2>
+			<li ng-repeat='(k, v) in maindata.android.RacePercentage  track by $index'><div class="head">{{k}}</div> {{v}} <div class="labelIndex"></div></li>
+
+		</ul>
+	</div>
+	<div class='col-md-6'>
+		<ul>
+			<li><div class="head">Unique Audience</div> {{maindata.ios.UniqueAudience}} <div class="labelIndex"></div></li>
+			<li><div class="head">Active Reach</div> {{maindata.ios.ActiveReach}} <div class="labelIndex"></div></li>
+			<li><div class="head">Total Duration Min</div> {{maindata.ios.TotalDurationMin}} <div class="labelIndex"></div></li>
+			<li><div class="head">Total Visits</div> {{maindata.ios.TotalVisits}} <div class="labelIndex"></div></li>
+			<li><div class="head">Visits Per Person</div> {{maindata.ios.VisitsPerPerson}} <div class="labelIndex"></div></li>
+			<li><div class="head">Male Percentage</div> {{maindata.ios.MalePercentage}} <div class="labelIndex"></div></li>
+			<li><div class="head">Female Percentage</div> {{maindata.ios.FemalePercentage}} <div class="labelIndex"></div></li>
+			<br>
+
+			<h2>Age group</h2>
+			<li ng-repeat='(k, v) in maindata.ios.AgeBreakPercentage  track by $index'><div class="head">{{k}}</div> {{v}} <div class="labelIndex"></div></li>
+			<br>
+
+			<h2>Income range</h2>
+			<li ng-repeat='(k, v) in maindata.ios.IncomePercentage_in_Dollar  track by $index'><div class="head">{{k}}</div> {{v}} <div class="labelIndex"></div></li>
+			<br>
+
+			<h2>Race Percentage</h2>
+			<li ng-repeat='(k, v) in maindata.ios.RacePercentage  track by $index'><div class="head">{{k}}</div> {{v}} <div class="labelIndex"></div></li>
+		</ul>
+	</div>
+</div>
+</div>
