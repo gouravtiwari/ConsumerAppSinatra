@@ -437,3 +437,6 @@ nav {
 .smallFont {
   font-size: 16px;
 }
+.error,.error1{
+  color:red;
+}
