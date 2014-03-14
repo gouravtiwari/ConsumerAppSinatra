@@ -3,6 +3,7 @@
 angular.module('publicApp')
   .controller('MainCtrl', function ($scope, $location, Data) {
     $scope.go = function(url) {
+      $scope.showRecentSearch = false;
     	$location.path(url);
     }
 
@@ -24,12 +25,19 @@ angular.module('publicApp')
 
     //BELOW INPUT MODEL MUST BE USED ACROSS ALL CTRLs FOR RECENT SEARCHES LOGIC!!! 
     $scope.input = {};
+    $scope.viaRecentSearch = false;
 
     $scope.recent_searches = Data.recent_searches;
     $scope.showRecentSearch = false;
     $scope.toggle = function(){
-      console.log('hi')
       $scope.showRecentSearch = !$scope.showRecentSearch;
+    }
+
+    $scope.loadRecentSearch = function(search){
+      $scope.cache_response = Data.in_cache(search.cache_url);
+      console.log($scope.cache_response);
+      $scope.viaRecentSearch = true;
+      $scope.go(search.location);
     }
 
 

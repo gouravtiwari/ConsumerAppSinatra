@@ -93,15 +93,18 @@ angular.module('publicApp')
         recent_searches: [],
 
         add_to_recent_searches: function(url_part, param_path){
-          var recentSearch = {};
-          recentSearch.api = url_part.split('/')[0];
+          var recentSearch = {},
+            url_split = url_part.split('/');
+          if(url_split[0] == 'EMM'){
+            url_split[0]  = 'Mobile Audience on ';
+          }
+          recentSearch.api = url_split[0] + (url_split[2] ? url_split[2] : '');
           recentSearch.input = {};
           for (var input in param_path){
-            if(input.indexOf('page') != -1) { continue; }
             recentSearch.input[input] = param_path[input];
           }
           recentSearch.cache_url = this.get_query_url(url_part, param_path);
-          recentSearch.location = this.locations[recentSearch.api];
+          recentSearch.location = this.locations[url_split[0]];
           this.recent_searches.push(recentSearch);
           console.log(this.recent_searches);
         },
@@ -111,7 +114,7 @@ angular.module('publicApp')
         },
 
         locations: {
-          'EMM': '/mobile-audience',
+          'Mobile Audience on ': '/mobile-audience',
           'Products': '/product_by_desc'
         }
 

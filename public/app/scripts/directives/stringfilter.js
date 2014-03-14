@@ -11,7 +11,8 @@ angular.module('publicApp')
         	scope.dataval = attrs.dataval.split(attrs.filter)[1]
         }
         if(attrs.filtertype == 'onlystring'){
-        	scope.dataval = scope.dataval.replace('/_/g', ' ');
+          console.log(scope.dataval)
+        	scope.dataval = scope.dataval.split('_').join(' ');
         }
         else{
         	scope.dataval = scope.dataval.replace('_', ' - ');

@@ -17,4 +17,9 @@ angular.module('publicApp')
       });
   	}
 
+  	if($scope.viaRecentSearch) {
+  		$scope.AppDetails = $scope.cache_response.AppResponse.AppDetails;
+  		$scope.viaRecentSearch = false;
+  	}
+
   });
