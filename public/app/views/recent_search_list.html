@@ -1,11 +1,11 @@
 <ul class="recentSearchList">
   <li ng-repeat="search in recent_searches">
-    <a href="#{{search.location}}">
-      <div class="alertMsg">{{search.api}}</div>
-      <span ng-repeat="(k, v) in search.input track by $index">
-        <b> {{k}}: </b>{{v}}
+    <div class="searchItem" ng-click="loadRecentSearch(search)">
+      <div><b>{{search.api}}</b></div>
+      <span class="smallFont" ng-repeat="(k, v) in search.input track by $index">
+        {{k}}: </b>{{v}}<span ng-show="!$last"> | </span>
       </span>
     </div>
-    </a>
+    </div>
   </li>
 </ul>
