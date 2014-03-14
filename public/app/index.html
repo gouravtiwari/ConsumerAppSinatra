@@ -29,12 +29,13 @@
       <header>
         <b class="cursorPointer" ng-click="go('/')">Smart Mart</b> 
         - <span class="lightBlue">Buy & Sell Smartly.</span>
-        <div class="recentSearch cursorPointer floatRight">
+        <div class="recentSearch cursorPointer floatRight" ng-click="toggle()">
           <span ng-bind="recent_searches.length"></span>
           Recent Search<span ng-show="recent_searches.length>1">es</span>
           <span class="icon glyphicon glyphicon-search"></span>
         </div>
       </header>
+      <div ng-include="" src="'views/recent_search_list.html'"></div>
       <!-- <nav class="collapse navbar-collapse bs-navbar-collapse">
         <ul class="nav navbar-nav">
           <li><a href="#/google_maps">Google</a></li>
