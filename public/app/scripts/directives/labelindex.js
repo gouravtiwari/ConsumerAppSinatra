@@ -7,6 +7,7 @@ angular.module('publicApp')
       restrict: 'E',
       replace: true,
       link: function postLink(scope, element, attrs) {
+      	console.log(Number(attrs.ios))
       	if(attrs.reverse == 'true'){
       		scope.result = parseFloat((attrs.ios - attrs.android)/attrs.android*100).toFixed(2);		
       	}
