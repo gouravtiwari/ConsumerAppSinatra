@@ -3,18 +3,22 @@
   <select ng-model="categoryName" ng-options="category for category in categories"></select>
   <div>
     <b><span class="categoryName">{{categoryName}}</span></b><br>
-    <div class="selectedCategory" ng-repeat="selectedCategory in selectedCategory">
-      <div class="subCategory" ng-repeat="subCategory in SubCategory">
+    <div class="selectedCategory" ng-repeat="selectedCategory in SelectedCategory">
+      <div class="subCategory" ng-repeat="subCategory in selectedCategory.SubCategory">
         <br>
-        <b>SubCategory:</b> {{subCategory.SubCategoryName}}<br>
-        <div class="demography" ng-repeat="demography in subCategory.Demographies">
-          <b>Demography:</b> {{demography.DemographyName}}<br>
-          <div class="item" ng-repeat="item in demography.Items">
-            <b>Item#{{item.Rank}}:</b> {{item.Name}}
-          </div>
-          <br>
-          <br>
+        <b>SubCategory:</b> 
+        <div class="subCategoryName" ng-model="selectedSubCategoryName" ng-click="selectSubCategory()">
+          {{subCategory.SubCategoryName}}
         </div>
+        <br>
+      </div>
+      <div class="demography" ng-repeat="demography in selectedSubCategory.Demographies">
+        <b>Demography:</b> {{demography.DemographyName}}<br>
+        <div class="item" ng-repeat="item in demography.Items">
+          <b>Item#{{item.Rank}}:</b> {{item.Name}}
+        </div>
+        <br>
+        <br>
       </div>
     </div>
   </div>
