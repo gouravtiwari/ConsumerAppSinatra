@@ -2,9 +2,10 @@
   <li ng-repeat="search in recent_searches">
     <a href="#{{search.location}}">
       <div class="alertMsg">{{search.api}}</div>
-      <div class="searchDate">
-        {{search.date}}
-      </div>
+      <span ng-repeat="(k, v) in search.input track by $index">
+        <b> {{k}}: </b>{{v}}
+      </span>
+    </div>
     </a>
   </li>
 </ul>
