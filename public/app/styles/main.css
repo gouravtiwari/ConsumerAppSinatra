@@ -334,3 +334,13 @@ nav {
 .view-leave.view-leave-active {
   left:-100%;
 }
+
+.recentSearch {
+  height: 30px;
+  width: 30px;
+  background: lightskyblue;
+}
+
+.floatRight {
+  float: right;
+}

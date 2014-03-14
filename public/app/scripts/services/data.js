@@ -86,11 +86,31 @@ angular.module('publicApp')
         },
 
         get_json: function(url_part, param_path){
+            this.add_to_recent_searches(url_part, param_path);
             return this.get_promise(this.get_query_url(url_part, param_path));
+        },
+
+        recent_searches: [],
+
+        add_to_recent_searches: function(url_part, param_path){
+          var recentSearch = {};
+          recentSearch.api = url_part.split('/')[0];
+          for (var input in param_path){
+            recentSearch[input] = param_path[input];
+          }
+          recentSearch.cache_url = this.get_query_url(url_part, param_path);
+          recentSearch.location = this.locations[recentSearch.api];
+          this.recent_searches.push(recentSearch);
+          console.log(this.recent_searches);
         },
         
         get_local: function(path){
             return this.get_promise(path);
+        },
+
+        locations: {
+          'EMM': '/mobile-audience',
+          'Products': '/product_by_desc'
         }
 
 		}
