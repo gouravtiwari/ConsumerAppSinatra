@@ -58,6 +58,10 @@ var app = angular.module('publicApp', ['google-maps', 'ui.bootstrap'])
 			  templateUrl: 'views/compare.html',
 			  controller: 'CompareCtrl'
 			})
+			.when('/recommender', {
+			  templateUrl: 'views/recommender.html',
+			  controller: 'RecommenderCtrl'
+			})
 			.otherwise({
 				redirectTo: '/'
 			})
