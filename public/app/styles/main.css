@@ -396,3 +396,32 @@ nav {
 .expandVertical {
   height: 100%;
 }
+
+.compare li {
+  position: relative;
+  float: left;
+  width: 100%;
+  list-style: none;
+}
+
+.head-val{
+  position: relative;
+  float: left;
+  width: 37.5%;
+  padding-left: 10px;
+}
+
+.labelIndex{
+  position: relative;
+  float: left;
+  width: 25%;
+  padding-left: 10px;
+}
+
+.green{
+  background: green;
+}
+
+.red{
+  background: red;
+}
