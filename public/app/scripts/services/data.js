@@ -95,8 +95,10 @@ angular.module('publicApp')
         add_to_recent_searches: function(url_part, param_path){
           var recentSearch = {};
           recentSearch.api = url_part.split('/')[0];
+          recentSearch.input = {};
           for (var input in param_path){
-            recentSearch[input] = param_path[input];
+            if(input.indexOf('page') != -1) { continue; }
+            recentSearch.input[input] = param_path[input];
           }
           recentSearch.cache_url = this.get_query_url(url_part, param_path);
           recentSearch.location = this.locations[recentSearch.api];

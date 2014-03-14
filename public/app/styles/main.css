@@ -365,7 +365,7 @@ nav {
   width: 450px;
   height: 0;
   padding: 5px 0;
-  background: rgba(0,0,0,.6);
+  background: rgba(0,0,0,.8);
   transition: height .7s;
   -webkit-transition: height .7s;
   z-index: 10000;
@@ -373,6 +373,7 @@ nav {
 }
 
 .recentSearchList {
+  padding: 5px;
   list-style: none;
 }
 
@@ -387,6 +388,7 @@ nav {
   color: #fff;
   width: 100%;
   height: 100%;
+  text-decoration: none;
 }
 
 .recentSearchList li:hover{
