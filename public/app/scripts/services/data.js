@@ -93,13 +93,15 @@ angular.module('publicApp')
         recent_searches: [],
 
         add_to_recent_searches: function(url_part, param_path){
-          var recentSearch = {},
+          var recentSearch = {input: {}},
             url_split = url_part.split('/');
+            
           if(url_split[0] == 'EMM'){
             url_split[0]  = 'Mobile Audience on ';
+            recentSearch.input.platform = url_split[2];
           }
           recentSearch.api = url_split[0] + (url_split[2] ? url_split[2] : '');
-          recentSearch.input = {};
+          
           for (var input in param_path){
             recentSearch.input[input] = param_path[input];
           }
