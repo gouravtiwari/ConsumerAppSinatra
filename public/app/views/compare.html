@@ -41,7 +41,7 @@
 			<h2>Age group</h2>
 			
 			<li ng-repeat='(k, v) in maindata.android.AgeBreakPercentage  track by $index'>
-				<div class="head-val">{{k}}</div>
+				<div class="head-val"><stringfilter dataval='{{k}}' filter='Age'></stringfilter></div>
 				<div class="head-val">{{v}}</div>
 				<labelindex ios='{{maindata.ios.AgeBreakPercentage[k]}}' android='{{v}}'></labelindex>
 			</li>
@@ -49,7 +49,7 @@
 
 			<h2>Income range</h2>
 			<li ng-repeat='(k, v) in maindata.android.IncomePercentage_in_Dollar  track by $index'>
-				<div class="head-val">{{k}}</div>
+				<div class="head-val"><stringfilter dataval='{{k}}' filter='Income'></div>
 				<div class="head-val">{{v}}</div>
 				<labelindex ios='{{maindata.ios.IncomePercentage_in_Dollar[k]}}' android='{{v}}'></labelindex>
 			</li>
@@ -57,7 +57,7 @@
 
 			<h2>Race Percentage</h2>
 			<li ng-repeat='(k, v) in maindata.android.RacePercentage  track by $index'>
-				<div class="head-val">{{k}}</div>
+				<div class="head-val"><stringfilter dataval='{{k}}' filtertype='onlystring'></div>
 				<div class="head-val">{{v}}</div>
 				<labelindex ios='{{maindata.ios.RacePercentage[k]}}' android='{{v}}'></labelindex>
 			</li>
@@ -98,7 +98,7 @@
 
 			<h2>Age group</h2>
 			<li ng-repeat='(k, v) in maindata.ios.AgeBreakPercentage  track by $index'>
-				<div class="head-val">{{k}}</div>
+				<div class="head-val"><stringfilter dataval='{{k}}' filter='Age'></div>
 				<div class="head-val">{{v}} </div>
 				<labelindex android='{{maindata.android.AgeBreakPercentage[k]}}' ios='{{v}}' reverse='true'></labelindex>
 			</li>
@@ -106,7 +106,7 @@
 
 			<h2>Income range</h2>
 			<li ng-repeat='(k, v) in maindata.ios.IncomePercentage_in_Dollar  track by $index'>
-				<div class="head-val">{{k}}</div>
+				<div class="head-val"><stringfilter dataval='{{k}}' filter='Income'></div>
 				<div class="head-val">{{v}} </div>
 				<labelindex android='{{maindata.android.IncomePercentage_in_Dollar[k]}}' ios='{{v}}' reverse='true'></labelindex>
 			</li>	
@@ -114,7 +114,7 @@
 
 			<h2>Race Percentage</h2>
 			<li ng-repeat='(k, v) in maindata.ios.RacePercentage  track by $index'>
-				<div class="head-val">{{k}}</div>
+				<div class="head-val"><stringfilter dataval='{{k}}' filtertype='onlystring'></div>
 				<div class="head-val">{{v}} </div>
 				<labelindex android='{{maindata.android.RacePercentage[k]}}' ios='{{v}}' reverse='true'></labelindex>
 			</li>
