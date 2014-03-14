@@ -19,6 +19,7 @@
 <button type='button' class='btn' ng-click='by_upc()'>Search</button>
 <div class="resultHolder" ng-repeat='data in product_detail'>
 	<div class="product">
+		<div class='btn' ng-click='open()'>Check Availablility</div><br>
 		<b><span class="productDesc">{{data.Description}}</span></b><br>
 		<b>UPC:</b> {{data.UPC}}<br>
 		<b>Item Code:</b> {{data.Item_Code}}<br>

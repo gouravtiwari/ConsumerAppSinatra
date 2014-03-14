@@ -1,19 +1,11 @@
 'use strict';
 
 angular.module('publicApp')
-  .controller('ProductReferenceCtrl', function ($scope, Data) {
+  .controller('ProductReferenceCtrl', function ($scope, Data, $modal, $log) {
 	  
 	  $scope.input.Description = 'Description...';
     $scope.input.UPC_CODE = 'UPC Code...';
     $scope.pageshow = false;
-
-    Data.get_local('scripts/jsons/product_by_upc.json').success(function(api_data){
-      $scope.product = api_data.Characteristics[0];
-    });
-
-    Data.get_local('scripts/jsons/product_health.json').success(function(api_data){
-      $scope.product = api_data.Characteristics[0];
-    });
 
     $scope.input.currentPage = 1;
 
@@ -30,8 +22,9 @@ angular.module('publicApp')
     }
 
     $scope.by_upc = function(){
+      
       var parameter_obj = {'search' : $scope.input.UPC_CODE};
-
+      Data.set_search_data({'product_id' : $scope.input.UPC_CODE});
       Data.get_json('Products/v1', parameter_obj).success(function(api_data){
       //Data.get_local('scripts/jsons/product_by_desc.json').success(function(api_data){
         $scope.product_detail = api_data.ProductDetails;
@@ -54,8 +47,23 @@ angular.module('publicApp')
       $scope.viaRecentSearch = false;
     }
 
-  });
+    $scope.open = function () {
 
-  function filter_query(data){
-    return data.replace(" ","%20");
-  }
+    var modalInstance = $modal.open({
+      templateUrl: 'views/modal_window.html',
+      controller: 'ModalInstanceCtrl',
+      resolve: {
+        items: function () {
+          return $scope.items;
+        }
+      }
+    });
+
+    modalInstance.result.then(function (selectedItem) {
+      $scope.selected = selectedItem;
+    }, function () {
+      $log.info('Modal dismissed at: ' + new Date());
+    });
+  };
+
+  });

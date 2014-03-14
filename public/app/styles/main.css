@@ -436,3 +436,7 @@ nav {
 .smallFont {
   font-size: 16px;
 }
+
+.position{
+  width: 100px;
+}
