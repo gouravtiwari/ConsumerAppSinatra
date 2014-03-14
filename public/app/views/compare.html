@@ -5,52 +5,52 @@
 </select>
 <div class='row compare'>
 	<div class='col-md-6'>
+		<h2>Android</h2>
 		<ul>
-
 			<li>
 				<div class="head-val">Unique Audience</div>
 				<div class="head-val">{{maindata.android.UniqueAudience}}</div>
-				<div class="labelIndex" ng-class="{green: (maindata.android.UniqueAudience-maindata.ios.UniqueAudience)/maindata.android.UniqueAudience*100 > 0}">{{(maindata.android.UniqueAudience-maindata.ios.UniqueAudience)/maindata.android.UniqueAudience*100 | roundoff}}</div>
+				<div class="labelIndex" ng-class="(maindata.android.UniqueAudience-maindata.ios.UniqueAudience)/maindata.android.UniqueAudience*100 > 0 ? 'green' : 'red'">{{(maindata.android.UniqueAudience-maindata.ios.UniqueAudience)/maindata.android.UniqueAudience*100 | roundoff}}</div>
 			</li>
 			<li><div class="head-val">Active Reach</div>
 				<div class="head-val">{{maindata.android.ActiveReach}}</div>
 				<div class></div>
-				<div class="labelIndex" ng-class="{green: (maindata.android.ActiveReach-maindata.ios.ActiveReach)/maindata.android.ActiveReach*100 > 0}">{{(maindata.android.ActiveReach-maindata.ios.ActiveReach)/maindata.android.ActiveReach*100 | roundoff}}</div>
+				<div class="labelIndex" ng-class="(maindata.android.ActiveReach-maindata.ios.ActiveReach)/maindata.android.ActiveReach*100 > 0  ? 'green' : 'red'">{{(maindata.android.ActiveReach-maindata.ios.ActiveReach)/maindata.android.ActiveReach*100 | roundoff}}</div>
 				<!--
 				<labelindex ios='{{maindata.ios.ActiveReach}}' android='{{maindata.android.ActiveReach}}'></labelindex>
 			-->
 			</li>	
 			<li><div class="head-val">Total Duration Mins</div>
 				<div class="head-val">{{maindata.android.TotalDurationMin}}</div>
-				<div class="labelIndex" ng-class="{green: (maindata.android.TotalDurationMin-maindata.ios.TotalDurationMin)/maindata.android.TotalDurationMin*100 > 0}">{{(maindata.android.TotalDurationMin-maindata.ios.TotalDurationMin)/maindata.android.TotalDurationMin*100 | roundoff}}</div>
+				<div class="labelIndex" ng-class="(maindata.android.TotalDurationMin-maindata.ios.TotalDurationMin)/maindata.android.TotalDurationMin*100 > 0  ? 'green' : 'red'">{{(maindata.android.TotalDurationMin-maindata.ios.TotalDurationMin)/maindata.android.TotalDurationMin*100 | roundoff}}</div>
 				<!--
 				<labelindex ios='{{maindata.ios.TotalDurationMin}}' android='{{maindata.android.TotalDurationMin}}'></labelindex>
 			-->
 			</li>
 			<li><div class="head-val">Total Visits</div>
 				<div class="head-val">{{maindata.android.TotalVisits}} </div>
-				<div class="labelIndex" ng-class="{green: (maindata.android.TotalVisits-maindata.ios.TotalVisits)/maindata.android.TotalVisits*100 > 0}">{{(maindata.android.TotalVisits-maindata.ios.TotalVisits)/maindata.android.TotalVisits*100 | roundoff}}</div>
+				<div class="labelIndex" ng-class="(maindata.android.TotalVisits-maindata.ios.TotalVisits)/maindata.android.TotalVisits*100 > 0  ? 'green' : 'red'">{{(maindata.android.TotalVisits-maindata.ios.TotalVisits)/maindata.android.TotalVisits*100 | roundoff}}</div>
 				<!--
 				<labelindex ios='{{maindata.ios.TotalVisits}}' android='{{maindata.android.TotalVisits}}'></labelindex>
 			-->
 			</li>
 			<li><div class="head-val">Visits Per Person</div>
 				<div class="head-val">{{maindata.android.VisitsPerPerson}} </div>
-				<div class="labelIndex" ng-class="{green: (maindata.android.VisitsPerPerson-maindata.ios.VisitsPerPerson)/maindata.android.VisitsPerPerson*100 > 0}">{{(maindata.android.VisitsPerPerson-maindata.ios.VisitsPerPerson)/maindata.android.VisitsPerPerson*100 | roundoff}}</div>
+				<div class="labelIndex" ng-class="(maindata.android.VisitsPerPerson-maindata.ios.VisitsPerPerson)/maindata.android.VisitsPerPerson*100 > 0  ? 'green' : 'red'">{{(maindata.android.VisitsPerPerson-maindata.ios.VisitsPerPerson)/maindata.android.VisitsPerPerson*100 | roundoff}}</div>
 				<!--
 				<labelindex ios='{{maindata.ios.VisitsPerPerson}}' android='{{maindata.android.VisitsPerPerson}}'></labelindex>
 			-->
 			</li>
 			<li><div class="head-val">Male Percentage</div>
 				<div class="head-val">{{maindata.android.MalePercentage}}</div>
-				<div class="labelIndex" ng-class="{green: (maindata.android.MalePercentage-maindata.ios.MalePercentage)/maindata.android.MalePercentage*100 > 0}">{{(maindata.android.MalePercentage-maindata.ios.MalePercentage)/maindata.android.MalePercentage*100 | roundoff}}</div>
+				<div class="labelIndex" ng-class="(maindata.android.MalePercentage-maindata.ios.MalePercentage)/maindata.android.MalePercentage*100 > 0  ? 'green' : 'red'">{{(maindata.android.MalePercentage-maindata.ios.MalePercentage)/maindata.android.MalePercentage*100 | roundoff}}</div>
 				<!--
 				<labelindex ios='{{maindata.ios.MalePercentage}}' android='{{maindata.android.MalePercentage}}'></labelindex>
 			-->
 			</li>
 			<li><div class="head-val">Female Percentage</div>
 				<div class="head-val">{{maindata.android.FemalePercentage}}</div>
-				<div class="labelIndex" ng-class="{green: (maindata.android.FemalePercentage-maindata.ios.FemalePercentage)/maindata.android.FemalePercentage*100 > 0}">{{(maindata.android.FemalePercentage-maindata.ios.FemalePercentage)/maindata.android.FemalePercentage*100 | roundoff}}</div>
+				<div class="labelIndex" ng-class="(maindata.android.FemalePercentage-maindata.ios.FemalePercentage)/maindata.android.FemalePercentage*100 > 0  ? 'green' : 'red'">{{(maindata.android.FemalePercentage-maindata.ios.FemalePercentage)/maindata.android.FemalePercentage*100 | roundoff}}</div>
 				<!--
 				<labelindex ios='{{maindata.ios.FemalePercentage}}' android='{{maindata.android.FemalePercentage}}'></labelindex>
 			-->
@@ -62,7 +62,7 @@
 			<li ng-repeat='(k, v) in maindata.android.AgeBreakPercentage  track by $index'>
 				<div class="head-val"><stringfilter dataval='{{k}}' filter='Age'></stringfilter></div>
 				<div class="head-val">{{v}}</div>
-				<div class="labelIndex" ng-class="{green: (v-maindata.ios.AgeBreakPercentage[k])/v*100 > 0}">{{(v-maindata.ios.AgeBreakPercentage[k])/v*100 | roundoff}}</div>
+				<div class="labelIndex" ng-class="(v-maindata.ios.AgeBreakPercentage[k])/v*100 > 0  ? 'green' : 'red'">{{(v-maindata.ios.AgeBreakPercentage[k])/v*100 | roundoff}}</div>
 				<!--
 				<labelindex ios='{{maindata.ios.AgeBreakPercentage[k]}}' android='{{v}}'></labelindex>
 				-->
@@ -73,7 +73,7 @@
 			<li ng-repeat='(k, v) in maindata.android.IncomePercentage_in_Dollar  track by $index'>
 				<div class="head-val"><stringfilter dataval='{{k}}' filter='Income'></div>
 				<div class="head-val">{{v}}</div>
-				<div class="labelIndex" ng-class="{green: (v-maindata.ios.IncomePercentage_in_Dollar[k])/v*100 > 0}">{{(v-maindata.ios.IncomePercentage_in_Dollar[k])/v*100 | roundoff}}</div>
+				<div class="labelIndex" ng-class="(v-maindata.ios.IncomePercentage_in_Dollar[k])/v*100 > 0  ? 'green' : 'red'">{{(v-maindata.ios.IncomePercentage_in_Dollar[k])/v*100 | roundoff}}</div>
 				<!--
 				<labelindex ios='{{maindata.ios.IncomePercentage_in_Dollar[k]}}' android='{{v}}'></labelindex>
 			-->
@@ -84,7 +84,7 @@
 			<li ng-repeat='(k, v) in maindata.android.RacePercentage  track by $index'>
 				<div class="head-val"><stringfilter dataval='{{k}}' filtertype='onlystring'></div>
 				<div class="head-val">{{v}}</div>
-				<div class="labelIndex" ng-class="{green: (v-maindata.ios.RacePercentage[k])/v*100 > 0}">{{(v-maindata.ios.RacePercentage[k])/v*100 | roundoff}}</div>
+				<div class="labelIndex" ng-class="(v-maindata.ios.RacePercentage[k])/v*100 > 0  ? 'green' : 'red'">{{(v-maindata.ios.RacePercentage[k])/v*100 | roundoff}}</div>
 				<!--
 				<labelindex ios='{{maindata.ios.RacePercentage[k]}}' android='{{v}}'></labelindex>
 				-->
@@ -93,40 +93,41 @@
 		</ul>
 	</div>
 	<div class='col-md-6'>
+		<h2>IOS</h2>
 		<ul>
 			<li><div class="head-val">Unique Audience</div>
 				<div class="head-val">{{maindata.ios.UniqueAudience}}</div>
-				<div class="labelIndex" ng-class="{red: (maindata.android.UniqueAudience-maindata.ios.UniqueAudience)/maindata.android.UniqueAudience*100 > 0, green}">{{-(maindata.android.UniqueAudience-maindata.ios.UniqueAudience)/maindata.android.UniqueAudience*100 | roundoff}}</div>
+				<div class="labelIndex" ng-class="(maindata.android.UniqueAudience-maindata.ios.UniqueAudience)/maindata.android.UniqueAudience*100 > 0 ? 'red' : 'green'">{{-(maindata.android.UniqueAudience-maindata.ios.UniqueAudience)/maindata.android.UniqueAudience*100 | roundoff}}</div>
 				<!-- <labelindex ios='{{maindata.ios.UniqueAudience}}' android='{{maindata.android.UniqueAudience}}' reverse='true'></labelindex> -->
 			</li>
 			<li><div class="head-val">Active Reach</div>
 				<div class="head-val">{{maindata.ios.ActiveReach}}</div>
-				<div class="labelIndex" ng-class="{red: (maindata.android.ActiveReach-maindata.ios.ActiveReach)/maindata.android.ActiveReach*100 > 0, green}">{{-(maindata.android.ActiveReach-maindata.ios.ActiveReach)/maindata.android.ActiveReach*100 | roundoff}}</div>
+				<div class="labelIndex" ng-class="(maindata.android.ActiveReach-maindata.ios.ActiveReach)/maindata.android.ActiveReach*100 > 0 ? 'red' : 'green'">{{-(maindata.android.ActiveReach-maindata.ios.ActiveReach)/maindata.android.ActiveReach*100 | roundoff}}</div>
 				<!-- <labelindex ios='{{maindata.ios.ActiveReach}}' android='{{maindata.android.ActiveReach}}' reverse='true'></labelindex> -->
 			</li>
 			<li><div class="head-val">Total Duration Min</div>
 				<div class="head-val">{{maindata.ios.TotalDurationMin}}</div>
-				<div class="labelIndex" ng-class="{red: (maindata.android.TotalDurationMin-maindata.ios.TotalDurationMin)/maindata.android.TotalDurationMin*100 > 0}">{{-(maindata.android.TotalDurationMin-maindata.ios.TotalDurationMin)/maindata.android.TotalDurationMin*100 | roundoff}}</div>
+				<div class="labelIndex" ng-class="(maindata.android.TotalDurationMin-maindata.ios.TotalDurationMin)/maindata.android.TotalDurationMin*100 > 0 ? 'red' : 'green'">{{-(maindata.android.TotalDurationMin-maindata.ios.TotalDurationMin)/maindata.android.TotalDurationMin*100 | roundoff}}</div>
 				<!-- <labelindex ios='{{maindata.ios.TotalDurationMin}}' android='{{maindata.android.TotalDurationMin}}' reverse='true'></labelindex> -->
 			</li>
 			<li><div class="head-val">Total Visits</div>
 				<div class="head-val">{{maindata.ios.TotalVisits}}</div>
-				<div class="labelIndex" ng-class="{red: (maindata.android.TotalVisits-maindata.ios.TotalVisits)/maindata.android.TotalVisits*100 > 0}">{{-(maindata.android.TotalVisits-maindata.ios.TotalVisits)/maindata.android.TotalVisits*100 | roundoff}}</div>
+				<div class="labelIndex" ng-class="(maindata.android.TotalVisits-maindata.ios.TotalVisits)/maindata.android.TotalVisits*100 > 0 ? 'red' : 'green'">{{-(maindata.android.TotalVisits-maindata.ios.TotalVisits)/maindata.android.TotalVisits*100 | roundoff}}</div>
 				<!-- <labelindex ios='{{maindata.ios.TotalVisits}}' android='{{maindata.android.TotalVisits}}' reverse='true'></labelindex> -->
 			</li>
 			<li><div class="head-val">Visits Per Person</div>
 				<div class="head-val">{{maindata.ios.VisitsPerPerson}}</div>
-				<div class="labelIndex" ng-class="{red: (maindata.android.VisitsPerPerson-maindata.ios.VisitsPerPerson)/maindata.android.VisitsPerPerson*100 > 0}">{{-(maindata.android.VisitsPerPerson-maindata.ios.VisitsPerPerson)/maindata.android.VisitsPerPerson*100 | roundoff}}</div>
+				<div class="labelIndex" ng-class="(maindata.android.VisitsPerPerson-maindata.ios.VisitsPerPerson)/maindata.android.VisitsPerPerson*100 > 0 ? 'red' : 'green'">{{-(maindata.android.VisitsPerPerson-maindata.ios.VisitsPerPerson)/maindata.android.VisitsPerPerson*100 | roundoff}}</div>
 				<!-- <labelindex ios='{{maindata.ios.VisitsPerPerson}}' android='{{maindata.android.VisitsPerPerson}}' reverse='true'></labelindex> -->
 			</li>
 			<li><div class="head-val">Male Percentage</div>
 				<div class="head-val">{{maindata.ios.MalePercentage}}</div>
-				<div class="labelIndex" ng-class="{red: (maindata.android.MalePercentage-maindata.ios.MalePercentage)/maindata.android.MalePercentage*100 > 0}">{{-(maindata.android.MalePercentage-maindata.ios.MalePercentage)/maindata.android.MalePercentage*100 | roundoff}}</div>
+				<div class="labelIndex" ng-class="(maindata.android.MalePercentage-maindata.ios.MalePercentage)/maindata.android.MalePercentage*100 > 0 ? 'red' : 'green'">{{-(maindata.android.MalePercentage-maindata.ios.MalePercentage)/maindata.android.MalePercentage*100 | roundoff}}</div>
 				<!-- <labelindex ios='{{maindata.ios.MalePercentage}}' android='{{maindata.android.MalePercentage}}' reverse='true'></labelindex> -->
 			</li>
 			<li><div class="head-val">Female Percentage</div>
 				<div class="head-val">{{maindata.ios.FemalePercentage}}</div>
-				<div class="labelIndex" ng-class="{red: (maindata.android.FemalePercentage-maindata.ios.FemalePercentage)/maindata.android.FemalePercentage*100 > 0}">{{-(maindata.android.FemalePercentage-maindata.ios.FemalePercentage)/maindata.android.FemalePercentage*100 | roundoff}}</div>
+				<div class="labelIndex" ng-class="(maindata.android.FemalePercentage-maindata.ios.FemalePercentage)/maindata.android.FemalePercentage*100 > 0 ? 'red' : 'green'">{{-(maindata.android.FemalePercentage-maindata.ios.FemalePercentage)/maindata.android.FemalePercentage*100 | roundoff}}</div>
 				<!-- <labelindex ios='{{maindata.ios.FemalePercentage}}' android='{{maindata.android.FemalePercentage}}' reverse='true'></labelindex> -->
 			</li>
 			<br>
@@ -135,7 +136,7 @@
 			<li ng-repeat='(k, v) in maindata.ios.AgeBreakPercentage  track by $index'>
 				<div class="head-val"><stringfilter dataval='{{k}}' filter='Age'></div>
 				<div class="head-val">{{v}} </div>
-				<div class="labelIndex" ng-class="{red: (maindata.android.AgeBreakPercentage[k]-v)/maindata.android.AgeBreakPercentage[k]*100 > 0}">{{-(maindata.android.AgeBreakPercentage[k]-v)/maindata.android.AgeBreakPercentage[k]*100 | roundoff}}</div>
+				<div class="labelIndex" ng-class="(maindata.android.AgeBreakPercentage[k]-v)/maindata.android.AgeBreakPercentage[k]*100 > 0 ? 'red' : 'green'">{{-(maindata.android.AgeBreakPercentage[k]-v)/maindata.android.AgeBreakPercentage[k]*100 | roundoff}}</div>
 				<!--
 				<labelindex android='{{maindata.android.AgeBreakPercentage[k]}}' ios='{{v}}' reverse='true'></labelindex>
 			-->
@@ -146,7 +147,7 @@
 			<li ng-repeat='(k, v) in maindata.ios.IncomePercentage_in_Dollar  track by $index'>
 				<div class="head-val"><stringfilter dataval='{{k}}' filter='Income'></div>
 				<div class="head-val">{{v}} </div>
-				<div class="labelIndex" ng-class="{red: (maindata.android.IncomePercentage_in_Dollar[k]-v)/maindata.android.IncomePercentage_in_Dollar[k]*100 > 0}">{{-(maindata.android.IncomePercentage_in_Dollar[k]-v)/maindata.android.IncomePercentage_in_Dollar[k]*100 | roundoff}}</div>
+				<div class="labelIndex" ng-class="(maindata.android.IncomePercentage_in_Dollar[k]-v)/maindata.android.IncomePercentage_in_Dollar[k]*100 > 0 ? 'red' : 'green'">{{-(maindata.android.IncomePercentage_in_Dollar[k]-v)/maindata.android.IncomePercentage_in_Dollar[k]*100 | roundoff}}</div>
 				<!--
 				<labelindex android='{{maindata.android.IncomePercentage_in_Dollar[k]}}' ios='{{v}}' reverse='true'></labelindex>
 			-->
@@ -157,7 +158,7 @@
 			<li ng-repeat='(k, v) in maindata.ios.RacePercentage  track by $index'>
 				<div class="head-val"><stringfilter dataval='{{k}}' filtertype='onlystring'></div>
 				<div class="head-val">{{v}} </div>
-				<div class="labelIndex" ng-class="{red: (maindata.android.RacePercentage[k]-v)/maindata.android.RacePercentage[k]*100 > 0}">{{-(maindata.android.RacePercentage[k]-v)/maindata.android.RacePercentage[k]*100 | roundoff}}</div>
+				<div class="labelIndex" ng-class="(maindata.android.RacePercentage[k]-v)/maindata.android.RacePercentage[k]*100 > 0 ? 'red' : 'green'">{{-(maindata.android.RacePercentage[k]-v)/maindata.android.RacePercentage[k]*100 | roundoff}}</div>
 				<!--
 				<labelindex android='{{maindata.android.RacePercentage[k]}}' ios='{{v}}' reverse='true'></labelindex>
 			-->
