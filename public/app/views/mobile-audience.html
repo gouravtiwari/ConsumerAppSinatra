@@ -5,7 +5,7 @@
 	<select ng-model="input.platform" placeholder="Select Platform"
  		ng-options="platform for platform in input.platforms">
   </select>
-  <b># of Top Apps:</b> <input type="number" ng-model="input.appCount" />
+  <b># of Top Apps:</b> <input type="number" ng-model="input.noofresults" />
   <button class="btn btn-primary" ng-click="search()">Search</button>
 	<!-- Result -->
 	<div class="product" ng-repeat="app in AppDetails">

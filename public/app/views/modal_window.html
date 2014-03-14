@@ -1,0 +1,28 @@
+<div ng-controller='ModalCtrl'>
+    <div class="modal-header">
+        <h3>Product Availablility for code {{obj.search}}</h3>
+    </div>
+    <div class="modal-body">
+        <div class='row'>
+            <div class='col-md-12'>
+                <button class="btn btn-primary" ng-click="setGeoLocation()">Take my Current Location</button>
+            </div>
+            <div class='col-md-12'>
+                <div class='col-md-3'>Latitude</div>
+                <div class='col-md-3'>{{geolocation.lat}}</div>
+                <div class='col-md-3'>Longitude</div>
+                <div class='col-md-3'>{{geolocation.long}}</div>
+            </div>
+            <div class="col-md-12">
+                <div class='col-md-3'>Latitude</div>
+                <div class='col-md-3'><input class='position' type="number" ng-model='latitude'></div>
+                <div class='col-md-3'>Longitude</div>
+                <div class='col-md-3'><input class='position' type="number" ng-model='longitude'></div>
+                <button class="btn btn-primary" ng-click="setCustomLocation()">Take my Current Location</button>
+            </div>    
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a href="#/google_maps" ng-click="ok()">Take me somewhere</a>
+    </div>
+</div>

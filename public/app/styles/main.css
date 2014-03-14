@@ -380,6 +380,7 @@ nav {
   border-bottom: 1px groove #fff;
   font-size: 18px;
   padding: 0 7px;
+  cursor: pointer;
 }
 
 .recentSearchList li .searchItem {
@@ -435,4 +436,12 @@ nav {
 
 .smallFont {
   font-size: 16px;
+}
+
+.position{
+  width: 100px;
+}
+
+.error,.error1{
+  color:red;
 }
