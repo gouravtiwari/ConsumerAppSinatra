@@ -10,7 +10,7 @@ angular.module('publicApp')
     	{title: 'Top 10 Products', url: '/top_ten'},
     	{title: 'Product <br/> Finder', url: '/product_by_desc'},
     	{title: 'Store <br/> Locator', url: '/store_by_name'},
-    	{title: 'Analyse Smartly!', url: '/market_analysis'},
+    	{title: 'Market Analyses', url: '/market_analysis'},
     	{title: 'Compare Smartly!', url: '/compare'},
     	{title: 'Recent <br/> Search', url: '/recent_search'}
     ];
