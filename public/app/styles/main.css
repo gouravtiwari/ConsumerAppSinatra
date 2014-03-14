@@ -427,7 +427,9 @@ nav {
 .red{
   background: red;
 }
-
+.storeDetails{
+  display: none;
+}
 .compare{
   margin-top: 20px;
 }
