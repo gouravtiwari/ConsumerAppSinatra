@@ -35,7 +35,9 @@
           <span class="icon glyphicon glyphicon-search"></span>
         </div>
       </header>
-      <div ng-include="" src="'views/recent_search_list.html'"></div>
+      <div class="recentSearchInclude" ng-include="" src="'views/recent_search_list.html'"
+        ng-class="{expandVertical: showRecentSearch}">
+      </div>
       <!-- <nav class="collapse navbar-collapse bs-navbar-collapse">
         <ul class="nav navbar-nav">
           <li><a href="#/google_maps">Google</a></li>
