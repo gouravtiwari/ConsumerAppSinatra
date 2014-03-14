@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('publicApp')
-  .controller('MainCtrl', function ($scope, $location) {
+  .controller('MainCtrl', function ($scope, $location, Data) {
     $scope.go = function(url) {
     	$location.path(url);
     }
@@ -23,6 +23,15 @@ angular.module('publicApp')
     	{name: 'TV Programs Rankings', url: '/program_rankings'}
     ];
 
+    //BELOW INPUT MODEL MUST BE USED ACROSS ALL CTRLs FOR RECENT SEARCHES LOGIC!!! 
     $scope.input = {};
+
+    $scope.recent_searches = Data.recent_searches;
+    $scope.showRecentSearch = false;
+    $scope.listRecentSearches = function(){
+      $scope.showRecentSearch = !$scope.showRecentSearch;
+    }
+
+
 
   });
