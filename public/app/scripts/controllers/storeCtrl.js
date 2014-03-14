@@ -166,8 +166,22 @@ angular.module('publicApp')
     }
 
     $scope.$watch('currentPage', function() {
-      if($scope.products != undefined){
-        $scope.by_desc();  
+      if($scope.stores != undefined){
+        if($scope.select_type == 'Store Name'){
+            $scope.by_name(); 
+        }
+        else if($scope.select_type == 'Owner Name'){
+          $scope.by_owner();
+        }
+        else if($scope.select_type == 'Location'){
+          $scope.by_location();
+        }
+        else if($scope.select_type == 'Market'){
+          $scope.by_market();
+        }
+        else if($scope.select_type == 'Size'){
+          $scope.by_size();
+        } 
       }
     });
 
