@@ -198,7 +198,7 @@ angular.module('publicApp')
     $scope.computeScore = function(){
       var score = 0;
       for (var i = 0; i < $scope.selectedItemsList.length; i++) {
-        $scope.selectedItemsList[i].item.Score = ($scope.rankScore($scope.selectedItemsList[i].item.Rank) * 10)/3 ;
+        $scope.selectedItemsList[i].item.Score = ($scope.rankScore($scope.selectedItemsList[i].item.Rank) * 10)/$scope.rowsToGenerate ;
         score = score + $scope.selectedItemsList[i].item.Score;
       };
       console.log($scope.selectedItemsList);
