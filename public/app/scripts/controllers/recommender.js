@@ -75,62 +75,62 @@ angular.module('publicApp')
       var parameter_obj = {};
 
       if ($scope.categoryName1){
-        // Data.get_json('TopTen/v1/' + $scope.categoryName, parameter_obj).success(function(api_data){
-        Data.get_local('scripts/jsons/top_ten_mobile_apps.json').success(function(api_data){
+        Data.get_json('TopTen/v1/' + $scope.categoryName1, parameter_obj).success(function(api_data){
+        // Data.get_local('scripts/jsons/top_ten_mobile_apps.json').success(function(api_data){
           $scope.selectedCategories1 = api_data.Category;
         });
       }
       if ($scope.categoryName2){
-        // Data.get_json('TopTen/v1/' + $scope.categoryName, parameter_obj).success(function(api_data){
-        Data.get_local('scripts/jsons/top_ten_mobile_apps.json').success(function(api_data){
+        Data.get_json('TopTen/v1/' + $scope.categoryName2, parameter_obj).success(function(api_data){
+        // Data.get_local('scripts/jsons/top_ten_mobile_apps.json').success(function(api_data){
           $scope.selectedCategories2 = api_data.Category;
         });
       }
       if ($scope.categoryName3){
-        // Data.get_json('TopTen/v1/' + $scope.categoryName, parameter_obj).success(function(api_data){
-        Data.get_local('scripts/jsons/top_ten_mobile_apps.json').success(function(api_data){
+        Data.get_json('TopTen/v1/' + $scope.categoryName3, parameter_obj).success(function(api_data){
+        // Data.get_local('scripts/jsons/top_ten_mobile_apps.json').success(function(api_data){
           $scope.selectedCategories3 = api_data.Category;
         });
       }
       if ($scope.categoryName4){
-        // Data.get_json('TopTen/v1/' + $scope.categoryName, parameter_obj).success(function(api_data){
-        Data.get_local('scripts/jsons/top_ten_mobile_apps.json').success(function(api_data){
+        Data.get_json('TopTen/v1/' + $scope.categoryName4, parameter_obj).success(function(api_data){
+        // Data.get_local('scripts/jsons/top_ten_mobile_apps.json').success(function(api_data){
           $scope.selectedCategories4 = api_data.Category;
         });
       }
       if ($scope.categoryName5){
-        // Data.get_json('TopTen/v1/' + $scope.categoryName, parameter_obj).success(function(api_data){
-        Data.get_local('scripts/jsons/top_ten_mobile_apps.json').success(function(api_data){
+        Data.get_json('TopTen/v1/' + $scope.categoryName5, parameter_obj).success(function(api_data){
+        // Data.get_local('scripts/jsons/top_ten_mobile_apps.json').success(function(api_data){
           $scope.selectedCategories5 = api_data.Category;
         });
       }
       if ($scope.categoryName6){
-        // Data.get_json('TopTen/v1/' + $scope.categoryName, parameter_obj).success(function(api_data){
-        Data.get_local('scripts/jsons/top_ten_mobile_apps.json').success(function(api_data){
+        Data.get_json('TopTen/v1/' + $scope.categoryName6, parameter_obj).success(function(api_data){
+        // Data.get_local('scripts/jsons/top_ten_mobile_apps.json').success(function(api_data){
           $scope.selectedCategories6 = api_data.Category;
         });
       }
       if ($scope.categoryName7){
-        // Data.get_json('TopTen/v1/' + $scope.categoryName, parameter_obj).success(function(api_data){
-        Data.get_local('scripts/jsons/top_ten_mobile_apps.json').success(function(api_data){
+        Data.get_json('TopTen/v1/' + $scope.categoryName7, parameter_obj).success(function(api_data){
+        // Data.get_local('scripts/jsons/top_ten_mobile_apps.json').success(function(api_data){
           $scope.selectedCategories7 = api_data.Category;
         });
       }
       if ($scope.categoryName8){
-        // Data.get_json('TopTen/v1/' + $scope.categoryName, parameter_obj).success(function(api_data){
-        Data.get_local('scripts/jsons/top_ten_mobile_apps.json').success(function(api_data){
+        Data.get_json('TopTen/v1/' + $scope.categoryName8, parameter_obj).success(function(api_data){
+        // Data.get_local('scripts/jsons/top_ten_mobile_apps.json').success(function(api_data){
           $scope.selectedCategories8 = api_data.Category;
         });
       }
       if ($scope.categoryName9){
-        // Data.get_json('TopTen/v1/' + $scope.categoryName, parameter_obj).success(function(api_data){
-        Data.get_local('scripts/jsons/top_ten_mobile_apps.json').success(function(api_data){
+        Data.get_json('TopTen/v1/' + $scope.categoryName9, parameter_obj).success(function(api_data){
+        // Data.get_local('scripts/jsons/top_ten_mobile_apps.json').success(function(api_data){
           $scope.selectedCategories9 = api_data.Category;
         });
       }
       if ($scope.categoryName10){
-        // Data.get_json('TopTen/v1/' + $scope.categoryName, parameter_obj).success(function(api_data){
-        Data.get_local('scripts/jsons/top_ten_mobile_apps.json').success(function(api_data){
+        Data.get_json('TopTen/v1/' + $scope.categoryName10, parameter_obj).success(function(api_data){
+        // Data.get_local('scripts/jsons/top_ten_mobile_apps.json').success(function(api_data){
           $scope.selectedCategories10 = api_data.Category;
         });
       }
