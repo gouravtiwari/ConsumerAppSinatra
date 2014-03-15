@@ -445,3 +445,18 @@ nav {
 .error{
   color:red;
 }
+.modal_store{
+  height: 40px;
+  background-color: #3276b1;
+  border-radius: 5px;
+  padding: 0px;
+}
+.modal_store h3{
+  padding: 7px;
+  margin: 0px;
+  color: white;
+}
+.storeDetails tr td:nth-child(1){
+  cursor: pointer;
+  text-decoration: underline;
+}

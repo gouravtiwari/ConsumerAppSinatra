@@ -179,7 +179,7 @@ angular.module('publicApp')
 
         var modalInstance = $modal.open({
           templateUrl: 'views/store_info.html',
-          controller: 'ModalInstanceCtrl',
+          controller: 'ModalInstanceCtrlStore',
           resolve: {
             info: function () {
               return $scope.storeInfo;
@@ -189,15 +189,10 @@ angular.module('publicApp')
       });
     };
   })
-.controller('ModalInstanceCtrl', function ($scope,$modalInstance,info) {
-  console.log("ModalInstanceCtrl")
+.controller('ModalInstanceCtrlStore', [ '$scope', '$modalInstance', 'info', function ($scope, $modalInstance, info) {
  $scope.storeInfo = info;
     $scope.ok = function () {
     $modalInstance.close();
-  };
-
-  $scope.cancel = function () {
-    $modalInstance.dismiss('cancel');
-  };
-});
+  }; 
+}]);
 
