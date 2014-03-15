@@ -1,29 +1,37 @@
 <div>
   <h2>Recommender Tool</h2>
-  <select ng-model="categoryName" ng-options="category for category in categories"></select>
-  <div>
-    <b><span class="categoryName">{{categoryName}}</span></b>
-    <div class="selectedCategory" ng-repeat="selectedCategory in selectedCategories">
+  <input disabled="disabled" placeholder="Money to Spend" style="margin-left: 10px;"><br><br>
+  <div class="selector-row">
+    <div class="category left">
+      <b>Select a Category:</b><br>
+      <select ng-model="categoryName" ng-options="category for category in categories"></select>
+      <!-- <b><span class="categoryName">{{categoryName}}</span> -->
+    </div>
+    <div class="subCategory left" ng-repeat="selectedCategory in selectedCategories">
       <b>Select a Sub-category:</b><br>
       <select ng-model="selectedSubCategory.obj" ng-options="subCategory.SubCategoryName for subCategory in selectedCategory.SubCategory"></select>
-
-      <div>
-        <b><span class="subCategoryClass">{{selectedSubCategory.obj.SubCategoryName}}</span></b><br>
-
-        <b>Select a Demography:</b><br>
-        <select ng-model="selectedDemography.obj" ng-options="demography.DemographyName for demography in selectedSubCategory.obj.Demographies"></select>
-        <div>
-          <b><span class="selectedDemoGraphy">{{selectedDemography.obj.DemographyName}}</span></b><br>
-          <b>Select an Item:</b><br>
-          <select ng-model="selectedItem.obj" ng-options="item.Name for item in selectedDemography.obj.Items"></select>
-          <b><span class="selectedItem">{{selectedItem.obj.Rank}} - {{selectedItem.obj.Name}} - {{selectedItem.obj.UniqueAudience}}</span></b><br>
-        </div>
-      </div>
-
+      <!-- <b><span class="subCategoryClass">{{selectedSubCategory.obj.SubCategoryName}}</span></b> -->
+    </div>
+    <div class="demography left">
+      <b>Select a Demography:</b><br>
+      <select ng-model="selectedDemography.obj" ng-options="demography.DemographyName for demography in selectedSubCategory.obj.Demographies"></select>
+      <!-- <b><span class="selectedDemoGraphy">{{selectedDemography.obj.DemographyName}}</span></b> -->
+    </div>
+    <div class="item left">
+      <b>Select an Item:</b><br>
+      <select ng-model="selectedItem.obj" ng-options="item.Name for item in selectedDemography.obj.Items"></select><br>
+      <b><span class="selectedItem">{{selectedItem.obj.Rank}} {{selectedItem.obj.Name}} {{selectedItem.obj.UniqueAudience}}</span></b>
+    </div>
+    <div class="price left">
+      <b>Estimated Price:</b><br>
+      <input disabled="disabled" placeholder="">
+      <button ng-click="addNewRow" class="btn"> Add new row</button>
     </div>
   </div>
+  <div class="clear"></div>
   <br>
-  <div>
+  <br>
+  <div class="recommender-btn">
     <button class="btn" ng-click="recommender()">Get Recommendation</button>
   </div>
 </div>

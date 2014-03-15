@@ -445,3 +445,20 @@ nav {
 .error,.error1{
   color:red;
 }
+
+.left{
+  float: left;
+}
+.clear{
+  clear: both;
+}
+
+.category, .sub-category, .demography, .item, .price{
+  width: 20%px;
+  min-width: 150px;
+  margin-left: 10px;
+}
+
+.recommender-btn{
+  text-align: center;
+}
