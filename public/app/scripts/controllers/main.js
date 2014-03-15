@@ -29,8 +29,12 @@ angular.module('publicApp')
 
     $scope.recent_searches = Data.recent_searches;
     $scope.showRecentSearch = false;
-    $scope.toggle = function(){
-      $scope.showRecentSearch = !$scope.showRecentSearch;
+    $scope.showList = function(){
+      $scope.showRecentSearch = true;
+    }
+
+    $scope.hideList = function(){
+      $scope.showRecentSearch = false;
     }
 
     $scope.loadRecentSearch = function(search){
