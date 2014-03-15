@@ -1,5 +1,5 @@
 <ul class="recentSearchList">
-  <li ng-repeat="search in recent_searches">
+  <li ng-repeat="search in recent_searches | reverse">
     <div class="searchItem" ng-click="loadRecentSearch(search)">
       <div><b>{{search.api}}</b></div>
       <span class="smallFont" ng-repeat="(k, v) in search.input track by $index">

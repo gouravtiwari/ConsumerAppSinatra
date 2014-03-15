@@ -29,7 +29,7 @@
       <header>
         <b class="cursorPointer" ng-click="go('/')">Smart Mart</b> 
         - <span class="lightBlue">Buy & Sell Smartly.</span>
-        <div class="recentSearch cursorPointer floatRight" ng-click="toggle()">
+        <div class="recentSearch cursorPointer floatRight" ng-mouseover="showList()">
           <span ng-bind="recent_searches.length"></span>
           Recent Search<span ng-show="recent_searches.length>1">es</span>
           <span class="icon glyphicon glyphicon-search"></span>
@@ -38,7 +38,7 @@
       <div class="recentSearchInclude" ng-include="" src="'views/recent_search_list.html'"
         ng-class="{expandVertical: showRecentSearch}">
       </div>
-      <div ng-view
+      <div ng-view ng-mouseover="hideList()"
         class="view-animate-container"
         ng-animate="{enter: 'view-enter', leave: 'view-leave'}">
       </div>

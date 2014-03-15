@@ -362,7 +362,7 @@ nav {
 .recentSearchInclude {
   position: absolute;
   right: 0;
-  width: 450px;
+  width: 550px;
   height: 0;
   background: rgba(0,0,0,.8);
   transition: height .3s;
@@ -435,14 +435,14 @@ nav {
 }
 
 .smallFont {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .position{
   width: 100px;
 }
 
-.error,.error1{
+.error{
   color:red;
 }
 
@@ -469,4 +469,20 @@ nav {
   height: 50px;
   color: blue;
   font-size: 15px;
+}
+
+.modal_store{
+  height: 40px;
+  background-color: #3276b1;
+  border-radius: 5px;
+  padding: 0px;
+}
+.modal_store h3{
+  padding: 7px;
+  margin: 0px;
+  color: white;
+}
+.storeDetails tr td:nth-child(1){
+  cursor: pointer;
+  text-decoration: underline;
 }

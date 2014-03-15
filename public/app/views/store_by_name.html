@@ -5,44 +5,48 @@
 	<br><br>
 	<div ng-show="select_type=='Store Name'">
 		<form name="myForm">
-			<input type="text" name="input" ng-model="input.storeName" required placeholder="Enter Store name" >
+			<input type="text" name="input" ng-model="input.storeName" required placeholder="Enter Store name">
+			<button type='submit' class='btn' ng-click='by_name()' ng-disabled="myForm.$invalid" >Search</button>
 		</form>
-		<span class="error">Please enter the store name</span><br>
-		<span class="error1">{{status_name}}</span><br>
-		<input type='button' class='btn' ng-click='by_name()' value="Search">
-
+		<span class="error">{{status_name}}</span><br>
 	</div>
 	<div ng-show="select_type=='Owner Name'">
-		<form name="myForm">
-			<input type="text" name="input" ng-model="input.ownerName" placeholder="Enter Owner name">
+		<form name="myForm_owner">
+			<input type="text" name="input" ng-model="input.ownerName" required placeholder="Enter Owner name">
+			<button type='submir' class='btn' ng-click='by_owner()' ng-disabled="myForm_owner.$invalid">Search</button>
 		</form>
-		<span class="error">Please enter the owner name</span><br>
-		<span class="error1">{{status_owner}}</span><br>
-		<input type='button' class='btn' ng-click='by_owner()' value="Search">
+		<span class="error">{{status_owner}}</span><br>
 	</div>
 	<div ng-show="select_type=='Market'">
-		<input type="text" ng-model="input.scanTrackCode" placeholder="Enter Scan track code">
-		<input type="text" ng-model="input.marketCode" placeholder="Enter Market code">
-		Select Indicator:
-		<select ng-options="obj for obj in indicators" ng-model="input.indicator"></select>
+		<form name="myForm_market">
+			<input type="text" ng-model="input.scanTrackCode" placeholder="Enter Scan track code">
+			<input type="text" ng-model="input.marketCode" placeholder="Enter Market code">
+			Select Indicator:
+			<select ng-options="obj for obj in indicators" ng-model="input.indicator"></select>
+			<button type='submit' class='btn' ng-click='by_market()'ng-disabled="!input.scanTrackCode && !input.marketCode && !input.indicator">Search</button>
+		</form>
 		<span class="error">{{status_market}}</span><br>
-		<input type='button' class='btn' ng-click='by_market()' value="Search">
+		
 	</div>
 	<div ng-show="select_type=='Location'">
-		<input type="text" ng-model="input.stateFIPS" placeholder="Enter State FIPS Code"><br><br>
-		<input type="text" ng-model="input.city" placeholder="Enter City"><br><br>
-		<input type="text" ng-model="input.streetaddr" placeholder="Enter Street Address"><br><br>
-		<input type="text" ng-model="input.lat" placeholder="Latitude">
-		<input type="text" ng-model="input.lng" placeholder="Longitude"><br><br>
-		<input type="text" ng-model="input.radius" placeholder="Radius"><br><br>
+		<form name="myForm_location">
+			<input type="text" ng-model="input.stateFIPS" placeholder="Enter State FIPS Code"><br><br>
+			<input type="text" ng-model="input.city" placeholder="Enter City"><br><br>
+			<input type="text" ng-model="input.streetaddr" placeholder="Enter Street Address"><br><br>
+			<input type="text" ng-model="input.lat" placeholder="Latitude">
+			<input type="text" ng-model="input.lng" placeholder="Longitude"><br><br>
+			<input type="text" ng-model="input.radius" placeholder="Radius"><br><br>
+			<button type='submit' class='btn' ng-click='by_location()' ng-disabled="!input.lat && !input.lng &&!input.stateFIPS && !input.city && !input.streetaddr && !input.radius">Search</button>
+		</form>
 		<span class="error">{{status_loc}}</span><br>
-		<input type='button' class='btn' ng-click='by_location()' value="Search">
 	</div>
 	<div ng-show="select_type=='Size'">
-		<input type="text" ng-model="input.sizeCode" placeholder="Size Code"><br><br>
-		<input type="text" ng-model="input.spaceArea" placeholder="Selling space area"><br><br>	
+		<form name="myForm_size">
+			<input type="text" ng-model="input.sizeCode" placeholder="Size Code"><br><br>
+			<input type="text" ng-model="input.spaceArea" placeholder="Selling space area"><br><br>	
+			<button type='submit' class='btn' ng-click='by_size()' ng-disabled="!input.sizeCode && !input.spaceArea">Search</button>
+		</form>
 		<span class="error">{{status_size}}</span><br>
-		<input type='button' class='btn' ng-click='by_size()' value="Search">
 	</div>
 
 	<br>
@@ -56,7 +60,7 @@
 			</thead>
 			<tbody>
 				<tr ng-repeat="store in stores">
-					<td>{{store.StoreCode}}</td>
+					<td ng-click="open(store.StoreCode)">{{store.StoreCode}}</td>
 					<td>{{store.StoreName}}</td>
 					<td>{{store.OwnerName}}</td>
 					<td>{{store.StoreStatus}}</td>

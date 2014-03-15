@@ -1,5 +1,5 @@
 angular.module('publicApp')
-  .controller('StoreCtrl', function ($scope, Data) {
+  .controller('StoreCtrl', function ($scope,$modal, Data) {
 	  
 	 $scope.input = {storeName:'',
                    ownerName:'',
@@ -21,7 +21,7 @@ angular.module('publicApp')
     "Market",
     "Location",
     "Size"
-   ]
+   ];
    $scope.indicators = [
     "",
     "Beer",
@@ -33,41 +33,27 @@ angular.module('publicApp')
    ]
    $scope.select_type = $scope.options[0];
    $(".error").hide();
-   $(".error1").hide();
-
 
    $scope.currentPage = 1;
 
     $scope.by_name = function(){
-
-      if($scope.input.storeName==''){
-        $(".error").show();
-      }
-      else{
-        $(".error").hide();
         $(".storeDetails").css("display","inline-table")
         var parameter_obj = {'name' : $scope.input.storeName,
                             'pageno' : $scope.currentPage};
         Data.get_json('Stores/v1', parameter_obj).success(function(api_data){
           $scope.status_name = api_data.Summary.Status;
           if($scope.status_name!=""){
-          $(".error1").show();
-        }
+            $(".error").show();
+          }
          //Data.get_local('scripts/jsons/product_by_desc.json').success(function(api_data){
           $scope.stores = api_data.StoreRefData.Stores;
           $scope.totalItems = api_data.Summary.TotalPages;
           $scope.maxSize = 10;
         });
-      }
     }
 
     $scope.by_owner = function(){
-      if($scope.input.ownerName==''){
-        $(".error").show();
-      }
-      else{
-        $(".error").hide();
-
+      
         $(".storeDetails").css("display","inline-table")
 
         var parameter_obj = {'owner' : $scope.input.ownerName,
@@ -75,14 +61,13 @@ angular.module('publicApp')
         Data.get_json('Stores/v1', parameter_obj).success(function(api_data){
           $scope.status_owner = api_data.Summary.Status;
           if($scope.status_owner!=""){
-          $(".error1").show();
+          $(".error").show();
         }
           //Data.get_local('scripts/jsons/product_by_desc.json').success(function(api_data){
           $scope.stores = api_data.StoreRefData.Stores;
           $scope.totalItems = api_data.Summary.TotalPages;
           $scope.maxSize = 10;
         });
-      }
     }
 
     $scope.by_market = function(){
@@ -166,11 +151,48 @@ angular.module('publicApp')
     }
 
     $scope.$watch('currentPage', function() {
-      if($scope.products != undefined){
-        $scope.by_desc();  
+      if($scope.stores != undefined){
+        if($scope.select_type == 'Store Name'){
+            $scope.by_name(); 
+        }
+        else if($scope.select_type == 'Owner Name'){
+          $scope.by_owner();
+        }
+        else if($scope.select_type == 'Location'){
+          $scope.by_location();
+        }
+        else if($scope.select_type == 'Market'){
+          $scope.by_market();
+        }
+        else if($scope.select_type == 'Size'){
+          $scope.by_size();
+        } 
       }
     });
+    $scope.$watch('select_type',function(){
+       $(".storeDetails").css("display","none")
+    })
+  $scope.open = function (code) {
+    var parameter_obj = {};
+      Data.get_json('Stores/v1/'+ code , parameter_obj).success(function(api_data){
+        $scope.storeInfo = api_data.StoreInfo.Characteristics[0];
 
+        var modalInstance = $modal.open({
+          templateUrl: 'views/store_info.html',
+          controller: 'ModalInstanceCtrlStore',
+          resolve: {
+            info: function () {
+              return $scope.storeInfo;
+            }
+          }
+        });
+      });
+    };
+  })
+.controller('ModalInstanceCtrlStore', [ '$scope', '$modalInstance', 'info', function ($scope, $modalInstance, info) {
+ $scope.storeInfo = info;
+    $scope.ok = function () {
+    $modalInstance.close();
+  }; 
+}]);
 
-  
-  });

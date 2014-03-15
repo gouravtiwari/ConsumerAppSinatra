@@ -27,21 +27,31 @@ angular.module('publicApp')
     //BELOW INPUT MODEL MUST BE USED ACROSS ALL CTRLs FOR RECENT SEARCHES LOGIC!!! 
     $scope.input = {};
     $scope.viaRecentSearch = false;
+    $scope.cache_response = {};
 
     $scope.recent_searches = Data.recent_searches;
     $scope.showRecentSearch = false;
-    $scope.toggle = function(){
-      $scope.showRecentSearch = !$scope.showRecentSearch;
+    $scope.showList = function(){
+      $scope.showRecentSearch = true;
+    }
+
+    $scope.hideList = function(){
+      $scope.showRecentSearch = false;
     }
 
     $scope.loadRecentSearch = function(search){
-      $scope.cache_response = Data.in_cache(search.cache_url);
-      $.extend($scope.input, search.input);
-      console.log($scope.cache_response);
+      console.log(search);
       $scope.viaRecentSearch = true;
       $scope.go(search.location);
+      //BELOW LINE MASHES UP SCREEN/SEARCH SPECIFIC INPUTS! 
+      $.extend($scope.input, search.input);
+      console.log($scope.input.pageno)
+      $scope.cache_response = Data.in_cache(search.cache_url);
+      console.log($scope.cache_response);
     }
 
+    //BELOW OUTPUT MODEL MUST BE USED FOR ERROR/NOT FOUND MESSAGES
+    $scope.output = {};
 
 
   });
