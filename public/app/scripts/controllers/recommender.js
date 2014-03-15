@@ -3,13 +3,11 @@
 angular.module('publicApp')
   .controller('RecommenderCtrl', function ($scope, Data) {
     $scope.categories = ['Television', 'Mobile Apps'];
-    $scope.selectedSubCategories = [];
-    $scope.selectedSubCategory = {};
+    $scope.selectedSubCategory = {"obj":{}};
+    $scope.selectedDemography = {"obj":{}};
+    $scope.selectedItem = {"obj":{}};
     $scope.$watch('categoryName', function() {
       $scope.searchByCategory();
-    });
-    $scope.$watch('selectedSubCategory.selection', function() {
-      $scope.searchBySubCategory();
     });
 
     $scope.searchByCategory = function(){
@@ -24,18 +22,4 @@ angular.module('publicApp')
         });
       }
     };
-
-    $scope.searchBySubCategory = function(){
-      if ($scope.selectedSubCategory.selection){
-
-        console.log($scope.selectedSubCategory.selection.SubCategoryName);
-        console.log($scope.selectedSubCategory.selection.Demographies);
-      }
-      // $scope.selectedSubCategory = $scope.selectedCategories.indexOf($scope.subCategoryName);
-      // console.log($scope.selectedSubCategory);
-    };
-
-    // $scope.selectSubCategory = function(subCategory){
-    //   $scope.selectedSubCategories.push(subCategory);
-    // };
   });
