@@ -403,7 +403,17 @@ nav {
   position: relative;
   float: left;
   width: 100%;
+  height: 30px;
   list-style: none;
+}
+
+.mainCell{
+  position: relative;
+  float: left;
+  width: 100%;
+  border-radius: 5px;
+  height: 25px;
+  line-height: 25px;
 }
 
 .head-val{
@@ -416,16 +426,31 @@ nav {
 .labelIndex{
   position: relative;
   float: left;
-  width: 25%;
-  padding-left: 10px;
+  width: 18%;
+  padding-right: 10px;
+  text-align: right;
 }
 
 .green{
-  background: green;
+  background-color: #5eb95e;
+  background-image: -moz-linear-gradient(top, #62c462, #57a957);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#62c462), to(#57a957));
+  background-image: -webkit-linear-gradient(top, #62c462, #57a957);
+  background-image: -o-linear-gradient(top, #62c462, #57a957);
+  background-image: linear-gradient(to bottom, #62c462, #57a957);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff62c462', endColorstr='#ff57a957', GradientType=0);
 }
 
 .red{
-  background: red;
+  background-color: #dd514c;
+  background-image: -moz-linear-gradient(top, #ee5f5b, #c43c35);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ee5f5b), to(#c43c35));
+  background-image: -webkit-linear-gradient(top, #ee5f5b, #c43c35);
+  background-image: -o-linear-gradient(top, #ee5f5b, #c43c35);
+  background-image: linear-gradient(to bottom, #ee5f5b, #c43c35);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffc43c35', GradientType=0);
 }
 .storeDetails{
   display: none;
@@ -485,4 +510,7 @@ nav {
 .storeDetails tr td:nth-child(1){
   cursor: pointer;
   text-decoration: underline;
+}
+.bold{
+  font-weight: bold;
 }
