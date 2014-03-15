@@ -50,7 +50,7 @@ angular.module('publicApp')
             return this.get_promise(url_calling)
         },
 
-        get_promise: function(url_calling){
+        get_promise: function(url_calling, url_part, param_path){
             console.log(url_calling);
             window.recent_api_url = url_calling
             var base_url = url_calling.split('?')[0], cached_data, promise;
@@ -69,7 +69,8 @@ angular.module('publicApp')
                 var that = this;
                 promise.success(function(api_data){
                     if(base_url != '/api/bkg_progress') {
-                        that.add_data_to_cache(url_calling, api_data)
+                        that.add_data_to_cache(url_calling, api_data);
+                        that.add_to_recent_searches(url_part, param_path);
                     }
                 }); 
             }
@@ -86,8 +87,7 @@ angular.module('publicApp')
         },
 
         get_json: function(url_part, param_path){
-            this.add_to_recent_searches(url_part, param_path);
-            return this.get_promise(this.get_query_url(url_part, param_path));
+            return this.get_promise(this.get_query_url(url_part, param_path), url_part, param_path);
         },
 
         recent_searches: [],

@@ -35,6 +35,7 @@ angular.module('publicApp')
 
     $scope.loadRecentSearch = function(search){
       $scope.cache_response = Data.in_cache(search.cache_url);
+      //BELOW LINE MASHES UP SCREEN/SEARCH SPECIFIC INPUTS! 
       $.extend($scope.input, search.input);
       console.log($scope.cache_response);
       $scope.viaRecentSearch = true;

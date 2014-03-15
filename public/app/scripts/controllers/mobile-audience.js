@@ -25,6 +25,6 @@ angular.module('publicApp')
   		if(newValue) {
   			$scope.AppDetails = $scope.cache_response.AppResponse.AppDetails;	
   		}
-  	})
+  	});
 
   });
