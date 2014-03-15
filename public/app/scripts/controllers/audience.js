@@ -26,7 +26,7 @@ angular.module('publicApp')
     }
 
     if($scope.viaRecentSearch) {
-      if(!$scope.cache_response.NetUsage[0].WebsiteCategory) {
+      if($scope.cache_response.NetUsage && !$scope.cache_response.NetUsage[0].WebsiteCategory) {
         $scope.output.message = "No Record found for the provided input";
         $scope.netUsageData = '';
       } else {

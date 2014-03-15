@@ -16,7 +16,9 @@ angular.module('publicApp')
   	}
 
   	if($scope.viaRecentSearch) {
-  		$scope.AppDetails = $scope.cache_response.AppResponse.AppDetails;
+      if($scope.cache_response.AppResponse){
+  		  $scope.AppDetails = $scope.cache_response.AppResponse.AppDetails;
+      }
   		$scope.viaRecentSearch = false;
   	}
 

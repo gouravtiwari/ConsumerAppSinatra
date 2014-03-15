@@ -26,6 +26,7 @@ angular.module('publicApp')
     //BELOW INPUT MODEL MUST BE USED ACROSS ALL CTRLs FOR RECENT SEARCHES LOGIC!!! 
     $scope.input = {};
     $scope.viaRecentSearch = false;
+    $scope.cache_response = {};
 
     $scope.recent_searches = Data.recent_searches;
     $scope.showRecentSearch = false;
@@ -43,6 +44,7 @@ angular.module('publicApp')
       $scope.go(search.location);
       //BELOW LINE MASHES UP SCREEN/SEARCH SPECIFIC INPUTS! 
       $.extend($scope.input, search.input);
+      console.log($scope.input.pageno)
       $scope.cache_response = Data.in_cache(search.cache_url);
       console.log($scope.cache_response);
     }

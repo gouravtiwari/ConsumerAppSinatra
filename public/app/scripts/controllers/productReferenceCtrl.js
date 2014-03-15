@@ -6,9 +6,10 @@ angular.module('publicApp')
 	  $scope.input.search = $scope.input.search || 'Description / UPC Code';
     $scope.pageshow = false;
 
-    $scope.input.pageno;
-
     $scope.by_desc = function(){
+      if($scope.input.prevSearch != $scope.input.search){
+        $scope.input.pageno = null;
+      }
       var parameter_obj = {'search' : $scope.input.search,
                           'pageno' : $scope.input.pageno || 1};
       Data.get_json('Products/v1', parameter_obj).success(function(api_data){
@@ -17,6 +18,7 @@ angular.module('publicApp')
         $scope.products = api_data.ProductDetails;
         $scope.totalItems = api_data.Summary.TotalPages;
         $scope.maxSize = 10;
+        $scope.input.prevSearch = $scope.input.search;
       });
     }
 
@@ -35,10 +37,11 @@ angular.module('publicApp')
     }
 
     $scope.$watch('input.pageno', function(newValue, oldValue) {
+      console.log(newValue, oldValue)
       if(newValue == oldValue) return;
-      if($scope.products != undefined){
+      if(isNaN($scope.input.pageno) || $scope.input.pageno == null) return; 
+        console.log($scope.input.pageno);
         $scope.by_desc();  
-      }
     });
 
     $scope.open = function () {
@@ -63,15 +66,19 @@ angular.module('publicApp')
   if($scope.viaRecentSearch) {
     $scope.products = $scope.cache_response.ProductDetails;
     $scope.viaRecentSearch = false;
+    //$scope.cache_response = {};
   }
 
   $scope.$watch('cache_response', function(newValue, oldValue){
+    console.log(' changed')
     if(newValue == oldValue) { return; }
+    console.log($scope.cache_response.ProductDetails)
     if($scope.cache_response.ProductDetails) {
       $scope.products = $scope.cache_response.ProductDetails;
       $scope.pageshow = true;
       $scope.totalItems = $scope.cache_response.Summary.TotalPages;
       $scope.maxSize = 10;
+      //$scope.cache_response = {};
     }
   });
 
