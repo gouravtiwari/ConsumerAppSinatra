@@ -10,6 +10,7 @@ angular.module('publicApp')
     $scope.input.currentPage = 1;
 
     $scope.by_desc = function(){
+      $scope.input.productDescription = $scope.input.productDescription.split(' ').join('%20');
       var parameter_obj = {'search' : $scope.input.productDescription,
                           'pageno' : $scope.input.currentPage};
       Data.get_json('Products/v1', parameter_obj).success(function(api_data){
@@ -19,6 +20,11 @@ angular.module('publicApp')
         $scope.totalItems = api_data.Summary.TotalPages;
         $scope.maxSize = 10;
       });
+    }
+
+    $scope.setData = function(data){
+      Data.set_search_data({'product_id' : data.UPC});
+      $scope.open();
     }
 
     $scope.by_upc = function(){

@@ -5,6 +5,7 @@
 	<button type='button' class='btn' ng-click='by_desc()'>Search</button>
 	<div class="resultHolder">
 		<div class="product" ng-repeat="product in products">
+			<div class='btn' ng-click='setData(product)'>Check Availablility</div><br>
 			<b><span class="productDesc">{{product.Description}}</span></b><br>
 			<b>Category:</b> {{product.Module}} | <b>Rank:</b> {{product.Rank}}
 		</div>
