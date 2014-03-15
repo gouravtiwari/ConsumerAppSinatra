@@ -453,14 +453,10 @@ nav {
   clear: both;
 }
 
-.category, .sub-category, .demography, .item, .price{
+.category, .sub-category, .demography, .item, .price, .number-of-rows, .recommender-btn{
   width: 20%px;
   min-width: 150px;
   margin-left: 10px;
-}
-
-.recommender-btn{
-  text-align: center;
 }
 
 .recommendation{
