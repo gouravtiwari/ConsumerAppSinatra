@@ -1,18 +1,14 @@
-<div>
-<h2>Search Categories by their name:</h2>
-<!-- <input type="text" ng-model="input.CategoryName" class="inputName"> -->
-<select ng-model="categoryName" ng-options="category for category in categories"></select>
-<div>
-  <b><span class="categoryName">{{categoryName}}</span></b><br>
-  <div class="subCategory" ng-repeat="subCategory in SubCategory">
-    <br>
-    <b>SubCategory:</b> {{subCategory.SubCategoryName}}
-    <div class="demography" ng-repeat="demography in subCategory.Demographies">
-      <b>Demography:</b> {{demography.DemographyName}}
-      <div class="item" ng-repeat="item in demography.Items">
-        <b>Item#{{item.Rank}}:</b> {{item.Name}}
-      </div>
+<div class='col-md-12'>
+  <h2>Search Categories by their name:</h2>
+  <span>Select Category</span><br>
+  <select ng-model="categoryName" ng-options="category for category in categories"></select><br>
+  <span>Select Sub Category</span><br>
+  <select ng-model="subCategoryName" ng-options="sub.SubCategoryName for sub in subCategories"></select><br>
+  <span>Select Demography</span><br>
+  <select ng-model="demography" ng-options="sub.DemographyName for sub in demographies"></select><br>
+  <div class='resultHolder' ng-repeat='item in items'>
+    <div ng-repeat="(k, v) in item track by $index">
+      <b>{{k}}: </b>{{v}} <br>
     </div>
   </div>
-</div>
 </div>
