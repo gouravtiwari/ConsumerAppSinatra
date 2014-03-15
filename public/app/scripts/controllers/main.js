@@ -40,15 +40,16 @@ angular.module('publicApp')
       $scope.showRecentSearch = false;
     }
 
-    $scope.loadRecentSearch = function(search){
+    $scope.loadRecentSearch = function(search, index){
       console.log(search);
       $scope.viaRecentSearch = true;
       $scope.go(search.location);
       //BELOW LINE MASHES UP SCREEN/SEARCH SPECIFIC INPUTS! 
       $.extend($scope.input, search.input);
-      console.log($scope.input.pageno)
       $scope.cache_response = Data.in_cache(search.cache_url);
       console.log($scope.cache_response);
+      Data.recent_searches.splice(Data.recent_searches.length - index - 1, 1);
+      Data.recent_searches.splice(Data.recent_searches.length, 0, search);
     }
 
     //BELOW OUTPUT MODEL MUST BE USED FOR ERROR/NOT FOUND MESSAGES
