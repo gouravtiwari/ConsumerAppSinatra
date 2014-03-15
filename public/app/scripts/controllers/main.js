@@ -42,6 +42,8 @@ angular.module('publicApp')
       $scope.go(search.location);
     }
 
+    //BELOW OUTPUT MODEL MUST BE USED FOR ERROR/NOT FOUND MESSAGES
+    $scope.output = {};
 
 
   });

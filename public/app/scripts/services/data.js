@@ -70,7 +70,9 @@ angular.module('publicApp')
                 promise.success(function(api_data){
                     if(base_url != '/api/bkg_progress') {
                         that.add_data_to_cache(url_calling, api_data);
-                        that.add_to_recent_searches(url_part, param_path);
+                        if(url_part){
+                            that.add_to_recent_searches(url_part, param_path);
+                        }
                     }
                 }); 
             }
