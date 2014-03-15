@@ -1,7 +1,7 @@
 <div>
 <div class="productSearch">
 	<h2>Search Products by their description:</h2>
-	<input type="text" ng-model="input.productDescription" class="inputDesc">
+	<input type="text" ng-model="input.search" class="inputDesc">
 	<button type='button' class='btn' ng-click='by_desc()'>Search</button>
 	<div class="resultHolder">
 		<div class="product" ng-repeat="product in products">
@@ -11,7 +11,8 @@
 		</div>
 	</div>
 	<div ng-show='pageshow'>
-		<pagination direction-links="false" boundary-links="true" total-items="totalItems" page="currentPage"></pagination>
+		<pagination direction-links="false" boundary-links="true" total-items="totalItems"
+			page="input.pageno" current-page="input.pageno"></pagination>
 	</div>
 </div>	
 
