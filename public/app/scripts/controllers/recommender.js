@@ -6,6 +6,7 @@ angular.module('publicApp')
     $scope.selectedSubCategory = {"obj":{}};
     $scope.selectedDemography = {"obj":{}};
     $scope.selectedItem = {"obj":{}};
+    $scope.selectedItemsList = [];
     $scope.$watch('categoryName', function() {
       $scope.searchByCategory();
     });
@@ -22,4 +23,9 @@ angular.module('publicApp')
         });
       }
     };
+
+    $scope.recommender = function(){
+      $scope.selectedItemsList = [$scope.selectedItem.obj];
+      console.log($scope.selectedItemsList);
+    }
   });

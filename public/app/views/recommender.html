@@ -1,16 +1,10 @@
 <div>
   <h2>Recommender Tool</h2>
   <select ng-model="categoryName" ng-options="category for category in categories"></select>
-  
-
   <div>
     <b><span class="categoryName">{{categoryName}}</span></b>
-  
-
     <div class="selectedCategory" ng-repeat="selectedCategory in selectedCategories">
       <b>Select a Sub-category:</b><br>
-  
-
       <select ng-model="selectedSubCategory.obj" ng-options="subCategory.SubCategoryName for subCategory in selectedCategory.SubCategory"></select>
 
       <div>
@@ -26,24 +20,10 @@
         </div>
       </div>
 
-      <!-- <div class="subCategory" ng-repeat="subCategory in selectedCategory.SubCategory">
-        <div class="subCategoryName" ng-click="selectSubCategory(subCategory.SubCategoryName)">
-          {{subCategory.SubCategoryName}}
-        </div>
-        <br>
-        <div class="demography" ng-repeat="demography in subCategory.Demographies">
-          <b>Demography:</b> {{demography.DemographyName}}<br>
-          <div class="item" ng-repeat="item in demography.Items">
-            <b>Item#{{item.Rank}}:</b> {{item.Name}}
-          </div>
-          <br>
-          <br>
-        </div>
-      </div> -->
-
-
-
-
     </div>
+  </div>
+  <br>
+  <div>
+    <button class="btn" ng-click="recommender()">Get Recommendation</button>
   </div>
 </div>
