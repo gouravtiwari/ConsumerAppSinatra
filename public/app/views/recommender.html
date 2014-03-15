@@ -1,25 +1,40 @@
 <div>
   <h2>Recommender Tool</h2>
   <select ng-model="categoryName" ng-options="category for category in categories"></select>
+  
+
   <div>
     <b><span class="categoryName">{{categoryName}}</span></b><br>
-    <div class="selectedCategory" ng-repeat="selectedCategory in SelectedCategory">
-      <div class="subCategory" ng-repeat="subCategory in selectedCategory.SubCategory">
-        <br>
-        <b>SubCategory:</b> 
-        <div class="subCategoryName" ng-model="selectedSubCategoryName" ng-click="selectSubCategory()">
+  
+
+    <div class="selectedCategory" ng-repeat="selectedCategory in selectedCategories">
+      <b>Select a Sub-category:</b><br>
+  
+
+      <select ng-model="selectedSubCategory.selection" ng-options="subCategory.SubCategoryName for subCategory in selectedCategory.SubCategory"></select><br>
+
+      <b><span class="subCategoryClass">{{selectedSubCategory.SubCategoryName}}</span></b><br>
+      <!-- <b>Select a Demography:</b><br>
+      <select ng-model="demographyName" ng-options="demography.DemographyName for demography in selectedSubCategory.Demography"></select> -->
+
+      <!-- <div class="subCategory" ng-repeat="subCategory in selectedCategory.SubCategory">
+        <div class="subCategoryName" ng-click="selectSubCategory(subCategory.SubCategoryName)">
           {{subCategory.SubCategoryName}}
         </div>
         <br>
-      </div>
-      <div class="demography" ng-repeat="demography in selectedSubCategory.Demographies">
-        <b>Demography:</b> {{demography.DemographyName}}<br>
-        <div class="item" ng-repeat="item in demography.Items">
-          <b>Item#{{item.Rank}}:</b> {{item.Name}}
+        <div class="demography" ng-repeat="demography in subCategory.Demographies">
+          <b>Demography:</b> {{demography.DemographyName}}<br>
+          <div class="item" ng-repeat="item in demography.Items">
+            <b>Item#{{item.Rank}}:</b> {{item.Name}}
+          </div>
+          <br>
+          <br>
         </div>
-        <br>
-        <br>
-      </div>
+      </div> -->
+
+
+
+
     </div>
   </div>
 </div>

@@ -115,6 +115,15 @@ angular.module('publicApp')
             return this.get_promise(path);
         },
 
+        set_search_data: function(obj){
+            this.gmapdata = obj;
+            console.log(obj)
+        },
+
+        get_search_data: function(){
+            return this.gmapdata;
+        },
+
         locations: {
           'Mobile Audience on ': '/mobile-audience',
           'Products': '/product_by_desc'

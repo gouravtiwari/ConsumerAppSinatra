@@ -1,14 +1,23 @@
 <div>
+	<br>
 	<b>Search Store:</b> 
 	<select ng-options="obj for obj in options" ng-model="select_type"></select>
 	<br><br>
 	<div ng-show="select_type=='Store Name'">
-		<input type="text" ng-model="input.storeName" required placeholder="Enter Store name" >
+		<form name="myForm">
+			<input type="text" name="input" ng-model="input.storeName" required placeholder="Enter Store name" >
+		</form>
+		<span class="error">Please enter the store name</span><br>
+		<span class="error1">{{status_name}}</span><br>
 		<input type='button' class='btn' ng-click='by_name()' value="Search">
-		<span>
+
 	</div>
 	<div ng-show="select_type=='Owner Name'">
-		<input type="text" ng-model="input.ownerName" placeholder="Enter Owner name">
+		<form name="myForm">
+			<input type="text" name="input" ng-model="input.ownerName" placeholder="Enter Owner name">
+		</form>
+		<span class="error">Please enter the owner name</span><br>
+		<span class="error1">{{status_owner}}</span><br>
 		<input type='button' class='btn' ng-click='by_owner()' value="Search">
 	</div>
 	<div ng-show="select_type=='Market'">
@@ -16,6 +25,7 @@
 		<input type="text" ng-model="input.marketCode" placeholder="Enter Market code">
 		Select Indicator:
 		<select ng-options="obj for obj in indicators" ng-model="input.indicator"></select>
+		<span class="error">{{status_market}}</span><br>
 		<input type='button' class='btn' ng-click='by_market()' value="Search">
 	</div>
 	<div ng-show="select_type=='Location'">
@@ -25,11 +35,13 @@
 		<input type="text" ng-model="input.lat" placeholder="Latitude">
 		<input type="text" ng-model="input.lng" placeholder="Longitude"><br><br>
 		<input type="text" ng-model="input.radius" placeholder="Radius"><br><br>
+		<span class="error">{{status_loc}}</span><br>
 		<input type='button' class='btn' ng-click='by_location()' value="Search">
 	</div>
 	<div ng-show="select_type=='Size'">
 		<input type="text" ng-model="input.sizeCode" placeholder="Size Code"><br><br>
-		<input type="text" ng-model="input.spaceArea" placeholder="Selling space area"><br><br>		
+		<input type="text" ng-model="input.spaceArea" placeholder="Selling space area"><br><br>	
+		<span class="error">{{status_size}}</span><br>
 		<input type='button' class='btn' ng-click='by_size()' value="Search">
 	</div>
 
