@@ -73,3 +73,10 @@ app.filter('unsafe', ['$sce', function ($sce) {
       return $sce.trustAsHtml(val);
     };
 }]);
+
+app.filter('reverse', function() {
+  return function(array) {
+  	var arrayCopy = [].concat(array);
+    return arrayCopy.reverse();
+  };
+});
