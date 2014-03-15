@@ -1,11 +1,11 @@
 <div>
 	<h2>Mobile Audience</h2>
 	<!-- Inputs -->
-	<b>Platform* :</b>
+	<b>Platform * :</b>
 	<select ng-model="input.platform" ng-required
  		ng-options="platform for platform in input.platforms">
   </select>
-  <b># of Top Apps* :</b> <input type="number" ng-model="input.noofresults" ng-required />
+  <b># of Top Apps * :</b> <input type="number" ng-model="input.noofresults" ng-required />
   <button class="btn btn-primary" ng-click="search()">Search</button>
 	<!-- Result -->
 	<div class="product" ng-repeat="app in AppDetails">

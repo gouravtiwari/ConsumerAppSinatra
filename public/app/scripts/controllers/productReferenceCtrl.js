@@ -8,7 +8,7 @@ angular.module('publicApp')
 
     $scope.by_desc = function(){
 
-      $scope.input.search = $scope.input.search.split(' ').join('%20');
+      //$scope.input.search = $scope.input.search.split(' ').join('%20');
       
       if($scope.input.prevSearch != $scope.input.search){
         $scope.input.pageno = null;
