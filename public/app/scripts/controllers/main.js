@@ -21,7 +21,8 @@ angular.module('publicApp')
     	{name: 'Mobile Audience', url: '/mobile-audience'},
     	{name: 'Ad <br/> Spend', url: '/ad_spend'},
     	{name: 'Ad Spend Recommender', url: '/recommender'},
-      {name: 'TV Programs Rankings', url: '/program_rankings'}
+      {name: 'TV Programs Rankings', url: '/program_rankings'},
+      {name: 'Lifestyle Segmentation', url: '/segmentation'}
     ];
 
     //BELOW INPUT MODEL MUST BE USED ACROSS ALL CTRLs FOR RECENT SEARCHES LOGIC!!! 
