@@ -39,7 +39,7 @@ angular.module('publicApp')
 
     $scope.$watch('cache_response', function(newValue, oldValue){
       if(newValue == oldValue) { return; }
-      if(newValue) {
+      if($scope.cache_response.NetUsage) {
         if(!$scope.cache_response.NetUsage[0].WebsiteCategory) {
           $scope.output.message = "No Record found for the provided input";
           $scope.netUsageData = '';

@@ -67,7 +67,7 @@ angular.module('publicApp')
 
   $scope.$watch('cache_response', function(newValue, oldValue){
     if(newValue == oldValue) { return; }
-    if(newValue) {
+    if($scope.cache_response.ProductDetails) {
       $scope.products = $scope.cache_response.ProductDetails;
       $scope.pageshow = true;
       $scope.totalItems = $scope.cache_response.Summary.TotalPages;

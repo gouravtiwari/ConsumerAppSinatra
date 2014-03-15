@@ -128,7 +128,8 @@ angular.module('publicApp')
 
         locations: {
           'Mobile Audience on ': '/mobile-audience',
-          'Products': '/product_by_desc'
+          'Products': '/product_by_desc',
+          'NetView': '/audience'
         }
 
 		}

@@ -22,7 +22,7 @@ angular.module('publicApp')
 
   	$scope.$watch('cache_response', function(newValue, oldValue){
   		if(newValue == oldValue) { return; }
-  		if(newValue) {
+  		if($scope.cache_response.AppResponse) {
   			$scope.AppDetails = $scope.cache_response.AppResponse.AppDetails;	
   		}
   	});

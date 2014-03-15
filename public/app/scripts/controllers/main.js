@@ -34,12 +34,13 @@ angular.module('publicApp')
     }
 
     $scope.loadRecentSearch = function(search){
-      $scope.cache_response = Data.in_cache(search.cache_url);
-      //BELOW LINE MASHES UP SCREEN/SEARCH SPECIFIC INPUTS! 
-      $.extend($scope.input, search.input);
-      console.log($scope.cache_response);
+      console.log(search);
       $scope.viaRecentSearch = true;
       $scope.go(search.location);
+      //BELOW LINE MASHES UP SCREEN/SEARCH SPECIFIC INPUTS! 
+      $.extend($scope.input, search.input);
+      $scope.cache_response = Data.in_cache(search.cache_url);
+      console.log($scope.cache_response);
     }
 
     //BELOW OUTPUT MODEL MUST BE USED FOR ERROR/NOT FOUND MESSAGES
