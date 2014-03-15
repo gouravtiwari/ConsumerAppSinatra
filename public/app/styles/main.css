@@ -462,3 +462,11 @@ nav {
 .recommender-btn{
   text-align: center;
 }
+
+.recommendation{
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  color: blue;
+  font-size: 15px;
+}
