@@ -1,15 +1,28 @@
 <div>
-<h3>Lifestyle Segmentation</h3>
-Address : <input type="text" ng-model="input.address">
-City : <input type="text" ng-model="input.city"><br><br>
-State : <input type="text" ng-model="input.state">
-Zip Code : <input type="text" ng-model="input.zipcode">
-<button ng-click = "search(input)">Search</button>
-<div class="resultHolder">
-	<div class="list" ng-repeat = "seg in segment">
-		Segment System : <span><b>{{seg.SegSystem}}</b></span><br>
-		Segment Name: <span><b>{{seg.SegmentName}}</b></span><br>
-		Segment code: <span><b>{{seg.SegmentCode}}</b></span>
+	<h3>Lifestyle Segmentation</h3>
+	<!-- Inputs -->
+	<b>Segment * : </b>
+	<select ng-model="input.segment" ng-required
+ 		ng-options="segment for segment in input.segments">
+  </select>
+  <b>Level: </b>
+	<select ng-model="input.segmentLevel"
+ 		ng-options="level for level in input.segmentLevels">
+  </select>
+	<b>Address* : </b>
+	<input type="text" ng-model="input.addressline">
+	<b>City* : </b>
+	<input type="text" ng-model="input.city"><br><br>
+	<b>State : <b>
+		<input type="text" ng-model="input.state">
+	<b>Zip Code* : </b>
+	<input type="text" ng-model="input.zipcode">
+	<button ng-click = "search(input)">Search</button>
+	<div class="resultHolder">
+		<div class="list" ng-repeat = "seg in segment">
+			Segment System : <span><b>{{seg.SegSystem}}</b></span><br>
+			Segment Name: <span><b>{{seg.SegmentName}}</b></span><br>
+			Segment code: <span><b>{{seg.SegmentCode}}</b></span>
+		</div>
 	</div>
-</div>
 </div>
