@@ -63,7 +63,7 @@ var app = angular.module('publicApp', ['google-maps', 'ui.bootstrap'])
 			  controller: 'RecommenderCtrl'
 			})
 			.otherwise({
-				redirectTo: '/'
+				redirectTo: '/nav_page'
 			})
 	});
 
