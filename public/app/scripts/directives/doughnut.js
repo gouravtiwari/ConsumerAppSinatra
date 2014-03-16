@@ -29,7 +29,7 @@ angular.module('publicApp')
                     data: scope.val,
                     totalLabel: "Recommendation Score",
                     width: 650,
-                    height: 500,
+                    height: 650,
                     innerRadius: 150,
                     outerRadius: 210,
                     legend: false

@@ -212,7 +212,7 @@
     <div class="recommender-btn left">
       <button class="btn" ng-click="recommender()">Get Recommendation</button>
     </div>
-    <div class="recommendation left">
+    <div class="recommendation left" ng-hide="true" ng-show="recommendationScore">
       {{recommendationScore}} {{recommendationRating}}
     </div>
   </div>
