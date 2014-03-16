@@ -4,6 +4,7 @@
 	<input type="text" ng-model="input.search" class="inputDesc">
 	<button type='button' class='btn' ng-click='by_desc()'>Search</button>
 	<div class="resultHolder">
+		<span class='nodata' ng-show='noData'>Sorry! No data found</span>
 		<div class="product" ng-repeat="product in products">
 			<div class='btn' ng-click='setData(product)'>Check Availablility</div><br>
 			<b><span class="productDesc">{{product.Description}}</span></b><br>
@@ -16,8 +17,9 @@
 </div>	
 
 <h2>Search Products by UPC code:</h2>
-<input type="text" ng-model="input.UPC_CODE" class="inputDesc">
-<button type='button' class='btn' ng-click='by_upc()'>Search</button>
+<input type="number" ng-model="input.UPC_CODE" class="inputDesc">
+<button type='button' class='btn' ng-click='by_upc()'>Search</button><br>
+<span class='nodata' ng-show='noData'>Sorry! No data found</span>
 <div class="resultHolder" ng-repeat='data in product_detail'>
 	<div class="product">
 		<div class='btn' ng-click='open()'>Check Availablility</div><br>
@@ -28,7 +30,7 @@
 	</div>
 </div>
 
-<h2>Products Health Lookup using UPC code:</h2>
+<h2 ng-hide='noData'>Products Health Lookup using UPC code:</h2>
 <div class="resultHolder" >
 	<div class="product" >
 		<div ng-repeat='(k, v) in product_detail_characterstics[0] track by $index'>

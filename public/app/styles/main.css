@@ -514,3 +514,6 @@ nav {
 .bold{
   font-weight: bold;
 }
+.nodata{
+  color: red;
+}
