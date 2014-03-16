@@ -600,6 +600,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 
 }
 
+<<<<<<< HEAD
 /* Spinner */
 @keyframes "spin" {
  0% {
@@ -672,3 +673,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   left: 40%;
   z-index: 1000;
 }
+
+.marginBottom {
+  margin-bottom: 40px;
+} 
