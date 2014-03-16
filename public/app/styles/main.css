@@ -300,6 +300,28 @@ nav {
   display: inline-block;
 }
 
+.column {
+  width: 100px;
+  display: inline-block;
+  text-align: center;
+  font-size: 15px;
+}
+
+.column70 {
+  width: 70px;
+}
+
+.vborder {
+  border-bottom: 1px solid #000;
+  border-left: 5px solid lightskyblue;
+}
+
+.cell {
+  border: 1px solid #bbb;
+  height: 30px;
+  overflow: hidden;
+}
+
 .view-leave, .view-enter {
   -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) .8s;
   -moz-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) .8s;
@@ -558,3 +580,22 @@ div.tooltip:after {
   left: 0%;
 }
 /* End hand crafted tooltip */
+
+.rotate60 {
+
+/* Safari */
+-webkit-transform: rotate(-60deg);
+
+/* Firefox */
+-moz-transform: rotate(-60deg);
+
+/* IE */
+-ms-transform: rotate(-60deg);
+
+/* Opera */
+-o-transform: rotate(-60deg);
+
+/* Internet Explorer */
+filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+
+}

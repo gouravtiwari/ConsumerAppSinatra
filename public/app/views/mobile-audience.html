@@ -11,25 +11,45 @@
 	<select ng-model="sortBy"
  		ng-options="field for field in sortByFields">
   </select>
+  <br><br><br><br>
 	<!-- Result -->
-	<div class="product" ng-repeat="app in AppDetails">
-		<h3><b>App Name: </b>{{app.AppName}}</h3>
-		<span class="label">UniqueAudience: </span>{{app.UniqueAudience}}<br>
-		<span class="label">ActiveReach: </span>{{app.ActiveReach}}<br>
-		<span class="label">TotalDurationMin: </span>{{app.TotalDurationMin}}<br>
-		<span class="label">TotalVisits: </span>{{app.TotalVisits}}<br>
-		<span class="label">VisitsPerPerson: </span>{{app.VisitsPerPerson}}<br>
-		<span class="label">TimePerPersonMin: </span>{{app.TimePerPersonMin}}<br>
-		<span class="label">MalePercentage: </span>{{app.MalePercentage}}<br>
-		<span class="label">FemalePercentage: </span>{{app.FemalePercentage}}<br>
-		<div ng-repeat="(k, v) in app.AgeBreakPercentage track by $index">
-			<span class="label">{{k}}: </span>{{v}}<br>
+	<div ng-repeat="app in AppDetails">
+		<div ng-show="$first">
+			<span class="column vborder rotate60"><b>App Name</b></span>
+			<span class="column column70 vborder rotate60">UniqueAudience</span>
+			<span class="column column70 vborder rotate60">ActiveReach</span>
+			<span class="column column70 vborder rotate60">TotalDuration</span>
+			<span class="column column70 vborder rotate60">TotalVisits</span>
+			<span class="column column70 vborder rotate60">Visits/Person</span>
+			<span class="column column70 vborder rotate60">Time/Person</span>
+			<span class="column vborder rotate60">Male Female %</span>
+			<span class="column vborder rotate60">Age Groups%</span>
+			<span class="column vborder rotate60">Income Groups%</span>
+			<span class="column vborder rotate60">Race %</span>
 		</div>
-		<div ng-repeat="(k, v) in app.IncomePercentage_in_Dollar track by $index">
-			<span class="label">{{k}}: </span>{{v}}<br>
-		</div>
-		<div ng-repeat="(k, v) in app.RacePercentage track by $index">
-			<span class="label">{{k}}: </span>{{v}}<br>
-		</div>
+		<span class="column cell"><b>{{app.AppName}}</b></span>
+		<span class="column column70 cell">{{app.UniqueAudience | unitCon}}</span>
+		<span class="column column70 cell">{{app.ActiveReach}}</span>
+		<span class="column column70 cell">{{app.TotalDurationMin | unitCon}}</span>
+		<span class="column column70 cell">{{app.TotalVisits | unitCon}}</span>
+		<span class="column column70 cell">{{app.VisitsPerPerson}}</span>
+		<span class="column column70 cell">{{app.TimePerPersonMin}}</span>
+		<span class="column cell">{{app.MalePercentage}} | {{app.FemalePercentage}}</span>
+		<span class="column cell">
+			<span ng-repeat="(k, v) in app.AgeBreakPercentage track by $index">
+				{{v}} |
+			</span>
+		</span>
+		<span class="column cell">
+			<span ng-repeat="(k, v) in app.IncomePercentage_in_Dollar track by $index">
+				{{v}}
+			</span>
+		</span>
+		<span class="column cell">
+			<span ng-repeat="(k, v) in app.RacePercentage track by $index">
+				{{v}}
+			</span>
+		</span>
+		<br/>
 	</div>
 </div>
