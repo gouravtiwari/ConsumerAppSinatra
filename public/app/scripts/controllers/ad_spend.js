@@ -3,7 +3,10 @@
 angular.module('publicApp')
   .controller('AdSpendCtrl', function ($scope, Data) {
     $scope.$watch('ProductCategory', function() {
-      $scope.doughnutsRedraw();
+      $scope.doughnutsRedrawCategory();
+    });
+    $scope.$watch('ProductBrand', function() {
+      $scope.doughnutsRedrawBrand();
     });
 
     $scope.searchByCategory = function(){
@@ -22,37 +25,72 @@ angular.module('publicApp')
       });
     };
 
-    $scope.doughnutsRedraw = function(){
+    $scope.doughnutsRedrawCategory = function(){
       if($scope.ProductCategory != undefined && $scope.ProductCategory != null && $scope.ProductCategory.toString() != 'NaN'){
-        $scope.dataNetworkTVAdSpend = [];
-        $scope.dataSpotTVAdSpend = [];
-        $scope.dataCableTVAdSpend = [];
-        $scope.dataNationalMagazineAdSpend = [];
-        $scope.dataSyndicatedTVAdSpend = [];
-        $scope.dataNationalInternetAdSpend = [];
+        $scope.dataCategoryNetworkTVAdSpend = [];
+        $scope.dataCategorySpotTVAdSpend = [];
+        $scope.dataCategoryCableTVAdSpend = [];
+        $scope.dataCategoryNationalMagazineAdSpend = [];
+        $scope.dataCategorySyndicatedTVAdSpend = [];
+        $scope.dataCategoryNationalInternetAdSpend = [];
 
         for (var category = 0; category < $scope.ProductCategory.length; category++) {
           for (var subcategory = 0; subcategory < $scope.ProductCategory[category].PCCSubGroup.length; subcategory++) {
             for (var adspend = 0; adspend < $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend.length; adspend++) {
-              $scope.dataNetworkTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
+              $scope.dataCategoryNetworkTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
                                                 'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].NetworkTVAdSpend
                                               });
-              $scope.dataSpotTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
+              $scope.dataCategorySpotTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
                                                 'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].SpotTVAdSpend
                                               });
-              $scope.dataCableTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
+              $scope.dataCategoryCableTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
                                                 'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].CableTVAdSpend
                                               });
-              $scope.dataNationalMagazineAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
+              $scope.dataCategoryNationalMagazineAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
                                                 'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].NationalMagazineAdSpend
                                               });
-              $scope.dataSyndicatedTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
+              $scope.dataCategorySyndicatedTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
                                                 'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].SyndicatedTVAdSpend
                                               });
-              $scope.dataNationalInternetAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
+              $scope.dataCategoryNationalInternetAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
                                                 'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].NationalInternetAdSpend
                                               });
             };
+          };
+        };
+      }
+    };
+
+    $scope.doughnutsRedrawBrand = function(){
+      if($scope.ProductBrand != undefined && $scope.ProductBrand != null && $scope.ProductBrand.toString() != 'NaN'){
+        $scope.dataBrandNetworkTVAdSpend = [];
+        $scope.dataBrandSpotTVAdSpend = [];
+        $scope.dataBrandCableTVAdSpend = [];
+        $scope.dataBrandNationalMagazineAdSpend = [];
+        $scope.dataBrandSyndicatedTVAdSpend = [];
+        $scope.dataBrandNationalInternetAdSpend = [];
+
+        for (var brand = 0; brand < $scope.ProductBrand.length; brand++) {
+          for (var category = 0; category < $scope.ProductBrand[brand].ProductCategory.length; category++) {
+            console.log($scope.ProductBrand[brand].ProductCategory);
+            $scope.dataBrandNetworkTVAdSpend.push({'label': $scope.ProductBrand[brand].ProductCategory[category].ProductCategoryName,
+                                              'value': $scope.ProductBrand[brand].ProductCategory[category].NetworkTVAdSpend
+                                            });
+            $scope.dataBrandSpotTVAdSpend.push({'label': $scope.ProductBrand[brand].ProductCategory[category].ProductCategoryName,
+                                              'value': $scope.ProductBrand[brand].ProductCategory[category].SpotTVAdSpend
+                                            });
+            $scope.dataBrandCableTVAdSpend.push({'label': $scope.ProductBrand[brand].ProductCategory[category].ProductCategoryName,
+                                              'value': $scope.ProductBrand[brand].ProductCategory[category].CableTVAdSpend
+                                            });
+            $scope.dataBrandNationalMagazineAdSpend.push({'label': $scope.ProductBrand[brand].ProductCategory[category].ProductCategoryName,
+                                              'value': $scope.ProductBrand[brand].ProductCategory[category].NationalMagazineAdSpend
+                                            });
+            $scope.dataBrandSyndicatedTVAdSpend.push({'label': $scope.ProductBrand[brand].ProductCategory[category].ProductCategoryName,
+                                              'value': $scope.ProductBrand[brand].ProductCategory[category].SyndicatedTVAdSpend
+                                            });
+            $scope.dataBrandNationalInternetAdSpend.push({'label': $scope.ProductBrand[brand].ProductCategory[category].ProductCategoryName,
+                                              'value': $scope.ProductBrand[brand].ProductCategory[category].NationalInternetAdSpend
+                                            });
           };
         };
       }
