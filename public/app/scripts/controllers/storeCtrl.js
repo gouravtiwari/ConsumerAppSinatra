@@ -1,20 +1,21 @@
 angular.module('publicApp')
   .controller('StoreCtrl', function ($scope,$modal, Data) {
 	  
-	 $scope.input = {storeName:'',
-                   ownerName:'',
-                   indicator:'',
-                   scanTrackCode:'',
-                   marketCode:'',
-                   stateFIPS:'',
-                   streetaddr:'',
-                   city:'',
-                   lat:'',
-                   lng:'',
-                   radius:'',
-                   sizeCode:'',
-                   spaceArea:''
-                 };
+	 $scope.input.storeName = '';
+   $scope.input.ownerName = '';
+   $scope.input.indicator = '';
+   $scope.input.scanTrackCode = '';
+   $scope.input.marketCode = '';
+   $scope.input.stateFIPS = '';
+   $scope.input.streetaddr = '';
+   $scope.input.city = '';
+   $scope.input.lat = '';
+   $scope.input.lng = '';
+   $scope.input.radius = '';
+   $scope.input.sizeCode = '';
+   $scope.input.spaceArea = '';
+                
+
    $scope.options = [
     "Store Name",
     "Owner Name",
@@ -172,6 +173,20 @@ angular.module('publicApp')
     $scope.$watch('select_type',function(){
        $(".storeDetails").css("display","none")
     })
+
+    $scope.$watch('cache_response', function(newValue, oldValue){
+      console.log(' changed')
+      if(newValue == oldValue) { return; }
+      console.log($scope.cache_response.StoreRefData.Stores)
+      if($scope.cache_response.StoreRefData.Stores) {
+        $scope.stores = $scope.cache_response.ProductDetails;
+        $scope.pageshow = true;
+        $scope.totalItems = $scope.cache_response.Summary.TotalPages;
+        $scope.maxSize = 10;
+        //$scope.cache_response = {};
+      }
+      });
+
   $scope.open = function (code) {
     var parameter_obj = {};
       Data.get_json('Stores/v1/'+ code , parameter_obj).success(function(api_data){
