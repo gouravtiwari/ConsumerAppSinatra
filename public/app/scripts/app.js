@@ -1,8 +1,17 @@
 'use strict';
 
-var app = angular.module('publicApp', ['google-maps', 'ui.bootstrap'])
-	.config(function ($routeProvider) {
-    $routeProvider
+var app = angular.module('publicApp', ['ngResource', 'google-maps', 'ui.bootstrap'])
+	.config(function ($routeProvider, $httpProvider) {
+		$httpProvider.responseInterceptors.push('spinnerInterceptor');
+
+	  var spinnerFunction = function spinnerFunction(data, headersGetter) {
+	    $("#spinner").show();
+	    return data;
+	  };
+
+	  $httpProvider.defaults.transformRequest.push(spinnerFunction);
+
+	  $routeProvider
     	.when('/', {
 			  templateUrl: 'views/landing_page.html'
 			})
@@ -65,6 +74,7 @@ var app = angular.module('publicApp', ['google-maps', 'ui.bootstrap'])
 			.otherwise({
 				redirectTo: '/nav_page'
 			})
+   
 	});
 
 app.filter('unsafe', ['$sce', function ($sce) {
@@ -78,5 +88,17 @@ app.filter('reverse', function() {
   return function(array) {
   	var arrayCopy = [].concat(array);
     return arrayCopy.reverse();
+  };
+});
+
+app.factory('spinnerInterceptor', function ($q, $window) {
+  return function (promise) {
+    return promise.then(function (response) {
+      $("#spinner").hide();
+      return response;
+    }, function (response) {
+      $("#spinner").hide();
+      return $q.reject(response);
+    });
   };
 });
