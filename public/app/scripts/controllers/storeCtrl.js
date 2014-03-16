@@ -188,10 +188,12 @@ angular.module('publicApp')
 
     $scope.$watch('cache_response', function(newValue, oldValue){
       console.log(' changed')
+
       if(newValue == oldValue) { return; }
       console.log($scope.cache_response.StoreRefData.Stores)
       if($scope.cache_response.StoreRefData.Stores) {
-        $scope.stores = $scope.cache_response.ProductDetails;
+        $(".storeDetails").css("display","inline-table");
+        $scope.stores = $scope.cache_response.StoreRefData.Stores;
         $scope.pageshow = true;
         $scope.totalItems = $scope.cache_response.Summary.TotalPages;
         $scope.maxSize = 10;
