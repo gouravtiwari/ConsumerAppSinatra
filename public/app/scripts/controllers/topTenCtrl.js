@@ -19,18 +19,20 @@ angular.module('publicApp')
     }
 
     function data_loader(){
-      for (var i=0; i<$scope.subCategories.length; i++){
-        if($scope.subCategories[i].SubCategoryName == $scope.subCategoryName.SubCategoryName){
-          for (var j = 0; j < $scope.subCategories[i].Demographies.length; j++) {
-            if ($scope.subCategories[i].Demographies[j].DemographyName == $scope.demography.DemographyName){
-              $scope.items = $scope.subCategories[i].Demographies[j].Items;
-              if($scope.categoryName != 'Music' || $scope.categoryName != 'Twitter TV'){
-                plot_graph($scope.items);
+      if ($scope.subCategories){
+        for (var i=0; i<$scope.subCategories.length; i++){
+          if($scope.subCategories[i].SubCategoryName == $scope.subCategoryName.SubCategoryName){
+            for (var j = 0; j < $scope.subCategories[i].Demographies.length; j++) {
+              if ($scope.subCategories[i].Demographies[j].DemographyName == $scope.demography.DemographyName){
+                $scope.items = $scope.subCategories[i].Demographies[j].Items;
+                if($scope.categoryName != 'Music' || $scope.categoryName != 'Twitter TV'){
+                  plot_graph($scope.items);
+                }
               }
             }
           }
         }
-      }
+      } 
     }
     
     $scope.$watch('categoryName', function() {
