@@ -1,6 +1,11 @@
 <div>
 <!-- Inputs -->
 <h2>National TV Program Ratings</h2>
+<b># of TV Programs* :</b>
+<input type="number" ng-model="input.numberofresults" ng-required />
+<b>Demography:</b>
+<input type="text" ng-model="input.demography" />
+<button class="btn btn-primary" ng-click="search()">Search</button>
 
 <!-- Result -->
 <div class="program" ng-repeat="program in programs">

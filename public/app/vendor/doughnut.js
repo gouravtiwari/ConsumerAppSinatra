@@ -58,9 +58,9 @@ function donutTip(options){
             return d3.sum(d3.values(d));
         });
 
-    var div = d3.select("body").append("div")
-        .attr("class", "tooltip")
-        .style("opacity", 0);
+    // var div = d3.select("body").append("div")
+    //     .attr("class", "tooltip")
+    //     .style("opacity", 0);
 
     var vis = d3.select(config.selector)
                 .append("svg:svg") //create the SVG element inside the <body>    
@@ -80,7 +80,7 @@ function donutTip(options){
                 .attr("dy", ".35em")
                 .style("text-anchor", "middle")
                 .attr("class", "textBottom")
-                .text(total + " Views")
+                .text(config.totalLabel + ": "+total)
                 .attr("y", 10);
 
     var arc = d3.svg.arc()
@@ -108,16 +108,16 @@ function donutTip(options){
                     
                     textTop.text(d3.select(this).datum().data[config.xDomain])
                     .attr("y", -10);
-                textBottom.text(d3.select(this).datum().data[config.yDomain] + " " +config.totalLabel)
+                textBottom.text(config.totalLabel + ": " +d3.select(this).datum().data[config.yDomain])
                     .attr("y", 10);
                     
-                    div.transition()
-                    .duration(200)
-                    .style("opacity", 0.9);
-                    div.html("<strong>" + config.tipText + label+ "</strong> <span style='color:red'>" + d.data[config.tipValue] + "</span>")
-                    .style("left", (d3.event.pageX - 57) + "px")
-                    .style("top", (d3.event.pageY - 50) + "px")
-                    .style("z-index", 10000)
+                    // div.transition()
+                    // .duration(200)
+                    // .style("opacity", 0.9);
+                    // div.html("<strong>" + config.tipText + label+ "</strong> <span style='color:red'>" + d.data[config.tipValue] + "</span>")
+                    // .style("left", (d3.event.pageX - 57) + "px")
+                    // .style("top", (d3.event.pageY - 50) + "px")
+                    // .style("z-index", 10000)
                 })
                 .on("mouseout", function (d) {
                     d3.select(this).select("path").transition()
@@ -126,11 +126,11 @@ function donutTip(options){
         
                     textTop.text("TOTAL")
                     .attr("y", -10);
-                    textBottom.text(total + " " + config.totalLabel);
+                    textBottom.text(config.totalLabel + ": "+total);
                     
-                    div.transition()
-                    .duration(500)
-                    .style("opacity", 0);
+                    // div.transition()
+                    // .duration(500)
+                    // .style("opacity", 0);
                 });
 
     arcs.append("svg:path")

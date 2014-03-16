@@ -1,44 +1,51 @@
 <div>
-<!-- Inputs -->
-<h2>Search Ad Spend by Category:</h2>
-<input type="text" ng-model="input.category" class="inputDesc">
-
-<!-- Result -->
-<div ng-repeat="category in ProductCategory">
-	<h3><b>Products Category: </b>{{category.ProductCategoryName}}</h3>
-	<div class="resultHolder" ng-repeat="subcategory in category.PCCSubGroup">
-		<h4><b>Sub Category: </b>{{subcategory.PCCSubGroupName}}</h4>
-		<div class="product" ng-repeat="adspend in subcategory.AdSpend">
-			<b>Brand: </b><span class="productDesc">{{adspend.Brand}}</span><br>
-			<span class="label">NetworkTVAdSpend:</span> {{adspend.NetworkTVAdSpend}}<br>
-			<span class="label">SpotTVAdSpend:</span> {{adspend.SpotTVAdSpend}}<br>
-			<span class="label">CableTVAdSpend:</span> {{adspend.CableTVAdSpend}}<br>
-			<span class="label">NationalMagazineAdSpend:</span> {{adspend.NationalMagazineAdSpend}}<br>
-			<span class="label">SyndicatedTVAdSpend:</span> {{adspend.SyndicatedTVAdSpend}}<br>
-			<span class="label">NationalInternetAdSpend:</span> {{adspend.NationalInternetAdSpend}}<br>
+	<!-- Inputs -->
+	<h2>Search Ad Spend by Category:</h2>
+	<div>
+		<input type="text" ng-model="input.category" class="inputDesc left">
+		<button ng-click="searchByCategory()" class="btn left">Search</button>
+	</div>
+	<div class="clear"></div>
+	<!-- Result -->
+	<div ng-repeat="category in ProductCategory">
+		<h3><b>Products Category: </b>{{category.ProductCategoryName}}</h3>
+		<div class="resultHolder" ng-repeat="subcategory in category.PCCSubGroup">
+			<h4><b>Sub Category: </b>{{subcategory.PCCSubGroupName}}</h4>
+			<div class="product" ng-repeat="adspend in subcategory.AdSpend">
+				<b>Brand: </b><span class="productDesc">{{adspend.Brand}}</span><br>
+				<span class="label">NetworkTVAdSpend:</span> {{adspend.NetworkTVAdSpend}}<br>
+				<span class="label">SpotTVAdSpend:</span> {{adspend.SpotTVAdSpend}}<br>
+				<span class="label">CableTVAdSpend:</span> {{adspend.CableTVAdSpend}}<br>
+				<span class="label">NationalMagazineAdSpend:</span> {{adspend.NationalMagazineAdSpend}}<br>
+				<span class="label">SyndicatedTVAdSpend:</span> {{adspend.SyndicatedTVAdSpend}}<br>
+				<span class="label">NationalInternetAdSpend:</span> {{adspend.NationalInternetAdSpend}}<br>
+			</div>
 		</div>
 	</div>
-</div>
+	<div class="clear"></div>
 
+	<!-- Inputs -->
+	<h2>Search Ad Spend by Brand:</h2>
+	<div>
+		<input type="text" ng-model="input.brand" class="inputDesc left">
+		<button ng-click="searchByBrand()" class="btn left">Search</button>
+	</div>
+	<div class="clear"></div>
 
-<!-- Inputs -->
-<h2>Search Ad Spend by Brand:</h2>
-<input type="text" ng-model="input.brand" class="inputDesc">
-
-<!-- Result -->
-<div ng-repeat="brand in BrandArray">
-	<h3><b>Brand: </b>{{brand.BrandName}}</h3>
-	<div class="resultHolder" ng-repeat="category in brand.ProductCategory">
-		<h4><b>Sub Category: </b>{{category.PCCSubgroup}}</h4>
-		<h3><b>Category: </b>{{category.ProductCategoryName}}</h3>
-		<div class="product">
-			<span class="label">NetworkTVAdSpend:</span> {{category.NetworkTVAdSpend}}<br>
-			<span class="label">SpotTVAdSpend:</span> {{category.SpotTVAdSpend}}<br>
-			<span class="label">CableTVAdSpend:</span> {{category.CableTVAdSpend}}<br>
-			<span class="label">NationalMagazineAdSpend:</span> {{category.NationalMagazineAdSpend}}<br>
-			<span class="label">SyndicatedTVAdSpend:</span> {{category.SyndicatedTVAdSpend}}<br>
-			<span class="label">NationalInternetAdSpend:</span> {{category.NationalInternetAdSpend}}<br>
+	<!-- Result -->
+	<div ng-repeat="brand in ProductBrand">
+		<h3><b>Brand: </b>{{brand.BrandName}}</h3>
+		<div class="resultHolder" ng-repeat="category in brand.ProductCategory">
+			<h4><b>Sub Category: </b>{{category.PCCSubgroup}}</h4>
+			<h3><b>Category: </b>{{category.ProductCategoryName}}</h3>
+			<div class="product">
+				<span class="label">NetworkTVAdSpend:</span> {{category.NetworkTVAdSpend}}<br>
+				<span class="label">SpotTVAdSpend:</span> {{category.SpotTVAdSpend}}<br>
+				<span class="label">CableTVAdSpend:</span> {{category.CableTVAdSpend}}<br>
+				<span class="label">NationalMagazineAdSpend:</span> {{category.NationalMagazineAdSpend}}<br>
+				<span class="label">SyndicatedTVAdSpend:</span> {{category.SyndicatedTVAdSpend}}<br>
+				<span class="label">NationalInternetAdSpend:</span> {{category.NationalInternetAdSpend}}<br>
+			</div>
 		</div>
 	</div>
-</div>
 </div>

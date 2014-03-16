@@ -134,10 +134,27 @@ angular.module('publicApp')
         locations: {
           'Mobile Audience on ': '/mobile-audience',
           'Products': '/product_by_desc',
-          'NetView': '/audience'
+          'NetView': '/audience',
+          'Stores' : '/store_by_name'
+        },
+
+        fillSortByFields: function(viewObject){
+          var sortBy = [];
+          for(var field in viewObject) {
+            if(typeof(viewObject[field]) !== 'object'){
+              sortBy.push(field);
+            }
+          }
+          return sortBy;
+        },
+
+        sortBy: function(field, array){
+          return _.sortBy(array, function(item){
+            return -item[field];
+          });
         }
 
-		}
+	}
     return Data;
   })
 
