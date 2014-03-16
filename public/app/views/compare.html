@@ -10,7 +10,7 @@
 			<li>
 				<div class="mainCell" ng-class="(maindata.android.UniqueAudience-maindata.ios.UniqueAudience)/maindata.android.UniqueAudience*100 > 0 ? 'green glyphicon glyphicon-arrow-up' : 'red glyphicon glyphicon-arrow-down'">
 					<div class="head-val bold">Unique Audience</div>
-					<div class="head-val">{{maindata.android.UniqueAudience}}</div>
+					<div class="head-val">{{maindata.android.UniqueAudience | unitCon}}</div>
 					<div class="labelIndex">{{(maindata.android.UniqueAudience-maindata.ios.UniqueAudience)/maindata.android.UniqueAudience*100 | roundoff}}</div>
 					
 				</div>	
@@ -38,7 +38,7 @@
 			<li>
 				<div class="mainCell" ng-class="(maindata.android.TotalVisits-maindata.ios.TotalVisits)/maindata.android.TotalVisits*100 > 0 ? 'green glyphicon glyphicon-arrow-up' : 'red glyphicon glyphicon-arrow-down'">
 					<div class="head-val bold">Total Visits</div>
-					<div class="head-val">{{maindata.android.TotalVisits}} </div>
+					<div class="head-val">{{maindata.android.TotalVisits | unitCon}} </div>
 					<div class="labelIndex">{{(maindata.android.TotalVisits-maindata.ios.TotalVisits)/maindata.android.TotalVisits*100 | roundoff}}</div>
 				</div>	
 				<!--
@@ -48,7 +48,7 @@
 			<li>
 				<div class="mainCell" ng-class="(maindata.android.VisitsPerPerson-maindata.ios.VisitsPerPerson)/maindata.android.VisitsPerPerson*100 > 0 ? 'green glyphicon glyphicon-arrow-up' : 'red glyphicon glyphicon-arrow-down'">
 					<div class="head-val bold">Visits Per Person</div>
-					<div class="head-val">{{maindata.android.VisitsPerPerson}} </div>
+					<div class="head-val">{{maindata.android.VisitsPerPerson | unitCon}} </div>
 					<div class="labelIndex" >{{(maindata.android.VisitsPerPerson-maindata.ios.VisitsPerPerson)/maindata.android.VisitsPerPerson*100 | roundoff}}</div>
 				</div>	
 				<!--
@@ -58,7 +58,7 @@
 			<li>
 				<div class="mainCell" ng-class="(maindata.android.MalePercentage-maindata.ios.MalePercentage)/maindata.android.MalePercentage*100 > 0 ? 'green glyphicon glyphicon-arrow-up' : 'red glyphicon glyphicon-arrow-down'">
 					<div class="head-val bold">Male Percentage</div>
-					<div class="head-val">{{maindata.android.MalePercentage}}</div>
+					<div class="head-val">{{maindata.android.MalePercentage | unitCon}}</div>
 					<div class="labelIndex">{{(maindata.android.MalePercentage-maindata.ios.MalePercentage)/maindata.android.MalePercentage*100 | roundoff}}</div>
 					<span></span>
 				</div>
@@ -67,9 +67,9 @@
 			-->
 			</li>
 			<li>
-				<div class="mainCell" ng-class="(maindata.android.FemalePercentage-maindata.ios.FemalePercentage)/maindata.android.FemalePercentage*100 > 0 ? 'green glyphicon glyphicon-arrow-up' : 'red glyphicon glyphicon-arrow-down'">
+				<div class="mainCell" ng-class="(maindata.android.FemalePercentage-maindata.ios.FemalePercentage)/maindata.android.FemalePercentage*100 > 0 ? 'green glyphicon glyphicon-arrow-up' : 'red glyphicon glyphicon-arrow-down'"> 
 					<div class="head-val bold">Female Percentage</div>
-					<div class="head-val">{{maindata.android.FemalePercentage}}</div>
+					<div class="head-val">{{maindata.android.FemalePercentage | unitCon}}</div>
 					<div class="labelIndex" >{{(maindata.android.FemalePercentage-maindata.ios.FemalePercentage)/maindata.android.FemalePercentage*100 | roundoff}}</div>
 				</div>	
 
@@ -84,7 +84,7 @@
 			<li ng-repeat='(k, v) in maindata.android.AgeBreakPercentage  track by $index'>
 				<div class="mainCell" ng-class="(v-maindata.ios.AgeBreakPercentage[k])/v*100 > 0 ?  'green glyphicon glyphicon-arrow-up' : 'red glyphicon glyphicon-arrow-down'">
 					<div class="head-val bold"><stringfilter dataval='{{k}}' filter='Age'></stringfilter></div>
-					<div class="head-val">{{v}}</div>
+					<div class="head-val">{{v | unitCon}}</div>
 					<div class="labelIndex">{{(v-maindata.ios.AgeBreakPercentage[k])/v*100 | roundoff}}</div>
 				</div>
 				<!--
@@ -97,7 +97,7 @@
 			<li ng-repeat='(k, v) in maindata.android.IncomePercentage_in_Dollar  track by $index'>
 				<div class="mainCell" ng-class="(v-maindata.ios.IncomePercentage_in_Dollar[k])/v*100 > 0 ? 'green glyphicon glyphicon-arrow-up' : 'red glyphicon glyphicon-arrow-down'">
 					<div class="head-val bold"><stringfilter dataval='{{k}}' filter='Income'></div>
-					<div class="head-val">{{v}}</div>
+					<div class="head-val">{{v | unitCon}}</div>
 					<div class="labelIndex">{{(v-maindata.ios.IncomePercentage_in_Dollar[k])/v*100 | roundoff}}</div>
 				</div>
 				<!--
@@ -126,7 +126,7 @@
 			<li>
 				<div class="mainCell" ng-class="(maindata.android.UniqueAudience-maindata.ios.UniqueAudience)/maindata.android.UniqueAudience*100 > 0 ? 'red glyphicon glyphicon-arrow-down' : 'green glyphicon glyphicon-arrow-up'">
 					<div class="head-val bold">Unique Audience</div>
-					<div class="head-val">{{maindata.ios.UniqueAudience}}</div>
+					<div class="head-val">{{maindata.ios.UniqueAudience | unitCon}}</div>
 					<div class="labelIndex">{{-(maindata.android.UniqueAudience-maindata.ios.UniqueAudience)/maindata.android.UniqueAudience*100 | roundoff}}</div>
 				</div>	
 				<!-- <labelindex ios='{{maindata.ios.UniqueAudience}}' android='{{maindata.android.UniqueAudience}}' reverse='true'></labelindex> -->
@@ -134,7 +134,7 @@
 			<li>
 				<div class="mainCell" ng-class="(maindata.android.ActiveReach-maindata.ios.ActiveReach)/maindata.android.ActiveReach*100 > 0 ? 'red glyphicon glyphicon-arrow-down' : 'green glyphicon glyphicon-arrow-up'">
 					<div class="head-val bold">Active Reach</div>
-					<div class="head-val">{{maindata.ios.ActiveReach}}</div>
+					<div class="head-val">{{maindata.ios.ActiveReach | unitCon}}</div>
 					<div class="labelIndex">{{-(maindata.android.ActiveReach-maindata.ios.ActiveReach)/maindata.android.ActiveReach*100 | roundoff}}</div>
 				</div>	
 				<!-- <labelindex ios='{{maindata.ios.ActiveReach}}' android='{{maindata.android.ActiveReach}}' reverse='true'></labelindex> -->
@@ -150,7 +150,7 @@
 			<li>
 				<div class="mainCell" ng-class="(maindata.android.TotalVisits-maindata.ios.TotalVisits)/maindata.android.TotalVisits*100 > 0 ? 'red glyphicon glyphicon-arrow-down' : 'green glyphicon glyphicon-arrow-up'">
 					<div class="head-val bold">Total Visits</div>
-					<div class="head-val">{{maindata.ios.TotalVisits}}</div>
+					<div class="head-val">{{maindata.ios.TotalVisits | unitCon}}</div>
 					<div class="labelIndex">{{-(maindata.android.TotalVisits-maindata.ios.TotalVisits)/maindata.android.TotalVisits*100 | roundoff}}</div>
 				</div>	
 				<!-- <labelindex ios='{{maindata.ios.TotalVisits}}' android='{{maindata.android.TotalVisits}}' reverse='true'></labelindex> -->
@@ -158,7 +158,7 @@
 			<li>
 				<div class="mainCell" ng-class="(maindata.android.VisitsPerPerson-maindata.ios.VisitsPerPerson)/maindata.android.VisitsPerPerson*100 > 0 ? 'red glyphicon glyphicon-arrow-down' : 'green glyphicon glyphicon-arrow-up'">
 					<div class="head-val bold">Visits Per Person</div>
-					<div class="head-val">{{maindata.ios.VisitsPerPerson}}</div>
+					<div class="head-val">{{maindata.ios.VisitsPerPerson | unitCon}}</div>
 					<div class="labelIndex">{{-(maindata.android.VisitsPerPerson-maindata.ios.VisitsPerPerson)/maindata.android.VisitsPerPerson*100 | roundoff}}</div>
 				</div>	
 				<!-- <labelindex ios='{{maindata.ios.VisitsPerPerson}}' android='{{maindata.android.VisitsPerPerson}}' reverse='true'></labelindex> -->
@@ -166,7 +166,7 @@
 			<li>
 				<div class="mainCell" ng-class="(maindata.android.MalePercentage-maindata.ios.MalePercentage)/maindata.android.MalePercentage*100 > 0 ? 'red glyphicon glyphicon-arrow-down' : 'green glyphicon glyphicon-arrow-up'">
 					<div class="head-val bold">Male Percentage</div>
-					<div class="head-val">{{maindata.ios.MalePercentage}}</div>
+					<div class="head-val">{{maindata.ios.MalePercentage | unitCon}}</div>
 					<div class="labelIndex">{{-(maindata.android.MalePercentage-maindata.ios.MalePercentage)/maindata.android.MalePercentage*100 | roundoff}}</div>
 				</div>	
 				<!-- <labelindex ios='{{maindata.ios.MalePercentage}}' android='{{maindata.android.MalePercentage}}' reverse='true'></labelindex> -->
@@ -174,7 +174,7 @@
 			<li>
 				<div class="mainCell" ng-class="(maindata.android.FemalePercentage-maindata.ios.FemalePercentage)/maindata.android.FemalePercentage*100 > 0 ? 'red glyphicon glyphicon-arrow-down' : 'green glyphicon glyphicon-arrow-up'">
 					<div class="head-val bold">Female Percentage</div>
-					<div class="head-val">{{maindata.ios.FemalePercentage}}</div>
+					<div class="head-val">{{maindata.ios.FemalePercentage | unitCon}}</div>
 					<div class="labelIndex">{{-(maindata.android.FemalePercentage-maindata.ios.FemalePercentage)/maindata.android.FemalePercentage*100 | roundoff}}</div>
 				</div>	
 				<!-- <labelindex ios='{{maindata.ios.FemalePercentage}}' android='{{maindata.android.FemalePercentage}}' reverse='true'></labelindex> -->
@@ -185,7 +185,7 @@
 			<li ng-repeat='(k, v) in maindata.ios.AgeBreakPercentage  track by $index'>
 				<div class="mainCell" ng-class="(maindata.android.AgeBreakPercentage[k]-v)/maindata.android.AgeBreakPercentage[k]*100 > 0 ? 'red glyphicon glyphicon-arrow-down' : 'green glyphicon glyphicon-arrow-up'">
 					<div class="head-val bold"><stringfilter dataval='{{k}}' filter='Age'></div>
-					<div class="head-val">{{v}} </div>
+					<div class="head-val">{{v | unitCon}} </div>
 					<div class="labelIndex">{{-(maindata.android.AgeBreakPercentage[k]-v)/maindata.android.AgeBreakPercentage[k]*100 | roundoff}}</div>
 				</div>	
 				<!--
@@ -198,7 +198,7 @@
 			<li ng-repeat='(k, v) in maindata.ios.IncomePercentage_in_Dollar  track by $index'>
 				<div class="mainCell" ng-class="(maindata.android.IncomePercentage_in_Dollar[k]-v)/maindata.android.IncomePercentage_in_Dollar[k]*100 > 0 ? 'red glyphicon glyphicon-arrow-down' : 'green glyphicon glyphicon-arrow-up'">
 				<div class="head-val bold"><stringfilter dataval='{{k}}' filter='Income'></div>
-				<div class="head-val">{{v}} </div>
+				<div class="head-val">{{v | unitCon}} </div>
 				<div class="labelIndex">{{-(maindata.android.IncomePercentage_in_Dollar[k]-v)/maindata.android.IncomePercentage_in_Dollar[k]*100 | roundoff}}</div>
 			</div>	
 				<!--
@@ -211,7 +211,7 @@
 			<li ng-repeat='(k, v) in maindata.ios.RacePercentage  track by $index'>
 				<div class="mainCell" ng-class="(maindata.android.RacePercentage[k]-v)/maindata.android.RacePercentage[k]*100 > 0 ? 'red glyphicon glyphicon-arrow-down' : 'green glyphicon glyphicon-arrow-up'">
 				<div class="head-val bold"><stringfilter dataval='{{k}}' filtertype='onlystring'></div>
-				<div class="head-val">{{v}} </div>
+				<div class="head-val">{{v | unitCon}} </div>
 				<div class="labelIndex">{{-(maindata.android.RacePercentage[k]-v)/maindata.android.RacePercentage[k]*100 | roundoff}}</div>
 			</div>	
 				<!--
