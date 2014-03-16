@@ -14,11 +14,10 @@ angular.module('publicApp')
 
     link: function (scope, element, attrs) {
       var selector = element[0];
-      console.log("selector:"+ selector);
         //Update when charts data changes
         scope.$watch('val', function () {
           // clear the elements inside of the directive
-          $("doughnut").html('');
+          $("doughnut[chart-id='"+attrs.chartId+"']").html('');
 
           // if 'val' is undefined, exit
           if (!scope.val) {
@@ -27,11 +26,11 @@ angular.module('publicApp')
           donutTip({
                     selector: selector, 
                     data: scope.val,
-                    totalLabel: $("doughnut").attr('totalLabel'),
-                    width: 650,
-                    height: 650,
-                    innerRadius: 150,
-                    outerRadius: 210,
+                    totalLabel: $("doughnut[chart-id='"+attrs.chartId+"']").attr('totalLabel'),
+                    width: 550,
+                    height: 550,
+                    innerRadius: 120,
+                    outerRadius: 180,
                     legend: false
                   });
         });
