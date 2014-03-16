@@ -669,9 +669,19 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   -o-animation: spin 6s infinite normal linear;
   animation: spin 6s infinite normal linear;
   position: fixed;
-  top: 40%;
-  left: 40%;
+  top: 50%;
+  left: 50%;
+  margin-top: -128px;
+  margin-left: -128px;
   z-index: 1000;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 999;
 }
 
 .marginBottom {

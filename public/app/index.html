@@ -23,7 +23,10 @@
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <img id="spinner" class="spin" ng-src="images/spinner.png" ng-hide="true">
+    <div id="spinner" class="overlay" ng-hide="true">
+      <img class="spin" ng-src="images/spinner.png">
+    </div>
+    
     <!-- Add your site or application content here -->
     <div class="container" ng-controller="MainCtrl">
       <header>
