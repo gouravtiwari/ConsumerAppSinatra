@@ -1,5 +1,5 @@
 angular.module('publicApp')
-  .controller('StoreCtrl', function ($scope,$modal, Data) {
+  .controller('StoreCtrl', function ($scope,$rootScope,$modal, Data) {
 	  
 	 $scope.input.storeName = '';
    $scope.input.ownerName = '';
@@ -201,6 +201,7 @@ angular.module('publicApp')
       
     });
     $scope.$watch('input.select_type',function(){
+       $rootScope.select = $scope.input.select_type;
        $(".storeDetails").css("display","none");
        $scope.pageshow = false;
        //$scope.input = '';

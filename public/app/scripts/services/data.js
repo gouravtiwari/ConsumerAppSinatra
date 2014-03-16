@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('publicApp')
-  .service('Data', function Data($http, $rootScope, $timeout, $location, $q, $route) {
+  .service('Data', function Data($http,$rootScope, $timeout, $location, $q, $route) {
     // AngularJS will instantiate a singleton by calling "new" on this function
     var Data = {
 
@@ -105,6 +105,10 @@ angular.module('publicApp')
           if(url_split[0] == 'EMM'){
             url_split[0]  = 'Mobile Audience on ';
             recentSearch.input.platform = url_split[2];
+          }
+          if(url_split[0] == 'Stores'){
+            console.log($rootScope.select)
+            recentSearch.input.select_type = $rootScope.select;
           }
           recentSearch.api = url_split[0] + (url_split[2] ? url_split[2] : '');
           
