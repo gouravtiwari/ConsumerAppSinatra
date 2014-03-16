@@ -2,45 +2,41 @@
 
 angular.module('publicApp')
 .directive('doughnut', function () {
+  // var margin = 20,
+  //   width = 960,
+  //   height = 500 - .5 - margin,
+  //   color = d3.interpolateRgb("#f77", "#77f");
   return {
     restrict: 'E',
-    template: '<div class="donut"></div>',
+    // template: '<div class="donut"></div>',
     scope: {
-        chartData: "=chartId"
+        chartData: "=chartId",
+        val: '=',
+        grouped: '='
     },
     transclude:true,
     replace: true,
 
     link: function (scope, element, attrs) {
-      var chartsDefaults = {
-        chart: {
-          renderTo: element[0],
-          type: attrs.type || null,
-          height: attrs.height,
-          width: attrs.width
-        },
-        colors: [attrs.color]
-      };
-      var chart;
-        //Update when charts data changes
-        scope.$watch(function() { console.log(scope.chartData);
-      return scope.chartData; }, function(value) {
-          if(!value) return;
-            var deepCopy = true;
-            var newSettings = {};
-            $.extend(deepCopy, newSettings, chartsDefaults, scope.chartData);
-            if (scope.chartData && scope.chartData.series.length > 0) {
-              chart = new Highcharts.Chart(newSettings);
-            } else {
-              for (var i = 0; i < chart.series.length; i++) {
-                // chart.series[i].setData(scope.chartData.series[i].data);
-                var new_data = scope.chartData.series[i].data;
-                for (var j=0;j<new_data.length;j++){
-                  chart.series[i].data[j].update(new_data[j]);
-                }                
-              }
+      var selector = element[0];
+      console.log("selector:"+ selector);
+        // .append("svg")
+        //   .attr("width", width)
+        //   .attr("height", height + margin + 100);
+        // //Update when charts data changes
+          scope.$watch('val', function () {
+            // console.log(newVal);
+            // console.log(oldVal);
+            // clear the elements inside of the directive
+            // selector.selectAll('*').remove();
+
+            // if 'val' is undefined, exit
+            if (!scope.val) {
+              return;
             }
-        }, true);
+            console.log('val: '+ scope.val);
+            donutTip({selector: selector, data: scope.val});
+          });
       }
     };
 })

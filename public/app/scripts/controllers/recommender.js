@@ -206,7 +206,7 @@ angular.module('publicApp')
         $scope.selectedItemsList[i].item.Score = ($scope.rankScore($scope.selectedItemsList[i].item.Rank) * 10)/$scope.rowsToGenerate ;
         score = score + $scope.selectedItemsList[i].item.Score;
       };
-      console.log($scope.selectedItemsList);
+
       return score;
     };
 
@@ -232,10 +232,13 @@ angular.module('publicApp')
     };
 
     $scope.doughnutRedraw = function(){
-      $scope.data = [[{"length": 17, "height": 20, "y": 20}],
-                  [{"length": 8, "height": 30, "y": 30}],
-                  [{"length": 19, "height": 10, "y": 10}],
-                  [{"length": 10, "height": 40, "y": 40}]];
-
+      if($scope.recommendationScore != undefined && $scope.recommendationScore != null && $scope.recommendationScore.toString() != 'NaN'){
+        $scope.data = [];
+        for (var i = 0; i < $scope.recommenderDoughnut.length; i++) {
+          $scope.data[i] = {'label': '#'+$scope.recommenderDoughnut[i].item.Rank + '. '+ $scope.recommenderDoughnut[i].item.Name,
+                            'value': $scope.recommenderDoughnut[i].item.Score};
+        };
+        console.log($scope.data);
+      }
     };
   });
