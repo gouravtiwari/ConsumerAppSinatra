@@ -6,9 +6,16 @@
   <select ng-model="subCategoryName" ng-options="sub.SubCategoryName for sub in subCategories"></select><br>
   <span>Select Demography</span><br>
   <select ng-model="demography" ng-options="sub.DemographyName for sub in demographies"></select><br>
-  <div class='resultHolder' ng-repeat='item in items'>
-    <div ng-repeat="(k, v) in item track by $index">
-      <b>{{k}}: </b>{{v}} <br>
+  <div class='row col-md-6'>
+    <div class='col-md-12 top_ten' ng-repeat='item in items'>
+      <div class='col-md-12' ng-repeat="(k, v) in item track by $index">
+        <b>{{k}}: </b>{{v}} <br>
+      </div>
+    </div>
+  </div>
+  <div class='row col-md-6'>
+    <div ng-hide="categoryName == 'Music' || categoryName == 'Twitter TV'">
+      <summarychart chart-id="chosenStat"></summarychart>
     </div>
   </div>
 </div>
