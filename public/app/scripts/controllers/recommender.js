@@ -235,7 +235,9 @@ angular.module('publicApp')
       if($scope.recommendationScore != undefined && $scope.recommendationScore != null && $scope.recommendationScore.toString() != 'NaN'){
         $scope.data = [];
         for (var i = 0; i < $scope.recommenderDoughnut.length; i++) {
-          $scope.data[i] = {'label': '#'+$scope.recommenderDoughnut[i].item.Rank + '. '+ $scope.recommenderDoughnut[i].item.Name,
+          $scope.data[i] = {'label': '#'+$scope.recommenderDoughnut[i].item.Rank + '. '+ 
+                                      $scope.recommenderDoughnut[i].item.Name + 
+                                      ', Unique Audience: ' + $scope.recommenderDoughnut[i].item.UniqueAudience,
                             'value': $scope.recommenderDoughnut[i].item.Score};
         };
         console.log($scope.data);

@@ -27,7 +27,7 @@ angular.module('publicApp')
           donutTip({
                     selector: selector, 
                     data: scope.val,
-                    totalLabel: "Recommendation Score",
+                    totalLabel: $("doughnut").attr('totalLabel'),
                     width: 650,
                     height: 650,
                     innerRadius: 150,

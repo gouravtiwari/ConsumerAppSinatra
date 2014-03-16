@@ -71,10 +71,10 @@ function donutTip(options){
                 .attr("transform", "translate(" + config.outerRadius * 1.5 + "," + config.outerRadius * 1.5 + ")");
     
     var textTop = vis.append("text")
-                .attr("dy", ".35em")
+                .attr("dy", "250px")
                 .style("text-anchor", "middle")
                 .attr("class", "textTop")
-                .text("TOTAL")
+                .text("")
                 .attr("y", -10),
         textBottom = vis.append("text")
                 .attr("dy", ".35em")
@@ -105,9 +105,12 @@ function donutTip(options){
                     d3.select(this).select("path").transition()
                     .duration(200)
                     .attr("d", arcOver);
-                    
-                    textTop.text(d3.select(this).datum().data[config.xDomain])
+                // var labelAry = d3.select(this).datum().data[config.xDomain].split('<br>');
+                // for (var i = 0; i < labelAry.length; i++) {
+                  textTop.text(d3.select(this).datum().data[config.xDomain])
                     .attr("y", -10);
+                // };
+                    
                 textBottom.text(config.totalLabel + ": " +d3.select(this).datum().data[config.yDomain])
                     .attr("y", 10);
                     
@@ -124,7 +127,7 @@ function donutTip(options){
                     .duration(100)
                     .attr("d", arc);
         
-                    textTop.text("TOTAL")
+                    textTop.text("")
                     .attr("y", -10);
                     textBottom.text(config.totalLabel + ": "+total);
                     
