@@ -71,6 +71,10 @@ angular.module('publicApp')
       $scope.searchByCategory();
     });
 
+    $scope.$watch('recommendationScore', function() {
+      $scope.doughnutRedraw();
+    })
+
     $scope.searchByCategory = function(){
       var parameter_obj = {};
 
@@ -225,5 +229,13 @@ angular.module('publicApp')
         rating = 'Poor';
       } 
       return rating;
-    }
+    };
+
+    $scope.doughnutRedraw = function(){
+      $scope.data = [[{"length": 17, "height": 20, "y": 20}],
+                  [{"length": 8, "height": 30, "y": 30}],
+                  [{"length": 19, "height": 10, "y": 10}],
+                  [{"length": 10, "height": 40, "y": 40}]];
+
+    };
   });
