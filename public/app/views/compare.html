@@ -28,7 +28,7 @@
 			<li>
 				<div class="mainCell" ng-class="(maindata.android.TotalDurationMin-maindata.ios.TotalDurationMin)/maindata.android.TotalDurationMin*100 > 0 ? 'green glyphicon glyphicon-arrow-up' : 'red glyphicon glyphicon-arrow-down'">
 					<div class="head-val bold">Total Duration Mins</div>
-					<div class="head-val">{{maindata.android.TotalDurationMin}}</div>
+					<div class="head-val">{{maindata.android.TotalDurationMin | unitCon}}</div>
 					<div class="labelIndex">{{(maindata.android.TotalDurationMin-maindata.ios.TotalDurationMin)/maindata.android.TotalDurationMin*100 | roundoff}}</div>
 				</div>
 				<!--
@@ -142,7 +142,7 @@
 			<li>
 				<div class="mainCell" ng-class="(maindata.android.TotalDurationMin-maindata.ios.TotalDurationMin)/maindata.android.TotalDurationMin*100 > 0 ? 'red glyphicon glyphicon-arrow-down' : 'green glyphicon glyphicon-arrow-up'">
 					<div class="head-val bold">Total Duration Min</div>
-					<div class="head-val">{{maindata.ios.TotalDurationMin}}</div>
+					<div class="head-val">{{maindata.ios.TotalDurationMin | unitCon}}</div>
 					<div class="labelIndex">{{-(maindata.android.TotalDurationMin-maindata.ios.TotalDurationMin)/maindata.android.TotalDurationMin*100 | roundoff}}</div>
 				</div>	
 				<!-- <labelindex ios='{{maindata.ios.TotalDurationMin}}' android='{{maindata.android.TotalDurationMin}}' reverse='true'></labelindex> -->
