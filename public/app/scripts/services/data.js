@@ -96,7 +96,7 @@ angular.module('publicApp')
         recent_searches: [],
 
         add_to_recent_searches: function(url_part, param_path){
-          if(param_path.pageno && param_path.pageno != 1) {
+          if(param_path && param_path.pageno && param_path.pageno != 1) {
             return;
           }
           var recentSearch = {input: {}},
