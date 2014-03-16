@@ -136,8 +136,24 @@ angular.module('publicApp')
           'Products': '/product_by_desc',
           'NetView': '/audience',
           'Stores' : '/store_by_name'
+        },
+
+        fillSortByFields: function(viewObject){
+          var sortBy = [];
+          for(var field in viewObject) {
+            if(typeof(viewObject[field]) !== 'object'){
+              sortBy.push(field);
+            }
+          }
+          return sortBy;
+        },
+
+        sortBy: function(field, array){
+          return _.sortBy(array, function(item){
+            return -item[field];
+          });
         }
 
-		}
+	}
     return Data;
   });

@@ -7,6 +7,10 @@
   </select>
   <b># of Top Apps * :</b> <input type="number" ng-model="input.noofresults" ng-required />
   <button class="btn btn-primary" ng-click="search()">Search</button>
+  <b>Sort By :</b>
+	<select ng-model="sortBy"
+ 		ng-options="field for field in sortByFields">
+  </select>
 	<!-- Result -->
 	<div class="product" ng-repeat="app in AppDetails">
 		<h3><b>App Name: </b>{{app.AppName}}</h3>
@@ -15,6 +19,7 @@
 		<span class="label">TotalDurationMin: </span>{{app.TotalDurationMin}}<br>
 		<span class="label">TotalVisits: </span>{{app.TotalVisits}}<br>
 		<span class="label">VisitsPerPerson: </span>{{app.VisitsPerPerson}}<br>
+		<span class="label">TimePerPersonMin: </span>{{app.TimePerPersonMin}}<br>
 		<span class="label">MalePercentage: </span>{{app.MalePercentage}}<br>
 		<span class="label">FemalePercentage: </span>{{app.FemalePercentage}}<br>
 		<div ng-repeat="(k, v) in app.AgeBreakPercentage track by $index">
