@@ -23,6 +23,7 @@ angular.module('publicApp')
     "Location",
     "Size"
    ];
+   $scope.pageshow = false;
    $scope.indicators = [
     "",
     "Beer",
@@ -38,9 +39,13 @@ angular.module('publicApp')
    $scope.currentPage = 1;
 
     $scope.by_name = function(){
+      if($scope.input.prevSearch != $scope.input.search){
+        $scope.input.pageno = null;
+      }
+      $scope.pageshow = true;
         $(".storeDetails").css("display","inline-table")
         var parameter_obj = {'name' : $scope.input.storeName,
-                            'pageno' : $scope.currentPage};
+                            'pageno' : $scope.input.pageno || 1 };
         Data.get_json('Stores/v1', parameter_obj).success(function(api_data){
           $scope.status_name = api_data.Summary.Status;
           if($scope.status_name!=""){
@@ -56,7 +61,7 @@ angular.module('publicApp')
     $scope.by_owner = function(){
       
         $(".storeDetails").css("display","inline-table")
-
+        $scope.pageshow = true;
         var parameter_obj = {'owner' : $scope.input.ownerName,
                             'pageno' : $scope.currentPage};
         Data.get_json('Stores/v1', parameter_obj).success(function(api_data){
@@ -72,7 +77,8 @@ angular.module('publicApp')
     }
 
     $scope.by_market = function(){
-      $(".storeDetails").css("display","inline-table")
+      $(".storeDetails").css("display","inline-table");
+      $scope.pageshow = true;
           var parameter_obj = {'indicator' : $scope.input.indicator,
                           'scantrackcode':$scope.input.scanTrackCode,
                           'marketcode':$scope.input.marketCode,
@@ -97,6 +103,7 @@ angular.module('publicApp')
     }
 
     $scope.by_location = function(){
+      $scope.pageshow = true;
       console.log("By location")
       $(".storeDetails").css("display","inline-table")
 
@@ -129,7 +136,8 @@ angular.module('publicApp')
     }
 
     $scope.by_size = function(){
-      $(".storeDetails").css("display","inline-table")
+      $(".storeDetails").css("display","inline-table");
+      $scope.pageshow = true;
         var parameter_obj = {'sizecode' : $scope.input.sizeCode,
                           'sellingspacearea':$scope.input.spaceArea,
                           'pageno' : $scope.currentPage};
@@ -151,8 +159,9 @@ angular.module('publicApp')
       });
     }
 
-    $scope.$watch('currentPage', function() {
-      if($scope.stores != undefined){
+    $scope.$watch('input.pageno', function(newValue,oldValue) {
+      if(newValue == oldValue) return;
+      if(isNaN($scope.input.pageno) || $scope.input.pageno == null) return; 
         if($scope.select_type == 'Store Name'){
             $scope.by_name(); 
         }
@@ -168,10 +177,13 @@ angular.module('publicApp')
         else if($scope.select_type == 'Size'){
           $scope.by_size();
         } 
-      }
+      
     });
     $scope.$watch('select_type',function(){
-       $(".storeDetails").css("display","none")
+       $(".storeDetails").css("display","none");
+       $scope.pageshow = false;
+       $scope.input = '';
+
     })
 
     $scope.$watch('cache_response', function(newValue, oldValue){
