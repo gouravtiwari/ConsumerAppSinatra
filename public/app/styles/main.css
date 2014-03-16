@@ -599,3 +599,7 @@ div.tooltip:after {
 filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 
 }
+
+.marginBottom {
+  margin-bottom: 40px;
+} 
