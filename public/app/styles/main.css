@@ -407,6 +407,10 @@ nav {
   list-style: none;
 }
 
+.compare div{
+  font-family: "Helvetica Neue" !important;
+}
+
 .mainCell{
   position: relative;
   float: left;

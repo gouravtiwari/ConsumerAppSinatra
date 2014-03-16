@@ -32,6 +32,7 @@ angular.module('publicApp')
         get_param_path: function(obj){
             var path = '';
             for(var data in obj){
+                obj[data] = obj[data].toString();
                 path = path + data +"=" + obj[data].split(' ').join('%20') + '&';
             }
             return path;
