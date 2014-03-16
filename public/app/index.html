@@ -25,15 +25,37 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-controller="MainCtrl">
+    <div ng-controller="MainCtrl">
       <header>
-        <b class="cursorPointer" ng-click="go('/nav_page')">Smart Mart</b> 
-        - <span class="lightBlue">Buy & Sell Smartly.</span>
-        <div class="recentSearch cursorPointer floatRight" ng-mouseover="showList()">
-          <span ng-bind="recent_searches.length"></span>
-          Recent Search<span ng-show="recent_searches.length>1">es</span>
-          <span class="icon glyphicon glyphicon-search"></span>
-        </div>
+<!--           <span class="cursorPointer" ng-click="go('/nav_page')"></span> 
+ --><!--           - <span class="lightBlue">Buy & Sell Smartly.</span>
+  -->     <div class="logo"  ng-click="go('/nav_page')">
+            <img src="../images/logo.png" width="220px"height="120px"></img>
+          </div>     
+          <!-- <span class="icon glyphicon glyphicon-search"></span>
+          -->
+          <ul class="main_nav nav nav-tabs">
+            <li>
+              <a href="#/product_by_desc">
+              <img src="../images/icon_findProducts.png" width="50px"/>Find Product</a>
+            </li>
+            <li>
+              <a href="#/store_by_name">
+              <img src="../images/icon_storeLocator.png" width="50px"/>Store Locator</a>
+              </a>
+            </li>
+            <li>
+              <a href="#/market_analysis">
+              <img src="../images/icon_analyseSmartly.png" width="50px"/>Analyse Smartly</a>
+              </a>
+            </li>
+          </ul>
+          <div class="recentSearch cursorPointer floatRight" ng-mouseover="showList()">
+            <span ng-bind="recent_searches.length"></span>
+            Recent Search<span ng-show="recent_searches.length>1">es</span>
+          </div> 
+
+
       </header>
       <div class="recentSearchInclude" ng-include="" src="'views/recent_search_list.html'"
         ng-class="{expandVertical: showRecentSearch}">

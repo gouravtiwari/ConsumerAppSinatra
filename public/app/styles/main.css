@@ -5,12 +5,50 @@ body {
 }
 
 header {
-  height: 45px;
+  height: 75px;
   padding: 5px 16px;
   font-size: 26px;
   line-height: 30px;
-  background: #000;
+  background: -webkit-linear-gradient(to bottom left, #6c5948, #88645b,#4a5f5c);
+  background: -o-linear-gradient(to bottom left, #6c5948, #88645b,#4a5f5c);
+  background: -moz-linear-gradient(to bottom left, #6c5948, #88645b,#4a5f5c);
+  background: linear-gradient(to bottom left, #6c5948, #88645b,#4a5f5c);
   color: #fff;
+}
+.logo{
+  cursor: pointer;
+  position: absolute;
+  width: 220px;
+  height: 100px;
+  margin-top: -39px;
+}
+.main_nav{
+  position: absolute;
+width: 50%;
+margin-left: 30%;
+margin-top: 30px;
+border-bottom: 0px;
+}
+.main_nav li{
+  height: 40px;
+}
+.main_nav li:nth-child(1){
+  background-color: #2b4345;
+}
+.main_nav li:nth-child(2){
+  background-color: #2e0f14;
+}
+.main_nav li:nth-child(3){
+  background-color: #2e3437;
+}
+.main_nav li a{
+border-radius: 0px;
+height: 40px;
+padding: 0px;
+font-size: 17px;
+width: 200px;
+color: white;
+
 }
 
 .lightBlue {
@@ -144,7 +182,7 @@ nav {
 /* Custom page header */
 
 .header {
-  border-bottom: 1px solid #e5e5e5;
+  /*border-bottom: 1px solid #e5e5e5;*/
 }
 
 /* Make the masthead heading the same height as the navigation */
@@ -362,7 +400,7 @@ nav {
 .recentSearch {
   position: relative;
   top: 3px;
-  font-size: 18px;
+  font-size: 15px;
   background: lightcoral;
   padding: 0 12px;
   border-radius: 14px;
@@ -524,7 +562,7 @@ nav {
 
 .modal_store{
   height: 40px;
-  background-color: #3276b1;
+  background-color: #614b4e;
   border-radius: 5px;
   padding: 0px;
 }
@@ -532,6 +570,10 @@ nav {
   padding: 7px;
   margin: 0px;
   color: white;
+  font-size: 18px;
+}
+.modal_okbtn{
+  background-color: #614b4e;
 }
 .storeDetails tr td:nth-child(1){
   cursor: pointer;
@@ -598,4 +640,31 @@ div.tooltip:after {
 /* Internet Explorer */
 filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 
+}
+
+.search_bar{
+  border-bottom:4px solid #321e1f;
+  background-color:#614b4e;
+  height: 40px;
+  color: white; 
+}
+.search_bar select{
+  margin-left: 2%;
+}
+.search_type{
+  margin-left: 26%;
+  font-size: 15px;
+  padding-top: 5px;
+}
+.search_form{
+  //background-color: #e0d4d6;
+  height: auto;
+  margin-top: 2%;
+}
+.search_btn{
+  color: black;
+  background-color: #ffc740;
+}
+.storeDetails thead{
+  background-color: #e0d4d6;
 }
