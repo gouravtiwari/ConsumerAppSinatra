@@ -20,23 +20,20 @@ angular.module('publicApp')
     link: function (scope, element, attrs) {
       var selector = element[0];
       console.log("selector:"+ selector);
-        // .append("svg")
-        //   .attr("width", width)
-        //   .attr("height", height + margin + 100);
-        // //Update when charts data changes
-          scope.$watch('val', function () {
-            // console.log(newVal);
-            // console.log(oldVal);
-            // clear the elements inside of the directive
-            // selector.selectAll('*').remove();
+        //Update when charts data changes
+        scope.$watch('val', function () {
+          // console.log(newVal);
+          // console.log(oldVal);
+          // clear the elements inside of the directive
+          // selector.selectAll('*').remove();
 
-            // if 'val' is undefined, exit
-            if (!scope.val) {
-              return;
-            }
-            console.log('val: '+ scope.val);
-            donutTip({selector: selector, data: scope.val});
-          });
+          // if 'val' is undefined, exit
+          if (!scope.val) {
+            return;
+          }
+          console.log('val: '+ scope.val);
+          donutTip({selector: selector, data: scope.val});
+        });
       }
     };
 })
