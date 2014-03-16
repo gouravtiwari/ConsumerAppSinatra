@@ -1,21 +1,28 @@
 <div>
-<!-- Inputs -->
-<h2>National TV Program Ratings</h2>
-<b># of TV Programs* :</b>
-<input type="number" ng-model="input.numberofresults" ng-required />
-<b>Demography:</b>
-<select ng-model="input.demography" ng-options="demography for demography in demographies">
-</select>
-<!-- <input type="text" ng-model="input.demography" /> -->
-<button class="btn btn-primary" ng-click="search()">Search</button>
-
-<!-- Result -->
-<div class="program" ng-repeat="program in programs">
-  <h4><b>Program: </b>{{program.ProgramName}}</h4>
-  <span class="label">Demographic: </span>{{program.Demographic}}<br>
-  <span class="label">Originator: </span>{{program.Originator}}<br>
-  <span class="label">US AA PERC: </span>{{program.US_AA_PERC}}<br>
-  <span class="label">US Projection: </span>{{program.USProjection}}<br>
-  <span class="label">Total Duration: </span>{{program.TotalDuration}}<br>
-</div>
+  <!-- Inputs -->
+  <h2>National TV Program Ratings</h2>
+  <b># of TV Programs* :</b>
+  <input type="number" ng-model="input.numberofresults" ng-required />
+  <b>Demography:</b>
+  <select ng-model="input.demography" ng-options="demography for demography in demographies">
+  </select>
+  <!-- <input type="text" ng-model="input.demography" /> -->
+  <button class="btn btn-primary" ng-click="search()">Search</button>
+  <div class="clear"></div>
+  <!-- Result -->
+  <div class="left">
+    <div class="program" ng-repeat="program in programs">
+      <h4><b>Program: </b>{{program.ProgramName}}</h4>
+      <span class="label">Demographic: </span>{{program.Demographic}}<br>
+      <span class="label">Originator: </span>{{program.Originator}}<br>
+      <span class="label">US AA PERC: </span>{{program.US_AA_PERC}}<br>
+      <span class="label">US Projection: </span>{{program.USProjection}}<br>
+      <span class="label">Total Duration: </span>{{program.TotalDuration}}<br>
+    </div>
+  </div>
+  <div class="left">
+    <doughnut chart-id="programRankingDoughnut" val="data" totalLabel="Projected Audience"></doughnut>
+  </div>
+  
+  
 </div>
