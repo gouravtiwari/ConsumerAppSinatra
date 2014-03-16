@@ -76,16 +76,6 @@ angular.module('publicApp')
       var chart_data = angular.copy(PieChartOptions.simplePie);
       chart_data.series = [{name:'Data', type: 'pie', data:series_data}];
       console.log(chart_data.series);
-      chart_data.plotOptions.pie.dataLabels = {
-                                                enabled: true,
-                                                style: { fontFamily: "OpenSansCondLight,Georgia,Times,serif",
-                                                  fontSize: 10
-                                                },
-                                                formatter: function() {
-                                                  return '<b>'+ this.point.name +': </b> '+ this.y +'';
-                                                },
-                                                distance: 10
-                                              }
       chart_data.plotOptions.pie.center = ['50%', '50%'];
       chart_data.chart.marginTop = chart_data.chart.marginBottom = 50;
       console.log(chart_data)

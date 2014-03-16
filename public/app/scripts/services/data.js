@@ -192,17 +192,14 @@ angular.module('publicApp')
             enabled: false
         },
         plotOptions: {
-            pie: {
-                allowPointSelect: true,
-                cursor: 'pointer',
-                dataLabels: {
-                    enabled: false,
-                    color: '#000000',
-                    connectorColor: '#000000',
-                    format: '{point.percentage:.1f} %',
-                    style: { fontFamily: "OpenSansCondLight,Georgia,Times,serif"}
+                pie: {
+                    allowPointSelect: true,
+                    cursor: 'pointer',
+                    dataLabels: {
+                        enabled: false
+                    },
+                    showInLegend: true
                 }
-            }
         },
         series: [{
             type: 'pie',
