@@ -10,21 +10,42 @@
 		(e.g. toothbrush, toothpaste)
 	</div>
 	<!-- Result -->
-	<div ng-repeat="category in ProductCategory">
-		<h3><b>Products Category: </b>{{category.ProductCategoryName}}</h3>
-		<div class="resultHolder" ng-repeat="subcategory in category.PCCSubGroup">
-			<h4><b>Sub Category: </b>{{subcategory.PCCSubGroupName}}</h4>
-			<div class="product" ng-repeat="adspend in subcategory.AdSpend">
-				<b>Brand: </b><span class="productDesc">{{adspend.Brand}}</span><br>
-				<span class="label">NetworkTVAdSpend:</span> {{adspend.NetworkTVAdSpend}}<br>
-				<span class="label">SpotTVAdSpend:</span> {{adspend.SpotTVAdSpend}}<br>
-				<span class="label">CableTVAdSpend:</span> {{adspend.CableTVAdSpend}}<br>
-				<span class="label">NationalMagazineAdSpend:</span> {{adspend.NationalMagazineAdSpend}}<br>
-				<span class="label">SyndicatedTVAdSpend:</span> {{adspend.SyndicatedTVAdSpend}}<br>
-				<span class="label">NationalInternetAdSpend:</span> {{adspend.NationalInternetAdSpend}}<br>
+	<div class="left">
+		<div ng-repeat="category in ProductCategory">
+			<h3><b>Products Category: </b>{{category.ProductCategoryName}}</h3>
+			<div class="resultHolder" ng-repeat="subcategory in category.PCCSubGroup">
+				<h4><b>Sub Category: </b>{{subcategory.PCCSubGroupName}}</h4>
+				<div class="product" ng-repeat="adspend in subcategory.AdSpend">
+					<b>Brand: </b><span class="productDesc">{{adspend.Brand}}</span><br>
+					<span class="label">NetworkTVAdSpend:</span> {{adspend.NetworkTVAdSpend}}<br>
+					<span class="label">SpotTVAdSpend:</span> {{adspend.SpotTVAdSpend}}<br>
+					<span class="label">CableTVAdSpend:</span> {{adspend.CableTVAdSpend}}<br>
+					<span class="label">NationalMagazineAdSpend:</span> {{adspend.NationalMagazineAdSpend}}<br>
+					<span class="label">SyndicatedTVAdSpend:</span> {{adspend.SyndicatedTVAdSpend}}<br>
+					<span class="label">NationalInternetAdSpend:</span> {{adspend.NationalInternetAdSpend}}<br>
+				</div>
 			</div>
 		</div>
 	</div>
+	<div class="left">
+    <doughnut chart-id="NetworkTVAdSpendDoughnut" val="dataNetworkTVAdSpend" totalLabel="Network TV Ad Spend"></doughnut>
+  </div>
+  <div class="left">
+    <doughnut chart-id="SpotTVAdSpendDoughnut" val="dataSpotTVAdSpend" totalLabel="Spot TV AdSpend"></doughnut>
+  </div>
+  <div class="left">
+    <doughnut chart-id="CableTVAdSpendDoughnut" val="dataCableTVAdSpend" totalLabel="Cable TV AdSpend"></doughnut>
+  </div>
+  <div class="left">
+    <doughnut chart-id="NationalMagazineAdSpendDoughnut" val="dataNationalMagazineAdSpend" totalLabel="National Magazine AdSpend"></doughnut>
+  </div>
+  <div class="left">
+    <doughnut chart-id="SyndicatedTVAdSpendDoughnut" val="dataSyndicatedTVAdSpend" totalLabel="Syndicated TV AdSpend"></doughnut>
+  </div>
+  <div class="left">
+    <doughnut chart-id="NationalInternetAdSpendDoughnut" val="dataNationalInternetAdSpend" totalLabel="National Internet AdSpend"></doughnut>
+  </div>
+  
 	<div class="clear"></div>
 
 	<!-- Inputs -->
