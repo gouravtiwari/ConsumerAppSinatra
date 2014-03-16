@@ -668,3 +668,89 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 .storeDetails thead{
   background-color: #e0d4d6;
 }
+/* Spinner */
+@keyframes "spin" {
+ 0% {
+    border-radius: 0px;
+ }
+ 100% {
+    border-radius: 50%;
+    -webkit-transform: rotate(1000deg);
+    -moz-transform: rotate(1000deg);
+    -o-transform: rotate(1000deg);
+    -ms-transform: rotate(1000deg);
+    transform: rotate(1000deg);
+ }
+}
+
+@-moz-keyframes spin {
+ 0% {
+   border-radius: 0px;
+ }
+ 100% {
+   border-radius: 50%;
+   -moz-transform: rotate(1000deg);
+   transform: rotate(1000deg);
+ }
+}
+
+@-webkit-keyframes "spin" {
+ 0% {
+   border-radius: 0px;
+ }
+ 100% {
+   border-radius: 50%;
+   -webkit-transform: rotate(1000deg);
+   transform: rotate(1000deg);
+ }
+}
+
+@-ms-keyframes "spin" {
+ 0% {
+   border-radius: 0px;
+ }
+ 100% {
+   border-radius: 50%;
+   -ms-transform: rotate(1000deg);
+   transform: rotate(1000deg);
+ }
+}
+
+@-o-keyframes "spin" {
+ 0% {
+   border-radius: 0px;
+ }
+ 100% {
+   border-radius: 50%;
+   -o-transform: rotate(1000deg);
+   transform: rotate(1000deg);
+ }
+}
+
+/* Default Spicon class */
+
+.spin {
+  -webkit-animation: spin 6s infinite normal linear;
+  -moz-animation: spin 6s infinite normal linear;
+  -ms-animation: spin 6s infinite normal linear;
+  -o-animation: spin 6s infinite normal linear;
+  animation: spin 6s infinite normal linear;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-top: -128px;
+  margin-left: -128px;
+  z-index: 1000;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 999;
+}
+
+.marginBottom {
+  margin-bottom: 40px;
+} 
