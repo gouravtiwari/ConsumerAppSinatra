@@ -491,9 +491,12 @@ nav {
 .recommendation{
   text-align: center;
   width: 100px;
-  height: 50px;
+  height: 34px;
   color: blue;
   font-size: 15px;
+  padding: 5px;
+  background: aquamarine;
+  border-radius: 5px;
 }
 
 .modal_store{
