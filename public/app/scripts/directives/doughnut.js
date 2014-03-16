@@ -32,7 +32,16 @@ angular.module('publicApp')
             return;
           }
           console.log('val: '+ scope.val);
-          donutTip({selector: selector, data: scope.val});
+          donutTip({
+                    selector: selector, 
+                    data: scope.val,
+                    totalLabel: "Recommendation Score",
+                    width: 650,
+                    height: 500,
+                    innerRadius: 150,
+                    outerRadius: 210,
+                    legend: false
+                  });
         });
       }
     };

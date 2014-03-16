@@ -80,7 +80,7 @@ function donutTip(options){
                 .attr("dy", ".35em")
                 .style("text-anchor", "middle")
                 .attr("class", "textBottom")
-                .text(total + " Views")
+                .text(config.totalLabel + ": "+total)
                 .attr("y", 10);
 
     var arc = d3.svg.arc()
@@ -108,7 +108,7 @@ function donutTip(options){
                     
                     textTop.text(d3.select(this).datum().data[config.xDomain])
                     .attr("y", -10);
-                textBottom.text(d3.select(this).datum().data[config.yDomain] + " " +config.totalLabel)
+                textBottom.text(config.totalLabel + ": " +d3.select(this).datum().data[config.yDomain])
                     .attr("y", 10);
                     
                     div.transition()
@@ -126,7 +126,7 @@ function donutTip(options){
         
                     textTop.text("TOTAL")
                     .attr("y", -10);
-                    textBottom.text(total + " " + config.totalLabel);
+                    textBottom.text(config.totalLabel + ": "+total);
                     
                     div.transition()
                     .duration(500)
