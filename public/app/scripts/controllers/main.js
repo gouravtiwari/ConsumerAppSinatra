@@ -10,7 +10,7 @@ angular.module('publicApp')
     $scope.navTiles = [
     	{title: 'Product <br/> Finder', url: '/product_by_desc'},
     	{title: 'Store <br/> Locator', url: '/store_by_name'},
-    	{title: 'Market Analyses', url: '/market_analysis'}
+    	{title: 'Market Analysis', url: '/market_analysis'}
     ];
 
     $scope.analyses = [      
