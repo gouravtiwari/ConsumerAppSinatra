@@ -2,6 +2,7 @@
 
 angular.module('publicApp')
   .controller('ProgramRankingsCtrl', function ($scope, Data) {
+    $scope.demographies = ['M2-11'];
     $scope.search = function(){
       var parameter_obj = {
                             "noofresults": $scope.input.numberofresults,

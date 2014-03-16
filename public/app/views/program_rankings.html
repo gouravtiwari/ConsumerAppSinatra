@@ -4,7 +4,9 @@
 <b># of TV Programs* :</b>
 <input type="number" ng-model="input.numberofresults" ng-required />
 <b>Demography:</b>
-<input type="text" ng-model="input.demography" />
+<select ng-model="input.demography" ng-options="demography for demography in demographies">
+</select>
+<!-- <input type="text" ng-model="input.demography" /> -->
 <button class="btn btn-primary" ng-click="search()">Search</button>
 
 <!-- Result -->

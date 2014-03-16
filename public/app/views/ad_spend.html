@@ -6,6 +6,9 @@
 		<button ng-click="searchByCategory()" class="btn left">Search</button>
 	</div>
 	<div class="clear"></div>
+	<div class='example-text'>
+		(e.g. toothbrush, toothpaste)
+	</div>
 	<!-- Result -->
 	<div ng-repeat="category in ProductCategory">
 		<h3><b>Products Category: </b>{{category.ProductCategoryName}}</h3>
@@ -31,6 +34,9 @@
 		<button ng-click="searchByBrand()" class="btn left">Search</button>
 	</div>
 	<div class="clear"></div>
+	<div class='example-text'>
+		(e.g. aveeno)
+	</div>
 
 	<!-- Result -->
 	<div ng-repeat="brand in ProductBrand">

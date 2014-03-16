@@ -1,9 +1,20 @@
 <div>
 <h2>Online Audience</h2>
-<b># of Top Websites* :</b>
-<input type="number" ng-model="input.numberofresults" ng-required />
-<b>Website Category:</b>
-<input type="text" ng-model="input.websitecategory" />
+<div class='left'>
+  <b># of Top Websites* :</b>
+  <input type="number" ng-model="input.numberofresults" ng-required />
+</div>
+<div class='left'>
+  <div class='left'>
+    <b>Website Category:</b>
+  </div>
+  <div class='left'>
+    <input type="text" ng-model="input.websitecategory" />
+    <div class='example-text'>
+      (e.g. finance)
+    </div>
+  </div>
+</div>
 <button class="btn btn-primary" ng-click="search()">Search</button>
 <div class="resultHolder">
 	<h3>{{output.message}}</h3>
