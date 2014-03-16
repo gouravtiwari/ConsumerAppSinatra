@@ -208,12 +208,14 @@
 
   <br>
   <br>
-  <div class="recommender-btn">
-    <button class="btn" ng-click="recommender()">Get Recommendation</button>
+  <div>
+    <div class="recommender-btn left">
+      <button class="btn" ng-click="recommender()">Get Recommendation</button>
+    </div>
+    <div class="recommendation left">
+      {{recommendationScore}} {{recommendationRating}}
+    </div>
   </div>
   <div class="clear"></div>
-  <div class="recommendation">
-    {{recommendationScore}} {{recommendationRating}}
-  </div>
   <doughnut chart-id="recommenderDoughnut" val="data" ></doughnut>
 </div>
