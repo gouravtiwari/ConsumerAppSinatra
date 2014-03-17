@@ -72,5 +72,8 @@ angular.module('publicApp')
     //BELOW OUTPUT MODEL MUST BE USED FOR ERROR/NOT FOUND MESSAGES
     $scope.output = {};
 
+    //Expose Math Object for rounding in {{}}
+    $scope.Math = window.Math;
+
 
   });

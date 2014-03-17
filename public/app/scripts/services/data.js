@@ -152,6 +152,29 @@ angular.module('publicApp')
           return sortBy;
         },
 
+        injectColorClass: function(items, fields){
+          var max = {};
+          $.each(fields, function(index, field){
+            max[field] = _.max(items, function(item){
+              return item[field];
+            })[field];
+          });
+          console.log(max);
+          $.each(fields, function(index, field){
+            $.each(items, function(index, item){
+              if(item[field] >= .7 * max[field]){
+                item[field + 'Class'] = 'green';
+              } else
+              if(item[field] >= .3 * max[field]){
+                item[field + 'Class'] = 'yellow';
+              } else {
+                item[field + 'Class'] = 'red';
+              }
+            });
+          });
+          
+        },
+
         sortBy: function(field, array){
           return _.sortBy(array, function(item){
             return -item[field];
