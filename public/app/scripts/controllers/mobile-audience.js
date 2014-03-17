@@ -10,8 +10,8 @@ angular.module('publicApp')
   		var platform = $scope.input.platform.toLowerCase(),
   			parameter_obj = {"numberofresults": $scope.input.noofresults};
 
-      //Data.get_json('EMM/v1/' + platform, parameter_obj).success(function(api_data){
-      Data.get_local('scripts/jsons/mobile_audience_ios.json').success(function(api_data){
+      Data.get_json('EMM/v1/' + platform, parameter_obj).success(function(api_data){
+      //Data.get_local('scripts/jsons/mobile_audience_ios.json').success(function(api_data){
         $scope.AppDetails = api_data.AppResponse.AppDetails;
         $scope.sortByFields = Data.fillSortByFields($scope.AppDetails[0]);
       });

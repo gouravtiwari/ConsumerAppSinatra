@@ -6,7 +6,7 @@ body {
 
 header {
   height: 75px;
-  padding: 5px 16px;
+  padding: 5px;
   font-size: 26px;
   line-height: 30px;
   background: -webkit-linear-gradient(to bottom left, #6c5948, #88645b,#4a5f5c);
@@ -23,9 +23,9 @@ header {
   margin-top: -39px;
 }
 .main_nav{
-  position: absolute;
+  position: relative;
   width: 620px;
-  margin-left: 22%;
+  margin: auto;
   margin-top: 30px;
   border-bottom: 0px;
 }
@@ -422,7 +422,7 @@ nav {
 
 .recentSearch {
   position: relative;
-  top: 3px;
+  top: -50px;
   font-size: 15px;
   background: lightcoral;
   padding: 0 12px;
