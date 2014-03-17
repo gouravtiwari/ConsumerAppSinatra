@@ -156,7 +156,7 @@ color: white;
 nav {
   position: relative;
   top: 100px;
-  width: 500px;
+  width: 495px;
   margin: auto; 
   
 }
@@ -169,7 +169,7 @@ nav {
   border-radius: 4px;
   font-size: 22px;
   font-style: italic;
-  background: rgba(0,0,0,.6);
+  background: rgba(0,0,0,.4);
   color: #fff;
   display: table;
   text-align: center;
@@ -177,7 +177,7 @@ nav {
 }
 
 .navTile:hover {
-  background: rgba(255, 255, 0, .7);
+  background: rgba(255, 255, 0, .6);
 }
 .tileIcon {
   width: 80px;
@@ -387,7 +387,69 @@ nav {
   border: 1px solid #bbb;
   height: 30px;
   overflow: hidden;
+  color: #fff;
+  line-height: 28px;
 }
+
+.cell span {
+  float: left;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 25px;
+  height: 100%;
+}
+.bar0 {
+  background: #cccc00;
+}
+
+.bar1 {
+  background: #ffccee;
+}
+
+.bar2 {
+  background: #cccccc;
+}
+
+.bar3 {
+  background: #ffccaa;
+}
+
+.bar4 {
+  background: #cccc88;
+}
+
+.bar5 {
+  background: #ffcc66;
+}
+
+.bar6 {
+  background: #cccc44;
+}
+
+.bar7 {
+  background: #ffcc22;
+}
+
+.bar8 {
+  background: #cccc00;
+}
+
+.bar9 {
+  background: #fcaaee;
+}
+
+.bar10 {
+  background: #ccaacc;
+}
+
+.bar11 {
+  background: #fcccaa;
+}
+
+.bar12 {
+  background: #cccc44;
+}
+
 
 .view-leave, .view-enter {
   -webkit-transition:all cubic-bezier(0.250, 0.460, 0.450, 0.940) .8s;
@@ -400,7 +462,7 @@ nav {
 .view-animate-container {
   position:absolute;
   width: 100%;
-  height:750px;
+  min-height: 750px;
   overflow: scroll;
 }
  
@@ -427,8 +489,9 @@ nav {
 }
 
 .recentSearch {
-  position: relative;
-  top: -40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
   font-size: 15px;
   background: lightcoral;
   padding: 0 12px;
@@ -454,7 +517,7 @@ nav {
   right: 0;
   width: 550px;
   height: 0;
-  background: rgba(0,0,0,.8);
+  background: rgba(0,0,0,.5);
   transition: height .3s;
   -webkit-transition: height .3s;
   z-index: 10000;
@@ -482,7 +545,7 @@ nav {
 }
 
 .recentSearchList li:hover{
-  background: rgba(0,0,0,.9);
+  background: rgba(0,0,0,.6);
   color: #ff0 !important;
 }
 
@@ -508,6 +571,7 @@ nav {
   width: 100%;
   border-radius: 5px;
   height: 25px;
+  color: #fff;
   line-height: 25px;
 }
 
@@ -528,6 +592,17 @@ nav {
 
 .green{
   background: #9fe3bc
+}
+
+.yellow{
+  background-color: #CCCC00;
+  background-image: -moz-linear-gradient(top, #CCCC00, #CCCC70);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#CCCC00), to(#CCCC70));
+  background-image: -webkit-linear-gradient(top, #CCCC00, #CCCC70);
+  background-image: -o-linear-gradient(top, #CCCC00, #CCCC70);
+  background-image: linear-gradient(to bottom, #CCCC00, #CCCC70);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccc0062', endColorstr='#cccc0057', GradientType=0);
 }
 
 .red{
@@ -768,7 +843,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
 .marginBottom {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .fontTiny {
@@ -808,4 +883,41 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 
 .smallfont{
   font-size: 10px;
+}
+
+/* market analysis left navigation - begin*/
+.left-nav{
+  top: 100px;
+  position: absolute;
+  width: 150px;
+  margin: auto;
+  margin-top: 4px;
+  border-bottom: 0px;
+  z-index: 100;
+  min-height: 768px;
+  background-color: #707070;
+}
+.left-nav li{
+  height: 110px;
+}
+.left-nav li a{
+border-radius: 0px;
+height: 110px;
+padding: 0px;
+font-size: 17px;
+width: 165px;
+color: white;
+}
+
+.left-nav li a.selected{
+  background: #fff !important;
+}
+
+.left-nav li a:hover {
+  background: #707070 !important;
+}
+/* market analysis left navigation - end */
+
+.market-analysis-section{
+  margin-left: 170px;
 }

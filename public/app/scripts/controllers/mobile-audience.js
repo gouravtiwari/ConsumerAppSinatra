@@ -14,6 +14,7 @@ angular.module('publicApp')
       //Data.get_local('scripts/jsons/mobile_audience_ios.json').success(function(api_data){
         $scope.AppDetails = api_data.AppResponse.AppDetails;
         $scope.sortByFields = Data.fillSortByFields($scope.AppDetails[0]);
+        Data.injectColorClass($scope.AppDetails, $scope.sortByFields);
       });
   	}
 
@@ -21,6 +22,7 @@ angular.module('publicApp')
       if($scope.cache_response.AppResponse){
   		  $scope.AppDetails = $scope.cache_response.AppResponse.AppDetails;
         $scope.sortByFields = Data.fillSortByFields($scope.AppDetails[0]);
+        Data.injectColorClass($scope.AppDetails, $scope.sortByFields);
       }
   		$scope.viaRecentSearch = false;
   	}
@@ -36,7 +38,6 @@ angular.module('publicApp')
       console.log(newvalue)
       if(!newvalue || newvalue == oldvalue) return;
       $scope.AppDetails = Data.sortBy(newvalue, $scope.AppDetails);
-
-    })
+    });
 
   });

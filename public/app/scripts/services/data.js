@@ -105,6 +105,9 @@ angular.module('publicApp')
           if(url_split[0] == 'EMM'){
             url_split[0]  = 'Mobile Audience on ';
             recentSearch.input.platform = url_split[2];
+          } else 
+          if(url_split[0] == 'NetView'){
+            url_split[0]  = 'Online Audience';
           }
           if(url_split[0] == 'Stores'){
             console.log($rootScope.select)
@@ -138,18 +141,43 @@ angular.module('publicApp')
         locations: {
           'Mobile Audience on ': '/mobile-audience',
           'Products': '/product_by_desc',
-          'NetView': '/audience',
+          'Online Audience': '/audience',
           'Stores' : '/store_by_name'
         },
 
         fillSortByFields: function(viewObject){
           var sortBy = [];
           for(var field in viewObject) {
-            if(typeof(viewObject[field]) !== 'object'){
+            if(typeof(viewObject[field]) !== 'object' && 
+                field.indexOf('Class') == -1 && 
+                field.indexOf('$$') == -1){
               sortBy.push(field);
             }
           }
           return sortBy;
+        },
+
+        injectColorClass: function(items, fields){
+          var max = {};
+          $.each(fields, function(index, field){
+            max[field] = _.max(items, function(item){
+              return item[field];
+            })[field];
+          });
+          console.log(max);
+          $.each(fields, function(index, field){
+            $.each(items, function(index, item){
+              if(item[field] >= .7 * max[field]){
+                item[field + 'Class'] = 'green';
+              } else
+              if(item[field] >= .3 * max[field]){
+                item[field + 'Class'] = 'yellow';
+              } else {
+                item[field + 'Class'] = 'red';
+              }
+            });
+          });
+          
         },
 
         sortBy: function(field, array){

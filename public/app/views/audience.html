@@ -1,26 +1,61 @@
 <div>
-<h2>Online Audience</h2>
-<div class='left'>
-  <b># of Top Websites* :</b>
-  <input type="number" ng-model="input.numberofresults" ng-required />
-</div>
-<div class='left'>
+  <h2>Online Audience</h2>
+  <!-- Inputs -->
   <div class='left'>
-    <b>Website Category:</b>
+    <b># of Top Websites* :</b>
+    <input type="number" ng-model="input.numberofresults" ng-required />
   </div>
   <div class='left'>
-    <input type="text" ng-model="input.websitecategory" />
-    <div class='example-text'>
-      (e.g. finance)
+    <div class='left'>
+      <b>Website Category:</b>
+    </div>
+    <div class='left'>
+      <input type="text" ng-model="input.websitecategory" />
+      <div class='example-text'>
+        (e.g. finance)
+      </div>
     </div>
   </div>
-</div>
-<button class="btn btn-primary" ng-click="search()">Search</button>
-<div class="resultHolder">
-	<h3>{{output.message}}</h3>
-	<div class="product" ng-repeat="audience in netUsageData">
-		<b><span class="productDesc"><b>Website Brand:</b> {{audience.WebsiteBrand}}</span></b><br>
-		<b>Uniq Visitor:</b> {{audience.UniqueAudience}} | <b>Total Minutes:</b> {{audience.TotalMinutes}}
-	</div>
-</div>
+  <button class="btn btn-primary" ng-click="search()">Search</button>
+  <b>Sort By :</b>
+  <select class="feature" ng-model="sortBy"
+    ng-options="field for field in sortByFields">
+  </select>
+
+  <!-- Result -->
+  <div class="resultHolder">
+  	<h3>{{output.message}}</h3>
+  	<div ng-repeat="site in netUsageData">
+      <div ng-show="$first">
+        <span class="column vborder">Website Name</span>
+        <span class="column vborder">Unique Audience</span>
+        <span class="column vborder">Active Reach</span>
+        <span class="column vborder">Universe Reach</span>
+        <span class="column vborder">Total Sessions</span>
+        <span class="column vborder">Sessions/Person</span>
+        <span class="column vborder">Total Minutes</span>
+      </div>
+      <div>
+        <span class="column cell fontTiny"><b>{{site.WebsiteBrand}}</b></span>
+        <span class="column cell {{site.UniqueAudienceClass}}">
+          {{site.UniqueAudience | unitCon}}
+        </span>
+        <span class="column cell {{site.ActiveReachClass}}">
+          {{site.ActiveReach}}
+        </span>
+        <span class="column cell {{site.UniverseReachClass}}">
+          {{site.UniverseReach}}
+        </span>
+        <span class="column cell {{site.TotalSessionsClass}}">
+          {{site.TotalSessions | unitCon}}
+        </span>
+        <span class="column cell {{site.SessionsPerPersonClass}}">
+          {{site.SessionsPerPerson}}
+        </span>
+        <span class="column cell {{site.TotalMinutesClass}}">
+          {{site.TotalMinutes | unitCon}}
+        </span>
+      </div>
+  	</div>
+  </div>
 </div>
