@@ -912,11 +912,12 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 
 /* market analysis left navigation - begin*/
 .left-nav{
-  top: 100px;
+  top: 45px;
+  left: 0;
   position: absolute;
   width: 150px;
   margin: auto;
-  margin-top: 4px;
+  padding-top: 55px;
   border-bottom: 0px;
   z-index: 100;
   min-height: 768px;
