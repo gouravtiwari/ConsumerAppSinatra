@@ -470,10 +470,12 @@ nav {
   width: 100%;
   min-height: 750px;
   overflow: scroll;
+  background: #edf1f2;
 }
  
 .view-animate-container > * {
   display:block;
+  background: #edf1f2;
   width:100%;
   position:absolute;
   top:0;
@@ -879,6 +881,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   height: 30px;
   line-height: 30px;
   font-size: 12px;
+  border-right: 2px solid #ffffff;
 }
 
 .dataval{
@@ -961,6 +964,11 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 
 .market-analysis-section{
   padding-left: 170px;
+  margin-top: 20px;
+}
+
+.market-cont{
+  margin-top: 20px;
 }
 
 .rows-selection{
