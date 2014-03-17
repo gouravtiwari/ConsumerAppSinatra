@@ -105,6 +105,9 @@ angular.module('publicApp')
           if(url_split[0] == 'EMM'){
             url_split[0]  = 'Mobile Audience on ';
             recentSearch.input.platform = url_split[2];
+          } else 
+          if(url_split[0] == 'NetView'){
+            url_split[0]  = 'Online Audience';
           }
           if(url_split[0] == 'Stores'){
             console.log($rootScope.select)
@@ -138,7 +141,7 @@ angular.module('publicApp')
         locations: {
           'Mobile Audience on ': '/mobile-audience',
           'Products': '/product_by_desc',
-          'NetView': '/audience',
+          'Online Audience': '/audience',
           'Stores' : '/store_by_name'
         },
 
