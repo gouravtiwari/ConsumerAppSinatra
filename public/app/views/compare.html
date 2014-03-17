@@ -7,17 +7,14 @@
 	<accordion close-others="true">
 	  <accordion-group  heading="Statistics Data" is-open="true">
 	    <div class='col-md-12'>
-	    	<div class='col-md-6'>
-	    		<div class='col-md-12'>
-		    		<div class='platform-head'></div>
-		    		<div class='platform align-center'>Android</div>
-		    		<div class='platform align-center'>IOS</div>
-	    		</div>
-	    	</div>
-	    	<div class='col-md-6'></div>
-	    </div>
-	    <div class='col-md-12'>
 		    <ul class='col-md-6 styleUl'>
+		    	<li>
+		    		<div class='col-md-12'>
+			    		<div class='platform-head'></div>
+			    		<div class='platform align-center'>Android</div>
+			    		<div class='platform align-center'>IOS</div>
+		    		</div>
+		    	</li>
 		    	<li>
 		    		<div class='col-md-12'>
 			    		<div class='platform-head'>Unique Audience</div>
@@ -114,18 +111,15 @@
 	  </accordion-group>
 	  <accordion-group  heading="Age groups">
 	    <div class='col-md-12'>
-	    	<div class='col-md-6'>
-	    		<div class='col-md-12'>
-		    		<div class='platform-head'></div>
-		    		<div class='platform align-center'>Android</div>
-		    		<div class='platform align-center'>IOS</div>
-	    		</div>
-	    	</div>
-	    	<div class='col-md-6'></div>
-	    </div>
-	    <div class='col-md-12'>
 		    <div class='col-md-6'>
 			    <ul class='styleUl'>
+			    	<li>
+			    		<div class='col-md-12'>
+				    		<div class='platform-head'></div>
+				    		<div class='platform align-center'>Android</div>
+				    		<div class='platform align-center'>IOS</div>
+			    		</div>
+			    	</li>
 			    	<li ng-repeat='(k, v) in maindata.android.AgeBreakPercentage  track by $index'>
 			    		<div class='col-md-12'>
 				    		<div class='platform-head'><stringfilter dataval='{{k}}' filter='Age'></div>
@@ -147,19 +141,16 @@
 		  </div>	
 	  </accordion-group>
 	  <accordion-group  heading="Income Range">
-		  <div class='col-md-12'>
-	    	<div class='col-md-6'>
-	    		<div class='col-md-12'>
-		    		<div class='platform-head'></div>
-		    		<div class='platform align-center'>Android</div>
-		    		<div class='platform align-center'>IOS</div>
-	    		</div>
-	    	</div>
-	    	<div class='col-md-6'></div>
-	    </div>
 	    <div class='col-md-12'>
 		    <div class='col-md-6'>
 			    <ul class='styleUl'>
+						<li>
+			    		<div class='col-md-12'>
+				    		<div class='platform-head'></div>
+				    		<div class='platform align-center'>Android</div>
+				    		<div class='platform align-center'>IOS</div>
+			    		</div>
+			    	</li>
 			    	<li ng-repeat='(k, v) in maindata.android.IncomePercentage_in_Dollar  track by $index'>
 			    		<div class='col-md-12'>
 				    		<div class='platform-head'><stringfilter dataval='{{k}}' filter='Income'></div>
@@ -181,19 +172,16 @@
 		  </div>
 	  </accordion-group>
 	  <accordion-group  heading='Race Percentage'>
-	      <div class='col-md-12'>
-	    	<div class='col-md-6'>
-	    		<div class='col-md-12'>
-		    		<div class='platform-head'></div>
-		    		<div class='platform align-center'>Android</div>
-		    		<div class='platform align-center'>IOS</div>
-	    		</div>
-	    	</div>
-	    	<div class='col-md-6'></div>
-	    </div>
 	    <div class='col-md-12'>
 		    <div class='col-md-6'>
 			    <ul class='styleUl'>
+			    	<li>
+			    		<div class='col-md-12'>
+				    		<div class='platform-head'></div>
+				    		<div class='platform align-center'>Android</div>
+				    		<div class='platform align-center'>IOS</div>
+			    		</div>
+			    	</li>
 			    	<li ng-repeat='(k, v) in maindata.android.RacePercentage  track by $index'>
 			    		<div class='col-md-12'>
 				    		<div class='platform-head'><stringfilter dataval='{{k}}' filtertype='onlystring'></div>

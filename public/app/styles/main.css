@@ -966,5 +966,5 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 .chart{
   position: relative;
   float: right;
-  top:-15px;
+  top: 20px;
 }
