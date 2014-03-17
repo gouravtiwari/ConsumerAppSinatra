@@ -10,15 +10,27 @@ angular.module('publicApp')
     ];
 
     $scope.analyses = [      
-      {name: 'Ad Spend Recommender', url: '/recommender', class: "feature"},
-      {name: 'Ad <br/> Spend', url: '/ad_spend'},
-      {name: 'Compare Smartly!', url: '/compare', class: "feature"},
+      // {name: 'Ad Spend Recommender', url: '/recommender', class: "feature"},
+      // {name: 'Ad <br/> Spend', url: '/ad_spend'},
+      // {name: 'Compare Smartly!', url: '/compare', class: "feature"},
       {name: 'Top 10 Products', url: '/top_ten'},
       {name: 'Online Audience', url: '/audience'},
       {name: 'Mobile Audience', url: '/mobile-audience'},
       {name: 'TV Programs Rankings', url: '/program_rankings'},
       {name: 'Lifestyle Segmentation', url: '/segmentation'},
       {name: 'Market <br/> Share', url: '/market_share'}
+    ];
+
+    $scope.marketAnalysisUrls = [      
+      {url: '/recommender'},
+      {url: '/ad_spend'},
+      {url: '/compare'},
+      {url: '/top_ten'},
+      {url: '/audience'},
+      {url: '/mobile-audience'},
+      {url: '/program_rankings'},
+      {url: '/segmentation'},
+      {url: '/market_share'}
     ];
 
     $scope.location = $location.path();
@@ -75,5 +87,14 @@ angular.module('publicApp')
     //Expose Math Object for rounding in {{}}
     $scope.Math = window.Math;
 
+    $scope.marketAnalysisSection = function(location){
+      var isMarketAnalysisSection = false;
+      isMarketAnalysisSection = location == '/market_analysis' || 
+                                $.grep($scope.marketAnalysisUrls, function(n) { 
+                                  return n.url == location; 
+                                }).length > 0;
+
+      return isMarketAnalysisSection;
+    }
 
   });
