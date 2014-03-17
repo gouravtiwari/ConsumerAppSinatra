@@ -3,8 +3,8 @@
 		<div class="search_bar">
 			<div class="search_type">
 				<b>Find your product by:</b> 
-				<input type="text" ng-model="input.search" placeholder="Description / UPC Code">
-				<button type='button' class='search_btn btn' ng-click='checkSearch()'><span class="icon glyphicon glyphicon-search"></span>Search</button>
+				<input type="text" ng-model="input.search" size="50" placeholder="Description / UPC Code">
+				<button type='button' class='search_btn btn' ng-click='checkSearch()' ng-disabled="!input.search"><span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
 			</div>
 		</div>
 		<div class="col-md-3">
