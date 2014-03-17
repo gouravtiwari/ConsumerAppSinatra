@@ -868,3 +868,33 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 .feature {
   background: rgba(100, 50, 200, .6);
 }
+
+
+/* market analysis left navigation - begin*/
+.left-nav{
+  top: 100px;
+  position: absolute;
+  width: 150px;
+  margin: auto;
+  margin-top: 4px;
+  border-bottom: 0px;
+  z-index: 100;
+  min-height: 768px;
+  background-color: #707070;
+}
+.left-nav li{
+  height: 110px;
+}
+.left-nav li a{
+border-radius: 0px;
+height: 110px;
+padding: 0px;
+font-size: 17px;
+width: 165px;
+color: white;
+}
+
+.left-nav li a:hover {
+  background: #fc0 !important;
+}
+/* market analysis left navigation - end */

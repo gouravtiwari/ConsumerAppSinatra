@@ -75,5 +75,11 @@ angular.module('publicApp')
     //Expose Math Object for rounding in {{}}
     $scope.Math = window.Math;
 
+    $scope.marketAnalysisSection = function(location){
+      var isMarketAnalysisSection = false;
+      isMarketAnalysisSection = location == '/market_analysis' || 
+                                $.grep($scope.analyses, function(n) { return n.url == location; }).length > 0;
+      return isMarketAnalysisSection;
+    }
 
   });
