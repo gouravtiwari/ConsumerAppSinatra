@@ -963,6 +963,23 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   padding-left: 170px;
 }
 
+.rows-selection{
+  padding-top: 10px;
+}
+
+/* recommender table */
+table.recommender-listing{
+  width: 80%;
+  padding-right: 10px;
+}
+table.recommender-listing thead{
+  background-color: lightgrey;
+  font-weight: bold;
+}
+table.recommender-listing thead td, table.recommender-listing tr td{
+  padding: 5px 0 5px 20px;
+}
+
 .chart{
   position: relative;
   float: right;
