@@ -38,6 +38,6 @@ angular.module('publicApp')
       console.log(newvalue)
       if(!newvalue || newvalue == oldvalue) return;
       $scope.AppDetails = Data.sortBy(newvalue, $scope.AppDetails);
-    })
+    });
 
   });

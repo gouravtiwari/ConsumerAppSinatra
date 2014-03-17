@@ -28,51 +28,51 @@
 			<span class="column vborder rotate60">Race %</span>
 		</div>
 		<div>
-		<span class="column cell fontTiny"><b>{{app.AppName}}</b></span>
-		<span class="column column70 cell {{app.UniqueAudienceClass}}">
-			{{app.UniqueAudience | unitCon}}
-		</span>
-		<span class="column column70 cell {{app.ActiveReachClass}}">
-			{{app.ActiveReach}}
-		</span>
-		<span class="column column70 cell {{app.TotalDurationMinClass}}">
-			{{app.TotalDurationMin | unitCon}}
-		</span>
-		<span class="column column70 cell {{app.TotalVisitsClass}}">
-			{{app.TotalVisits | unitCon}}
-		</span>
-		<span class="column column70 cell {{app.VisitsPerPersonClass}}">
-			{{app.VisitsPerPerson}}
-		</span>
-		<span class="column column70 cell {{app.VisitsPerPersonClass}}">
-			{{app.TimePerPersonMin}}
-		</span>
-		<span class="column cell">
-			<span class="bar0" style="width:{{Math.round(app.MalePercentage)}}%">
-				{{Math.round(app.MalePercentage)}}%
+			<span class="column cell fontTiny"><b>{{app.AppName}}</b></span>
+			<span class="column column70 cell {{app.UniqueAudienceClass}}">
+				{{app.UniqueAudience | unitCon}}
 			</span>
-			<span class="bar1" style="width:{{Math.round(app.FemalePercentage)}}%">
-				{{Math.round(app.FemalePercentage)}}%
+			<span class="column column70 cell {{app.ActiveReachClass}}">
+				{{app.ActiveReach}}
 			</span>
-		</span>
-		<span class="column cell">
-			<span class="bar{{$index}}" style="width:{{Math.round(v)}}%" 
-				ng-repeat="(k, v) in app.AgeBreakPercentage track by $index">
-				{{Math.round(v)}}%
+			<span class="column column70 cell {{app.TotalDurationMinClass}}">
+				{{app.TotalDurationMin | unitCon}}
 			</span>
-		</span>
-		<span class="column cell">
-			<span class="bar{{$index}}" style="width:{{Math.round(v)}}%"
-				ng-repeat="(k, v) in app.IncomePercentage_in_Dollar track by $index">
-				{{Math.round(v)}}%
+			<span class="column column70 cell {{app.TotalVisitsClass}}">
+				{{app.TotalVisits | unitCon}}
 			</span>
-		</span>
-		<span class="column cell">
-			<span class="bar{{$index}}" style="width:{{Math.round(v)}}%"
-				ng-repeat="(k, v) in app.RacePercentage track by $index">
-				{{Math.round(v)}}%
+			<span class="column column70 cell {{app.VisitsPerPersonClass}}">
+				{{app.VisitsPerPerson}}
 			</span>
-		</span>
+			<span class="column column70 cell {{app.TimePerPersonMinClass}}">
+				{{app.TimePerPersonMin}}
+			</span>
+			<span class="column cell">
+				<span class="bar0" style="width:{{Math.round(app.MalePercentage)}}%">
+					{{Math.round(app.MalePercentage)}}%
+				</span>
+				<span class="bar1" style="width:{{Math.round(app.FemalePercentage)}}%">
+					{{Math.round(app.FemalePercentage)}}%
+				</span>
+			</span>
+			<span class="column cell">
+				<span class="bar{{$index}}" style="width:{{Math.round(v)}}%" 
+					ng-repeat="(k, v) in app.AgeBreakPercentage track by $index">
+					{{Math.round(v)}}%
+				</span>
+			</span>
+			<span class="column cell">
+				<span class="bar{{$index}}" style="width:{{Math.round(v)}}%"
+					ng-repeat="(k, v) in app.IncomePercentage_in_Dollar track by $index">
+					{{Math.round(v)}}%
+				</span>
+			</span>
+			<span class="column cell">
+				<span class="bar{{$index}}" style="width:{{Math.round(v)}}%"
+					ng-repeat="(k, v) in app.RacePercentage track by $index">
+					{{Math.round(v)}}%
+				</span>
+			</span>
 		</div>
 	</div>
 </div>
