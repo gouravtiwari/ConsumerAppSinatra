@@ -37,7 +37,7 @@
           </div>     
           <!-- <span class="icon glyphicon glyphicon-search"></span>
           -->
-          <ul class="main_nav nav nav-tabs">
+          <ul class="main_nav nav nav-tabs" ng-hide="location == '/' || location == '/nav_page'">
             <li>
               <a href="#/product_by_desc">
               <img src="../images/icon_findProducts.png" width="50px"/>Find Product</a>
@@ -53,7 +53,8 @@
               </a>
             </li>
           </ul>
-          <div class="recentSearch cursorPointer floatRight" ng-mouseover="showList()">
+          <div class="recentSearch cursorPointer floatRight" ng-hide="location == '/'"
+            ng-mouseover="showList()">
             <span ng-bind="recent_searches.length"></span>
             Recent Search<span ng-show="recent_searches.length>1">es</span>
           </div> 

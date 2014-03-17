@@ -2,9 +2,14 @@
 
 angular.module('publicApp')
   .controller('MainCtrl', function ($scope, $location, Data) {
+
+    $scope.location = $location.path();
+    console.log($scope.location);
     $scope.go = function(url) {
       $scope.showRecentSearch = false;
     	$location.path(url);
+      $scope.location = url;
+      console.log($scope.location)
     }
 
     $scope.navTiles = [

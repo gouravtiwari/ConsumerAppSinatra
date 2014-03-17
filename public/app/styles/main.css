@@ -24,10 +24,10 @@ header {
 }
 .main_nav{
   position: absolute;
-width: 50%;
-margin-left: 30%;
-margin-top: 30px;
-border-bottom: 0px;
+  width: 620px;
+  margin-left: 22%;
+  margin-top: 30px;
+  border-bottom: 0px;
 }
 .main_nav li{
   height: 40px;
@@ -339,10 +339,16 @@ nav {
 }
 
 .column {
-  width: 100px;
+  width: 108px;
   display: inline-block;
   text-align: center;
   font-size: 15px;
+}
+
+@media(min-width: 1260px) {
+  .column{
+    width: 150px;
+  }
 }
 
 .column70 {
@@ -352,6 +358,7 @@ nav {
 .vborder {
   border-bottom: 1px solid #000;
   border-left: 5px solid lightskyblue;
+  font-weight: bold;
 }
 
 .cell {
@@ -753,4 +760,9 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 
 .marginBottom {
   margin-bottom: 40px;
-} 
+}
+
+.fontTiny {
+  font-size: 11px;
+  background: lightskyblue;
+}

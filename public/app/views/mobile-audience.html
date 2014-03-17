@@ -15,19 +15,20 @@
 	<!-- Result -->
 	<div ng-repeat="app in AppDetails">
 		<div class="marginBottom" ng-show="$first">
-			<span class="column vborder rotate60"><b>App Name</b></span>
-			<span class="column column70 vborder rotate60">UniqueAudience</span>
-			<span class="column column70 vborder rotate60">ActiveReach</span>
-			<span class="column column70 vborder rotate60">TotalDuration</span>
-			<span class="column column70 vborder rotate60">TotalVisits</span>
-			<span class="column column70 vborder rotate60">Visits/Person</span>
-			<span class="column column70 vborder rotate60">Time/Person</span>
-			<span class="column vborder rotate60">Male Female %</span>
-			<span class="column vborder rotate60">Age Groups%</span>
-			<span class="column vborder rotate60">Income Groups%</span>
+			<span class="column vborder rotate60">App<br>Name</span>
+			<span class="column column70 vborder rotate60">Unique<br>Audience</span>
+			<span class="column column70 vborder rotate60">Active<br>Reach</span>
+			<span class="column column70 vborder rotate60">Total<br>Duration</span>
+			<span class="column column70 vborder rotate60">Total<br>Visits</span>
+			<span class="column column70 vborder rotate60">Visits/<br>Person</span>
+			<span class="column column70 vborder rotate60">Time/<br>Person</span>
+			<span class="column vborder rotate60">Male<br>Female %</span>
+			<span class="column vborder rotate60">Age<br>Groups%</span>
+			<span class="column vborder rotate60">Income<br>Groups%</span>
 			<span class="column vborder rotate60">Race %</span>
 		</div>
-		<span class="column cell"><b>{{app.AppName}}</b></span>
+		<div>
+		<span class="column cell fontTiny"><b>{{app.AppName}}</b></span>
 		<span class="column column70 cell">{{app.UniqueAudience | unitCon}}</span>
 		<span class="column column70 cell">{{app.ActiveReach}}</span>
 		<span class="column column70 cell">{{app.TotalDurationMin | unitCon}}</span>
@@ -50,6 +51,6 @@
 				{{v}}
 			</span>
 		</span>
-		<br/>
+		</div>
 	</div>
 </div>
