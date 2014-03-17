@@ -156,7 +156,7 @@ color: white;
 nav {
   position: relative;
   top: 100px;
-  width: 500px;
+  width: 495px;
   margin: auto; 
   
 }
@@ -427,8 +427,9 @@ nav {
 }
 
 .recentSearch {
-  position: relative;
-  top: -40px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
   font-size: 15px;
   background: lightcoral;
   padding: 0 12px;
@@ -508,6 +509,7 @@ nav {
   width: 100%;
   border-radius: 5px;
   height: 25px;
+  color: #fff;
   line-height: 25px;
 }
 
