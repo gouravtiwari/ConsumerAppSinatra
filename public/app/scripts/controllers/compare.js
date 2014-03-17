@@ -26,8 +26,8 @@ angular.module('publicApp')
     		$scope.input.appname = $scope.appnames[0]
     		$scope.maindata = $scope.sorted_data[$scope.input.appname];
             $scope.chart_data = draw_age_chart('AgeBreakPercentage');   
-            //$scope.income_data = draw_age_chart('IncomePercentage_in_Dollar');
-            //$scope.race_data = draw_age_chart('RacePercentage');
+            $scope.income_data = draw_age_chart('IncomePercentage_in_Dollar');
+            $scope.race_data = draw_age_chart('RacePercentage');
             console.log($scope.income_data)
         });
     });
@@ -51,14 +51,15 @@ angular.module('publicApp')
             var seriesData = {name: '', data: [], color: ''};
             seriesData.name = platform;
             for(var ageData in $scope.maindata[platform][field]){
+                console.log(ageData)
                 seriesData['data'].push(parseFloat($scope.maindata[platform][field][ageData]))
-                seriesVal.push(seriesData)
             }
+            seriesVal.push(seriesData)
         }
         seriesVal[0].color = '#41a4c9';
-        seriesVal[5].color = '#fdde7f';
+        seriesVal[1].color = '#fdde7f';
         chart_data.series.push(seriesVal[0]);
-        chart_data.series.push(seriesVal[5]);
+        chart_data.series.push(seriesVal[1]);
         return chart_data    
     }
   });

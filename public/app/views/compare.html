@@ -176,7 +176,7 @@
 			    </ul>
 			  </div>  
 		  	<div class='chart col-md-6'>
-		    	<highcharts chart-id='income_data' height="420" width="400"></highcharts>
+		    	<highcharts chart-id='income_data' height="430" width="400"></highcharts>
 		  	</div>
 		  </div>
 	  </accordion-group>
@@ -192,21 +192,26 @@
 	    	<div class='col-md-6'></div>
 	    </div>
 	    <div class='col-md-12'>
-		    <ul class='col-md-6 styleUl'>
-		    	<li ng-repeat='(k, v) in maindata.android.RacePercentage  track by $index'>
-		    		<div class='col-md-12'>
-			    		<div class='platform-head'><stringfilter dataval='{{k}}' filtertype='onlystring'></div>
-			    		<div class='platform' ng-class="(v-maindata.ios.RacePercentage[k])/v*100 > 0 ?  'green' : 'red'">
-			    			<div class='dataval'>{{v}}</div>
-			    			<div class='dataval'>{{-(maindata.ios.RacePercentage[k]-v)/v*100 | roundoff}}</div>
-			    		</div>
-			    		<div class='platform' ng-class="(v-maindata.ios.RacePercentage[k])/v*100 < 0 ?  'green' : 'red'">
-			    			<div class='dataval'>{{maindata.ios.RacePercentage[k] | unitCon}}</div>
-			    			<div class='dataval'>{{(maindata.ios.RacePercentage[k]-v)/v*100 | roundoff}}</div>
-			    		</div>
-		    	</div>
-		    	</li>
-		    </ul>
+		    <div class='col-md-6'>
+			    <ul class='styleUl'>
+			    	<li ng-repeat='(k, v) in maindata.android.RacePercentage  track by $index'>
+			    		<div class='col-md-12'>
+				    		<div class='platform-head'><stringfilter dataval='{{k}}' filtertype='onlystring'></div>
+				    		<div class='platform' ng-class="(v-maindata.ios.RacePercentage[k])/v*100 > 0 ?  'green' : 'red'">
+				    			<div class='dataval'>{{v}}</div>
+				    			<div class='dataval'>{{-(maindata.ios.RacePercentage[k]-v)/v*100 | roundoff}}</div>
+				    		</div>
+				    		<div class='platform' ng-class="(v-maindata.ios.RacePercentage[k])/v*100 < 0 ?  'green' : 'red'">
+				    			<div class='dataval'>{{maindata.ios.RacePercentage[k] | unitCon}}</div>
+				    			<div class='dataval'>{{(maindata.ios.RacePercentage[k]-v)/v*100 | roundoff}}</div>
+				    		</div>
+			    	</div>
+			    	</li>
+			    </ul>
+		  	</div>
+		  	<div class='chart col-md-6'>
+		    	<highcharts chart-id='race_data' height="330" width="400"></highcharts>
+		  	</div>
 		  </div>
 	  </accordion-group>
 	</accordion>
