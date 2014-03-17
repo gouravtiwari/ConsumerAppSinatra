@@ -470,12 +470,12 @@ nav {
   border-bottom: 1px groove #fff;
   font-size: 18px;
   padding: 0 7px;
+  color: #fff;
   cursor: pointer;
 }
 
 .recentSearchList li .searchItem {
   display: inline-block;
-  color: #fff;
   width: 100%;
   height: 100%;
   text-decoration: none;
@@ -483,6 +483,7 @@ nav {
 
 .recentSearchList li:hover{
   background: rgba(0,0,0,.9);
+  color: #ff0 !important;
 }
 
 .expandVertical {
