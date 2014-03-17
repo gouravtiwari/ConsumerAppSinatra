@@ -993,3 +993,20 @@ table.recommender-listing thead td, table.recommender-listing tr td{
   float: right;
   top: 20px;
 }
+
+.change-button{
+  position: relative;
+  float: left;
+  width: 30px;
+  top: 40px;
+  left: -30px;
+}
+
+.change-button button{
+  position: relative;
+  margin-bottom: 10px;
+  float: left;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px !important;
+}
