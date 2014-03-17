@@ -336,20 +336,25 @@ nav {
 
 .product {
   padding: 12px 16px;
-  font-size: 18px;
-  border-bottom: 1px solid #aaa;
+  font-size: 12px;
+  border-bottom: 1px dotted #aaa;
 }
-
+.productDesc{
+  font-size: 15px;
+  font-weight: bold;
+}
 .resultHolder {
   min-height: 100px;
-  margin-bottom: 50px;
-}
+/*  margin-bottom: 50px;
+*/}
 
 .list {
   background-color: aliceblue;
   margin-top: 10px;
 }
-
+.check{
+  text-decoration: underline;
+}
 .content-container {
 }
 
@@ -607,6 +612,9 @@ nav {
 
 .red{
   background: #F2CECE;
+}
+.redFont{
+  color: red;
 }
 .storeDetails{
   display: none;

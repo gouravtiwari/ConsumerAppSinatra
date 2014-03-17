@@ -1,10 +1,22 @@
 'use strict';
 
 angular.module('publicApp')
-  .controller('ProductReferenceCtrl', function ($scope, Data, $modal, $log) {
-	  
-	  $scope.input.search = $scope.input.search || 'Description / UPC Code';
+  .controller('ProductReferenceCtrl', function ($scope,$rootScope, Data, $modal, $log) {
+	  $scope.input.search = $scope.input.search || '';
     $scope.pageshow = false;
+    $scope.checkSearch = function(){
+      if(isNaN($scope.input.search)){
+        $scope.input.prod_type = 'description'
+        $scope.by_desc();
+        $rootScope.prod_type = $scope.input.prod_type;
+      }
+      else{
+        $scope.input.prod_type = 'code';
+        $scope.by_upc();
+        $rootScope.prod_type = $scope.input.prod_type;
+      }
+    }
+
 
     $scope.by_desc = function(){
 
@@ -37,7 +49,7 @@ angular.module('publicApp')
 
     $scope.by_upc = function(){
       
-      var parameter_obj = {'search' : $scope.input.UPC_CODE};
+      var parameter_obj = {'search' : $scope.input.search};
       Data.set_search_data({'product_id' : $scope.input.search});
       Data.get_json('Products/v1', parameter_obj).success(function(api_data){
       //Data.get_local('scripts/jsons/product_by_desc.json').success(function(api_data){
