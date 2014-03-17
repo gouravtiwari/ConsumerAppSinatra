@@ -250,5 +250,68 @@ angular.module('publicApp')
 
     }
     return BCC;
+  })
+
+.factory('StackChartOptions', function () {
+    var stack_chart = {
+
+        chart: {
+                type: 'bar'
+            },
+            title: {
+                text: ''
+            },
+            xAxis: {
+                title: {
+                    text: null
+                },
+                labels: {
+                    enabled: false
+                }
+            },
+            yAxis: {
+                gridLineWidth: 0,
+                min: 0,
+                title: {
+                    text: '',
+                    align: 'high'
+                },
+                labels: {
+                    overflow: 'justify'
+                }
+            },
+            tooltip: {
+                valueSuffix: ''
+            },
+            plotOptions: {
+                bar: {
+                    dataLabels: {
+                        enabled: false
+                    }
+                }
+            },
+            legend: {
+                layout: 'vertical',
+                align: 'right',
+                verticalAlign: 'top',
+                floating: true,
+                borderWidth: 0,
+                backgroundColor: '#FFFFFF',
+                shadow: false
+            },
+            credits: {
+                enabled: false
+            },
+            series: []
+        
+    }
+
+
+    var BCC = {
+
+        stackChart: stack_chart
+
+    }
+    return BCC;
   });
 
