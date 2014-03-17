@@ -869,12 +869,22 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   width: 100%;
 }
 
+.platform-head{
+  position: relative;
+  float: left;
+  width: 40%;
+  height: 30px;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
 .platform{
   position: relative;
   float: left;
-  width: 33%;
+  width: 30%;
   height: 30px;
   line-height: 30px;
+  font-size: 12px;
 }
 
 .styleUl li{
