@@ -11,9 +11,8 @@ angular.module('publicApp')
 
     $scope.analyses = [      
       // {name: 'Ad Spend Recommender', url: '/recommender', class: "feature"},
-      // {name: 'Ad <br/> Spend', url: '/ad_spend'},
       // {name: 'Compare Smartly!', url: '/compare', class: "feature"},
-      {name: 'Top 10 Products', url: '/top_ten'},
+      {name: 'Ad <br/> Spend', url: '/ad_spend'},
       {name: 'Online Audience', url: '/audience'},
       {name: 'Mobile Audience', url: '/mobile-audience'},
       {name: 'TV Programs Rankings', url: '/program_rankings'},
