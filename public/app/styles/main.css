@@ -2,17 +2,18 @@
 
 body {
   font-family: 'Century Gothic';
+  overflow: hidden;
 }
 
 header {
-  height: 75px;
-  padding: 5px 16px;
+  height: 50px;
+  padding: 5px;
   font-size: 26px;
   line-height: 30px;
-  background: -webkit-linear-gradient(to bottom left, #6c5948, #88645b,#4a5f5c);
-  background: -o-linear-gradient(to bottom left, #6c5948, #88645b,#4a5f5c);
-  background: -moz-linear-gradient(to bottom left, #6c5948, #88645b,#4a5f5c);
-  background: linear-gradient(to bottom left, #6c5948, #88645b,#4a5f5c);
+  background: -webkit-linear-gradient(to bottom left, #6c5948, #000,#4a5f5c);
+  background: -o-linear-gradient(to bottom left, #6c5948, #000,#4a5f5c);
+  background: -moz-linear-gradient(to bottom left, #6c5948, #000,#4a5f5c);
+  background: linear-gradient(to bottom left, #6c5948, #000,#4a5f5c);
   color: #fff;
 }
 .logo{
@@ -21,12 +22,13 @@ header {
   width: 220px;
   height: 100px;
   margin-top: -39px;
+  z-index: 10000;
 }
 .main_nav{
-  position: absolute;
+  position: relative;
   width: 620px;
-  margin-left: 22%;
-  margin-top: 30px;
+  margin: auto;
+  margin-top: 4px;
   border-bottom: 0px;
 }
 .main_nav li{
@@ -48,8 +50,16 @@ padding: 0px;
 font-size: 17px;
 width: 200px;
 color: white;
-
 }
+
+.main_nav li a:hover {
+  background: #fc0 !important;
+}
+
+.selected {
+  background: #fc0 !important;
+}
+
 
 .lightBlue {
   color: lightskyblue;
@@ -59,6 +69,7 @@ color: white;
   height: 768px;
   background: url('../images/smartmartbg.png') no-repeat;
   background-size: 100% 100%;
+  background-position-y: -40px; 
 }
 
 .analysePage {
@@ -163,6 +174,17 @@ nav {
   display: table;
   text-align: center;
   cursor: pointer;
+}
+
+.navTile:hover {
+  background: rgba(255, 255, 0, .7);
+}
+.tileIcon {
+  width: 80px;
+  height: 80px;
+  margin: auto;
+  margin-top: 12px;
+  display: block;
 }
 
 .tileTitle {
@@ -406,7 +428,7 @@ nav {
 
 .recentSearch {
   position: relative;
-  top: 3px;
+  top: -40px;
   font-size: 15px;
   background: lightcoral;
   padding: 0 12px;
@@ -448,12 +470,12 @@ nav {
   border-bottom: 1px groove #fff;
   font-size: 18px;
   padding: 0 7px;
+  color: #fff;
   cursor: pointer;
 }
 
 .recentSearchList li .searchItem {
   display: inline-block;
-  color: #fff;
   width: 100%;
   height: 100%;
   text-decoration: none;
@@ -461,6 +483,7 @@ nav {
 
 .recentSearchList li:hover{
   background: rgba(0,0,0,.9);
+  color: #ff0 !important;
 }
 
 .expandVertical {
@@ -765,4 +788,8 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 .fontTiny {
   font-size: 11px;
   background: lightskyblue;
+}
+
+.feature {
+  background: rgba(100, 50, 200, .6);
 }
