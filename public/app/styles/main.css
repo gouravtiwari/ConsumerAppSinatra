@@ -2,17 +2,18 @@
 
 body {
   font-family: 'Century Gothic';
+  overflow: hidden;
 }
 
 header {
-  height: 75px;
+  height: 50px;
   padding: 5px;
   font-size: 26px;
   line-height: 30px;
-  background: -webkit-linear-gradient(to bottom left, #6c5948, #88645b,#4a5f5c);
-  background: -o-linear-gradient(to bottom left, #6c5948, #88645b,#4a5f5c);
-  background: -moz-linear-gradient(to bottom left, #6c5948, #88645b,#4a5f5c);
-  background: linear-gradient(to bottom left, #6c5948, #88645b,#4a5f5c);
+  background: -webkit-linear-gradient(to bottom left, #6c5948, #000,#4a5f5c);
+  background: -o-linear-gradient(to bottom left, #6c5948, #000,#4a5f5c);
+  background: -moz-linear-gradient(to bottom left, #6c5948, #000,#4a5f5c);
+  background: linear-gradient(to bottom left, #6c5948, #000,#4a5f5c);
   color: #fff;
 }
 .logo{
@@ -21,12 +22,13 @@ header {
   width: 220px;
   height: 100px;
   margin-top: -39px;
+  z-index: 10000;
 }
 .main_nav{
   position: relative;
   width: 620px;
   margin: auto;
-  margin-top: 30px;
+  margin-top: 4px;
   border-bottom: 0px;
 }
 .main_nav li{
@@ -67,6 +69,7 @@ color: white;
   height: 768px;
   background: url('../images/smartmartbg.png') no-repeat;
   background-size: 100% 100%;
+  background-position-y: -40px; 
 }
 
 .analysePage {
@@ -422,7 +425,7 @@ nav {
 
 .recentSearch {
   position: relative;
-  top: -50px;
+  top: -40px;
   font-size: 15px;
   background: lightcoral;
   padding: 0 12px;
