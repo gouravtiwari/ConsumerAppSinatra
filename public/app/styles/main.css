@@ -336,20 +336,25 @@ nav {
 
 .product {
   padding: 12px 16px;
-  font-size: 18px;
-  border-bottom: 1px solid #aaa;
+  font-size: 12px;
+  border-bottom: 1px dotted #aaa;
 }
-
+.productDesc{
+  font-size: 15px;
+  font-weight: bold;
+}
 .resultHolder {
   min-height: 100px;
-  margin-bottom: 50px;
-}
+/*  margin-bottom: 50px;
+*/}
 
 .list {
   background-color: aliceblue;
   margin-top: 10px;
 }
-
+.check{
+  text-decoration: underline;
+}
 .content-container {
 }
 
@@ -621,6 +626,9 @@ nav {
   background-image: linear-gradient(to bottom, #ee5f5b, #c43c35);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffee5f5b', endColorstr='#ffc43c35', GradientType=0);
+}
+.redFont{
+  color: red;
 }
 .storeDetails{
   display: none;

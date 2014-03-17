@@ -109,10 +109,12 @@ angular.module('publicApp')
           if(url_split[0] == 'NetView'){
             url_split[0]  = 'Online Audience';
           }
-          if(url_split[0] == 'Stores'){
-            console.log($rootScope.select)
+          else if(url_split[0] == 'Stores'){
             recentSearch.input.select_type = $rootScope.select;
           }
+          else if(url_split[0] == 'Products'){
+            recentSearch.input.prod_type= $rootScope.prod_type;
+            }
           recentSearch.api = url_split[0] + (url_split[2] ? url_split[2] : '');
           
           for (var input in param_path){

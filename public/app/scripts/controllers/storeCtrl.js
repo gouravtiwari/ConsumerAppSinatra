@@ -207,17 +207,17 @@ angular.module('publicApp')
 
     })
     if($scope.viaRecentSearch) {
-      if($scope.cache_response.StoreRefData.Stores){
+      if($scope.cache_response.StoreRefData){
         $scope.stores = $scope.cache_response.StoreRefData.Stores;
       }
-      $scope.viaRecentSearch = false;
+
+        $scope.viaRecentSearch = false;
     }
     $scope.$watch('cache_response', function(newValue, oldValue){
       console.log(' changed')
 
       if(newValue == oldValue) { return; }
-      console.log($scope.cache_response.StoreRefData.Stores)
-      if($scope.cache_response.StoreRefData.Stores) {
+      if($scope.cache_response.StoreRefData) {
         $(".storeDetails").css("display","inline-table");
         $scope.stores = $scope.cache_response.StoreRefData.Stores;
         $scope.pageshow = true;
@@ -225,7 +225,7 @@ angular.module('publicApp')
         $scope.maxSize = 10;
         //$scope.cache_response = {};
       }
-      });
+    });
 
   $scope.open = function (code) {
     var parameter_obj = {};

@@ -1,47 +1,49 @@
-<div>
-<div class="productSearch">
-	<h2>Search Products by their description:</h2>
-	<input type="text" ng-model="input.search" class="inputDesc">
-	<button type='button' class='btn' ng-click='by_desc()'>Search</button>
-	<div class='example-text'>
-		(e.g. tin, bottle, jar)
-	</div>
-	<div class="resultHolder">
-		<span class='nodata' ng-show='noData'>Sorry! No data found</span>
-		<div class="product" ng-repeat="product in products">
-			<div class='btn' ng-click='setData(product)'>Check Availablility</div><br>
-			<b><span class="productDesc">{{product.Description}}</span></b><br>
-			<b>Category:</b> {{product.Module}} | <b>Rank:</b> {{product.Rank}}
+<div class="container">
+	<div class="row">
+		<div class="search_bar">
+			<div class="search_type">
+				<b>Find your product by:</b> 
+				<input type="text" ng-model="input.search" placeholder="Description / UPC Code">
+				<button type='button' class='search_btn btn' ng-click='checkSearch()'><span class="icon glyphicon glyphicon-search"></span>Search</button>
+			</div>
+		</div>
+		<div class="col-md-3">
+			Left Nav
+		</div>
+		<div class="col-md-9">
+			<span class='nodata' ng-show='noData'>Sorry! No data found</span>
+			<div class="productSearch">
+				
+				<div class="resultHolder" ng-show="prod_type=='description'">
+					<div class="product" ng-repeat="product in products">
+						<span class="productDesc">{{product.Description}}</span><br>
+						<b>Category:</b><span class="redFont"> {{product.Module}}</span> | <b>Rank:</b> {{product.Rank}}<br>
+						<div class='check btn' ng-click='setData(product)'>Check Availablility</div>
+					</div>
+				</div>
+				<div class="resultHolder" ng-repeat='data in product_detail' ng-show="prod_type=='code'">
+					<div class="product">
+						<b><span class="productDesc">{{data.Description}}</span></b><br>
+						<b>UPC:</b> {{data.UPC}}<br>
+						<b>Item Code:</b> {{data.Item_Code}}<br>
+						<b>Module:</b> {{data.Module}}<br>
+						<div class='check btn' ng-click='open()'>Check Availablility</div><br>
+					</div>
+				</div>
+				<div ng-show='pageshow'>
+					<pagination total-items="totalItems" page="input.pageno" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
+				</div>
+			</div>	
+
+
+			<h4 ng-hide='noData'>Products Health Lookup using UPC code:</h4>
+			<div class="resultHolder" >
+				<div class="product" >
+					<div ng-repeat='(k, v) in product_detail_characterstics[0] track by $index'>
+						<b><stringfilter dataval='{{k}}' filtertype='onlystring'></stringfilter></b>{{v}}
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
-	<div ng-show='pageshow'>
-		<pagination total-items="totalItems" page="input.pageno" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
-	</div>
-</div>	
-
-<h2>Search Products by UPC code:</h2>
-<input type="number" ng-model="input.UPC_CODE" class="inputDesc">
-<button type='button' class='btn' ng-click='by_upc()'>Search</button><br>
-<div class='example-text'>
-	(13 digit UPC code e.g. 0070596000906, 0019100111059)
-</div>
-<span class='nodata' ng-show='noData'>Sorry! No data found</span>
-<div class="resultHolder" ng-repeat='data in product_detail'>
-	<div class="product">
-		<div class='btn' ng-click='open()'>Check Availablility</div><br>
-		<b><span class="productDesc">{{data.Description}}</span></b><br>
-		<b>UPC:</b> {{data.UPC}}<br>
-		<b>Item Code:</b> {{data.Item_Code}}<br>
-		<b>Module:</b> {{data.Module}}<br>
-	</div>
-</div>
-
-<h2 ng-hide='noData'>Products Health Lookup using UPC code:</h2>
-<div class="resultHolder" >
-	<div class="product" >
-		<div ng-repeat='(k, v) in product_detail_characterstics[0] track by $index'>
-			<b><stringfilter dataval='{{k}}' filtertype='onlystring'></stringfilter></b>{{v}}
-		</div>
-	</div>
-</div>
 </div>
