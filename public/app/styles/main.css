@@ -894,7 +894,15 @@ width: 165px;
 color: white;
 }
 
+.left-nav li a.selected{
+  background: #fff !important;
+}
+
 .left-nav li a:hover {
-  background: #fc0 !important;
+  background: #707070 !important;
 }
 /* market analysis left navigation - end */
+
+.market-analysis-section{
+  margin-left: 170px;
+}
