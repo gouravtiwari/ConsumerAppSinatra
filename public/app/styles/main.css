@@ -887,6 +887,13 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   font-size: 12px;
 }
 
+.dataval{
+  position: relative;
+  float: left;
+  width: 50%;
+  padding: 0 10px;
+  text-align: right;
+}
 .styleUl li{
   list-style: none;
   height: 30px;

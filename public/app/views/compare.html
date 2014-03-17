@@ -22,12 +22,12 @@
 		    		<div class='col-md-12'>
 			    		<div class='platform-head'>Unique Audience</div>
 			    		<div class='platform' ng-class="(maindata.android.UniqueAudience-maindata.ios.UniqueAudience)/maindata.android.UniqueAudience*100 > 0 ? 'green' : 'red'">
-			    			<div class='col-md-6'>{{maindata.android.UniqueAudience | unitCon}}</div>
-			    			<div class='col-md-6'>{{(maindata.android.UniqueAudience-maindata.ios.UniqueAudience)/maindata.android.UniqueAudience*100 | roundoff}}</div>
+			    			<div class='dataval'>{{maindata.android.UniqueAudience | unitCon}}</div>
+			    			<div class='dataval'>{{(maindata.android.UniqueAudience-maindata.ios.UniqueAudience)/maindata.android.UniqueAudience*100 | roundoff}}</div>
 			    		</div>
 			    		<div class='platform' ng-class="(maindata.android.UniqueAudience-maindata.ios.UniqueAudience)/maindata.android.UniqueAudience*100 < 0 ? 'green' : 'red'">
-			    			<div class='col-md-6'>{{maindata.ios.UniqueAudience | unitCon}}</div>
-			    			<div class='col-md-6'>{{(maindata.ios.UniqueAudience-maindata.android.UniqueAudience)/maindata.android.UniqueAudience*100 | roundoff}}</div>
+			    			<div class='dataval'>{{maindata.ios.UniqueAudience | unitCon}}</div>
+			    			<div class='dataval'>{{(maindata.ios.UniqueAudience-maindata.android.UniqueAudience)/maindata.android.UniqueAudience*100 | roundoff}}</div>
 			    		</div>
 		    	</div>
 		    	</li>
@@ -35,12 +35,12 @@
 		    		<div class='col-md-12'>
 			    		<div class='platform-head'>Active Reach</div>
 			    		<div class='platform' ng-class="(maindata.android.ActiveReach-maindata.ios.ActiveReach)/maindata.android.ActiveReach*100 > 0 ? 'green' : 'red'">
-			    			<div class='col-md-6'>{{maindata.android.ActiveReach | unitCon}}</div>
-			    			<div class='col-md-6'>{{(maindata.android.ActiveReach-maindata.ios.ActiveReach)/maindata.android.ActiveReach*100 | roundoff}}</div>
+			    			<div class='dataval'>{{maindata.android.ActiveReach | unitCon}}</div>
+			    			<div class='dataval'>{{(maindata.android.ActiveReach-maindata.ios.ActiveReach)/maindata.android.ActiveReach*100 | roundoff}}</div>
 			    		</div>
 			    		<div class='platform' ng-class="(maindata.android.ActiveReach-maindata.ios.ActiveReach)/maindata.android.ActiveReach*100 < 0 ? 'green' : 'red'">
-			    			<div class='col-md-6'>{{maindata.ios.ActiveReach | unitCon}}</div>
-			    			<div class='col-md-6'>{{(maindata.ios.ActiveReach-maindata.android.ActiveReach)/maindata.android.ActiveReach*100 | roundoff}}</div>
+			    			<div class='dataval'>{{maindata.ios.ActiveReach | unitCon}}</div>
+			    			<div class='dataval'>{{(maindata.ios.ActiveReach-maindata.android.ActiveReach)/maindata.android.ActiveReach*100 | roundoff}}</div>
 			    		</div>
 		    	</div>
 		    	</li>
@@ -48,12 +48,12 @@
 		    		<div class='col-md-12'>
 			    		<div class='platform-head'>Total Duration Mins</div>
 			    		<div class='platform' ng-class="(maindata.android.TotalDurationMin-maindata.ios.TotalDurationMin)/maindata.android.TotalDurationMin*100 > 0 ? 'green' : 'red'">
-			    			<div class='col-md-6'>{{maindata.android.TotalDurationMin | unitCon}}</div>
-			    			<div class='col-md-6'>{{(maindata.android.TotalDurationMin-maindata.ios.TotalDurationMin)/maindata.android.TotalDurationMin*100 | roundoff}}</div>
+			    			<div class='dataval'>{{maindata.android.TotalDurationMin | unitCon}}</div>
+			    			<div class='dataval'>{{(maindata.android.TotalDurationMin-maindata.ios.TotalDurationMin)/maindata.android.TotalDurationMin*100 | roundoff}}</div>
 			    		</div>
 			    		<div class='platform' ng-class="(maindata.android.TotalDurationMin-maindata.ios.TotalDurationMin)/maindata.android.TotalDurationMin*100 < 0 ? 'green' : 'red'">
-			    			<div class='col-md-6'>{{maindata.ios.TotalDurationMin | unitCon}}</div>
-			    			<div class='col-md-6'>{{(maindata.ios.TotalDurationMin-maindata.android.TotalDurationMin)/maindata.android.TotalDurationMin*100 | roundoff}}</div>
+			    			<div class='dataval'>{{maindata.ios.TotalDurationMin | unitCon}}</div>
+			    			<div class='dataval'>{{(maindata.ios.TotalDurationMin-maindata.android.TotalDurationMin)/maindata.android.TotalDurationMin*100 | roundoff}}</div>
 			    		</div>
 		    	</div>
 		    	</li>
@@ -61,12 +61,12 @@
 		    		<div class='col-md-12'>
 			    		<div class='platform-head'>Total Visits</div>
 			    		<div class='platform' ng-class="(maindata.android.TotalVisits-maindata.ios.TotalVisits)/maindata.android.TotalVisits*100 > 0 ? 'green' : 'red'">
-			    			<div class='col-md-6'>{{maindata.android.TotalVisits | unitCon}}</div>
-			    			<div class='col-md-6'>{{(maindata.android.TotalVisits-maindata.ios.TotalVisits)/maindata.android.TotalVisits*100 | roundoff}}</div>
+			    			<div class='dataval'>{{maindata.android.TotalVisits | unitCon}}</div>
+			    			<div class='dataval'>{{(maindata.android.TotalVisits-maindata.ios.TotalVisits)/maindata.android.TotalVisits*100 | roundoff}}</div>
 			    		</div>
 			    		<div class='platform' ng-class="(maindata.android.TotalVisits-maindata.ios.TotalVisits)/maindata.android.TotalVisits*100 < 0 ? 'green' : 'red'">
-			    			<div class='col-md-6'>{{maindata.ios.TotalVisits | unitCon}}</div>
-			    			<div class='col-md-6'>{{(maindata.ios.TotalVisits-maindata.android.TotalVisits)/maindata.android.TotalVisits*100 | roundoff}}</div>
+			    			<div class='dataval'>{{maindata.ios.TotalVisits | unitCon}}</div>
+			    			<div class='dataval'>{{(maindata.ios.TotalVisits-maindata.android.TotalVisits)/maindata.android.TotalVisits*100 | roundoff}}</div>
 			    		</div>
 		    	</div>
 		    	</li>
@@ -74,12 +74,12 @@
 		    		<div class='col-md-12'>
 			    		<div class='platform-head'>Visits Per Person</div>
 			    		<div class='platform' ng-class="(maindata.android.VisitsPerPerson-maindata.ios.VisitsPerPerson)/maindata.android.VisitsPerPerson*100 > 0 ? 'green' : 'red'">
-			    			<div class='col-md-6'>{{maindata.android.VisitsPerPerson | unitCon}}</div>
-			    			<div class='col-md-6'>{{(maindata.android.VisitsPerPerson-maindata.ios.VisitsPerPerson)/maindata.android.VisitsPerPerson*100 | roundoff}}</div>
+			    			<div class='dataval'>{{maindata.android.VisitsPerPerson | unitCon}}</div>
+			    			<div class='dataval'>{{(maindata.android.VisitsPerPerson-maindata.ios.VisitsPerPerson)/maindata.android.VisitsPerPerson*100 | roundoff}}</div>
 			    		</div>
 			    		<div class='platform' ng-class="(maindata.android.VisitsPerPerson-maindata.ios.VisitsPerPerson)/maindata.android.VisitsPerPerson*100 < 0 ? 'green' : 'red'">
-			    			<div class='col-md-6'>{{maindata.ios.VisitsPerPerson | unitCon}}</div>
-			    			<div class='col-md-6'>{{(maindata.ios.VisitsPerPerson-maindata.android.VisitsPerPerson)/maindata.android.VisitsPerPerson*100 | roundoff}}</div>
+			    			<div class='dataval'>{{maindata.ios.VisitsPerPerson | unitCon}}</div>
+			    			<div class='dataval'>{{(maindata.ios.VisitsPerPerson-maindata.android.VisitsPerPerson)/maindata.android.VisitsPerPerson*100 | roundoff}}</div>
 			    		</div>
 		    	</div>
 		    	</li>
@@ -87,12 +87,12 @@
 		    		<div class='col-md-12'>
 			    		<div class='platform-head'>Male Percentage</div>
 			    		<div class='platform' ng-class="(maindata.android.MalePercentage-maindata.ios.MalePercentage)/maindata.android.MalePercentage*100 > 0 ? 'green' : 'red'">
-			    			<div class='col-md-6'>{{maindata.android.MalePercentage | unitCon}}</div>
-			    			<div class='col-md-6'>{{(maindata.android.MalePercentage-maindata.ios.MalePercentage)/maindata.android.MalePercentage*100 | roundoff}}</div>
+			    			<div class='dataval'>{{maindata.android.MalePercentage | unitCon}}</div>
+			    			<div class='dataval'>{{(maindata.android.MalePercentage-maindata.ios.MalePercentage)/maindata.android.MalePercentage*100 | roundoff}}</div>
 			    		</div>
 			    		<div class='platform' ng-class="(maindata.android.MalePercentage-maindata.ios.MalePercentage)/maindata.android.MalePercentage*100 < 0 ? 'green' : 'red'">
-			    			<div class='col-md-6'>{{maindata.ios.MalePercentage | unitCon}}</div>
-			    			<div class='col-md-6'>{{(maindata.ios.MalePercentage-maindata.android.MalePercentage)/maindata.android.MalePercentage*100 | roundoff}}</div>
+			    			<div class='dataval'>{{maindata.ios.MalePercentage | unitCon}}</div>
+			    			<div class='dataval'>{{(maindata.ios.MalePercentage-maindata.android.MalePercentage)/maindata.android.MalePercentage*100 | roundoff}}</div>
 			    		</div>
 		    	</div>
 		    	</li>
@@ -100,12 +100,12 @@
 		    		<div class='col-md-12'>
 			    		<div class='platform-head'>Female Percentage</div>
 			    		<div class='platform' ng-class="(maindata.android.FemalePercentage-maindata.ios.FemalePercentage)/maindata.android.FemalePercentage*100 > 0 ? 'green' : 'red'">
-			    			<div class='col-md-6'>{{maindata.android.FemalePercentage | unitCon}}</div>
-			    			<div class='col-md-6'>{{(maindata.android.FemalePercentage-maindata.ios.FemalePercentage)/maindata.android.FemalePercentage*100 | roundoff}}</div>
+			    			<div class='dataval'>{{maindata.android.FemalePercentage | unitCon}}</div>
+			    			<div class='dataval'>{{(maindata.android.FemalePercentage-maindata.ios.FemalePercentage)/maindata.android.FemalePercentage*100 | roundoff}}</div>
 			    		</div>
 			    		<div class='platform' ng-class="(maindata.android.FemalePercentage-maindata.ios.FemalePercentage)/maindata.android.FemalePercentage*100 < 0 ? 'green' : 'red'">
-			    			<div class='col-md-6'>{{maindata.ios.FemalePercentage | unitCon}}</div>
-			    			<div class='col-md-6'>{{(maindata.ios.FemalePercentage-maindata.android.FemalePercentage)/maindata.android.FemalePercentage*100 | roundoff}}</div>
+			    			<div class='dataval'>{{maindata.ios.FemalePercentage | unitCon}}</div>
+			    			<div class='dataval'>{{(maindata.ios.FemalePercentage-maindata.android.FemalePercentage)/maindata.android.FemalePercentage*100 | roundoff}}</div>
 			    		</div>
 		    	</div>
 		    	</li>
@@ -129,12 +129,12 @@
 		    		<div class='col-md-12'>
 			    		<div class='platform-head'><stringfilter dataval='{{k}}' filter='Age'></div>
 			    		<div class='platform' ng-class="(v-maindata.ios.AgeBreakPercentage[k])/v*100 > 0 ?  'green' : 'red'">
-			    			<div class='col-md-6'>{{v}}</div>
-			    			<div class='col-md-6'>{{-(maindata.ios.AgeBreakPercentage[k]-v)/v*100 | roundoff}}</div>
+			    			<div class='dataval'>{{v}}</div>
+			    			<div class='dataval'>{{-(maindata.ios.AgeBreakPercentage[k]-v)/v*100 | roundoff}}</div>
 			    		</div>
 			    		<div class='platform' ng-class="(v-maindata.ios.AgeBreakPercentage[k])/v*100 < 0 ?  'green' : 'red'">
-			    			<div class='col-md-6'>{{maindata.ios.AgeBreakPercentage[k] | unitCon}}</div>
-			    			<div class='col-md-6'>{{(maindata.ios.AgeBreakPercentage[k]-v)/v*100 | roundoff}}</div>
+			    			<div class='dataval'>{{maindata.ios.AgeBreakPercentage[k] | unitCon}}</div>
+			    			<div class='dataval'>{{(maindata.ios.AgeBreakPercentage[k]-v)/v*100 | roundoff}}</div>
 			    		</div>
 		    	</div>
 		    	</li>
@@ -158,12 +158,12 @@
 		    		<div class='col-md-12'>
 			    		<div class='platform-head'><stringfilter dataval='{{k}}' filter='Income'></div>
 			    		<div class='platform' ng-class="(v-maindata.ios.IncomePercentage_in_Dollar[k])/v*100 > 0 ?  'green' : 'red'">
-			    			<div class='col-md-6'>{{v}}</div>
-			    			<div class='col-md-6'>{{-(maindata.ios.IncomePercentage_in_Dollar[k]-v)/v*100 | roundoff}}</div>
+			    			<div class='dataval'>{{v}}</div>
+			    			<div class='dataval'>{{-(maindata.ios.IncomePercentage_in_Dollar[k]-v)/v*100 | roundoff}}</div>
 			    		</div>
 			    		<div class='platform' ng-class="(v-maindata.ios.IncomePercentage_in_Dollar[k])/v*100 < 0 ?  'green' : 'red'">
-			    			<div class='col-md-6'>{{maindata.ios.IncomePercentage_in_Dollar[k] | unitCon}}</div>
-			    			<div class='col-md-6'>{{(maindata.ios.IncomePercentage_in_Dollar[k]-v)/v*100 | roundoff}}</div>
+			    			<div class='dataval'>{{maindata.ios.IncomePercentage_in_Dollar[k] | unitCon}}</div>
+			    			<div class='dataval'>{{(maindata.ios.IncomePercentage_in_Dollar[k]-v)/v*100 | roundoff}}</div>
 			    		</div>
 		    	</div>
 		    	</li>
@@ -187,12 +187,12 @@
 		    		<div class='col-md-12'>
 			    		<div class='platform-head'><stringfilter dataval='{{k}}' filtertype='onlystring'></div>
 			    		<div class='platform' ng-class="(v-maindata.ios.RacePercentage[k])/v*100 > 0 ?  'green' : 'red'">
-			    			<div class='col-md-6'>{{v}}</div>
-			    			<div class='col-md-6'>{{-(maindata.ios.RacePercentage[k]-v)/v*100 | roundoff}}</div>
+			    			<div class='dataval'>{{v}}</div>
+			    			<div class='dataval'>{{-(maindata.ios.RacePercentage[k]-v)/v*100 | roundoff}}</div>
 			    		</div>
 			    		<div class='platform' ng-class="(v-maindata.ios.RacePercentage[k])/v*100 < 0 ?  'green' : 'red'">
-			    			<div class='col-md-6'>{{maindata.ios.RacePercentage[k] | unitCon}}</div>
-			    			<div class='col-md-6'>{{(maindata.ios.RacePercentage[k]-v)/v*100 | roundoff}}</div>
+			    			<div class='dataval'>{{maindata.ios.RacePercentage[k] | unitCon}}</div>
+			    			<div class='dataval'>{{(maindata.ios.RacePercentage[k]-v)/v*100 | roundoff}}</div>
 			    		</div>
 		    	</div>
 		    	</li>
