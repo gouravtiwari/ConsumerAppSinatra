@@ -4,6 +4,7 @@ angular.module('publicApp')
   .controller('RecommenderCtrl', function ($scope, Data) {
     $scope.categories = ['Mobile Apps', 'Movies', 'Television', 'Websites'];
     $scope.numberOfRows = [1,2,3,4,5,6,7,8,9,10];
+    $scope.rowsToGenerate = 1;
 
     $scope.selectedSubCategory1 = {"obj":{}};
     $scope.selectedSubCategory2 = {"obj":{}};

@@ -1,10 +1,36 @@
 <div class="market-analysis-section">
-  <h2>Recommender Tool</h2>
-  <input disabled="disabled" placeholder="Money to Spend" style="margin-left: 10px;"><br><br>
-  <div class="number-of-rows">
-    Select number of rows <select ng-model="rowsToGenerate" ng-options="row for row in numberOfRows"></select>
+  <div class="rows-selection">
+    <div class="left" style="margin-left: 10px; height: 20px;">
+      Number of rows:
+    </div>
+    <div class="left">
+      <select ng-model="rowsToGenerate" ng-options="row for row in numberOfRows" style="margin-left: 10px; height: 20px;"></select>
+    </div>
+    <div class="left" style="margin-left: 10px; height: 20px;">
+      Money to spend:
+    </div>
+    <div class="left">
+      <input disabled="disabled" style="margin-left: 10px; height: 20px;">
+    </div>
   </div>
-  <br><br>
+  <div class="clear"></div>
+  <br>
+  <table class="recommender-listing">
+    <thead>
+      <td>
+        Category
+      </td>
+      <td>
+        Sub-category
+      </td>
+      <td>
+        Demography
+      </td>
+      <td>
+        Items
+      </td>
+    </thead>
+  </table>
   <div class="selector-row" ng-hide="true" ng-show="rowsToGenerate > 0">
     <div class="category left">
       <b>Select a Category:</b><br>
