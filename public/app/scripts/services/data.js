@@ -145,7 +145,9 @@ angular.module('publicApp')
         fillSortByFields: function(viewObject){
           var sortBy = [];
           for(var field in viewObject) {
-            if(typeof(viewObject[field]) !== 'object'){
+            if(typeof(viewObject[field]) !== 'object' && 
+                field.indexOf('Class') == -1 && 
+                field.indexOf('$$') == -1){
               sortBy.push(field);
             }
           }
