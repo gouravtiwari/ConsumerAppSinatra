@@ -261,6 +261,7 @@ nav {
 .container {
   width: 100%;
   padding: 0;
+  background: #edf1f2;
   overflow: hidden;
 }
 
@@ -688,13 +689,6 @@ nav {
   margin-bottom: 20px;
 }
 
-.hc-bars{
-  position: relative;
-  float: left;
-  width: 100%;
-  min-height: 400px;
-}
-
 /* Begin hand crafted tooltip taken from d3-tip */
 div.tooltip {
     position: absolute;
@@ -945,4 +939,10 @@ color: white;
 
 .market-analysis-section{
   padding-left: 170px;
+}
+
+.chart{
+  position: relative;
+  float: right;
+  top:-15px;
 }

@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('publicApp')
-  .controller('CompareCtrl', function ($scope, Data) {
+  .controller('CompareCtrl', function ($scope, Data, StackChartOptions) {
     
   	var parameter_obj = {'numberofresults' : '5000',
   											 'sort' : 'desc'}
@@ -25,8 +25,11 @@ angular.module('publicApp')
     		}
     		$scope.input.appname = $scope.appnames[0]
     		$scope.maindata = $scope.sorted_data[$scope.input.appname];
-    		console.log($scope.maindata)
-    	});
+            $scope.chart_data = draw_age_chart('AgeBreakPercentage');   
+            //$scope.income_data = draw_age_chart('IncomePercentage_in_Dollar');
+            //$scope.race_data = draw_age_chart('RacePercentage');
+            console.log($scope.income_data)
+        });
     });
 
     $scope.$watch('input.appname', function() {
@@ -38,4 +41,24 @@ angular.module('publicApp')
         return parseFloat((a-b)/a*100).toFixed(2);
     }
 
+    var draw_age_chart = function(field){
+        var chart_data = $.extend(true, {}, StackChartOptions.stackChart);
+        console.log($scope.maindata)
+        /* Set Chart data for age group */
+        var seriesVal = [];
+        for(var platform in $scope.maindata){
+            console.log(platform)
+            var seriesData = {name: '', data: [], color: ''};
+            seriesData.name = platform;
+            for(var ageData in $scope.maindata[platform][field]){
+                seriesData['data'].push(parseFloat($scope.maindata[platform][field][ageData]))
+                seriesVal.push(seriesData)
+            }
+        }
+        seriesVal[0].color = '#41a4c9';
+        seriesVal[5].color = '#fdde7f';
+        chart_data.series.push(seriesVal[0]);
+        chart_data.series.push(seriesVal[5]);
+        return chart_data    
+    }
   });

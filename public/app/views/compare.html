@@ -124,21 +124,26 @@
 	    	<div class='col-md-6'></div>
 	    </div>
 	    <div class='col-md-12'>
-		    <ul class='col-md-6 styleUl'>
-		    	<li ng-repeat='(k, v) in maindata.android.AgeBreakPercentage  track by $index'>
-		    		<div class='col-md-12'>
-			    		<div class='platform-head'><stringfilter dataval='{{k}}' filter='Age'></div>
-			    		<div class='platform' ng-class="(v-maindata.ios.AgeBreakPercentage[k])/v*100 > 0 ?  'green' : 'red'">
-			    			<div class='dataval'>{{v}}</div>
-			    			<div class='dataval'>{{-(maindata.ios.AgeBreakPercentage[k]-v)/v*100 | roundoff}}</div>
-			    		</div>
-			    		<div class='platform' ng-class="(v-maindata.ios.AgeBreakPercentage[k])/v*100 < 0 ?  'green' : 'red'">
-			    			<div class='dataval'>{{maindata.ios.AgeBreakPercentage[k] | unitCon}}</div>
-			    			<div class='dataval'>{{(maindata.ios.AgeBreakPercentage[k]-v)/v*100 | roundoff}}</div>
-			    		</div>
-		    	</div>
-		    	</li>
-		    </ul>
+		    <div class='col-md-6'>
+			    <ul class='styleUl'>
+			    	<li ng-repeat='(k, v) in maindata.android.AgeBreakPercentage  track by $index'>
+			    		<div class='col-md-12'>
+				    		<div class='platform-head'><stringfilter dataval='{{k}}' filter='Age'></div>
+				    		<div class='platform' ng-class="(v-maindata.ios.AgeBreakPercentage[k])/v*100 > 0 ?  'green' : 'red'">
+				    			<div class='dataval'>{{v}}</div>
+				    			<div class='dataval'>{{-(maindata.ios.AgeBreakPercentage[k]-v)/v*100 | roundoff}}</div>
+				    		</div>
+				    		<div class='platform' ng-class="(v-maindata.ios.AgeBreakPercentage[k])/v*100 < 0 ?  'green' : 'red'">
+				    			<div class='dataval'>{{maindata.ios.AgeBreakPercentage[k] | unitCon}}</div>
+				    			<div class='dataval'>{{(maindata.ios.AgeBreakPercentage[k]-v)/v*100 | roundoff}}</div>
+				    		</div>
+			    	</div>
+			    	</li>
+			    </ul>
+		    </div>
+		    <div class='chart col-md-6'>
+		    	<highcharts chart-id='chart_data' height="220" width="400"></highcharts>
+		  	</div>
 		  </div>	
 	  </accordion-group>
 	  <accordion-group  heading="Income Range">
@@ -153,21 +158,26 @@
 	    	<div class='col-md-6'></div>
 	    </div>
 	    <div class='col-md-12'>
-		    <ul class='col-md-6 styleUl'>
-		    	<li ng-repeat='(k, v) in maindata.android.IncomePercentage_in_Dollar  track by $index'>
-		    		<div class='col-md-12'>
-			    		<div class='platform-head'><stringfilter dataval='{{k}}' filter='Income'></div>
-			    		<div class='platform' ng-class="(v-maindata.ios.IncomePercentage_in_Dollar[k])/v*100 > 0 ?  'green' : 'red'">
-			    			<div class='dataval'>{{v}}</div>
-			    			<div class='dataval'>{{-(maindata.ios.IncomePercentage_in_Dollar[k]-v)/v*100 | roundoff}}</div>
-			    		</div>
-			    		<div class='platform' ng-class="(v-maindata.ios.IncomePercentage_in_Dollar[k])/v*100 < 0 ?  'green' : 'red'">
-			    			<div class='dataval'>{{maindata.ios.IncomePercentage_in_Dollar[k] | unitCon}}</div>
-			    			<div class='dataval'>{{(maindata.ios.IncomePercentage_in_Dollar[k]-v)/v*100 | roundoff}}</div>
-			    		</div>
-		    	</div>
-		    	</li>
-		    </ul>
+		    <div class='col-md-6'>
+			    <ul class='styleUl'>
+			    	<li ng-repeat='(k, v) in maindata.android.IncomePercentage_in_Dollar  track by $index'>
+			    		<div class='col-md-12'>
+				    		<div class='platform-head'><stringfilter dataval='{{k}}' filter='Income'></div>
+				    		<div class='platform' ng-class="(v-maindata.ios.IncomePercentage_in_Dollar[k])/v*100 > 0 ?  'green' : 'red'">
+				    			<div class='dataval'>{{v}}</div>
+				    			<div class='dataval'>{{-(maindata.ios.IncomePercentage_in_Dollar[k]-v)/v*100 | roundoff}}</div>
+				    		</div>
+				    		<div class='platform' ng-class="(v-maindata.ios.IncomePercentage_in_Dollar[k])/v*100 < 0 ?  'green' : 'red'">
+				    			<div class='dataval'>{{maindata.ios.IncomePercentage_in_Dollar[k] | unitCon}}</div>
+				    			<div class='dataval'>{{(maindata.ios.IncomePercentage_in_Dollar[k]-v)/v*100 | roundoff}}</div>
+				    		</div>
+			    	</div>
+			    	</li>
+			    </ul>
+			  </div>  
+		  	<div class='chart col-md-6'>
+		    	<highcharts chart-id='income_data' height="420" width="400"></highcharts>
+		  	</div>
 		  </div>
 	  </accordion-group>
 	  <accordion-group  heading='Race Percentage'>
