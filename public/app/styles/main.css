@@ -176,6 +176,9 @@ nav {
   cursor: pointer;
 }
 
+.navTile:hover {
+  background: rgba(255, 255, 0, .7);
+}
 .tileIcon {
   width: 80px;
   height: 80px;
