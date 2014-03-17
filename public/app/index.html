@@ -54,22 +54,25 @@
             </li>
           </ul>
           <!-- left navigation-->
-          <ul class="left-nav nav nav-tabs" ng-hide="true" ng-show="marketAnalysisSection(location)">
-            <li>
-              <a href="#/recommender" ng-class="{selected: location == '/recommender'}">
-              <img src="../images/recommender.png" width="165px"/></a>
-            </li>
-            <li>
-              <a href="#/compare" ng-class="{selected: location == '/compare'}">
-              <img src="../images/compare_smartly.png" width="165px"/></a>
-              </a>
-            </li>
-            <li>
-              <a href="#/top_ten" ng-class="{selected: location == '/top_ten'}">
-              <img src="../images/top_ten.png" width="165px"/></a>
-              </a>
-            </li>
-          </ul>
+          <div class="left-nav">
+            <ul class="nav nav-tabs" ng-hide="true" ng-show="marketAnalysisSection(location)">
+              <li>
+                <a href="#/compare" ng-class="(location == '/compare') ? 'selectedCompare' : 'notselectedCompare'">
+                  Compare Smartly!
+                </a>
+              </li>
+              <li>
+                <a href="#/recommender" ng-class="(location == '/recommender') ? 'selectedRecommender' : 'notselectedRecommender'">
+                  Ad Spend<br>Recommender
+                </a>
+              </li>
+              <li>
+                <a href="#/top_ten" ng-class="(location == '/top_ten') ? 'selectedTopTen' : 'notselectedTopTen'">
+                  Top 10 Products
+                </a>
+              </li>
+            </ul>
+          </div>
           <!-- left navigation-->
           <div class="recentSearch cursorPointer feature" ng-hide="location == '/'"
             ng-mouseover="showList()">
