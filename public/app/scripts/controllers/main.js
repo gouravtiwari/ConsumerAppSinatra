@@ -13,9 +13,9 @@ angular.module('publicApp')
     }
 
     $scope.navTiles = [
-    	{title: 'Product <br/> Finder', url: '/product_by_desc'},
-    	{title: 'Store <br/> Locator', url: '/store_by_name'},
-    	{title: 'Market Analysis', url: '/market_analysis'}
+    	{title: 'Product <br/> Finder', url: '/product_by_desc', img: 'icon_findProducts.png'},
+    	{title: 'Store <br/> Locator', url: '/store_by_name', img: 'icon_storeLocator.png'},
+    	{title: 'Market Analysis', url: '/market_analysis', img: 'icon_analyseSmartly.png'}
     ];
 
     $scope.analyses = [      
