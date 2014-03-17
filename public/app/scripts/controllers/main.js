@@ -21,6 +21,18 @@ angular.module('publicApp')
       {name: 'Market <br/> Share', url: '/market_share'}
     ];
 
+    $scope.marketAnalysisUrls = [      
+      {url: '/recommender'},
+      {url: '/ad_spend'},
+      {url: '/compare'},
+      {url: '/top_ten'},
+      {url: '/audience'},
+      {url: '/mobile-audience'},
+      {url: '/program_rankings'},
+      {url: '/segmentation'},
+      {url: '/market_share'}
+    ];
+
     $scope.location = $location.path();
     console.log($scope.location);
     $scope.go = function(url) {
@@ -78,7 +90,10 @@ angular.module('publicApp')
     $scope.marketAnalysisSection = function(location){
       var isMarketAnalysisSection = false;
       isMarketAnalysisSection = location == '/market_analysis' || 
-                                $.grep($scope.analyses, function(n) { return n.url == location; }).length > 0;
+                                $.grep($scope.marketAnalysisUrls, function(n) { 
+                                  return n.url == location; 
+                                }).length > 0;
+
       return isMarketAnalysisSection;
     }
 
