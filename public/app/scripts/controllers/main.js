@@ -19,15 +19,15 @@ angular.module('publicApp')
     ];
 
     $scope.analyses = [      
-      {name: 'Ad Spend Recommender', url: '/recommender'},
-      {name: 'Compare Smartly!', url: '/compare'},
+      {name: 'Ad Spend Recommender', url: '/recommender', class: "feature"},
+      {name: 'Ad <br/> Spend', url: '/ad_spend'},
+      {name: 'Compare Smartly!', url: '/compare', class: "feature"},
       {name: 'Top 10 Products', url: '/top_ten'},
-    	{name: 'Market <br/> Share', url: '/market_share'},
     	{name: 'Online Audience', url: '/audience'},
     	{name: 'Mobile Audience', url: '/mobile-audience'},
-    	{name: 'Ad <br/> Spend', url: '/ad_spend'},
       {name: 'TV Programs Rankings', url: '/program_rankings'},
-      {name: 'Lifestyle Segmentation', url: '/segmentation'}
+      {name: 'Lifestyle Segmentation', url: '/segmentation'},
+      {name: 'Market <br/> Share', url: '/market_share'}
     ];
 
     //BELOW INPUT MODEL MUST BE USED ACROSS ALL CTRLs FOR RECENT SEARCHES LOGIC!!! 

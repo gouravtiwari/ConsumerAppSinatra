@@ -774,3 +774,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   font-size: 11px;
   background: lightskyblue;
 }
+
+.feature {
+  background: rgba(100, 50, 200, .6);
+}
