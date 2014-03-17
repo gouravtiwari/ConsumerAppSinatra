@@ -926,21 +926,42 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   height: 110px;
 }
 .left-nav li a{
-border-radius: 0px;
-height: 110px;
-padding: 0px;
-font-size: 17px;
-width: 165px;
-color: white;
-}
-
-.left-nav li a.selected{
-  background: #fff !important;
+  border-radius: 0px;
+  border: none;
+  height: 110px;
+  padding: 0px;
+  font-size: 17px;
+  width: 150px;
+  color: white;
+  padding: 65px 5px 5px 0;
+  text-align: right;
+  font-size: 14px;
 }
 
 .left-nav li a:hover {
   background: #707070 !important;
 }
+
+.left-nav li a.selectedCompare, .left-nav li a.selectedCompare:hover{
+  background: #7f7f7f url('../images/icon_compare.png') !important ;
+}
+.left-nav li a.notselectedCompare, .left-nav li a.notselectedCompare:hover{
+  background: #666666 url('../images/icon_compare_ntSelected.png') !important;
+}
+.left-nav li a.selectedRecommender, .left-nav li a.selectedRecommender:hover{
+  background: #7f7f7f url('../images/icon_Recommender.png') !important ;
+}
+.left-nav li a.notselectedRecommender, .left-nav li a.notselectedRecommender:hover{
+  background: #666666 url('../images/icon_Recommender_ntSelected.png') !important;
+}
+.left-nav li a.selectedTopTen, .left-nav li a.selectedTopTen:hover{
+  background: #7f7f7f url('../images/icon_topten.png') !important ;
+}
+.left-nav li a.notselectedTopTen, .left-nav li a.notselectedTopTen:hover{
+  background: #666666 url('../images/icon_topten_ntSelected.png') !important;
+}
+
+
 /* market analysis left navigation - end */
 
 .market-analysis-section{
