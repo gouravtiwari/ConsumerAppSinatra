@@ -1,6 +1,5 @@
 angular.module('publicApp')
   .controller('StoreCtrl', function ($scope,$rootScope,$modal, Data) {
-	  
 	 $scope.input.storeName = '';
    $scope.input.ownerName = '';
    $scope.input.indicator = '';
@@ -209,7 +208,7 @@ angular.module('publicApp')
     })
     if($scope.viaRecentSearch) {
       if($scope.cache_response.StoreRefData.Stores){
-        $scope.AppDetails = $scope.cache_response.StoreRefData.Stores;
+        $scope.stores = $scope.cache_response.StoreRefData.Stores;
       }
       $scope.viaRecentSearch = false;
     }
