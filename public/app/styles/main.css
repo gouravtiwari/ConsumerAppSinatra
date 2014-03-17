@@ -48,8 +48,16 @@ padding: 0px;
 font-size: 17px;
 width: 200px;
 color: white;
-
 }
+
+.main_nav li a:hover {
+  background: #fc0 !important;
+}
+
+.selected {
+  background: #fc0 !important;
+}
+
 
 .lightBlue {
   color: lightskyblue;

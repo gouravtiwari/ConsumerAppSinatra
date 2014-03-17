@@ -39,16 +39,16 @@
           -->
           <ul class="main_nav nav nav-tabs" ng-hide="location == '/' || location == '/nav_page'">
             <li>
-              <a href="#/product_by_desc">
+              <a href="#/product_by_desc" ng-class="{selected: location == '/product_by_desc'}">
               <img src="../images/icon_findProducts.png" width="50px"/>Find Product</a>
             </li>
             <li>
-              <a href="#/store_by_name">
+              <a href="#/store_by_name" ng-class="{selected: location == '/store_by_name'}">
               <img src="../images/icon_storeLocator.png" width="50px"/>Store Locator</a>
               </a>
             </li>
             <li>
-              <a href="#/market_analysis">
+              <a href="#/market_analysis" ng-class="{selected: location == '/market_analysis'}">
               <img src="../images/icon_analyseSmartly.png" width="50px"/>Market Analyses</a>
               </a>
             </li>

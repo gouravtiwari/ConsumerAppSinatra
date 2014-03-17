@@ -3,19 +3,10 @@
 angular.module('publicApp')
   .controller('MainCtrl', function ($scope, $location, Data) {
 
-    $scope.location = $location.path();
-    console.log($scope.location);
-    $scope.go = function(url) {
-      $scope.showRecentSearch = false;
-    	$location.path(url);
-      $scope.location = url;
-      console.log($scope.location)
-    }
-
     $scope.navTiles = [
-    	{title: 'Product <br/> Finder', url: '/product_by_desc', img: 'icon_findProducts.png'},
-    	{title: 'Store <br/> Locator', url: '/store_by_name', img: 'icon_storeLocator.png'},
-    	{title: 'Market Analysis', url: '/market_analysis', img: 'icon_analyseSmartly.png'}
+      {title: 'Product <br/> Finder', url: '/product_by_desc', img: 'icon_findProducts.png'},
+      {title: 'Store <br/> Locator', url: '/store_by_name', img: 'icon_storeLocator.png'},
+      {title: 'Market Analysis', url: '/market_analysis', img: 'icon_analyseSmartly.png'}
     ];
 
     $scope.analyses = [      
@@ -23,12 +14,33 @@ angular.module('publicApp')
       {name: 'Ad <br/> Spend', url: '/ad_spend'},
       {name: 'Compare Smartly!', url: '/compare', class: "feature"},
       {name: 'Top 10 Products', url: '/top_ten'},
-    	{name: 'Online Audience', url: '/audience'},
-    	{name: 'Mobile Audience', url: '/mobile-audience'},
+      {name: 'Online Audience', url: '/audience'},
+      {name: 'Mobile Audience', url: '/mobile-audience'},
       {name: 'TV Programs Rankings', url: '/program_rankings'},
       {name: 'Lifestyle Segmentation', url: '/segmentation'},
       {name: 'Market <br/> Share', url: '/market_share'}
     ];
+
+    $scope.location = $location.path();
+    console.log($scope.location);
+    $scope.go = function(url) {
+      $scope.showRecentSearch = false;
+    	$location.path(url);
+    }
+
+    $scope.$watch(function(){return $location.path()}, function(newvalue, oldvalue){
+      if(!newvalue || newvalue == oldvalue) return;
+      $scope.location = '';
+      $.each($scope.analyses, function(index, analysis){
+        if(analysis.url == newvalue) {
+          $scope.location = '/market_analysis';
+        }
+      });
+      if(!$scope.location) {
+        $scope.location = newvalue;
+      }
+      console.log($scope.location);
+    });
 
     //BELOW INPUT MODEL MUST BE USED ACROSS ALL CTRLs FOR RECENT SEARCHES LOGIC!!! 
     $scope.input = {};
