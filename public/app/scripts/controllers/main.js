@@ -88,7 +88,7 @@ angular.module('publicApp')
 
     $scope.marketAnalysisSection = function(location){
       var isMarketAnalysisSection = false;
-      isMarketAnalysisSection = location == '/market_analysis' || 
+      isMarketAnalysisSection = location == '/market_analysis' || '/product_by_desc' ||
                                 $.grep($scope.marketAnalysisUrls, function(n) { 
                                   return n.url == location; 
                                 }).length > 0;
