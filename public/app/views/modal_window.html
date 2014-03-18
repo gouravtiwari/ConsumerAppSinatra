@@ -1,28 +1,29 @@
 <div ng-controller='ModalCtrl'>
     <div class="modal-header">
-        <h3>Product Availablility for code {{obj.search}}</h3>
+        <h3>Product Availablility for code {{obj.product_id}}</h3>
     </div>
     <div class="modal-body">
         <div class='row'>
             <div class='col-md-12'>
-                <button class="btn btn-primary" ng-click="setGeoLocation()">Take my Current Location</button>
+                <div class="btn-group">
+                    <button type="button" ng-click='viewChange("CurrentLocation")' class="btn btn-primary" ng-model="radioModel" btn-radio="'CurrentLocation'">Current Location</button>
+                    <button type="button" ng-click='viewChange("CustomLocation")' class="btn btn-primary" ng-model="radioModel" btn-radio="'CustomLocation'">Custom Location</button>
+                </div>
             </div>
-            <div class='col-md-12'>
-                <div class='col-md-3'>Latitude</div>
-                <div class='col-md-3'>{{geolocation.lat}}</div>
-                <div class='col-md-3'>Longitude</div>
-                <div class='col-md-3'>{{geolocation.long}}</div>
+            <div ng-show='view' class='col-md-12 align-view'>
+                <div>
+                    <button ng-click="setGeoLocation()" class="btn locationB btn-success">Take my current location</button>
+                </div>
+                <div class='col-md-6'>Latitude</div>
+                <div class='col-md-6'>{{geolocation.lat}}</div>
+                <div class='col-md-6'>Longitude</div>
+                <div class='col-md-6'>{{geolocation.long}}</div>
+                <button ng-show='haveData' ng-click='ok()' class="btn searchB margin-button btn-primary"><a href="#/google_maps">Search</a></button>
             </div>
-            <div class="col-md-12">
-                <div class='col-md-3'>Latitude</div>
-                <div class='col-md-3'><input class='position' type="number" ng-model='latitude'></div>
-                <div class='col-md-3'>Longitude</div>
-                <div class='col-md-3'><input class='position' type="number" ng-model='longitude'></div>
-                <button class="btn btn-primary" ng-click="setCustomLocation()">Take my Current Location</button>
+            <div ng-hide='view' class="col-md-12 align-view">
+                <googleplace location=location></googleplace>
+                <button ng-click="doSearch()" class="btn searchB btn-primary"><a href="#/google_maps">Search</a></button>
             </div>    
         </div>
-    </div>
-    <div class="modal-footer">
-        <a href="#/google_maps" ng-click="ok()">Take me somewhere</a>
     </div>
 </div>

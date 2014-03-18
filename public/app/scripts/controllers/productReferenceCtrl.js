@@ -4,24 +4,25 @@ angular.module('publicApp')
   .controller('ProductReferenceCtrl', function ($scope,$rootScope, Data, $modal, $log) {
 	  $scope.input.search = $scope.input.search || '';
     $scope.pageshow = false;
+    
     $scope.checkSearch = function(){
       if(isNaN($scope.input.search)){
         $scope.input.prod_type = 'description'
         $scope.by_desc();
         $rootScope.prod_type = $scope.input.prod_type;
+        $scope.pageshow = true;
       }
       else{
         $scope.input.prod_type = 'code';
         $scope.by_upc();
         $rootScope.prod_type = $scope.input.prod_type;
+        $scope.pageshow = false;
       }
     }
 
-
     $scope.by_desc = function(){
 
-      //$scope.input.search = $scope.input.search.split(' ').join('%20');
-      
+      //$scope.input.search = $scope.input.search.split(' ').join('%20');      
       if($scope.input.prevSearch != $scope.input.search){
         $scope.input.pageno = null;
       }
@@ -33,7 +34,6 @@ angular.module('publicApp')
           $scope.noData = true;
         }
         else{
-          $scope.pageshow = true;
           $scope.products = api_data.ProductDetails;
           $scope.totalItems = api_data.Summary.TotalPages;
           $scope.maxSize = 10;
@@ -43,6 +43,7 @@ angular.module('publicApp')
     }
 
     $scope.setData = function(data){
+      console.log()
       Data.set_search_data({'product_id' : data.UPC});
       $scope.open();
     }
@@ -105,7 +106,6 @@ angular.module('publicApp')
     console.log($scope.cache_response.ProductDetails)
     if($scope.cache_response.ProductDetails) {
       $scope.products = $scope.cache_response.ProductDetails;
-      $scope.pageshow = true;
       $scope.totalItems = $scope.cache_response.Summary.TotalPages;
       $scope.maxSize = 10;
       //$scope.cache_response = {};
