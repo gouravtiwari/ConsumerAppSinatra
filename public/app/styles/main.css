@@ -1138,3 +1138,8 @@ text.textBottom{
 .more{
   min-height: 70px;
 }
+
+.css-form{
+  position: relative;
+  float: left;
+}

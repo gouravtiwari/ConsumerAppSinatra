@@ -3,7 +3,7 @@
 		<div class="search_bar">
 			<div class="search_type">
 				<b>Find your store by:</b> 
-				<select ng-options="obj for obj in options" ng-model="input.select_type"></select>
+				<select ng-options="obj for obj in options" ng-model="input.select_type"></select>*
 			</div>
 		</div>
 		<div class="col-md-3">
@@ -12,7 +12,7 @@
 		<div class="col-md-9">
 			<div class="search_form" ng-show="input.select_type=='Store Name'">
 				<form name="myForm">
-					<input type="text" name="input" ng-model="input.storeName" required placeholder="Enter Store name">
+					<input type="text" name="input" ng-model="input.storeName" required placeholder="Enter Store name">*
 					<button type='submit' class='search_btn btn' ng-click='by_name()' ng-disabled="myForm.$invalid" > <span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
 				</form>
 				<span class="error">{{status_name}}</span><br>
