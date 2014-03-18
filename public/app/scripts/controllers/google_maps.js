@@ -2,7 +2,6 @@
 
 angular.module('publicApp')
   .controller('GoogleMapsCtrl', function ($scope, Data) {
-	  
 	  $scope.map = {
 	    center: {
 	        "latitude":"20",
@@ -22,6 +21,7 @@ angular.module('publicApp')
       $scope.retailers = [];
       var iconNo = 0;
       for(var i=0; i<api_data.Product.Availability.length; i++){
+        $scope.haveOutlets = true;
       	for(var j=0; j<api_data.Product.Availability[i].Retailer.length; j++){
       			iconNo++;
       			api_data.Product.Availability[i].Retailer[j].icon = {icon: "https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld="+iconNo+"|ff0000|000000"}

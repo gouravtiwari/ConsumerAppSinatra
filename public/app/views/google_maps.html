@@ -1,17 +1,22 @@
 <div>
-<div class="retailer-info">
-	<li ng-repeat='retailer in retailers'>
-		<div class="head">
-			<img ng-src="{{retailer.icon.icon}}"/>
-			<div class="head-data">
-		  	{{retailer.RetailerName}}, {{retailer.Locations.Line1}}, {{retailer.Locations.City}}, {{retailer.Locations.State}}, {{retailer.Locations.Country}}
+<div ng-show='haveOutlets'>
+	<div class="retailer-info">
+		<li ng-repeat='retailer in retailers'>
+			<div class="head">
+				<img ng-src="{{retailer.icon.icon}}"/>
+				<div class="head-data">
+			  	{{retailer.RetailerName}}, {{retailer.Locations.Line1}}, {{retailer.Locations.City}}, {{retailer.Locations.State}}, {{retailer.Locations.Country}}
+				</div>
 			</div>
-		</div>
-	</li>
+		</li>
+	</div>
+	<div class="map-container">
+		<google-map center="map.center" draggable="true" zoom="map.zoom">
+			<marker coords='location' options='location.icon' ng-repeat="location in locations"></marker>
+		</google-map>
+	</div>
 </div>
-<div class="map-container">
-	<google-map center="map.center" draggable="true" zoom="map.zoom">
-		<marker coords='location' options='location.icon' ng-repeat="location in locations"></marker>
-	</google-map>
+<div ng-hide='haveOutlets'>
+	<h2>Sorry No data found for the search that you have requested</h2>
 </div>
 </div>
