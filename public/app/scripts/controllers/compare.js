@@ -29,7 +29,7 @@ angular.module('publicApp')
             $scope.chart_data = draw_age_chart('AgeBreakPercentage');   
             $scope.income_data = draw_age_chart('IncomePercentage_in_Dollar');
             $scope.race_data = draw_age_chart('RacePercentage');
-            //plot_graph();
+            plot_graph();
         });
     });
 
@@ -95,8 +95,8 @@ angular.module('publicApp')
       $scope['chosenStat'] = chart_data;
     }
 
-    $scope.$watch('radioModel', function() {
-      console.log($scope.radioModel)
-      //plot_graph();
-    });
+    $scope.changeChart = function(model){
+        $scope.radioModel = model;
+        plot_graph();
+    }
   });
