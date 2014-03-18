@@ -243,8 +243,8 @@ angular.module('publicApp')
         for (var i = 0; i < $scope.recommenderDoughnut.length; i++) {
           $scope.data.list[i] = {'label': 'Rank #'+$scope.recommenderDoughnut[i].item.Rank + '.' + $scope.recommenderDoughnut[i].item.Name + '<br>' +
                                           'Category: ' + $scope.recommenderDoughnut[i].category + '<br>' +
-                                          'User Age Group:' + $scope.recommenderDoughnut[i].demography,
-                                          'Unique Audience: ' + $scope.recommenderDoughnut[i].item.UniqueAudience + '<br>' +
+                                          'User Age Group:' + $scope.recommenderDoughnut[i].demography + '<br>' +
+                                          'Unique Audience: ' + $scope.recommenderDoughnut[i].item.UniqueAudience,
                             'value': Math.round($scope.recommenderDoughnut[i].item.Score, 1)};
         };
         console.log($scope.data);
