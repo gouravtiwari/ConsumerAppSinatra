@@ -130,7 +130,17 @@
     </div> -->
   </div>
   <div class="clear"></div>
-  <div class="col-md-12 doughnut-container">
-    <doughnut chart-id="recommenderDoughnut" val="data" totalLabel="Recommendation Score"></doughnut>
+  <div class="col-md-12">
+    <div class="unique-user-counts" >
+      <div ng-hide="true" ng-show="totalUsers != 0 && totalUsers != undefined">
+        Your ads will be reaching to {{totalUsers}} users!
+      </div>
+      <div class="help-text">
+        (You can improve user reach by selecting higher ranked items)
+      </div>
+    </div>
+    <div class="doughnut-container">
+      <doughnut chart-id="recommenderDoughnut" val="data" totalLabel="Recommendation Score"></doughnut>
+    </div>
   </div>
 </div>

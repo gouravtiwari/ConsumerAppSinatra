@@ -3,8 +3,11 @@
 angular.module('publicApp')
   .controller('RecommenderCtrl', function ($scope, Data) {
     $scope.categories = ['Mobile Apps', 'Movies', 'Television', 'Websites'];
+    $scope.users = ['Mobile Apps', 'Websites'];
+    $scope.viewers = ['Movies', 'Television'];
     $scope.numberOfRows = [1,2,3,4,5];
     $scope.rowsToGenerate = 1;
+    $scope.totalUsers = 0;
 
     $scope.selectedSubCategory1 = {"obj":{}};
     $scope.selectedSubCategory2 = {"obj":{}};
@@ -233,6 +236,7 @@ angular.module('publicApp')
     };
 
     $scope.doughnutRedraw = function(){
+      $scope.totalUsers = 0;
       if($scope.recommendationScore != undefined && $scope.recommendationScore != null && $scope.recommendationScore.toString() != 'NaN'){
         $scope.data = { 'list': [], 
                         'output': $scope.recommendationRating,
@@ -241,13 +245,12 @@ angular.module('publicApp')
                         'outputValueColor': '#45C0B6'
                       };
         for (var i = 0; i < $scope.recommenderDoughnut.length; i++) {
-          $scope.data.list[i] = {'label': 'Rank #'+$scope.recommenderDoughnut[i].item.Rank + '.' + $scope.recommenderDoughnut[i].item.Name + '<br>' +
-                                          'Category: ' + $scope.recommenderDoughnut[i].category + '<br>' +
-                                          'User Age Group:' + $scope.recommenderDoughnut[i].demography + '<br>' +
-                                          'Unique Audience: ' + $scope.recommenderDoughnut[i].item.UniqueAudience,
+          console.log($scope.totalUsers);
+          $scope.data.list[i] = {'label': $scope.recommenderDoughnut[i].item.Name + '<br>' +
+                                 $scope.recommenderDoughnut[i].item.UniqueAudience + ' users',
                             'value': Math.round($scope.recommenderDoughnut[i].item.Score, 1)};
+          $scope.totalUsers = $scope.totalUsers + parseInt($scope.recommenderDoughnut[i].item.UniqueAudience);
         };
-        console.log($scope.data);
       }
     };
   });

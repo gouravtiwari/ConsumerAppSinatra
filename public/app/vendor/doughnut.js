@@ -42,13 +42,14 @@ function donutTip(options){
                         },
         width:          500,
         height:         500,
-        margin:         {top: 10, right: 20, bottom: 20, left:10},
+        margin:         {top: 0, right: 20, bottom: 15, left:10},
         innerRadius:    90,
         outerRadius:    180,
-        color:          d3.scale.category20c(),
+        color:          d3.scale.category20(),
         xDomain:        'label',
         yDomain:        'value',
         tipLabel:       '',
+        tipLabelUnit:   '',
         tipValue:       'value',
         tipText:        '',
         totalLabel:     '',
@@ -94,8 +95,8 @@ function donutTip(options){
                 .innerRadius(config.innerRadius)
                 .outerRadius(config.outerRadius);
     var arcOver = d3.svg.arc()
-                .innerRadius(config.innerRadius + 5)
-                .outerRadius(config.outerRadius + 5);
+                .innerRadius(config.innerRadius+5)
+                .outerRadius(config.outerRadius+5);
 
     var pie = d3.layout.pie() //this will create arc data for us given a list of values
                 .value(function (d) {
@@ -110,7 +111,7 @@ function donutTip(options){
                 .on('mousemove', function (d, i) {
                     label = d[config.tipLabel] == undefined ? "" : " " + d[config.tipLabel];
                     d3.select(this).select("path").transition()
-                    .duration(200)
+                    .duration(1000)
                     .attr("d", arcOver);
                     
                 //     textTop.text(d3.select(this).datum().data[config.xDomain])
@@ -122,9 +123,9 @@ function donutTip(options){
                     div.transition()
                     .duration(200)
                     .style("opacity", 0.9);
-                    div.html(d.data.label + "<br><span style='color:red'>"+ config.tipLabel + ": " + d[config.tipValue] + "</span>")
+                    div.html(d.data.label + "<br><span style='color:red'>"+ config.tipLabel + ": " + d[config.tipValue] + config.tipLabelUnit+ "</span>")
                     .style("left", (d3.event.pageX - 17) + "px")
-                    .style("top", (d3.event.pageY - 140) + "px")
+                    .style("top", (d3.event.pageY - 100) + "px")
                     .style("z-index", 10000)
                 })
                 .on("mouseout", function (d) {
@@ -145,13 +146,22 @@ function donutTip(options){
 
     arcs.append("svg:path")
         .attr("fill", function (d, i) {
-            return config.color(i);
-        }) //set the color for each slice to be chosen from the color function defined above
-        .attr("d", arc); //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+            return config.color(i); //set the color for each slice to be chosen from the color function defined above
+        })
+        .transition().delay(function(d, i) { return i * 500; }).duration(1000)
+        .attrTween('d', function(d) {
+           var i = d3.interpolate(d.startAngle+0.1, d.endAngle);
+           return function(t) {
+               d.endAngle = i(t);
+             return arc(d);
+           }
+        }); 
+
+        // .attr("d", arc); //this creates the actual SVG path using the associated data (pie) with the arc drawing function
     if(config.legend){
         var legend = d3.select(config.selector).append("svg")
             .attr("class", "legend")
-            .attr("width", config.outerRadius * 2)
+            .attr("width", 200)
             .attr("height", config.outerRadius * 2)
             .selectAll("g")
             .data(config.data.list)
