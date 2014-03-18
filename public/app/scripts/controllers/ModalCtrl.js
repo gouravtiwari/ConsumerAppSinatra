@@ -28,3 +28,5 @@ angular.module('publicApp')
 	    $scope.geolocation = {'lat': position.coords.latitude, 'long': position.coords.longitude};    
 	  }
   });
+
+  
