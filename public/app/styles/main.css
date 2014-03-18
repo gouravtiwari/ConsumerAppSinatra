@@ -367,7 +367,7 @@ nav {
 }
 
 .column {
-  width: 100px;
+  width: 75px;
   display: inline-block;
   text-align: center;
   font-size: 15px;
@@ -973,7 +973,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 /* market analysis left navigation - end */
 
 .market-analysis-section{
-  padding-left: 170px;
+  padding-left: 150px;
   margin-top: 20px;
 }
 
