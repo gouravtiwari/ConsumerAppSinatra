@@ -470,10 +470,12 @@ nav {
   width: 100%;
   min-height: 750px;
   overflow: scroll;
+  background: #edf1f2;
 }
  
 .view-animate-container > * {
   display:block;
+  background: #edf1f2;
   width:100%;
   position:absolute;
   top:0;
@@ -880,6 +882,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   height: 30px;
   line-height: 30px;
   font-size: 12px;
+  border-right: 2px solid #ffffff;
 }
 
 .dataval{
@@ -962,6 +965,11 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 
 .market-analysis-section{
   padding-left: 170px;
+  margin-top: 20px;
+}
+
+.market-cont{
+  margin-top: 20px;
 }
 
 .rows-selection{
@@ -971,9 +979,10 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 .chart{
   position: relative;
   float: right;
-  top:-15px;
+  top: 20px;
 }
 
+<<<<<<< HEAD
 .recommender-head{
   position: relative;
   float: left;
@@ -1014,4 +1023,21 @@ text.textBottom{
 
 .doughnut-container{
   margin: 0 20%;
+}
+
+.change-button{
+  position: relative;
+  float: left;
+  width: 30px;
+  top: 40px;
+  left: -30px;
+}
+
+.change-button button{
+  position: relative;
+  margin-bottom: 10px;
+  float: left;
+  width: 25px;
+  height: 25px;
+  border-radius: 5px !important;
 }
