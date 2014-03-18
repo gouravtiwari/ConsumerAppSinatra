@@ -32,8 +32,8 @@ angular.module('publicApp')
                     innerRadius: 90,
                     outerRadius: 180,
                     legend: true,
-                    tipLabel: 'Score',
-                    tipLabelUnit: '%' 
+                    tipLabel: scope.val.tipLabel,
+                    tipLabelUnit: scope.val.tipLabelUnit
                   });
         });
       }

@@ -148,7 +148,7 @@ function donutTip(options){
         .attr("fill", function (d, i) {
             return config.color(i); //set the color for each slice to be chosen from the color function defined above
         })
-        .transition().delay(function(d, i) { return i * 500; }).duration(1000)
+        .transition().delay(function(d, i) { return i * 100; }).duration(100)
         .attrTween('d', function(d) {
            var i = d3.interpolate(d.startAngle+0.1, d.endAngle);
            return function(t) {

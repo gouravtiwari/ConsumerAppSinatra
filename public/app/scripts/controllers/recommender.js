@@ -242,7 +242,9 @@ angular.module('publicApp')
                         'output': $scope.recommendationRating,
                         'value': Math.round($scope.recommendationScore,1) + ' %',
                         'outputColor': '#000000',
-                        'outputValueColor': '#45C0B6'
+                        'outputValueColor': '#45C0B6',
+                        'tipLabel': 'Score',
+                        'tipLabelUnit': '%'
                       };
         for (var i = 0; i < $scope.recommenderDoughnut.length; i++) {
           console.log($scope.totalUsers);
