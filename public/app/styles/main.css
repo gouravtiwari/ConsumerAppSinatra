@@ -261,7 +261,7 @@ nav {
 .container {
   width: 100%;
   padding: 0;
-  background: #edf1f2;
+  background-color: #edf1f2;
   overflow: hidden;
 }
 
@@ -470,12 +470,12 @@ nav {
   width: 100%;
   min-height: 750px;
   overflow: scroll;
-  background: #edf1f2;
+  background-color: #edf1f2;
 }
  
 .view-animate-container > * {
   display:block;
-  background: #edf1f2;
+  background-color: #edf1f2;
   width:100%;
   position:absolute;
   top:0;
