@@ -30,20 +30,26 @@ function mergeConfigOptions(defaults,options){
 }
 
 function donutTip(options){
-    console.log(options);
     var defaults = {
         selector:       'body',
-        data:           [{'label': 'weather-morning', 'value': 29.1}, {'label': 'weather-afternoon', 'value': 33.2},
-                        {'label': 'weather-evening', 'value': 32.1}, {'label': 'weather-night', 'value': 30.2}],
+        data:           {
+                            'list': [{'label': 'weather-morning', 'value': 29.1}, {'label': 'weather-afternoon', 'value': 33.2},
+                                {'label': 'weather-evening', 'value': 32.1}, {'label': 'weather-night', 'value': 30.2}],
+                            'output': '',
+                            'value': '',
+                            'outputColor': '#000000',
+                            'outputValueColor': '#45C0B6'
+                        },
         width:          500,
         height:         500,
-        margin:         {top: 10, right: 20, bottom: 20, left:10},
+        margin:         {top: 0, right: 20, bottom: 15, left:10},
         innerRadius:    90,
         outerRadius:    180,
-        color:          d3.scale.category20c(),
+        color:          d3.scale.category20(),
         xDomain:        'label',
         yDomain:        'value',
         tipLabel:       '',
+        tipLabelUnit:   '',
         tipValue:       'value',
         tipText:        '',
         totalLabel:     '',
@@ -54,41 +60,43 @@ function donutTip(options){
 
     var width = config.width - config.margin.left - config.margin.right,
         height = config.height - config.margin.top - config.margin.bottom,
-        total = d3.sum(config.data, function (d) {
+        total = d3.sum(config.data.list, function (d) {
             return d3.sum(d3.values(d));
         });
 
-    // var div = d3.select("body").append("div")
-    //     .attr("class", "tooltip")
-    //     .style("opacity", 0);
+    var div = d3.select("body").append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
 
     var vis = d3.select(config.selector)
                 .append("svg:svg") //create the SVG element inside the <body>    
-                .data([config.data]) //associate our data with the document
+                .data([config.data.list]) //associate our data with the document
                 .attr("width", width + config.margin.left + config.margin.right)
                 .attr("height", height + config.margin.top + config.margin.bottom)
                 .append("svg:g") //make a group to hold our pie chart
                 .attr("transform", "translate(" + config.outerRadius * 1.5 + "," + config.outerRadius * 1.5 + ")");
-    
+
     var textTop = vis.append("text")
-                .attr("dy", "250px")
+                .attr("dy", ".35em")
                 .style("text-anchor", "middle")
+                .attr("fill", config.data.outputValueColor)
                 .attr("class", "textTop")
-                .text("")
+                .text(config.data.value)
                 .attr("y", -10),
         textBottom = vis.append("text")
                 .attr("dy", ".35em")
                 .style("text-anchor", "middle")
                 .attr("class", "textBottom")
-                .text(config.totalLabel + ": "+total)
-                .attr("y", 10);
+                .attr("fill", config.data.outputColor)
+                .text(config.data.output)
+                .attr("y", 30);
 
     var arc = d3.svg.arc()
                 .innerRadius(config.innerRadius)
                 .outerRadius(config.outerRadius);
     var arcOver = d3.svg.arc()
-                .innerRadius(config.innerRadius + 5)
-                .outerRadius(config.outerRadius + 5);
+                .innerRadius(config.innerRadius+5)
+                .outerRadius(config.outerRadius+5);
 
     var pie = d3.layout.pie() //this will create arc data for us given a list of values
                 .value(function (d) {
@@ -103,51 +111,60 @@ function donutTip(options){
                 .on('mousemove', function (d, i) {
                     label = d[config.tipLabel] == undefined ? "" : " " + d[config.tipLabel];
                     d3.select(this).select("path").transition()
-                    .duration(200)
+                    .duration(1000)
                     .attr("d", arcOver);
-                // var labelAry = d3.select(this).datum().data[config.xDomain].split('<br>');
-                // for (var i = 0; i < labelAry.length; i++) {
-                  textTop.text(d3.select(this).datum().data[config.xDomain])
-                    .attr("y", -10);
-                // };
                     
-                textBottom.text(config.totalLabel + ": " +d3.select(this).datum().data[config.yDomain])
-                    .attr("y", 10);
-                    
-                    // div.transition()
-                    // .duration(200)
-                    // .style("opacity", 0.9);
-                    // div.html("<strong>" + config.tipText + label+ "</strong> <span style='color:red'>" + d.data[config.tipValue] + "</span>")
-                    // .style("left", (d3.event.pageX - 57) + "px")
-                    // .style("top", (d3.event.pageY - 50) + "px")
-                    // .style("z-index", 10000)
+                //     textTop.text(d3.select(this).datum().data[config.xDomain])
+                //     .attr("fill", config.outputValueColor)
+                //     .attr("y", -10);
+                // textBottom.text(d3.select(this).datum().data[config.yDomain] + " " +config.totalLabel)
+                //     .attr("fill", config.outputColor)
+                //     .attr("y", 10);
+                    div.transition()
+                    .duration(200)
+                    .style("opacity", 0.9);
+                    div.html(d.data.label + "<br><span style='color:red'>"+ config.tipLabel + ": " + d[config.tipValue] + config.tipLabelUnit+ "</span>")
+                    .style("left", (d3.event.pageX - 17) + "px")
+                    .style("top", (d3.event.pageY - 100) + "px")
+                    .style("z-index", 10000)
                 })
                 .on("mouseout", function (d) {
                     d3.select(this).select("path").transition()
                     .duration(100)
                     .attr("d", arc);
         
-                    textTop.text("")
-                    .attr("y", -10);
-                    textBottom.text(config.totalLabel + ": "+total);
+                    // textTop.text(config.data.value)
+                    // .attr("fill", config.outputValueColor)
+                    // .attr("y", -10);
+                    // textBottom.text(config.data.output)
+                    // .attr("fill", config.outputColor);
                     
-                    // div.transition()
-                    // .duration(500)
-                    // .style("opacity", 0);
+                    div.transition()
+                    .duration(500)
+                    .style("opacity", 0);
                 });
 
     arcs.append("svg:path")
         .attr("fill", function (d, i) {
-            return config.color(i);
-        }) //set the color for each slice to be chosen from the color function defined above
-        .attr("d", arc); //this creates the actual SVG path using the associated data (pie) with the arc drawing function
+            return config.color(i); //set the color for each slice to be chosen from the color function defined above
+        })
+        .transition().delay(function(d, i) { return i * 500; }).duration(1000)
+        .attrTween('d', function(d) {
+           var i = d3.interpolate(d.startAngle+0.1, d.endAngle);
+           return function(t) {
+               d.endAngle = i(t);
+             return arc(d);
+           }
+        }); 
+
+        // .attr("d", arc); //this creates the actual SVG path using the associated data (pie) with the arc drawing function
     if(config.legend){
         var legend = d3.select(config.selector).append("svg")
             .attr("class", "legend")
-            .attr("width", config.outerRadius)
+            .attr("width", 200)
             .attr("height", config.outerRadius * 2)
             .selectAll("g")
-            .data(config.data)
+            .data(config.data.list)
             .enter().append("g")
             .attr("transform", function (d, i) {
             return "translate(0," + i * 20 + ")";
@@ -165,7 +182,7 @@ function donutTip(options){
             .attr("y", 9)
             .attr("dy", ".35em")
             .text(function (d) {
-                return d[config.xDomain];
+                return d[config.xDomain].replace(/<br>.*/, '');
         });
     }
 }

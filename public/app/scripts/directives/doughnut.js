@@ -27,11 +27,13 @@ angular.module('publicApp')
                     selector: selector, 
                     data: scope.val,
                     totalLabel: $("doughnut[chart-id='"+attrs.chartId+"']").attr('totalLabel'),
-                    width: 550,
-                    height: 550,
-                    innerRadius: 120,
+                    width: 500,
+                    height: 480,
+                    innerRadius: 90,
                     outerRadius: 180,
-                    legend: false
+                    legend: true,
+                    tipLabel: 'Score',
+                    tipLabelUnit: '%' 
                   });
         });
       }

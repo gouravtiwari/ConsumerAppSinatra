@@ -3,8 +3,11 @@
 angular.module('publicApp')
   .controller('RecommenderCtrl', function ($scope, Data) {
     $scope.categories = ['Mobile Apps', 'Movies', 'Television', 'Websites'];
-    $scope.numberOfRows = [1,2,3,4,5,6,7,8,9,10];
+    $scope.users = ['Mobile Apps', 'Websites'];
+    $scope.viewers = ['Movies', 'Television'];
+    $scope.numberOfRows = [1,2,3,4,5];
     $scope.rowsToGenerate = 1;
+    $scope.totalUsers = 0;
 
     $scope.selectedSubCategory1 = {"obj":{}};
     $scope.selectedSubCategory2 = {"obj":{}};
@@ -233,15 +236,21 @@ angular.module('publicApp')
     };
 
     $scope.doughnutRedraw = function(){
+      $scope.totalUsers = 0;
       if($scope.recommendationScore != undefined && $scope.recommendationScore != null && $scope.recommendationScore.toString() != 'NaN'){
-        $scope.data = [];
+        $scope.data = { 'list': [], 
+                        'output': $scope.recommendationRating,
+                        'value': Math.round($scope.recommendationScore,1) + ' %',
+                        'outputColor': '#000000',
+                        'outputValueColor': '#45C0B6'
+                      };
         for (var i = 0; i < $scope.recommenderDoughnut.length; i++) {
-          $scope.data[i] = {'label': '#'+$scope.recommenderDoughnut[i].item.Rank + '. '+ 
-                                      $scope.recommenderDoughnut[i].item.Name + 
-                                      ', Unique Audience: ' + $scope.recommenderDoughnut[i].item.UniqueAudience,
-                            'value': $scope.recommenderDoughnut[i].item.Score};
+          console.log($scope.totalUsers);
+          $scope.data.list[i] = {'label': $scope.recommenderDoughnut[i].item.Name + '<br>' +
+                                 $scope.recommenderDoughnut[i].item.UniqueAudience + ' users',
+                            'value': Math.round($scope.recommenderDoughnut[i].item.Score, 1)};
+          $scope.totalUsers = $scope.totalUsers + parseInt($scope.recommenderDoughnut[i].item.UniqueAudience);
         };
-        console.log($scope.data);
       }
     };
   });
