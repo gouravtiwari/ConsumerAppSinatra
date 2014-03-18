@@ -765,7 +765,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   background-color: #e0d4d6;
 }
 /* Spinner */
-@keyframes "spin" {
+@keyframes spin {
  0% {
     border-radius: 0px;
  }
@@ -790,7 +790,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
  }
 }
 
-@-webkit-keyframes "spin" {
+@-webkit-keyframes spin {
  0% {
    border-radius: 0px;
  }
@@ -801,7 +801,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
  }
 }
 
-@-ms-keyframes "spin" {
+@-ms-keyframes spin {
  0% {
    border-radius: 0px;
  }
@@ -812,7 +812,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
  }
 }
 
-@-o-keyframes "spin" {
+@-o-keyframes spin {
  0% {
    border-radius: 0px;
  }
