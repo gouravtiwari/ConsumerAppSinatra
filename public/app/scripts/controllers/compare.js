@@ -34,7 +34,11 @@ angular.module('publicApp')
     });
 
     $scope.$watch('input.appname', function() {
-      $scope.maindata = $scope.sorted_data[$scope.input.appname];
+        $scope.maindata = $scope.sorted_data[$scope.input.appname];
+        plot_graph();
+        $scope.chart_data = draw_age_chart('AgeBreakPercentage');   
+        $scope.income_data = draw_age_chart('IncomePercentage_in_Dollar');
+        $scope.race_data = draw_age_chart('RacePercentage');
     });
 
     $scope.get_diff = function(a, b){
