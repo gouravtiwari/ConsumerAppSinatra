@@ -367,7 +367,7 @@ nav {
 }
 
 .column {
-  width: 108px;
+  width: 100px;
   display: inline-block;
   text-align: center;
   font-size: 15px;
@@ -375,7 +375,7 @@ nav {
 
 @media(min-width: 1260px) {
   .column{
-    width: 150px;
+    width: 130px;
   }
 }
 

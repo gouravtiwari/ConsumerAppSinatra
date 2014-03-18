@@ -162,9 +162,9 @@ angular.module('publicApp')
         injectColorClass: function(items, fields){
           var max = {};
           $.each(fields, function(index, field){
-            max[field] = _.max(items, function(item){
+            max[field] = parseFloat(_.max(items, function(item){
               return item[field];
-            })[field];
+            })[field]);
           });
           console.log(max);
           $.each(fields, function(index, field){
@@ -184,7 +184,7 @@ angular.module('publicApp')
 
         sortBy: function(field, array){
           return _.sortBy(array, function(item){
-            return -item[field];
+            return -parseFloat(item[field]);
           });
         }
 

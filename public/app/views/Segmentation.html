@@ -18,11 +18,57 @@
 	<b>Zip Code* : </b>
 	<input type="text" ng-model="input.zipcode">
 	<button ng-click = "search(input)">Search</button>
-	<div class="resultHolder">
-		<div class="list" ng-repeat = "seg in segment">
-			Segment System : <span><b>{{seg.SegSystem}}</b></span><br>
-			Segment Name: <span><b>{{seg.SegmentName}}</b></span><br>
-			Segment code: <span><b>{{seg.SegmentCode}}</b></span>
-		</div>
-	</div>
+	<b>Sort By :</b>
+  <select class="feature" ng-model="sortBy"
+    ng-options="field for field in sortByFields">
+  </select>
+	
+	<!-- Result -->
+  <div class="resultHolder">
+  	<h3>{{output.message}}</h3>
+  	<div ng-repeat="segment in segments">
+      <div ng-show="$first">
+        <span class="column vborder">Segment Name</span>
+        <span class="column vborder">Urbanicity</span>
+        <span class="column vborder">Income</span>
+        <span class="column vborder">Income Producers</span>
+        <span class="column vborder">Age Ranges</span>
+        <span class="column vborder">Kids Presence</span>
+        <span class="column vborder">Homeownership</span>
+        <span class="column vborder">Employment Levels</span>
+        <span class="column vborder">Education Levels</span>
+        <span class="column vborder">Ethnic Diversity</span>
+      </div>
+      <div>
+        <span class="column cell fontTiny"><b>{{segment.SegmentName}}</b></span>
+        <span class="column cell {{segment.UrbanicityClass}}">
+          {{segment.Urbanicity}}
+        </span>
+        <span class="column cell {{segment.IncomeClass}}">
+          {{segment.Income}}
+        </span>
+        <span class="column cell {{segment.IncomeProducingAssetsClass}}">
+          {{segment.IncomeProducingAssets}}
+        </span>
+        <span class="column cell {{segment.AgeRangesClass}}">
+          {{segment.AgeRanges}}
+        </span>
+        <span class="column cell {{segment.PresenceofKidsClass}}">
+          {{segment.PresenceofKids}}
+        </span>
+        <span class="column cell {{segment.HomeownershipClass}}">
+          {{segment.Homeownership}}
+        </span>
+        <span class="column cell {{segment.EmploymentLevelsClass}}">
+          {{segment.EmploymentLevels}}
+        </span>
+        <span class="column cell {{segment.EducationLevelsClass}}">
+          {{segment.EducationLevels}}
+        </span>
+        <span class="column cell {{segment.EthnicDiversityClass}}">
+          {{segment.EthnicDiversity}}
+        </span>
+      </div>
+  	</div>
+  </div>
 </div>

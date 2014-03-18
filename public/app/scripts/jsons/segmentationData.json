@@ -44,11 +44,43 @@
  "Income":"1 Wealthy", 
  "IncomeProducingAssets":"2 Elite", 
  "AgeRanges":"3 Age 25-44", 
+ "PresenceofKids":"2 Family Mix", 
+ "Homeownership":"3 Mix, Renters", 
+ "EmploymentLevels":"1 Management", 
+ "EducationLevels":"2 Graduate Plus", 
+ "EthnicDiversity":"4 White, Asian, Hispanic, Mix" 
+ } 
+ },
+ { 
+ "SegSystem":"KRIZMNE", 
+ "SegmentCode":"4", 
+ "SegmentName":"Young Mumbaikars", 
+ "DemographicsTraits":{ 
+ "Urbanicity":"2 Urban", 
+ "Income":"3 Wealthy", 
+ "IncomeProducingAssets":"5 Elite", 
+ "AgeRanges":"3 Age 25-44", 
+ "PresenceofKids":"2 Family Mix", 
+ "Homeownership":"5 Mix, Renters", 
+ "EmploymentLevels":"4 Management", 
+ "EducationLevels":"3 Graduate Plus", 
+ "EthnicDiversity":"3 White, Asian, Hispanic, Mix" 
+ } 
+ },
+ { 
+ "SegSystem":"MRIZMNE", 
+ "SegmentCode":"4", 
+ "SegmentName":"Young Indori", 
+ "DemographicsTraits":{ 
+ "Urbanicity":"1 Urban", 
+ "Income":"1 Wealthy", 
+ "IncomeProducingAssets":"2 Elite", 
+ "AgeRanges":"3 Age 35-54", 
  "PresenceofKids":"3 Family Mix", 
  "Homeownership":"4 Mix, Renters", 
- "EmploymentLevels":"1 Management", 
+ "EmploymentLevels":"0 Management", 
  "EducationLevels":"1 Graduate Plus", 
- "EthnicDiversity":"3 White, Asian, Hispanic, Mix" 
+ "EthnicDiversity":"2 White, Asian, Hispanic, Mix" 
  } 
  } 
  ] 
