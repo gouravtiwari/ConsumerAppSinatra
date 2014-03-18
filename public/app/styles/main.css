@@ -644,9 +644,10 @@ nav {
 }
 
 .category, .sub-category, .demography, .item, .price, .number-of-rows, .recommender-btn{
-  width: 20%px;
   min-width: 150px;
-  margin-left: 10px;
+}
+.category select, .sub-category select, .demography select, .item select{
+  width: 120px;
 }
 
 .recommendation{
@@ -694,23 +695,23 @@ div.tooltip {
     position: absolute;
     text-align: center;
     line-height: 1;
-    font-weight: bold;
-    padding: 12px;
+    padding: 14px;
     background: rgba(0, 0, 0, 0.8);
     color: #fff;
     border-radius: 2px;
     pointer-events: none;
+    font-size: 16px;
 }
 div.tooltip:after {
   box-sizing: border-box;
   display: inline;
-  font-size: 10px;
+  font-size: 16px;
   width: 100%;
   line-height: 1;
   color: rgba(0, 0, 0, 0.8);
   content: "\25BC";
   position: absolute;
-  text-align: center;
+  text-align: left;
   top: 100%;
   left: 0%;
 }
@@ -967,21 +968,50 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   padding-top: 10px;
 }
 
-/* recommender table */
-table.recommender-listing{
-  width: 80%;
-  padding-right: 10px;
-}
-table.recommender-listing thead{
-  background-color: lightgrey;
-  font-weight: bold;
-}
-table.recommender-listing thead td, table.recommender-listing tr td{
-  padding: 5px 0 5px 20px;
-}
-
 .chart{
   position: relative;
   float: right;
   top:-15px;
+}
+
+.recommender-head{
+  position: relative;
+  float: left;
+  width: 23%;
+  height: 30px;
+  font-size: 14px;
+  padding: 5px 0 0 5px;
+  text-align: left;
+}
+
+.recommender-row{
+  position: relative;
+  float: left;
+  width: 23%;
+  height: 30px;
+  line-height: 30px;
+  font-size: 12px;
+  padding: 5px 0 0 5px;
+  border-bottom: 1px;
+}
+
+.recommender-btn, .recommender-btn:hover{
+  margin-left: 10px;
+  background-color: #45C0B6;
+  color: #ffffff;
+}
+
+/* doughnut styles */
+text.textTop{
+  color: #45C0B6;
+  font-size: 45px;
+}
+
+text.textBottom{
+  color: #45C0B6;
+  font-size: 30px;
+}
+
+.doughnut-container{
+  margin: 0 20%;
 }

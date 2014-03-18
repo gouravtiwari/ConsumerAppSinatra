@@ -3,7 +3,7 @@
 angular.module('publicApp')
   .controller('RecommenderCtrl', function ($scope, Data) {
     $scope.categories = ['Mobile Apps', 'Movies', 'Television', 'Websites'];
-    $scope.numberOfRows = [1,2,3,4,5,6,7,8,9,10];
+    $scope.numberOfRows = [1,2,3,4,5];
     $scope.rowsToGenerate = 1;
 
     $scope.selectedSubCategory1 = {"obj":{}};
@@ -234,12 +234,18 @@ angular.module('publicApp')
 
     $scope.doughnutRedraw = function(){
       if($scope.recommendationScore != undefined && $scope.recommendationScore != null && $scope.recommendationScore.toString() != 'NaN'){
-        $scope.data = [];
+        $scope.data = { 'list': [], 
+                        'output': $scope.recommendationRating,
+                        'value': Math.round($scope.recommendationScore,1) + ' %',
+                        'outputColor': '#000000',
+                        'outputValueColor': '#45C0B6'
+                      };
         for (var i = 0; i < $scope.recommenderDoughnut.length; i++) {
-          $scope.data[i] = {'label': '#'+$scope.recommenderDoughnut[i].item.Rank + '. '+ 
-                                      $scope.recommenderDoughnut[i].item.Name + 
-                                      ', Unique Audience: ' + $scope.recommenderDoughnut[i].item.UniqueAudience,
-                            'value': $scope.recommenderDoughnut[i].item.Score};
+          $scope.data.list[i] = {'label': 'Rank #'+$scope.recommenderDoughnut[i].item.Rank + '.' + $scope.recommenderDoughnut[i].item.Name + '<br>' +
+                                          'Category: ' + $scope.recommenderDoughnut[i].category + '<br>' +
+                                          'User Age Group:' + $scope.recommenderDoughnut[i].demography,
+                                          'Unique Audience: ' + $scope.recommenderDoughnut[i].item.UniqueAudience + '<br>' +
+                            'value': Math.round($scope.recommenderDoughnut[i].item.Score, 1)};
         };
         console.log($scope.data);
       }
