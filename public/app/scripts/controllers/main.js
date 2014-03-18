@@ -16,7 +16,7 @@ angular.module('publicApp')
       {name: 'Online Audience', url: '/audience'},
       {name: 'Mobile Audience', url: '/mobile-audience'},
       {name: 'TV Programs Rankings', url: '/program_rankings'},
-      {name: 'Lifestyle Segmentation', url: '/segmentation'},
+      {name: 'Region Segmentation', url: '/segmentation'},
       {name: 'Market <br/> Share', url: '/market_share'}
     ];
 
