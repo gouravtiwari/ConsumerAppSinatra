@@ -14,32 +14,36 @@
 			<span class='nodata' ng-show='noData'>Sorry! No data found</span>
 			<div class="productSearch">
 				
-				<div class="resultHolder" ng-show="prod_type=='description'">
-					<div class="product" ng-repeat="product in products">
-						<span class="productDesc">{{product.Description}}</span><br>
-						<b>Category:</b><span class="redFont"> {{product.Module}}</span> | <b>Rank:</b> {{product.Rank}}<br>
-						<button type='button' class='btn btn-success' ng-click='setData(product)'>Check Availablility</button>
+				<div ng-show="prod_type=='description'">
+					<div class="col-md-12 space" ng-repeat="product in products">
+						<div class='col-md-9'>
+							<span class="productDesc">{{product.Description}}</span><br>
+							<b>Category:</b><span class="redFont"> {{product.Module}}</span> | <b>Rank:</b> {{product.Rank}}<br>
+						</div>
+						<div class='col-md-3'>
+							<button type='button' class='btn btn-success' ng-click='setData(product)'>Check Availablility</button>
+						</div>
 					</div>
 				</div>
-				<div class="resultHolder" ng-repeat='data in product_detail' ng-show="prod_type=='code'">
-					<div class="product">
-						<b><span class="productDesc">{{data.Description}}</span></b><br>
-						<b>UPC:</b> {{data.UPC}}<br>
-						<b>Item Code:</b> {{data.Item_Code}}<br>
-						<b>Module:</b> {{data.Module}}<br>
-						<div class='check btn' ng-click='open()'>Check Availablility</div><br>
+				<div ng-repeat='data in product_detail' ng-show="prod_type=='code'">
+					<div class="col-md-12 space">
+						<div class='col-md-9'>
+							<span class="productDesc">{{data.Description}}</span><br>
+							<b>Module:</b><span class="redFont"> {{data.Module}}</span> | <b>UPC:</b> {{data.UPC}} | <b>Item Code:</b> {{data.Item_Code}}
+						</div>
+						<div class='col-md-3'>
+							<button type='button' class='btn btn-success' ng-click='open()'>Check Availablility</button>
+						</div>
 					</div>
 				</div>
 				<div ng-show='pageshow'>
 					<pagination total-items="totalItems" page="input.pageno" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" num-pages="numPages"></pagination>
 				</div>
 			</div>	
-
-
-			<h4 ng-hide='noData'>Products Health Lookup using UPC code:</h4>
-			<div class="resultHolder" >
-				<div class="product" >
-					<div ng-repeat='(k, v) in product_detail_characterstics[0] track by $index'>
+			<div class="col-md-12 space" >
+				<h4 ng-show="prod_type=='code'">More Details</h4>	
+				<div class='margin-button' ng-repeat='(k, v) in product_detail_characterstics[0] track by $index'>
+					<div class='col-md-3 more'>
 						<b><stringfilter dataval='{{k}}' filtertype='onlystring'></stringfilter></b>{{v}}
 					</div>
 				</div>

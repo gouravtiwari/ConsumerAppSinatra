@@ -1116,3 +1116,16 @@ text.textBottom{
 .margin-button{
   margin-top: 10px;
 }
+
+.space{
+  padding: 10px 0;
+  border-bottom: 1px dotted;
+}
+
+.resultHolder h4{
+  margin-top: 20px;
+}
+
+.more{
+  min-height: 70px;
+}
