@@ -13,6 +13,7 @@ angular.module('publicApp')
         },
 
         in_cache: function (base_url) {
+            $rootScope.noDataText = false;
             return this.cache[base_url] || null;
         },
 
@@ -66,6 +67,12 @@ angular.module('publicApp')
             } else {
                 promise = $http.get(url_calling).success(function(api_response){
                     window.recent_api_response = api_response
+                    if(api_response.Message){
+                        $rootScope.noDataText = true;
+                    }
+                    else{
+                        $rootScope.noDataText = false;
+                    }
                 });   
                 var that = this;
                 promise.success(function(api_data){
