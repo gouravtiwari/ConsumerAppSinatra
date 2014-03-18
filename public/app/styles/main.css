@@ -696,7 +696,7 @@ nav {
 div.tooltip {
     position: absolute;
     text-align: center;
-    line-height: 1;
+    line-height: 1.25;
     padding: 14px;
     background: rgba(0, 0, 0, 0.8);
     color: #fff;

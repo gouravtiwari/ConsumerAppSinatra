@@ -122,7 +122,7 @@ function donutTip(options){
                     div.transition()
                     .duration(200)
                     .style("opacity", 0.9);
-                    div.html(d.data.label + "<br><br> <span style='color:red'>"+ config.tipLabel + ": " + d[config.tipValue] + "</span>")
+                    div.html(d.data.label + "<br><span style='color:red'>"+ config.tipLabel + ": " + d[config.tipValue] + "</span>")
                     .style("left", (d3.event.pageX - 17) + "px")
                     .style("top", (d3.event.pageY - 140) + "px")
                     .style("z-index", 10000)
