@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('publicApp')
-  .controller('MainCtrl', function ($scope, $location, Data) {
+  .controller('MainCtrl', function ($scope, $location, Data, $rootScope) {
 
     $scope.navTiles = [
       {title: 'Product <br/> Finder', url: '/product_by_desc', img: 'icon_findProducts.png'},
@@ -81,7 +81,7 @@ angular.module('publicApp')
     }
 
     //BELOW OUTPUT MODEL MUST BE USED FOR ERROR/NOT FOUND MESSAGES
-    $scope.output = {};
+    $rootScope.output = {};
 
     //Expose Math Object for rounding in {{}}
     $scope.Math = window.Math;

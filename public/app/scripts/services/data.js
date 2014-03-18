@@ -69,16 +69,19 @@ angular.module('publicApp')
                     window.recent_api_response = api_response
                     if(api_response.Message){
                         $rootScope.noDataText = true;
+                        $rootScope.output.message = api_response.Message.errorMessage;
+                        console.log(api_response.Message.errorMessage)
                     }
                     else{
                         $rootScope.noDataText = false;
+                        $rootScope.output.message = '';
                     }
                 });   
                 var that = this;
                 promise.success(function(api_data){
                     if(base_url != '/api/bkg_progress') {
                         that.add_data_to_cache(url_calling, api_data);
-                        if(url_part){
+                        if(url_part && !api_data.Message){
                             that.add_to_recent_searches(url_part, param_path);
                         }
                     }
@@ -87,9 +90,8 @@ angular.module('publicApp')
              
             if(promise.error) {
                 promise.error(function(data, status){
-                    if(status == 303){
-                        console.log('Status 303, starting progress bar...')
-                        $rootScope.job_progress = true;
+                    if(status != 200){
+                        $rootScope.output.message = "Server not responding! Try after some time."
                     }
                 });
             }
