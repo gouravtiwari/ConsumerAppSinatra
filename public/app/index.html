@@ -54,7 +54,7 @@
             </li>
           </ul>
           <!-- left navigation-->
-          <div class="left-nav" ng-show="marketAnalysisSection(location)">
+          <div class="left-nav" ng-show="marketAnalysisSection(location) && location != '/'">
             <ul class="nav nav-tabs">
               <li>
                 <a href="#/compare" ng-class="(location == '/compare') ? 'selectedCompare' : 'notselectedCompare'">
