@@ -12,9 +12,8 @@
  		ng-options="field for field in sortByFields">
   </select>
   <h3 class="redFont">{{output.message}}</h3>
-  <br><br><br><br>
 	<!-- Result -->
-	<accordion close-others="true">
+	<accordion close-others="false">
 	  <accordion-group  heading="Statistics" is-open="true">
 			<div ng-repeat="app in AppDetails">
 				<div class="marginBottom" ng-show="$first">
@@ -81,7 +80,7 @@
 				</span>
 			</div>
 		</accordion-group>
-		<accordion-group  heading="Age Group" is-open="true">
+		<accordion-group  heading="Age Group" is-open="false">
 			<div ng-repeat="app in AppDetails">
 				<div class="marginBottom" ng-show="$first">
 					<span class="column vborder"
@@ -99,7 +98,7 @@
 				</span>
 			</div>
 		</accordion-group>
-		<accordion-group  heading="Income Group" is-open="true">
+		<accordion-group  heading="Income Group" is-open="false">
 			<div ng-repeat="app in AppDetails">
 				<div class="marginBottom" ng-show="$first">
 					<span class="column vborder"
@@ -117,7 +116,7 @@
 				</span>
 			</div>
 		</accordion-group>
-		<accordion-group  heading="Race Group" is-open="true">
+		<accordion-group  heading="Race Group" is-open="false">
 			<div ng-repeat="app in AppDetails">
 				<div class="marginBottom" ng-show="$first">
 					<span class="column vborder"
