@@ -260,8 +260,7 @@ nav {
 .headHover{
   border: 1px solid #ddd;
   border-radius: 4px;
-/*  zoom:1.5;
-*/  font-weight: bold;
+  font-weight: bold;
 }
 
 .head-data {
@@ -682,7 +681,9 @@ nav {
   background: aquamarine;
   border-radius: 5px;
 }
-
+.modal-content{
+  margin-top:20%;
+}
 .modal_store{
   height: 40px;
   background-color: #614b4e;
