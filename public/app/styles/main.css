@@ -1076,7 +1076,7 @@ text.textBottom{
   position: relative;
   float: left;
   width: 30px;
-  top: 40px;
+  top: 33px;
   left: -30px;
 }
 
@@ -1190,4 +1190,26 @@ text.textBottom{
 
 .main-view{
   top: 50px;
+}
+
+.selectcompare .active{
+  width: 0 !important; 
+  height: 0 !important; 
+  border-bottom: 15px solid transparent !important;  /* left arrow slant */
+  border-top: 15px solid transparent !important; /* right arrow slant */
+  border-left: 15px solid #098000 !important; /* bottom, add background color here */
+  font-size: 0 !important;
+  margin-top: 5px !important;
+  cursor: pointer !important;
+}
+
+.right-arrow{
+  width: 0; 
+  height: 0; 
+  border-bottom: 15px solid transparent;  /* left arrow slant */
+  border-top: 15px solid transparent; /* right arrow slant */
+  border-left: 15px solid #696758; /* bottom, add background color here */
+  font-size: 0;
+  margin-top: 5px;
+  cursor: pointer;
 }
