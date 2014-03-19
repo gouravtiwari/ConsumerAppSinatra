@@ -17,7 +17,7 @@
 		<input type="text" ng-model="input.state">
 	<b>Zip Code* : </b>
 	<input type="text" ng-model="input.zip">
-	<button class="search_btn btn" ng-click = "search(input)"><span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
+	<button class="search_btn btn" ng-click = "search(input)" ng-disabled="!input.segment || !input.addressline || !input.city || !input.zip"><span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
 	<b>Sort By :</b>
   <select class="feature" ng-model="sortBy"
     ng-options="field for field in sortByFields">
@@ -25,7 +25,7 @@
 	
 	<!-- Result -->
   <div class="resultHolder">
-  	<h3>{{output.message}}</h3>
+  	<h3 class="redFont">{{output.message}}</h3>
   	<div ng-repeat="segment in segments">
       <div ng-show="$first">
         <span class="column vborder">Segment Name</span>

@@ -87,6 +87,11 @@ angular.module('publicApp')
                         $rootScope.output.message = api_response.NetUsage.Status;
                         console.log(api_response.NetUsage.Status)
                     }
+                    else if(api_response.Segments.SegmentDetails.Description){
+                         $rootScope.noDataText = true;
+                        $rootScope.output.message = api_response.Segments.SegmentDetails.Description;
+                        console.log( api_response.Segments.SegmentDetails.Description)
+                    }
                     else{
                         $rootScope.noDataText = false;
                         $rootScope.output.message = '';

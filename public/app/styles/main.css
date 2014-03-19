@@ -650,7 +650,7 @@ nav {
   color: red;
 }
 .storeDetails{
-  display: none;
+ /* display: none;*/
 }
 .compare{
   margin-top: 20px;
