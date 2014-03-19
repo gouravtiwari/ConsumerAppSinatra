@@ -237,7 +237,6 @@ nav {
 
 .map-container {
   position: relative;
-  height: 600px;
   float: left;
   width: 69%;
   margin-left: 1%;
@@ -338,7 +337,7 @@ nav {
 }
 
 .angular-google-map-container {
-  height: 400px;
+  height: 550px;
 }
 
 .inputDesc {
