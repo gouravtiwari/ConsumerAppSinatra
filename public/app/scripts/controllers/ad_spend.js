@@ -2,97 +2,169 @@
 
 angular.module('publicApp')
   .controller('AdSpendCtrl', function ($scope, Data) {
-    $scope.$watch('ProductCategory', function() {
+    $scope.input.choices = ['brand','category'];
+    $scope.sortByFields = [];
+    $scope.$watch('categories', function() {
       $scope.doughnutsRedrawCategory();
     });
-    $scope.$watch('ProductBrand', function() {
-      $scope.doughnutsRedrawBrand();
-    });
-
+    $scope.search = function(){
+      var parameter_obj = {"choice": $scope.input.choice};
+      if (parameter_obj.choice == 'category') {
+        $scope.searchByCategory();
+      } else{
+        $scope.searchByBrand();
+      }; 
+    }
     $scope.searchByCategory = function(){
-      var parameter_obj = {"productcategory": $scope.input.category};
+      var parameter_obj = {"productcategory": $scope.input.searchCriteria};
       // Data.get_json('AdView/Product/v1/', parameter_obj).success(function(api_data){
       Data.get_local('scripts/jsons/adspend_by_category.json').success(function(api_data){
-        $scope.ProductCategory = api_data.AdViews.ProductCategory;
+        if(!api_data.AdViews.ProductCategory) {
+          $scope.output.message = "No Record found for the provided input";
+        } else {
+          $scope.output.message = '';
+          $scope.categoriesByCategory(api_data.AdViews.ProductCategory);
+
+          $scope.sortByFields = Data.fillSortByFields($scope.categories[0]);
+          Data.injectColorClass($scope.categories, $scope.sortByFields);
+        }
       }); 
     };
+
+    $scope.categoriesByCategory = function(productCategories){
+      $scope.categories = [];
+      for (var category = 0; category < productCategories.length; category++) {
+        for(var subcategory = 0; subcategory < productCategories[category].PCCSubGroup.length; subcategory++){
+          for (var adspend = 0; adspend < productCategories[category].PCCSubGroup[subcategory].AdSpend.length; adspend++) {
+            $scope.categories.push({
+              'CategoryName': productCategories[category].ProductCategoryName,
+              'SubCategoryName': productCategories[category].PCCSubGroup[subcategory].PCCSubGroupName,
+              'Brand': productCategories[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
+              'NetworkTVAdSpend': productCategories[category].PCCSubGroup[subcategory].AdSpend[adspend].NetworkTVAdSpend,
+              'SpotTVAdSpend': productCategories[category].PCCSubGroup[subcategory].AdSpend[adspend].SpotTVAdSpend,
+              'CableTVAdSpend': productCategories[category].PCCSubGroup[subcategory].AdSpend[adspend].CableTVAdSpend,
+              'SyndicatedTVAdSpend': productCategories[category].PCCSubGroup[subcategory].AdSpend[adspend].SyndicatedTVAdSpend,
+              'NationalMagazineAdSpend': productCategories[category].PCCSubGroup[subcategory].AdSpend[adspend].NationalMagazineAdSpend,
+              'NationalInternetAdSpend': productCategories[category].PCCSubGroup[subcategory].AdSpend[adspend].NationalInternetAdSpend
+            });
+          }
+        }
+      };
+    }
     
     $scope.searchByBrand = function(){
-      var parameter_obj = {"productbrand": $scope.input.brand};
-      Data.get_json('AdView/Brand/v1/', parameter_obj).success(function(api_data){
-      // Data.get_local('scripts/jsons/adspend_by_brand.json').success(function(api_data){
-        $scope.ProductBrand = api_data.AdSpend.Brand;
+      var parameter_obj = {"productbrand": $scope.input.searchCriteria};
+      // Data.get_json('AdView/Brand/v1/', parameter_obj).success(function(api_data){
+      Data.get_local('scripts/jsons/adspend_by_brand.json').success(function(api_data){
+        if(!api_data.AdSpend.Brand) {
+          $scope.output.message = "No Record found for the provided input";
+        } else {
+          $scope.output.message = '';
+          $scope.categoriesByBrand(api_data.AdSpend.Brand);
+        
+          $scope.sortByFields = Data.fillSortByFields($scope.categories[0]);
+          Data.injectColorClass($scope.categories, $scope.sortByFields);
+        }
       });
     };
 
+    $scope.categoriesByBrand = function (productBrands) {
+      $scope.categories = []
+      for (var brand = 0; brand < productBrands.length; brand++) {
+        for(var category = 0; category < productBrands[brand].ProductCategory.length; category++){
+          $scope.categories.push({
+            'CategoryName': productBrands[brand].ProductCategory[category].ProductCategoryName,
+            'SubCategoryName': productBrands[brand].ProductCategory[category].PCCSubgroup,
+            'Brand': productBrands[brand].BrandName,
+            'NetworkTVAdSpend': productBrands[brand].ProductCategory[category].NetworkTVAdSpend,
+            'SpotTVAdSpend': productBrands[brand].ProductCategory[category].SpotTVAdSpend,
+            'CableTVAdSpend': productBrands[brand].ProductCategory[category].CableTVAdSpend,
+            'SyndicatedTVAdSpend': productBrands[brand].ProductCategory[category].SyndicatedTVAdSpend,
+            'NationalMagazineAdSpend': productBrands[brand].ProductCategory[category].NationalMagazineAdSpend,
+            'NationalInternetAdSpend': productBrands[brand].ProductCategory[category].NationalInternetAdSpend
+          });
+        }
+      };
+    }
+
+    if($scope.viaRecentSearch) {
+      if(($scope.input.choice == 'category' && $scope.cache_response.AdViews && !$scope.cache_response.AdViews.ProductCategory) ||
+        ($scope.input.choice == 'brand' && $scope.cache_response.AdSpend && !$scope.cache_response.AdSpend.Brand)
+        ) {
+        $scope.output.message = "No Record found for the provided input";
+        $scope.netUsageData = '';
+      } else {
+        if($scope.input.choice == 'category'){
+          $scope.categories = $scope.categoriesByCategory($scope.cache_response.AdViews.ProductCategory);
+        }else{
+          $scope.categories = $scope.categoriesByBrand($scope.cache_response.AdSpend.Brand);
+        }
+        $scope.sortByFields = Data.fillSortByFields($scope.categories[0]);
+        Data.injectColorClass($scope.categories, $scope.sortByFields);
+        $scope.output.message = '';
+      }
+      $scope.viaRecentSearch = false;
+    }
+
+    $scope.$watch('cache_response', function(newValue, oldValue){
+      if(newValue == oldValue) { return; }
+      if($scope.cache_response.AdViews) {
+        if(!$scope.cache_response.AdViews.ProductCategory) {
+          $scope.output.message = "No Record found for the provided input";
+          $scope.netUsageData = '';
+        } else {
+          $scope.netUsageData = $scope.cache_response.AdViews.ProductCategory;
+          $scope.output.message = '';
+        }
+      } else {
+        if(!$scope.cache_response.AdSpend.Brand) {
+          $scope.output.message = "No Record found for the provided input";
+          $scope.netUsageData = '';
+        } else {
+          $scope.netUsageData = $scope.cache_response.AdSpend.Brand;
+          $scope.output.message = '';
+        }
+      }
+    });
+
+    $scope.$watch('sortBy', function(newvalue, oldvalue){
+      console.log(newvalue)
+      if(!newvalue || newvalue == oldvalue) return;
+      $scope.categories = Data.sortBy(newvalue, $scope.categories);
+    });
     $scope.doughnutsRedrawCategory = function(){
-      if($scope.ProductCategory != undefined && $scope.ProductCategory != null && $scope.ProductCategory.toString() != 'NaN'){
-        $scope.dataCategoryNetworkTVAdSpend = [];
-        $scope.dataCategorySpotTVAdSpend = [];
-        $scope.dataCategoryCableTVAdSpend = [];
-        $scope.dataCategoryNationalMagazineAdSpend = [];
-        $scope.dataCategorySyndicatedTVAdSpend = [];
-        $scope.dataCategoryNationalInternetAdSpend = [];
+      // if($scope.ProductCategory != undefined && $scope.ProductCategory != null && $scope.ProductCategory.toString() != 'NaN'){
+      //   $scope.dataCategoryNetworkTVAdSpend = [];
+      //   $scope.dataCategorySpotTVAdSpend = [];
+      //   $scope.dataCategoryCableTVAdSpend = [];
+      //   $scope.dataCategoryNationalMagazineAdSpend = [];
+      //   $scope.dataCategorySyndicatedTVAdSpend = [];
+      //   $scope.dataCategoryNationalInternetAdSpend = [];
 
-        for (var category = 0; category < $scope.ProductCategory.length; category++) {
-          for (var subcategory = 0; subcategory < $scope.ProductCategory[category].PCCSubGroup.length; subcategory++) {
-            for (var adspend = 0; adspend < $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend.length; adspend++) {
-              $scope.dataCategoryNetworkTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
-                                                'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].NetworkTVAdSpend
-                                              });
-              $scope.dataCategorySpotTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
-                                                'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].SpotTVAdSpend
-                                              });
-              $scope.dataCategoryCableTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
-                                                'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].CableTVAdSpend
-                                              });
-              $scope.dataCategoryNationalMagazineAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
-                                                'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].NationalMagazineAdSpend
-                                              });
-              $scope.dataCategorySyndicatedTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
-                                                'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].SyndicatedTVAdSpend
-                                              });
-              $scope.dataCategoryNationalInternetAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
-                                                'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].NationalInternetAdSpend
-                                              });
-            };
-          };
-        };
-      }
-    };
-
-    $scope.doughnutsRedrawBrand = function(){
-      if($scope.ProductBrand != undefined && $scope.ProductBrand != null && $scope.ProductBrand.toString() != 'NaN'){
-        $scope.dataBrandNetworkTVAdSpend = [];
-        $scope.dataBrandSpotTVAdSpend = [];
-        $scope.dataBrandCableTVAdSpend = [];
-        $scope.dataBrandNationalMagazineAdSpend = [];
-        $scope.dataBrandSyndicatedTVAdSpend = [];
-        $scope.dataBrandNationalInternetAdSpend = [];
-
-        for (var brand = 0; brand < $scope.ProductBrand.length; brand++) {
-          for (var category = 0; category < $scope.ProductBrand[brand].ProductCategory.length; category++) {
-            console.log($scope.ProductBrand[brand].ProductCategory);
-            $scope.dataBrandNetworkTVAdSpend.push({'label': $scope.ProductBrand[brand].ProductCategory[category].ProductCategoryName,
-                                              'value': $scope.ProductBrand[brand].ProductCategory[category].NetworkTVAdSpend
-                                            });
-            $scope.dataBrandSpotTVAdSpend.push({'label': $scope.ProductBrand[brand].ProductCategory[category].ProductCategoryName,
-                                              'value': $scope.ProductBrand[brand].ProductCategory[category].SpotTVAdSpend
-                                            });
-            $scope.dataBrandCableTVAdSpend.push({'label': $scope.ProductBrand[brand].ProductCategory[category].ProductCategoryName,
-                                              'value': $scope.ProductBrand[brand].ProductCategory[category].CableTVAdSpend
-                                            });
-            $scope.dataBrandNationalMagazineAdSpend.push({'label': $scope.ProductBrand[brand].ProductCategory[category].ProductCategoryName,
-                                              'value': $scope.ProductBrand[brand].ProductCategory[category].NationalMagazineAdSpend
-                                            });
-            $scope.dataBrandSyndicatedTVAdSpend.push({'label': $scope.ProductBrand[brand].ProductCategory[category].ProductCategoryName,
-                                              'value': $scope.ProductBrand[brand].ProductCategory[category].SyndicatedTVAdSpend
-                                            });
-            $scope.dataBrandNationalInternetAdSpend.push({'label': $scope.ProductBrand[brand].ProductCategory[category].ProductCategoryName,
-                                              'value': $scope.ProductBrand[brand].ProductCategory[category].NationalInternetAdSpend
-                                            });
-          };
-        };
-      }
+      //   for (var category = 0; category < $scope.ProductCategory.length; category++) {
+      //     for (var subcategory = 0; subcategory < $scope.ProductCategory[category].PCCSubGroup.length; subcategory++) {
+      //       for (var adspend = 0; adspend < $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend.length; adspend++) {
+      //         $scope.dataCategoryNetworkTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
+      //                                           'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].NetworkTVAdSpend
+      //                                         });
+      //         $scope.dataCategorySpotTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
+      //                                           'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].SpotTVAdSpend
+      //                                         });
+      //         $scope.dataCategoryCableTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
+      //                                           'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].CableTVAdSpend
+      //                                         });
+      //         $scope.dataCategoryNationalMagazineAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
+      //                                           'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].NationalMagazineAdSpend
+      //                                         });
+      //         $scope.dataCategorySyndicatedTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
+      //                                           'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].SyndicatedTVAdSpend
+      //                                         });
+      //         $scope.dataCategoryNationalInternetAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
+      //                                           'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].NationalInternetAdSpend
+      //                                         });
+      //       };
+      //     };
+      //   };
+      // }
     };
   });
