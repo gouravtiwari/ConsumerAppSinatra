@@ -14,8 +14,8 @@ angular.module('publicApp')
                             "demographies": $scope.input.demography
                           };
       // demographies=M2-11&originator=TURNER NEEDs to be added
-      // Data.get_json('NationalTV/v1/', parameter_obj).success(function(api_data){
-      Data.get_local('scripts/jsons/program_rankings.json').success(function(api_data){
+      Data.get_json('NationalTV/v1/', parameter_obj).success(function(api_data){
+      //Data.get_local('scripts/jsons/program_rankings.json').success(function(api_data){
         if(!api_data.NationalTVRanking.Programs) {
           $scope.output.message = "No Record found for the provided input";
           $scope.programs = [];

@@ -208,6 +208,7 @@ angular.module('publicApp')
     if($scope.viaRecentSearch) {
       if($scope.cache_response.StoreRefData){
         $scope.stores = $scope.cache_response.StoreRefData.Stores;
+        $(".storeDetails").css("display","inline-table");
       }
       $scope.viaRecentSearch = false;
     }
@@ -222,6 +223,7 @@ angular.module('publicApp')
         $scope.pageshow = true;
         $scope.totalItems = $scope.cache_response.Summary.TotalPages;
         $scope.maxSize = 10;
+        $(".storeDetails").css("display","inline-table");
         //$scope.cache_response = {};
       }
     });

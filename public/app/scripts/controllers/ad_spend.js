@@ -2,24 +2,26 @@
 
 angular.module('publicApp')
   .controller('AdSpendCtrl', function ($scope, Data) {
-    $scope.input.choices = ['brand','category'];
+    $scope.choices = ['brand','category'];
+    $scope.input.choice = $scope.input.choice || $scope.choices[1];
+    $scope.input.productcategory = $scope.input.productcategory || '';
+    $scope.input.productbrand = $scope.input.productbrand || '';
     $scope.sortByFields = [];
-    $scope.$watch('categories', function() {
-      $scope.doughnutsRedrawCategory();
-    });
+
     $scope.search = function(){
       var parameter_obj = {"choice": $scope.input.choice};
       if (parameter_obj.choice == 'category') {
         $scope.searchByCategory();
       } else{
+        $scope.input.productbrand = $scope.input.productcategory;
         $scope.searchByBrand();
       }; 
     }
     $scope.searchByCategory = function(){
       var parameter_obj = {"productcategory": $scope.input.searchCriteria};
-      // Data.get_json('AdView/Product/v1/', parameter_obj).success(function(api_data){
-      Data.get_local('scripts/jsons/adspend_by_category.json').success(function(api_data){
-        if(!api_data.AdViews.ProductCategory) {
+      Data.get_json('AdView/Product/v1/', parameter_obj).success(function(api_data){
+      // Data.get_local('scripts/jsons/adspend_by_category.json').success(function(api_data){
+        if(!api_data.AdViews || !api_data.AdViews.ProductCategory) {
           $scope.output.message = "No Record found for the provided input";
         } else {
           $scope.output.message = '';
@@ -54,9 +56,9 @@ angular.module('publicApp')
     
     $scope.searchByBrand = function(){
       var parameter_obj = {"productbrand": $scope.input.searchCriteria};
-      // Data.get_json('AdView/Brand/v1/', parameter_obj).success(function(api_data){
-      Data.get_local('scripts/jsons/adspend_by_brand.json').success(function(api_data){
-        if(!api_data.AdSpend.Brand) {
+      Data.get_json('AdView/Brand/v1/', parameter_obj).success(function(api_data){
+      // Data.get_local('scripts/jsons/adspend_by_brand.json').success(function(api_data){
+        if(!api_data.AdSpend || !api_data.AdSpend.Brand) {
           $scope.output.message = "No Record found for the provided input";
         } else {
           $scope.output.message = '';
@@ -95,12 +97,24 @@ angular.module('publicApp')
         $scope.netUsageData = '';
       } else {
         if($scope.input.choice == 'category'){
-          $scope.categories = $scope.categoriesByCategory($scope.cache_response.AdViews.ProductCategory);
+          if($scope.cache_response.AdViews){
+            $scope.categories = $scope.categoriesByCategory($scope.cache_response.AdViews.ProductCategory);
+            $scope.sortByFields = Data.fillSortByFields($scope.categories[0]);
+            Data.injectColorClass($scope.categories, $scope.sortByFields);
+          }else{
+            $scope.output.message = "No Record found for the provided input";
+            $scope.netUsageData = '';
+          }
         }else{
-          $scope.categories = $scope.categoriesByBrand($scope.cache_response.AdSpend.Brand);
+          if($scope.cache_response.AdSpend){
+            $scope.categories = $scope.categoriesByBrand($scope.cache_response.AdSpend.Brand);
+            $scope.sortByFields = Data.fillSortByFields($scope.categories[0]);
+            Data.injectColorClass($scope.categories, $scope.sortByFields);
+          }else{
+            $scope.output.message = "No Record found for the provided input";
+            $scope.netUsageData = '';
+          }
         }
-        $scope.sortByFields = Data.fillSortByFields($scope.categories[0]);
-        Data.injectColorClass($scope.categories, $scope.sortByFields);
         $scope.output.message = '';
       }
       $scope.viaRecentSearch = false;
@@ -132,39 +146,5 @@ angular.module('publicApp')
       if(!newvalue || newvalue == oldvalue) return;
       $scope.categories = Data.sortBy(newvalue, $scope.categories);
     });
-    $scope.doughnutsRedrawCategory = function(){
-      // if($scope.ProductCategory != undefined && $scope.ProductCategory != null && $scope.ProductCategory.toString() != 'NaN'){
-      //   $scope.dataCategoryNetworkTVAdSpend = [];
-      //   $scope.dataCategorySpotTVAdSpend = [];
-      //   $scope.dataCategoryCableTVAdSpend = [];
-      //   $scope.dataCategoryNationalMagazineAdSpend = [];
-      //   $scope.dataCategorySyndicatedTVAdSpend = [];
-      //   $scope.dataCategoryNationalInternetAdSpend = [];
 
-      //   for (var category = 0; category < $scope.ProductCategory.length; category++) {
-      //     for (var subcategory = 0; subcategory < $scope.ProductCategory[category].PCCSubGroup.length; subcategory++) {
-      //       for (var adspend = 0; adspend < $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend.length; adspend++) {
-      //         $scope.dataCategoryNetworkTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
-      //                                           'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].NetworkTVAdSpend
-      //                                         });
-      //         $scope.dataCategorySpotTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
-      //                                           'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].SpotTVAdSpend
-      //                                         });
-      //         $scope.dataCategoryCableTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
-      //                                           'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].CableTVAdSpend
-      //                                         });
-      //         $scope.dataCategoryNationalMagazineAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
-      //                                           'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].NationalMagazineAdSpend
-      //                                         });
-      //         $scope.dataCategorySyndicatedTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
-      //                                           'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].SyndicatedTVAdSpend
-      //                                         });
-      //         $scope.dataCategoryNationalInternetAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
-      //                                           'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].NationalInternetAdSpend
-      //                                         });
-      //       };
-      //     };
-      //   };
-      // }
-    };
   });
