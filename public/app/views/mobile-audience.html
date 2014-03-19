@@ -128,7 +128,7 @@
 				<span class="column cell fontTiny"><b>{{app.AppName}}</b></span>
 				<span class="column column-big cell">
 					<span class="bar{{$index}}" style="width:{{Math.round(v)}}%"
-						ng-repeat="(k, v) in app.RacePercentage track by $index" tooltip='{{k}}'>
+						ng-repeat="(k, v) in app.RacePercentage track by $index" tooltip='{{k | racefilter}}'>
 						{{Math.round(v)}}%
 					</span>
 				</span>
