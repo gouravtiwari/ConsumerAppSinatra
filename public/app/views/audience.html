@@ -18,15 +18,15 @@
       </h6>
     </div>
   </div>
-  <button class="search_btn btn" ng-click="search()"><span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
+  <button class="search_btn btn" ng-click="search()" ng-disabled="!input.numberofresults"><span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
   <b>Sort By :</b>
   <select class="feature" ng-model="sortBy"
     ng-options="field for field in sortByFields">
   </select>
-
+  <br><br>
+  <h3 class="redFont">{{output.message}}</h3>
   <!-- Result -->
   <div class="resultHolder">
-  	<h3>{{output.message}}</h3>
   	<div ng-repeat="site in netUsageData">
       <div ng-show="$first">
         <span class="column vborder" ng-class="{sorted: sortBy == 'WebsiteBrand'}">
