@@ -99,8 +99,13 @@ angular.module('publicApp')
         if($scope.input.productcategory){
           if($scope.cache_response.AdViews){
             $scope.categories = $scope.categoriesByCategory($scope.cache_response.AdViews.ProductCategory);
-            $scope.sortByFields = Data.fillSortByFields($scope.categories[0]);
-            Data.injectColorClass($scope.categories, $scope.sortByFields);
+            if($scope.categories){
+              $scope.sortByFields = Data.fillSortByFields($scope.categories[0]);
+              Data.injectColorClass($scope.categories, $scope.sortByFields);
+            }else{
+              $scope.output.message = "No Record found for the provided input";
+              $scope.netUsageData = '';  
+            }
           }else{
             $scope.output.message = "No Record found for the provided input";
             $scope.netUsageData = '';
@@ -108,8 +113,13 @@ angular.module('publicApp')
         }else{
           if($scope.cache_response.AdSpend){
             $scope.categories = $scope.categoriesByBrand($scope.cache_response.AdSpend.Brand);
-            $scope.sortByFields = Data.fillSortByFields($scope.categories[0]);
-            Data.injectColorClass($scope.categories, $scope.sortByFields);
+            if($scope.categories){
+              $scope.sortByFields = Data.fillSortByFields($scope.categories[0]);
+              Data.injectColorClass($scope.categories, $scope.sortByFields);
+            }else{
+              $scope.output.message = "No Record found for the provided input";
+              $scope.netUsageData = '';  
+            }
           }else{
             $scope.output.message = "No Record found for the provided input";
             $scope.netUsageData = '';
