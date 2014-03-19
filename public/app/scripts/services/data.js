@@ -205,7 +205,11 @@ angular.module('publicApp')
 
         sortBy: function(field, array){
           return _.sortBy(array, function(item){
-            return -parseFloat(item[field]);
+            if(!isNaN(parseFloat(item[field]))){
+                return -parseFloat(item[field]);
+            } else {
+                return item[field];
+            }
           });
         }
 
