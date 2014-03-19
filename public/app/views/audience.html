@@ -27,13 +27,27 @@
   	<h3>{{output.message}}</h3>
   	<div ng-repeat="site in netUsageData">
       <div ng-show="$first">
-        <span class="column vborder">Website Name</span>
-        <span class="column vborder">Unique Audience</span>
-        <span class="column vborder">Active Reach</span>
-        <span class="column vborder">Universe Reach</span>
-        <span class="column vborder">Total Sessions</span>
-        <span class="column vborder">Sessions/Person</span>
-        <span class="column vborder">Total Minutes</span>
+        <span class="column vborder" ng-class="{sorted: sortBy == 'WebsiteBrand'}">
+          Website Name
+        </span>
+        <span class="column vborder" ng-class="{sorted: sortBy == 'UniqueAudience'}">
+          Unique Audience
+        </span>
+        <span class="column vborder" ng-class="{sorted: sortBy == 'ActiveReach'}">
+          Active Reach
+        </span>
+        <span class="column vborder" ng-class="{sorted: sortBy == 'UniverseReach'}">
+          Universe Reach
+        </span>
+        <span class="column vborder" ng-class="{sorted: sortBy == 'TotalSessions'}">
+          Total Sessions
+        </span>
+        <span class="column vborder" ng-class="{sorted: sortBy == 'SessionsPerPerson'}">
+          Sessions/Person
+        </span>
+        <span class="column vborder" ng-class="{sorted: sortBy == 'TotalMinutes'}">
+          Total Minutes
+        </span>
       </div>
       <div>
         <span class="column cell fontTiny"><b>{{site.WebsiteBrand}}</b></span>
