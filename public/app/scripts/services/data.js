@@ -133,6 +133,10 @@ angular.module('publicApp')
           else 
           if(url_split[0] == 'AdView'){
             url_split[0]  = 'Ad Spend';
+          }
+          else 
+          if(url_split[0] == 'NationalTV'){
+            url_split[0]  = 'TV Programs Ranking';
           } 
           else 
           if(url_split[0] == 'NetView'){
@@ -176,7 +180,8 @@ angular.module('publicApp')
           'Online Audience': '/audience',
           'Stores' : '/store_by_name',
           'TopTen': '/top_ten',
-          'Ad Spend': '/ad_spend'
+          'Ad Spend': '/ad_spend',
+          'TV Programs Ranking': '/program_rankings'
         },
 
         fillSortByFields: function(viewObject){
