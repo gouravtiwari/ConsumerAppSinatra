@@ -4,13 +4,14 @@ angular.module('publicApp')
   .controller('GoogleMapsCtrl', function ($scope, Data) {
 	  $scope.map = {
 	    center: {
-	        "latitude": 29.79,
-          "longitude": -95.194
+	        "latitude": Data.get_search_data().lat,
+          "longitude": Data.get_search_data().long
 	    },
 	    zoom: 12
 		};
 		var parameter_obj = Data.get_search_data();
-    
+    //$scope.map.center.latitude = parameter_obj.lat;
+    //$scope.map.center.longitude = parameter_obj.long;
     //Data.get_local('scripts/jsons/product_availability.json').success(function(api_data){
     Data.get_json('StoreAvailability/v1', parameter_obj).success(function(api_data){
       $scope.locations = [];
@@ -30,9 +31,6 @@ angular.module('publicApp')
         	    $scope.locations.push(position);
           }
         }
-        $scope.map.center.latitude = position.latitude;
-        $scope.map.center.longitude = position.longitude;
       }  
-      console.log($scope.map)
     });
   });
