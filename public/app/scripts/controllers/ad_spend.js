@@ -2,7 +2,10 @@
 
 angular.module('publicApp')
   .controller('AdSpendCtrl', function ($scope, Data) {
-    $scope.input.choices = ['brand','category'];
+    $scope.choices = ['brand','category'];
+    $scope.input.choice = $scope.input.choice || $scope.choices[1];
+    $scope.input.productcategory = $scope.input.productcategory || '';
+    $scope.input.productbrand = $scope.input.productbrand || '';
     $scope.sortByFields = [];
     $scope.$watch('categories', function() {
       $scope.doughnutsRedrawCategory();
@@ -12,13 +15,14 @@ angular.module('publicApp')
       if (parameter_obj.choice == 'category') {
         $scope.searchByCategory();
       } else{
+        $scope.input.productbrand = $scope.input.productcategory;
         $scope.searchByBrand();
       }; 
     }
     $scope.searchByCategory = function(){
-      var parameter_obj = {"productcategory": $scope.input.searchCriteria};
-      // Data.get_json('AdView/Product/v1/', parameter_obj).success(function(api_data){
-      Data.get_local('scripts/jsons/adspend_by_category.json').success(function(api_data){
+      var parameter_obj = {"productcategory": $scope.input.productcategory};
+      Data.get_json('AdView/Product/v1/', parameter_obj).success(function(api_data){
+      //Data.get_local('scripts/jsons/adspend_by_category.json').success(function(api_data){
         if(!api_data.AdViews.ProductCategory) {
           $scope.output.message = "No Record found for the provided input";
         } else {
@@ -53,9 +57,9 @@ angular.module('publicApp')
     }
     
     $scope.searchByBrand = function(){
-      var parameter_obj = {"productbrand": $scope.input.searchCriteria};
-      // Data.get_json('AdView/Brand/v1/', parameter_obj).success(function(api_data){
-      Data.get_local('scripts/jsons/adspend_by_brand.json').success(function(api_data){
+      var parameter_obj = {"productbrand": $scope.input.productbrand};
+      Data.get_json('AdView/Brand/v1/', parameter_obj).success(function(api_data){
+      //Data.get_local('scripts/jsons/adspend_by_brand.json').success(function(api_data){
         if(!api_data.AdSpend.Brand) {
           $scope.output.message = "No Record found for the provided input";
         } else {
