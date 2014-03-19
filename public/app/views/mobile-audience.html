@@ -13,90 +13,126 @@
   </select>
   <br><br><br><br>
 	<!-- Result -->
-	<div ng-repeat="app in AppDetails">
-		<div class="marginBottom" ng-show="$first">
-			<span class="column vborder rotate60"
-				ng-class="{sorted: sortBy == 'AppName'}">
-				App<br>Name
-			</span>
-			<span class="column column70 vborder rotate60"
-				ng-class="{sorted: sortBy == 'UniqueAudience'}">
-				Unique<br>Audience
-			</span>
-			<span class="column column70 vborder rotate60"
-				ng-class="{sorted: sortBy == 'ActiveReach'}">
-				Active<br>Reach
-			</span>
-			<span class="column column70 vborder rotate60"
-				ng-class="{sorted: sortBy == 'TotalDurationMin'}">
-				Total<br>Duration
-			</span>
-			<span class="column column70 vborder rotate60"
-				ng-class="{sorted: sortBy == 'TotalVisits'}">
-				Total<br>Visits
-			</span>
-			<span class="column column70 vborder rotate60"
-				ng-class="{sorted: sortBy == 'VisitsPerPerson'}">
-				Visits/<br>Person
-			</span>
-			<span class="column column70 vborder rotate60"
-				ng-class="{sorted: sortBy == 'TimePerPerson'}">
-				Time/<br>Person
-			</span>
-			<span class="column vborder rotate60"
-				ng-class="{sorted: sortBy == 'MalePercentage' || sortBy == 'FemalePercentage'}">
-				Male<br>Female %
-			</span>
-			<span class="column vborder rotate60">Age<br>Groups%</span>
-			<span class="column vborder rotate60">Income<br>Groups%</span>
-			<span class="column vborder rotate60">Race %</span>
-		</div>
-		<div>
-			<span class="column cell fontTiny"><b>{{app.AppName}}</b></span>
-			<span class="column column70 cell {{app.UniqueAudienceClass}}">
-				{{app.UniqueAudience | unitCon}}
-			</span>
-			<span class="column column70 cell {{app.ActiveReachClass}}">
-				{{app.ActiveReach}}
-			</span>
-			<span class="column column70 cell {{app.TotalDurationMinClass}}">
-				{{app.TotalDurationMin | unitCon}}
-			</span>
-			<span class="column column70 cell {{app.TotalVisitsClass}}">
-				{{app.TotalVisits | unitCon}}
-			</span>
-			<span class="column column70 cell {{app.VisitsPerPersonClass}}">
-				{{app.VisitsPerPerson}}
-			</span>
-			<span class="column column70 cell {{app.TimePerPersonMinClass}}">
-				{{app.TimePerPersonMin}}
-			</span>
-			<span class="column cell">
-				<span class="bar0" style="width:{{Math.round(app.MalePercentage)}}%">
-					{{Math.round(app.MalePercentage)}}%
+	<accordion close-others="true">
+	  <accordion-group  heading="Statistics" is-open="true">
+			<div ng-repeat="app in AppDetails">
+				<div class="marginBottom" ng-show="$first">
+					<span class="column vborder rotate60"
+						ng-class="{sorted: sortBy == 'AppName'}">
+						App<br>Name
+					</span>
+					<span class="column column70 vborder rotate60"
+						ng-class="{sorted: sortBy == 'UniqueAudience'}">
+						Unique<br>Audience
+					</span>
+					<span class="column column70 vborder rotate60"
+						ng-class="{sorted: sortBy == 'ActiveReach'}">
+						Active<br>Reach
+					</span>
+					<span class="column column70 vborder rotate60"
+						ng-class="{sorted: sortBy == 'TotalDurationMin'}">
+						Total<br>Duration
+					</span>
+					<span class="column column70 vborder rotate60"
+						ng-class="{sorted: sortBy == 'TotalVisits'}">
+						Total<br>Visits
+					</span>
+					<span class="column column70 vborder rotate60"
+						ng-class="{sorted: sortBy == 'VisitsPerPerson'}">
+						Visits/<br>Person
+					</span>
+					<span class="column column70 vborder rotate60"
+						ng-class="{sorted: sortBy == 'TimePerPerson'}">
+						Time/<br>Person
+					</span>
+					<span class="column vborder rotate60"
+						ng-class="{sorted: sortBy == 'MalePercentage' || sortBy == 'FemalePercentage'}">
+						Male<br>Female %
+					</span>
+				</div>
+			
+				<span class="column cell fontTiny"><b>{{app.AppName}}</b></span>
+				<span class="column column70 cell {{app.UniqueAudienceClass}}">
+					{{app.UniqueAudience | unitCon}}
 				</span>
-				<span class="bar1" style="width:{{Math.round(app.FemalePercentage)}}%">
-					{{Math.round(app.FemalePercentage)}}%
+				<span class="column column70 cell {{app.ActiveReachClass}}">
+					{{app.ActiveReach}}
 				</span>
-			</span>
-			<span class="column cell">
-				<span class="bar{{$index}}" style="width:{{Math.round(v)}}%" 
-					ng-repeat="(k, v) in app.AgeBreakPercentage track by $index">
-					{{Math.round(v)}}%
+				<span class="column column70 cell {{app.TotalDurationMinClass}}">
+					{{app.TotalDurationMin | unitCon}}
 				</span>
-			</span>
-			<span class="column cell">
-				<span class="bar{{$index}}" style="width:{{Math.round(v)}}%"
-					ng-repeat="(k, v) in app.IncomePercentage_in_Dollar track by $index">
-					{{Math.round(v)}}%
+				<span class="column column70 cell {{app.TotalVisitsClass}}">
+					{{app.TotalVisits | unitCon}}
 				</span>
-			</span>
-			<span class="column cell">
-				<span class="bar{{$index}}" style="width:{{Math.round(v)}}%"
-					ng-repeat="(k, v) in app.RacePercentage track by $index">
-					{{Math.round(v)}}%
+				<span class="column column70 cell {{app.VisitsPerPersonClass}}">
+					{{app.VisitsPerPerson}}
 				</span>
-			</span>
-		</div>
-	</div>
+				<span class="column column70 cell {{app.TimePerPersonMinClass}}">
+					{{app.TimePerPersonMin}}
+				</span>
+				<span class="column column-split cell">
+					<span class="bar0" style="width:{{Math.round(app.MalePercentage)}}%" tooltip='Male'>
+						{{Math.round(app.MalePercentage)}}%
+					</span>
+					<span class="bar1" style="width:{{Math.round(app.FemalePercentage)}}%" tooltip='Female'>
+						{{Math.round(app.FemalePercentage)}}%
+					</span>
+				</span>
+			</div>
+		</accordion-group>
+		<accordion-group  heading="Age Group" is-open="true">
+			<div ng-repeat="app in AppDetails">
+				<div class="marginBottom" ng-show="$first">
+					<span class="column vborder rotate60"
+						ng-class="{sorted: sortBy == 'AppName'}">
+						App<br>Name
+					</span>
+					<span class="column vborder rotate60">Age<br>Groups%</span>
+				</div>
+				<span class="column cell fontTiny"><b>{{app.AppName}}</b></span>
+				<span class="column column-big cell">
+					<span class="bar{{$index}}" style="width:{{Math.round(v)}}%" 
+						ng-repeat="(k, v) in app.AgeBreakPercentage track by $index" tooltip='{{k | agefilter}} | {{v}}%'>
+						{{Math.round(v)}}%
+					</span>
+				</span>
+			</div>
+		</accordion-group>
+		<accordion-group  heading="Income Group" is-open="true">
+			<div ng-repeat="app in AppDetails">
+				<div class="marginBottom" ng-show="$first">
+					<span class="column vborder rotate60"
+						ng-class="{sorted: sortBy == 'AppName'}">
+						App<br>Name
+					</span>
+					<span class="column vborder rotate60">Income<br>Groups%</span>
+				</div>
+				<span class="column cell fontTiny"><b>{{app.AppName}}</b></span>
+				<span class="column column-big cell">
+					<span class="bar{{$index}}" style="width:{{Math.round(v)}}%"
+						ng-repeat="(k, v) in app.IncomePercentage_in_Dollar track by $index" tooltip='{{k | incomefilter}} | {{v}}%'>
+						{{Math.round(v)}}%
+					</span>
+				</span>
+			</div>
+		</accordion-group>
+		<accordion-group  heading="Race Group" is-open="true">
+			<div ng-repeat="app in AppDetails">
+				<div class="marginBottom" ng-show="$first">
+					<span class="column vborder rotate60"
+						ng-class="{sorted: sortBy == 'AppName'}">
+						App<br>Name
+					</span>
+					<span class="column vborder rotate60">Race<br>Groups%</span>
+				</div>
+				<span class="column cell fontTiny"><b>{{app.AppName}}</b></span>
+				<span class="column column-big cell">
+					<span class="bar{{$index}}" style="width:{{Math.round(v)}}%"
+						ng-repeat="(k, v) in app.RacePercentage track by $index" tooltip='{{k}}'>
+						{{Math.round(v)}}%
+					</span>
+				</span>
+			</div>
+		</accordion-group>
+	</accordion>		
 </div>
