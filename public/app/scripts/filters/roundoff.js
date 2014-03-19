@@ -17,10 +17,10 @@ angular.module('publicApp')
       	data = parseFloat(data/1000).toFixed(2) + 'K';
       }
       else if(data>=1000000 && data<10000000000){
-      	data = parseFloat(data/1000000).toFixed(2) + 'M';
+      	data = parseFloat(data/10000000).toFixed(2) + 'M';
       }
       else{
-      	data = parseFloat(data/1000000000).toFixed(2) + 'B';
+      	data = parseFloat(data/10000000000).toFixed(2) + 'B';
       }
       return data;
     };

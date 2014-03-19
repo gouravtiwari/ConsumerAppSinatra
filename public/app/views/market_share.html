@@ -1,24 +1,5 @@
 <div  class="market-analysis-section col-md-12">
-<h2>Market Share by Manufacturer</h2>
-<!--
-<div>
-  <form novalidate class="simple-form">
-    <input type="text" ng-model="category" placeholder="Category Name"><br><br>
-    <input type="text" ng-model="market" placeholder="Market Name"><br><br>
-    <input type="text" ng-model="period" placeholder="Period"><br><br>
-    <input type="text" ng-model="manufacturer" placeholder="manufacturer"><br><br>
-    Top results<br>
-    <input type="text" ng-model="top" placeholder="10"><br><br>
-    <input type="checkbox" ng-model="private_label" checked="checked"> Private Label<br><br>
-    Page Size <br>
-    <input type="text" ng-model="page_size" placeholder="10"><br><br>
-    Page Number<br>
-    <input type="text" ng-model="page_number" placeholder="1"><br><br>
-    <button type="button" ng-click="search()">Search</button><br><br>
-  </form>
-</div>
--->
-<br>
+<h2>Market Share by Manufacturer</h2><br>
   <div class="resultHolder col-md-6">
     <div class="period" ng-repeat="period in periods">
       Period: <b><span>{{period.Period}}</span></b><br>
@@ -27,10 +8,10 @@
         <div class="category" ng-repeat="category in market.Category">
           Category: <span>{{category.CategoryName}}</span><br><br>
           <div class="manufacturer" ng-repeat="manufacturer in category.Manufacturer">
-            Manufacturer: <span>{{manufacturer.ManufacturerName}}</span><br>
-            Total Sales Dollar: <span>{{manufacturer.TotalSalesDollar}}</span><br>
-            Total Units Sold: <span>{{manufacturer.TotalUnitsSold}}</span><br>
-            Dollar Share Percentage: <span>{{manufacturer.DollarSharePercentage}}</span><br><br>
+            <b>Manufacturer:</b> <span>{{manufacturer.ManufacturerName}}</span><br>
+            <b>Total Sales Dollar:</b> <span>{{manufacturer.TotalSalesDollar}}</span><br>
+            <b>Total Units Sold:</b> <span>{{manufacturer.TotalUnitsSold}}</span><br>
+            <b>Dollar Share Percentage:</b> <span>{{manufacturer.DollarSharePercentage}}</span><br><br>
           </div>
         </div>
       </div>
@@ -40,6 +21,8 @@
   <div class="col-md-6">
     <select ng-model="input.category" placeholder="Select Category"
     ng-options="category for category in categories"></select>
-    <summarychart chart-id="chosenStat"></summarychart>
+    <div class='margin-button'>
+      <summarychart chart-id="chosenStat"></summarychart>
+    </div>
   </div>
 </div>
