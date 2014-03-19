@@ -3,20 +3,19 @@
   <h2>National TV Program Ratings</h2>
   <b># of TV Programs* :</b>
   <input type="number" ng-model="input.numberofresults" ng-required />
-  <b>Demography:</b>
+  <b>Demography*:</b>
   <select ng-model="input.demography" ng-options="demography for demography in demographies">
   </select>
   <!-- <input type="text" ng-model="input.demography" /> -->
-  <button class="search_btn btn" ng-click="search()"><span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
+  <button class="search_btn btn" ng-click="search()" ng-disabled="!input.numberofresults || !input.demography"><span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
   <b>Sort By :</b>
   <select class="feature" ng-model="sortBy" ng-options="field for field in sortByFields">
   </select>
-
+  <h3 class="redFont">{{output.message}}</h3>
   <div class="clear"></div>
   <!-- Result -->
     <!-- Result -->
   <div class="resultHolder left">
-    <h3>{{output.message}}</h3>
     <div ng-repeat="program in programs">
       <div ng-show="$first">
         <span class="column90 vborder" ng-class="{sorted: sortBy == 'ProgramName'}">

@@ -15,6 +15,7 @@
     </div>
   </div>
   <div class='row col-md-6 margin-button'>
+    <h3 class="redFont">{{output.message}}</h3>
     <div class='col-md-12 top_ten' ng-repeat='item in items'>
       <div class='col-md-12' ng-repeat="(k, v) in item track by $index">
         <b>{{k}}: </b>{{v}} <br>

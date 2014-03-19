@@ -14,7 +14,7 @@
       </div>
 
       <div class='left' style="">
-        <button ng-click="search()" class="search_btn btn left"><span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
+        <button ng-click="search()" class="search_btn btn left" ng-disabled="!input.productcategory"><span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
       </div>
       <div class="left" style="padding: 5px;">
         <b style="padding: 5px;">Sort By :</b>
@@ -25,11 +25,11 @@
 	</div>
   <div class="clear"></div>
   <h6><em>(categories e.g. toothbrush, toothpaste OR brands e.g. aveeno)</em></h6>
+  <h3 class="redFont">{{output.message}}</h3>
   <div class='clear'></div>
   <div class="clear"></div>
 	<!-- Result -->
   <div class="resultHolder left">
-    <h3>{{output.message}}</h3>
     <div ng-repeat="category in categories">
       <div ng-show="$first">
         <span class="column vborder">Category</span>

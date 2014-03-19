@@ -6,11 +6,12 @@
  		ng-options="platform for platform in input.platforms">
   </select>
   <b># of Top Apps * :</b> <input type="number" ng-model="input.noofresults" ng-required />
-  <button class="search_btn btn" ng-click="search()"><span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
+  <button class="search_btn btn" ng-click="search()" ng-disabled="!input.platform || !input.noofresults"><span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
   <b>Sort By :</b>
 	<select class="feature" ng-model="sortBy"
  		ng-options="field for field in sortByFields">
   </select>
+  <h3 class="redFont">{{output.message}}</h3>
   <br><br><br><br>
 	<!-- Result -->
 	<accordion close-others="true">
