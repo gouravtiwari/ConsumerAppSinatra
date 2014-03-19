@@ -2,28 +2,30 @@
 	<!-- Inputs -->
 	<h2>Find out Ad Spend</h2>
   <div>
-    <input type="text" ng-model="input.searchCriteria" class="inputDesc left">
+    <div class='left'>
+      <input type="text" ng-model="input.searchCriteria" class="ng-pristine ng-valid" style="width:350px;">
+    </div>
 		<div class='left'>
-      <b class='left' style="height: 50px;padding: 10px 0;">Category/Brand:</b>
-      <div class='left' style="height: 50px;padding: 10px 0;">
+      <b class='left' style="padding: 5px;">Category/Brand:</b>
+      <div class='left' style="padding: 5px;">
         <select ng-model="input.choice" ng-required
         ng-options="choice for choice in input.choices" class="left">
       </select>
       </div>
-      <div class='left' style="height: 50px;padding: 5px 2px;">
-        <button ng-click="search()" class="btn left brn-small">Search</button>
+      <div class='left' style="">
+        <button ng-click="search()" class="btn left">Search</button>
+      </div>
+      <div class="left" style="padding: 5px;">
+        <b style="padding: 5px;">Sort By :</b>
+        <select class="feature" ng-model="sortBy" ng-options="field for field in sortByFields" style="padding: 5px;">
+        </select>
       </div>
     </div>
 	</div>
   <div class="clear"></div>
   <h6><em>(categories e.g. toothbrush, toothpaste OR brands e.g. aveeno)</em></h6>
   <div class='clear'></div>
-  <div class="left">
-    <b>Sort By :</b>
-    <select class="feature" ng-model="sortBy" ng-options="field for field in sortByFields">
-    </select>
-  </div>
-	<div class="clear"></div>
+  <div class="clear"></div>
 	<!-- Result -->
   <div class="resultHolder left">
     <h3>{{output.message}}</h3>
