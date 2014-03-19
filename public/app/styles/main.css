@@ -1251,9 +1251,16 @@ text.textBottom{
 
 select{
   height: 27px !important;
-  margin-top: -5px !important;
 }
 
 .margin-left{
   margin-left: 10px;
+}
+
+select.left{
+  margin-top: -5px;
+}
+
+.left select{
+  margin-top: -5px; 
 }
