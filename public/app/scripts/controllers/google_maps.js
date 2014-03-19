@@ -2,7 +2,8 @@
 
 angular.module('publicApp')
   .controller('GoogleMapsCtrl', function ($scope, Data) {
-	  $scope.map = {
+	  $scope.haveOutlets = false;
+    $scope.map = {
 	    center: {
 	        "latitude": Data.get_search_data().lat,
           "longitude": Data.get_search_data().long
@@ -17,7 +18,7 @@ angular.module('publicApp')
       $scope.locations = [];
       $scope.retailers = [];
       var iconNo = 0;
-      if(api_data.Product.Availability.AvailabilityStatus != "No Record found for the provided input"){
+      if(api_data.Product.Availability[0].AvailabilityStatus != "No Record found for the provided input"){
         for(var i=0; i<api_data.Product.Availability.length; i++){
           $scope.haveOutlets = true;
         	for(var j=0; j<api_data.Product.Availability[i].Retailer.length; j++){
