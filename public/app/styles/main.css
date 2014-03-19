@@ -13,10 +13,8 @@ header {
   padding: 5px;
   font-size: 26px;
   line-height: 30px;
-  background: -webkit-linear-gradient(to bottom left, #6c5948, #000,#4a5f5c);
-  background: -o-linear-gradient(to bottom left, #6c5948, #000,#4a5f5c);
-  background: -moz-linear-gradient(to bottom left, #6c5948, #000,#4a5f5c);
-  background: linear-gradient(to bottom left, #6c5948, #000,#4a5f5c);
+  background: url('../images/headerIcon.jpg');
+  background-size: 100% 100%;
   color: #fff;
 }
 .logo{
@@ -24,7 +22,6 @@ header {
   position: absolute;
   width: 220px;
   height: 100px;
-  margin-top: -39px;
   z-index: 10000;
 }
 .main_nav{
@@ -170,8 +167,7 @@ nav {
   width: 160px;
   height: 160px;
   border-radius: 4px;
-  font-size: 22px;
-  font-style: italic;
+  font-size: 16px;
   background: rgba(0,0,0,.4);
   color: #fff;
   display: table;
@@ -1076,7 +1072,7 @@ text.textBottom{
   position: relative;
   float: left;
   width: 30px;
-  top: 40px;
+  top: 33px;
   left: -30px;
 }
 
@@ -1190,4 +1186,26 @@ text.textBottom{
 
 .main-view{
   top: 50px;
+}
+
+.selectcompare .active{
+  width: 0 !important; 
+  height: 0 !important; 
+  border-bottom: 15px solid transparent !important;  /* left arrow slant */
+  border-top: 15px solid transparent !important; /* right arrow slant */
+  border-left: 15px solid #098000 !important; /* bottom, add background color here */
+  font-size: 0 !important;
+  margin-top: 5px !important;
+  cursor: pointer !important;
+}
+
+.right-arrow{
+  width: 0; 
+  height: 0; 
+  border-bottom: 15px solid transparent;  /* left arrow slant */
+  border-top: 15px solid transparent; /* right arrow slant */
+  border-left: 15px solid #696758; /* bottom, add background color here */
+  font-size: 0;
+  margin-top: 5px;
+  cursor: pointer;
 }
