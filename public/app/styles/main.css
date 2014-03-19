@@ -950,7 +950,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
 .left-nav li:hover {
-  background: rgba(255, 255, 0, .7);
+  background: rgba(100, 50, 200, .6);
 }
 
 .left-nav li a{
@@ -967,7 +967,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
 .left-nav li a.selectedCompare, .left-nav li a.notselectedCompare:hover{
-  background: #fc0 url('../images/icon_compare.png') no-repeat;
+  background: rgba(100, 50, 200, .8) url('../images/icon_compare.png') no-repeat;
   background-position: -45px 0;
 }
 .left-nav li a.notselectedCompare, .left-nav li a.notselectedCompare:hover{
@@ -975,7 +975,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   background-position: -45px 0;
 }
 .left-nav li a.selectedRecommender, .left-nav li a.selectedRecommender:hover{
-  background: #fc0 url('../images/icon_Recommender.png') no-repeat;
+  background: rgba(100, 50, 200, .8) url('../images/icon_Recommender.png') no-repeat;
   background-position: -55px 0;
 }
 .left-nav li a.notselectedRecommender, .left-nav li a.notselectedRecommender:hover{
@@ -983,7 +983,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   background-position: -55px 0;
 }
 .left-nav li a.selectedTopTen, .left-nav li a.selectedTopTen:hover{
-  background: #fc0 url('../images/icon_topten.png') no-repeat;
+  background: rgba(100, 50, 200, .8) url('../images/icon_topten.png') no-repeat;
   background-position: -50px 0;
 }
 .left-nav li a.notselectedTopTen, .left-nav li a.notselectedTopTen:hover{
