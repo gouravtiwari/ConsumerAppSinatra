@@ -23,17 +23,19 @@ angular.module('publicApp')
           if (!scope.val) {
             return;
           }
+          console.log(scope.val.animate);
           donutTip({
                     selector: selector, 
                     data: scope.val,
                     totalLabel: $("doughnut[chart-id='"+attrs.chartId+"']").attr('totalLabel'),
-                    width: 500,
-                    height: 480,
-                    innerRadius: 90,
-                    outerRadius: 180,
-                    legend: true,
+                    width: parseInt(scope.val.width),
+                    height: parseInt(scope.val.height),
+                    innerRadius: parseInt(scope.val.innerRadius),
+                    outerRadius: parseInt(scope.val.outerRadius),
+                    legend: scope.val.legend,
                     tipLabel: scope.val.tipLabel,
-                    tipLabelUnit: scope.val.tipLabelUnit
+                    tipLabelUnit: scope.val.tipLabelUnit,
+                    animate: scope.val.animate
                   });
         });
       }

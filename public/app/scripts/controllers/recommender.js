@@ -244,7 +244,13 @@ angular.module('publicApp')
                         'outputColor': '#000000',
                         'outputValueColor': '#45C0B6',
                         'tipLabel': 'Score',
-                        'tipLabelUnit': '%'
+                        'tipLabelUnit': '%',
+                        'legend': true,
+                        'width': 480,
+                        'height': 480,
+                        'innerRadius': 90,
+                        'outerRadius': 180,
+                        'animate': true
                       };
         for (var i = 0; i < $scope.recommenderDoughnut.length; i++) {
           console.log($scope.totalUsers);
