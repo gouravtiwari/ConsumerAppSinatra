@@ -22,7 +22,6 @@ header {
   position: absolute;
   width: 220px;
   height: 100px;
-  margin-top: -39px;
   z-index: 10000;
 }
 .main_nav{

@@ -137,6 +137,10 @@ angular.module('publicApp')
           else 
           if(url_split[0] == 'NationalTV'){
             url_split[0]  = 'TV Programs Ranking';
+          }
+          else 
+          if(url_split[0] == 'MyBestSegments'){
+            url_split[0]  = 'Region Segmentation';
           } 
           else 
           if(url_split[0] == 'NetView'){
@@ -181,7 +185,8 @@ angular.module('publicApp')
           'Stores' : '/store_by_name',
           'TopTen': '/top_ten',
           'Ad Spend': '/ad_spend',
-          'TV Programs Ranking': '/program_rankings'
+          'TV Programs Ranking': '/program_rankings',
+          'Region Segmentation': '/segmentation'
         },
 
         fillSortByFields: function(viewObject){
