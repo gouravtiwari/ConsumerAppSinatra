@@ -6,7 +6,9 @@ angular.module('publicApp')
     $scope.sortBy = 'US_AA_PERC';
     $scope.demographies = ['M2-11'];
     $scope.$watch('programs', function() {
-      $scope.doughnutRedraw();
+      if($scope.programs){
+        $scope.doughnutRedraw();
+      }
     });
     $scope.search = function(){
       var parameter_obj = {
@@ -33,10 +35,15 @@ angular.module('publicApp')
         $scope.output.message = "No Record found for the provided input";
         $scope.netUsageData = '';
       } else {
-        $scope.programs = $scope.cache_response.NationalTVRanking.Programs;
-        $scope.sortByFields = Data.fillSortByFields($scope.programs[0]);
-        Data.injectColorClass($scope.programs, $scope.sortByFields);
-        $scope.output.message = '';
+        if($scope.cache_response.NationalTVRanking && $scope.cache_response.NationalTVRanking.Programs){
+          $scope.programs = $scope.cache_response.NationalTVRanking.Programs;
+          $scope.sortByFields = Data.fillSortByFields($scope.programs[0]);
+          Data.injectColorClass($scope.programs, $scope.sortByFields);
+          $scope.output.message = '';
+        }else{
+          $scope.output.message = "No Record found for the provided input";
+          $scope.netUsageData = '';
+        }
 
       }
       $scope.viaRecentSearch = false;
