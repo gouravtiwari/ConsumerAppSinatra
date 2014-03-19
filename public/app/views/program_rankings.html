@@ -21,8 +21,18 @@
     </div>
   </div>
   <div class="left">
-    <doughnut chart-id="programRankingDoughnut" val="data" totalLabel="Projected Audience"></doughnut>
+    <div>
+      <div ng-hide="true" ng-show="totalUSProjection != 0 && totalUSProjection != undefined">
+        Total Projected Audience: {{totalUSProjection}}!
+      </div>
+      <div class="help-text" ng-hide="true" ng-show="totalUSProjection != 0 && totalUSProjection != undefined">
+        (You can spend more on TV Program Ads with comparatively larger audience)<br>
+        (Ranks are based on US AA ratings)
+      </div>
+    </div>
+    <div>
+      <doughnut chart-id="programRankingDoughnut" val="data" totalLabel="Projected Audience"></doughnut>
+    </div>
   </div>
-  
   
 </div>

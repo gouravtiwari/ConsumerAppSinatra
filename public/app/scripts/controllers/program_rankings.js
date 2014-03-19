@@ -19,14 +19,25 @@ angular.module('publicApp')
     };
 
     $scope.doughnutRedraw = function(){
+      $scope.totalUSProjection = 0;
       if($scope.programs != undefined && $scope.programs != null && $scope.programs.toString() != 'NaN'){
-        $scope.data = [];
+        $scope.data = { 'list': [], 
+                        'output': '',
+                        'value': '',
+                        'outputColor': '#000000',
+                        'outputValueColor': '#45C0B6',
+                        'tipLabel': 'Projected Audience',
+                        'tipLabelUnit': ''
+                      };
         for (var i = 0; i < $scope.programs.length; i++) {
-          $scope.data[i] = {'label': '#'+i+'. '+$scope.programs[i].ProgramName +
-                                      ", Originator: " + $scope.programs[i].Originator +
-                                      ", AA %: " + $scope.programs[i].US_AA_PERC,
-
-                            'value': $scope.programs[i].USProjection};
+          $scope.data.list[i] = {'label': '#'+(i+1)+'. '+$scope.programs[i].ProgramName + '<br>' + 
+                                      "Originator: " + $scope.programs[i].Originator + '<br>' +
+                                      "US AA %: " + $scope.programs[i].US_AA_PERC,
+                            'value': parseInt($scope.programs[i].USProjection)};
+          console.log(parseInt($scope.programs[i].USProjection));
+          console.log(i);
+          console.log($scope.totalUSProjection);
+          $scope.totalUSProjection = $scope.totalUSProjection + parseInt($scope.programs[i].USProjection);
         };
       }
     };
