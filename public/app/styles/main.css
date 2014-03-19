@@ -383,6 +383,14 @@ nav {
   width: 70px;
 }
 
+.column90 {
+  width: 90px;
+  min-width: 90px;
+  display: inline-block;
+  text-align: center;
+  font-size: 15px;
+}
+
 .vborder {
   border-bottom: 1px solid #000;
   border-left: 5px solid lightskyblue;
