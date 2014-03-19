@@ -775,6 +775,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   background-color:#614b4e;
   height: 50px;
   color: white; 
+  padding-top: 5px;
 }
 .search_bar select{
   margin-left: 2%;
@@ -792,6 +793,9 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 .search_btn{
   color: black;
   background-color: #ffc740;
+  padding: 0 5px !important;
+  height: 27px;
+  margin-top: -1px;
 }
 .storeDetails thead{
   background-color: #e0d4d6;
