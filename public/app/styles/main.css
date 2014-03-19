@@ -261,8 +261,7 @@ nav {
 .headHover{
   border: 1px solid #ddd;
   border-radius: 4px;
-/*  zoom:1.5;
-*/  font-weight: bold;
+  font-weight: bold;
 }
 
 .head-data {
@@ -383,8 +382,8 @@ nav {
 .column {
   width: 75px;
   display: inline-block;
-  text-align: center;
-  font-size: 15px;
+  text-align: left;
+  font-size: 12px;
 }
 
 @media(min-width: 1260px) {
@@ -418,12 +417,12 @@ nav {
   min-width: 90px;
   display: inline-block;
   text-align: center;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .vborder {
   border-bottom: 1px solid #000;
-  border-left: 5px solid lightskyblue;
+  padding-left: 5px;
   font-weight: bold;
 }
 
@@ -433,12 +432,12 @@ nav {
   overflow: hidden;
   color: #fff;
   line-height: 28px;
+  text-align: center;
 }
 
 .cell span {
   float: left;
   display: inline-block;
-  font-size: 11px;
   line-height: 25px;
   height: 100%;
 }
@@ -700,7 +699,9 @@ nav {
   background: aquamarine;
   border-radius: 5px;
 }
-
+.modal-content{
+  margin-top:20%;
+}
 .modal_store{
   height: 40px;
   background-color: #614b4e;
@@ -886,7 +887,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
 .marginBottom {
-  margin-bottom: 60px;
+  margin-bottom: 0px;
 }
 
 .fontTiny {
