@@ -126,7 +126,11 @@ angular.module('publicApp')
           if(url_split[0] == 'EMM'){
             url_split[0]  = 'Mobile Audience on ';
             recentSearch.input.platform = url_split[2];
-          } else 
+          } else
+          if(url_split[0] == 'TopTen'){
+            recentSearch.input.categoryName = url_split[2];
+          } 
+          else 
           if(url_split[0] == 'NetView'){
             url_split[0]  = 'Online Audience';
           }
@@ -136,7 +140,7 @@ angular.module('publicApp')
           else if(url_split[0] == 'Products'){
             recentSearch.input.prod_type= $rootScope.prod_type;
             }
-          recentSearch.api = url_split[0] + (url_split[2] ? url_split[2] : '');
+          recentSearch.api = url_split[0] + (url_split[2] ? ' ' + url_split[2] : '');
           
           for (var input in param_path){
             if(input == 'pageno') continue;
@@ -145,6 +149,7 @@ angular.module('publicApp')
           recentSearch.cache_url = this.get_query_url(url_part, param_path);
           recentSearch.location = this.locations[url_split[0]];
           this.recent_searches.push(recentSearch);
+          console.log('$$$$$$$$$$ RECENT SEARCHES $$$$$$$$$$$$$');
           console.log(this.recent_searches);
         },
         
@@ -165,7 +170,8 @@ angular.module('publicApp')
           'Mobile Audience on ': '/mobile-audience',
           'Products': '/product_by_desc',
           'Online Audience': '/audience',
-          'Stores' : '/store_by_name'
+          'Stores' : '/store_by_name',
+          'TopTen': '/top_ten'
         },
 
         fillSortByFields: function(viewObject){
