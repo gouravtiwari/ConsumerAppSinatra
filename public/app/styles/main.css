@@ -261,8 +261,7 @@ nav {
 .headHover{
   border: 1px solid #ddd;
   border-radius: 4px;
-/*  zoom:1.5;
-*/  font-weight: bold;
+  font-weight: bold;
 }
 
 .head-data {
@@ -560,12 +559,13 @@ nav {
 .recentSearchInclude {
   position: absolute;
   right: 0;
+  top: 50px;
   width: 550px;
   height: 0;
-  background: rgba(0,0,0,.5);
+  background: rgba(0,0,0,.7);
   transition: height .3s;
   -webkit-transition: height .3s;
-  z-index: 10000;
+  z-index: 100000;
   overflow: hidden;
 }
 
@@ -699,7 +699,9 @@ nav {
   background: aquamarine;
   border-radius: 5px;
 }
-
+.modal-content{
+  margin-top:20%;
+}
 .modal_store{
   height: 40px;
   background-color: #614b4e;
