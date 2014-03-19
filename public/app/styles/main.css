@@ -775,6 +775,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   background-color:#614b4e;
   height: 50px;
   color: white; 
+  padding-top: 5px;
 }
 .search_bar select{
   margin-left: 2%;
