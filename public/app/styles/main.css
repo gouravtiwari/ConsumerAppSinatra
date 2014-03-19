@@ -1104,6 +1104,7 @@ text.textBottom{
   font-size: 14px;
   color: blue;
   text-align: center;
+  font-style: italic;
 }
 
 /* google map autocomplete */
