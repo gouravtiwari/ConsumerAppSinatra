@@ -650,7 +650,7 @@ nav {
   color: red;
 }
 .storeDetails{
-  display: none;
+ /* display: none;*/
 }
 .compare{
   margin-top: 20px;
@@ -1247,4 +1247,13 @@ text.textBottom{
   background: url(../images/icon_mktShare.png) no-repeat; 
   background-color:rgba(0,0,0,.4);
   background-position: -240% 30%;
+}
+
+select{
+  height: 27px !important;
+  margin-top: -5px !important;
+}
+
+.margin-left{
+  margin-left: 10px;
 }

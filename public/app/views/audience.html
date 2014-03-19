@@ -1,15 +1,15 @@
 <div class="market-analysis-section">
   <h2>Online Audience</h2>
   <!-- Inputs -->
-  <div class='left'>
+  <div class='left margin-left'>
     <b># of Top Websites* :</b>
     <input type="number" ng-model="input.numberofresults" ng-required />
   </div>
-  <div class='left'>
-    <div class='left'>
+  <div class='left margin-left'>
+    <div class='left margin-left'>
       <b>Website Category:</b>
     </div>
-    <div class='left'>
+    <div class='left margin-left'>
       <input type="text" ng-model="input.websitecategory" />
       <h6>
         <em>
@@ -18,9 +18,9 @@
       </h6>
     </div>
   </div>
-  <button class="search_btn btn" ng-click="search()" ng-disabled="!input.numberofresults"><span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
-  <b>Sort By :</b>
-  <select class="feature" ng-model="sortBy"
+  <button class="search_btn btn margin-left" ng-click="search()" ng-disabled="!input.numberofresults"><span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
+  <span class='margin-left'><b>Sort By :</b></span>
+  <select class="feature margin-left" ng-model="sortBy"
     ng-options="field for field in sortByFields">
   </select>
   <br><br>
