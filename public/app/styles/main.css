@@ -939,6 +939,11 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   width: 100%;
   border-bottom: 1px solid #ccc;
 }
+
+.left-nav li:hover {
+  background: rgba(255, 255, 0, .7);
+}
+
 .left-nav li a{
   border-radius: 0px;
   border: none;
