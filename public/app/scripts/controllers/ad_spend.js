@@ -132,39 +132,6 @@ angular.module('publicApp')
       if(!newvalue || newvalue == oldvalue) return;
       $scope.categories = Data.sortBy(newvalue, $scope.categories);
     });
-    $scope.doughnutsRedrawCategory = function(){
-      // if($scope.ProductCategory != undefined && $scope.ProductCategory != null && $scope.ProductCategory.toString() != 'NaN'){
-      //   $scope.dataCategoryNetworkTVAdSpend = [];
-      //   $scope.dataCategorySpotTVAdSpend = [];
-      //   $scope.dataCategoryCableTVAdSpend = [];
-      //   $scope.dataCategoryNationalMagazineAdSpend = [];
       //   $scope.dataCategorySyndicatedTVAdSpend = [];
-      //   $scope.dataCategoryNationalInternetAdSpend = [];
 
-      //   for (var category = 0; category < $scope.ProductCategory.length; category++) {
-      //     for (var subcategory = 0; subcategory < $scope.ProductCategory[category].PCCSubGroup.length; subcategory++) {
-      //       for (var adspend = 0; adspend < $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend.length; adspend++) {
-      //         $scope.dataCategoryNetworkTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
-      //                                           'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].NetworkTVAdSpend
-      //                                         });
-      //         $scope.dataCategorySpotTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
-      //                                           'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].SpotTVAdSpend
-      //                                         });
-      //         $scope.dataCategoryCableTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
-      //                                           'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].CableTVAdSpend
-      //                                         });
-      //         $scope.dataCategoryNationalMagazineAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
-      //                                           'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].NationalMagazineAdSpend
-      //                                         });
-      //         $scope.dataCategorySyndicatedTVAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
-      //                                           'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].SyndicatedTVAdSpend
-      //                                         });
-      //         $scope.dataCategoryNationalInternetAdSpend.push({'label': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].Brand,
-      //                                           'value': $scope.ProductCategory[category].PCCSubGroup[subcategory].AdSpend[adspend].NationalInternetAdSpend
-      //                                         });
-      //       };
-      //     };
-      //   };
-      // }
-    };
   });
