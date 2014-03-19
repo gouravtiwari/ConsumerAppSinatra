@@ -2,10 +2,12 @@
 
 body {
   font-family: 'Century Gothic';
-  overflow: hidden;
 }
 
 header {
+  position: fixed;
+  width: 100%;
+  z-index: 100000;
   height: 50px;
   padding: 5px;
   font-size: 26px;
@@ -485,7 +487,6 @@ nav {
   position:absolute;
   width: 100%;
   min-height: 750px;
-  overflow: scroll;
   background-color: #edf1f2;
 }
  
@@ -926,7 +927,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 
 /* market analysis left navigation - begin*/
 .left-nav{
-  top: 45px;
+  top: 50px;
   left: 0;
   position: absolute;
   width: 125px;
@@ -1167,4 +1168,12 @@ text.textBottom{
 
 .sorted {
   background: rgba(100, 50, 200, .7);
+}
+
+.main-view{
+  top: 50px;
+}
+
+.row{
+  background-color: #edf1f2;
 }
