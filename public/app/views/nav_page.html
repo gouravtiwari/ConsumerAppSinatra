@@ -2,7 +2,7 @@
 	<div class="landingPage">
 		<nav>
 			<div class="navTile" ng-repeat="tile in navTiles" ng-click="go(tile.url)">
-				<img class="tileIcon" src="images/{{tile.img}}" />
+				<img class="tileIcon" src="images/{{tile.img}}" style="height: 100px; width: 100px;" />
 				<span class="tileTitle1" ng-bind-html-unsafe="tile.title"></span>
 			</div>
 		</nav>

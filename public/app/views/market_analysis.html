@@ -3,6 +3,7 @@
 		<nav>
 			<div class="navTile {{analysis.class}}" ng-repeat="analysis in analyses"
 				ng-click="go(analysis.url)"	>
+				<img class="tileIcon" src="images/{{tile.img}}" style="height: 100px; width: 100px;" />
 				<span class="tileTitle" ng-bind-html-unsafe="analysis.name"></span>
 			</div>
 		</nav>

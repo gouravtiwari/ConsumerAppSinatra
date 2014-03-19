@@ -13,10 +13,8 @@ header {
   padding: 5px;
   font-size: 26px;
   line-height: 30px;
-  background: -webkit-linear-gradient(to bottom left, #6c5948, #000,#4a5f5c);
-  background: -o-linear-gradient(to bottom left, #6c5948, #000,#4a5f5c);
-  background: -moz-linear-gradient(to bottom left, #6c5948, #000,#4a5f5c);
-  background: linear-gradient(to bottom left, #6c5948, #000,#4a5f5c);
+  background: url('../images/headerIcon.jpg');
+  background-size: 100% 100%;
   color: #fff;
 }
 .logo{
@@ -170,8 +168,7 @@ nav {
   width: 160px;
   height: 160px;
   border-radius: 4px;
-  font-size: 22px;
-  font-style: italic;
+  font-size: 16px;
   background: rgba(0,0,0,.4);
   color: #fff;
   display: table;
