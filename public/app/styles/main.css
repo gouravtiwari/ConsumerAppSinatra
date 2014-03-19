@@ -1248,3 +1248,12 @@ text.textBottom{
   background-color:rgba(0,0,0,.4);
   background-position: -240% 30%;
 }
+
+select{
+  height: 27px !important;
+  margin-top: -5px !important;
+}
+
+.margin-left{
+  margin-left: 10px;
+}
