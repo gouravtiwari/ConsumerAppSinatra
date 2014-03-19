@@ -153,9 +153,14 @@ angular.module('publicApp')
             recentSearch.input.select_type = $rootScope.select;
           }
           else if(url_split[0] == 'Products'){
-            recentSearch.input.prod_type= $rootScope.prod_type;
-            }
-          recentSearch.api = url_split[0] + (url_split[2] != 'v1' ? ' ' + url_split[2] : '');
+            recentSearch.input.prod_type = $rootScope.prod_type;
+          }
+          
+          recentSearch.api = url_split[0];
+          
+          if(url_split[2] && url_split[2] != 'v1'){
+            recentSearch.api = recentSearch.api + ' ' + url_split[2];
+          }
           
           for (var input in param_path){
             if(input == 'pageno') continue;
