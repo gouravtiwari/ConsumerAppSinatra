@@ -82,8 +82,11 @@ angular.module('publicApp')
                         $rootScope.noDataText = true;
                         $rootScope.output.message = api_response;
                         console.log($rootScope.output.message)
+                    }else if(api_response.NetUsage){
+                        $rootScope.noDataText = true;
+                        $rootScope.output.message = api_response.NetUsage.Status;
+                        console.log(api_response.NetUsage.Status)
                     }
-
                     else{
                         $rootScope.noDataText = false;
                         $rootScope.output.message = '';

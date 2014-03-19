@@ -16,7 +16,7 @@
 					<button type='submit' class='search_btn btn' ng-click='by_name()' ng-disabled="myForm.$invalid" > <span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
 				</form>
 				<!-- <span class="error">{{status_name}}</span><br> -->
-				<h3>{{output.message}}</h3>
+				<h3 class="redFont">{{output.message}}</h3>
 			</div>
 			<div class="search_form" ng-show="input.select_type=='Owner Name'">
 				<form name="myForm_owner">
@@ -24,7 +24,7 @@
 					<button type='submit' class='search_btn btn' ng-click='by_owner()' ng-disabled="myForm_owner.$invalid"><span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
 				</form>
 				<!-- <span class="error">{{status_owner}}</span><br> -->
-				<h3>{{output.message}}</h3>
+				<h3 class="redFont">{{output.message}}</h3>
 			</div>
 			<div class="search_form" ng-show="input.select_type=='Market'">
 				<form name="myForm_market">
@@ -35,7 +35,7 @@
 					<button type='submit' class='search_btn btn' ng-click='by_market()'ng-disabled="!input.scantrackcode && !input.marketcode && !input.indicator"><span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
 				</form>
 				<!-- <span class="error">{{status_market}}</span><br> -->
-				<h3>{{output.message}}</h3>
+				<h3 class="redFont">{{output.message}}</h3>
 				
 			</div>
 			<div class="search_form" ng-show="input.select_type=='Location'">
@@ -48,8 +48,9 @@
 					<input type="text" ng-model="input.radius" placeholder="Radius"><br><br>
 					<button type='submit' class='search_btn btn' ng-click='by_location()' ng-disabled="!input.latitude && !input.longtitude &&!input.statefipscode && !input.city && !input.streetaddress && !input.radius"><span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
 				</form>
-				<!-- <span class="error">{{status_loc}}</span><br> -->
-				<h3>{{output.message}}</h3>
+
+<!-- 				<span class="error">{{status_loc}}</span><br>
+ -->				<h3 class="redFont">{{output.message}}</h3>
 			</div>
 			<div class="search_form" ng-show="input.select_type=='Size'">
 				<form name="myForm_size">
@@ -57,9 +58,9 @@
 					<input type="text" ng-model="input.sellingspacearea" placeholder="Selling space area">	
 					<button type='submit' class='search_btn btn' ng-click='by_size()' ng-disabled="!input.sizecode && !input.sellingspacearea"><span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
 				</form>
-				<span class="error">{{status_size}}</span><br>
+<!-- 				<span class="error">{{status_size}}</span><br>-->
+				<h3 class="redFont">{{output.message}}</h3>
 			</div>
-
 			<br>
 			<div class="resultHolder">
 				<table class="table table-striped table-bordered storeDetails">
