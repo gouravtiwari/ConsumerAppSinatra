@@ -4,8 +4,8 @@ angular.module('publicApp')
   .controller('AdSpendCtrl', function ($scope, Data) {
     $scope.choices = ['brand','category'];
     $scope.input.choice = $scope.input.choice || $scope.choices[1];
-    // $scope.input.productcategory = $scope.input.productcategory || '';
-    // $scope.input.productbrand = $scope.input.productbrand || '';
+    $scope.input.productcategory = $scope.input.productcategory || '';
+    $scope.input.productbrand = $scope.input.productbrand || '';
     $scope.sortByFields = [];
 
     $scope.search = function(){
@@ -13,12 +13,12 @@ angular.module('publicApp')
       if (parameter_obj.choice == 'category') {
         $scope.searchByCategory();
       } else{
-        // $scope.input.productbrand = $scope.input.productcategory;
+        $scope.input.productbrand = $scope.input.productcategory;
         $scope.searchByBrand();
       }; 
     }
     $scope.searchByCategory = function(){
-      var parameter_obj = {"productcategory": $scope.input.searchCriteria};
+      var parameter_obj = {"productcategory": $scope.input.productcategory};
       Data.get_json('AdView/Product/v1/', parameter_obj).success(function(api_data){
       // Data.get_local('scripts/jsons/adspend_by_category.json').success(function(api_data){
         if(!api_data.AdViews || !api_data.AdViews.ProductCategory) {
@@ -55,7 +55,7 @@ angular.module('publicApp')
     }
     
     $scope.searchByBrand = function(){
-      var parameter_obj = {"productbrand": $scope.input.searchCriteria};
+      var parameter_obj = {"productbrand": $scope.input.productbrand};
       Data.get_json('AdView/Brand/v1/', parameter_obj).success(function(api_data){
       // Data.get_local('scripts/jsons/adspend_by_brand.json').success(function(api_data){
         if(!api_data.AdSpend || !api_data.AdSpend.Brand) {
@@ -90,13 +90,13 @@ angular.module('publicApp')
     }
 
     if($scope.viaRecentSearch) {
-      if(($scope.input.choice == 'category' && $scope.cache_response.AdViews && !$scope.cache_response.AdViews.ProductCategory) ||
-        ($scope.input.choice == 'brand' && $scope.cache_response.AdSpend && !$scope.cache_response.AdSpend.Brand)
+      if(($scope.input.productcategory && $scope.cache_response.AdViews && !$scope.cache_response.AdViews.ProductCategory) ||
+        ($scope.input.productbrand && $scope.cache_response.AdSpend && !$scope.cache_response.AdSpend.Brand)
         ) {
         $scope.output.message = "No Record found for the provided input";
         $scope.netUsageData = '';
       } else {
-        if($scope.input.choice == 'category'){
+        if($scope.input.productcategory){
           if($scope.cache_response.AdViews){
             $scope.categories = $scope.categoriesByCategory($scope.cache_response.AdViews.ProductCategory);
             $scope.sortByFields = Data.fillSortByFields($scope.categories[0]);
