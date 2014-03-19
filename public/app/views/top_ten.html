@@ -1,19 +1,27 @@
 <div class='col-md-12 market-analysis-section'>
   <h2>Search Categories by their name:</h2>
-  <span>Select Category</span><br>
-  <select ng-model="categoryName" ng-options="category for category in categories"></select><br>
-  <span>Select Sub Category</span><br>
-  <select ng-model="subCategoryName" ng-options="sub.SubCategoryName for sub in subCategories"></select><br>
-  <span>Select Demography</span><br>
-  <select ng-model="demography" ng-options="sub.DemographyName for sub in demographies"></select><br>
-  <div class='row col-md-6'>
+  <div class='col-md-12'>
+    <div class='col-md-3'>
+      <span>Select Category</span><br>
+      <select ng-model="categoryName" ng-options="category for category in categories"></select>
+    </div>
+    <div class='col-md-3'>
+      <span>Select Sub Category</span><br>
+      <select ng-model="subCategoryName" ng-options="sub.SubCategoryName for sub in subCategories"></select>
+    </div>
+    <div class='col-md-3'>
+      <span>Select Demography</span><br>
+      <select ng-model="demography" ng-options="sub.DemographyName for sub in demographies"></select>
+    </div>
+  </div>
+  <div class='row col-md-6 margin-button'>
     <div class='col-md-12 top_ten' ng-repeat='item in items'>
       <div class='col-md-12' ng-repeat="(k, v) in item track by $index">
         <b>{{k}}: </b>{{v}} <br>
       </div>
     </div>
   </div>
-  <div class='row col-md-6'>
+  <div class='row col-md-6 margin-button'>
     <div ng-hide="categoryName == 'Music' || categoryName == 'Twitter TV'">
       <summarychart chart-id="chosenStat"></summarychart>
     </div>

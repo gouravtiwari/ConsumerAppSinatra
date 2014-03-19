@@ -26,6 +26,7 @@ angular.module('publicApp')
               if ($scope.subCategories[i].Demographies[j].DemographyName == $scope.demography.DemographyName){
                 $scope.items = $scope.subCategories[i].Demographies[j].Items;
                 if($scope.categoryName != 'Music' || $scope.categoryName != 'Twitter TV'){
+                  console.log($scope.items)
                   plot_graph($scope.items);
                 }
               }

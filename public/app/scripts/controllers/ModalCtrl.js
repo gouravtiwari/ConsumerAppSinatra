@@ -7,8 +7,16 @@ angular.module('publicApp')
     $scope.radioModel = 'CurrentLocation'
     $scope.view = true;
     $scope.haveData = 'false';
+    
     $scope.setGeoLocation = function(){
-    	getLocation();
+    	window.navigator.geolocation.getCurrentPosition(function(position) {
+            $scope.$apply(function() {
+                $scope.geolocation = {'lat': position.coords.latitude, 'long': position.coords.longitude};
+                $scope.haveData = 'true';       
+            });
+        }, function(error) {
+            alert(error);
+        });
     }
 
     $scope.viewChange = function(type){
@@ -40,19 +48,6 @@ angular.module('publicApp')
             $scope.setCustomLocation($scope.location.split(',')[0],$scope.location.split(',')[1])
         }
     };
-
-    function getLocation(){
-	    if (navigator.geolocation){
-	      navigator.geolocation.getCurrentPosition(showPosition);
-	    }
-	    else{
-	      x.innerHTML="Geolocation is not supported by this browser.";
-	    }
-	  }
-
-	  function showPosition(position){
-	    $scope.geolocation = {'lat': position.coords.latitude, 'long': position.coords.longitude};    
-	    $scope.haveData = 'true';   
-      }
+	    
   });
 
