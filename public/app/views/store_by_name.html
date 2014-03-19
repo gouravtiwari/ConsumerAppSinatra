@@ -15,14 +15,16 @@
 					<input type="text" name="input" ng-model="input.storeName" required placeholder="Enter Store name">*
 					<button type='submit' class='search_btn btn' ng-click='by_name()' ng-disabled="myForm.$invalid" > <span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
 				</form>
-				<span class="error">{{status_name}}</span><br>
+				<!-- <span class="error">{{status_name}}</span><br> -->
+				<h3>{{output.message}}</h3>
 			</div>
 			<div class="search_form" ng-show="input.select_type=='Owner Name'">
 				<form name="myForm_owner">
 					<input type="text" name="input" ng-model="input.ownerName" required placeholder="Enter Owner name">
 					<button type='submit' class='search_btn btn' ng-click='by_owner()' ng-disabled="myForm_owner.$invalid"><span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
 				</form>
-				<span class="error">{{status_owner}}</span><br>
+				<!-- <span class="error">{{status_owner}}</span><br> -->
+				<h3>{{output.message}}</h3>
 			</div>
 			<div class="search_form" ng-show="input.select_type=='Market'">
 				<form name="myForm_market">
@@ -32,7 +34,8 @@
 					<select ng-options="obj for obj in indicators" ng-model="input.indicator"></select>
 					<button type='submit' class='search_btn btn' ng-click='by_market()'ng-disabled="!input.scanTrackCode && !input.marketCode && !input.indicator"><span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
 				</form>
-				<span class="error">{{status_market}}</span><br>
+				<!-- <span class="error">{{status_market}}</span><br> -->
+				<h3>{{output.message}}</h3>
 				
 			</div>
 			<div class="search_form" ng-show="input.select_type=='Location'">
@@ -46,6 +49,7 @@
 					<button type='submit' class='search_btn btn' ng-click='by_location()' ng-disabled="!input.lat && !input.lng &&!input.stateFIPS && !input.city && !input.streetaddr && !input.radius"><span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
 				</form>
 				<span class="error">{{status_loc}}</span><br>
+				<h3>{{output.message}}</h3>
 			</div>
 			<div class="search_form" ng-show="input.select_type=='Size'">
 				<form name="myForm_size">
