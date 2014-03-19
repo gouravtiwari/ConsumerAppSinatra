@@ -22,7 +22,6 @@ header {
   position: absolute;
   width: 220px;
   height: 100px;
-  margin-top: -39px;
   z-index: 10000;
 }
 .main_nav{
@@ -177,7 +176,7 @@ nav {
 }
 
 .navTile:hover {
-  background: rgba(255, 255, 0, .6);
+  background-color: rgba(255, 255, 0, .6);
 }
 .tileIcon {
   width: 80px;
@@ -190,6 +189,7 @@ nav {
 .tileTitle {
   vertical-align: middle;
   display: table-cell;
+  padding-top: 100px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -1209,4 +1209,35 @@ text.textBottom{
   font-size: 0;
   margin-top: 5px;
   cursor: pointer;
+}
+
+.icon_aspendd{
+  background: url(../images/icon_aspendd.png) no-repeat;
+  background-color:rgba(0,0,0,.4);
+  background-position: -240% 30%;
+}
+.icon_onlineAudience{
+  background: url(../images/icon_onlineAudience.png) no-repeat; 
+  background-color:rgba(0,0,0,.4);
+  background-position: -240% 30%;
+}
+.icon_mobileAudience{
+  background: url(../images/icon_mobileAudience.png) no-repeat; 
+  background-color:rgba(0,0,0,.4);
+  background-position: -240% 30%;
+}
+.icon_tvPrograms{
+  background: url(../images/icon_tvPrograms.png) no-repeat; 
+  background-color:rgba(0,0,0,.4);
+  background-position: -240% 30%;
+}
+.icon_Recommender{
+  background: url(../images/icon_Recommender.png) no-repeat; 
+  background-color:rgba(0,0,0,.4);
+  background-position: -240% 30%;
+}
+.icon_mktShare{
+  background: url(../images/icon_mktShare.png) no-repeat; 
+  background-color:rgba(0,0,0,.4);
+  background-position: -240% 30%;
 }
