@@ -32,15 +32,15 @@
   <div class="resultHolder left">
     <div ng-repeat="category in categories">
       <div ng-show="$first">
-        <span class="column vborder">Category</span>
-        <span class="column vborder">SubCategory</span>
-        <span class="column vborder">Brand</span>
-        <span class="column vborder">NetworkTV</span>
-        <span class="column vborder">SpotTV</span>
-        <span class="column vborder">CableTV</span>
-        <span class="column vborder">SyndicatedTV</span>
-        <span class="column vborder">NationalMagazine</span>
-        <span class="column vborder">NationalInternet</span>
+        <span class="column vborder" ng-class="{sorted: sortBy == 'CategoryName'}">Category</span>
+        <span class="column vborder" ng-class="{sorted: sortBy == 'SubCategoryName'}">Sub-category</span>
+        <span class="column vborder" ng-class="{sorted: sortBy == 'Brand'}">Brand</span>
+        <span class="column vborder" ng-class="{sorted: sortBy == 'NetworkTVAdSpend'}">Network TV</span>
+        <span class="column vborder" ng-class="{sorted: sortBy == 'SpotTVAdSpend'}">Spot TV</span>
+        <span class="column vborder" ng-class="{sorted: sortBy == 'CableTVAdSpend'}">Cable TV</span>
+        <span class="column vborder" ng-class="{sorted: sortBy == 'SyndicatedTVAdSpend'}">Syndicated TV</span>
+        <span class="column vborder" ng-class="{sorted: sortBy == 'NationalMagazineAdSpend'}">National Magazine</span>
+        <span class="column vborder" ng-class="{sorted: sortBy == 'NationalInternetAdSpend'}">National Internet</span>
       </div>
       <div>
         <span class="column cell fontTiny"><b>{{category.CategoryName}}</b></span>

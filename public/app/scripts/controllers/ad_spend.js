@@ -7,6 +7,7 @@ angular.module('publicApp')
     $scope.input.productcategory = $scope.input.productcategory || '';
     $scope.input.productbrand = $scope.input.productbrand || '';
     $scope.sortByFields = [];
+    $scope.sortBy = 'CategoryName';
 
     $scope.search = function(){
       var parameter_obj = {"choice": $scope.input.choice};
