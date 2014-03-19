@@ -34,7 +34,7 @@ angular.module('publicApp')
    ]
    //$scope.input.select_type = $scope.options[0];
    $(".error").hide();
-
+   // $scope.showTable = false;
    $scope.input.pageno = 1;
 
     $scope.by_name = function(){
@@ -52,8 +52,8 @@ angular.module('publicApp')
           }
           else{
             $scope.pageshow = true;
-            $(".storeDetails").css("display","inline-table")
-
+            // $(".storeDetails").css("display","inline-table")
+            $scope.showTable = true;
          //Data.get_local('scripts/jsons/product_by_desc.json').success(function(api_data){
           $scope.stores = api_data.StoreRefData.Stores;
           $scope.totalItems = api_data.Summary.TotalPages;
@@ -75,7 +75,8 @@ angular.module('publicApp')
           }
           else{
           //Data.get_local('scripts/jsons/product_by_desc.json').success(function(api_data){
-            $(".storeDetails").css("display","inline-table")
+            // $(".storeDetails").css("display","inline-table")
+            $scope.showTable = true;
             $scope.pageshow = true;
             $scope.stores = api_data.StoreRefData.Stores;
             $scope.totalItems = api_data.Summary.TotalPages;
@@ -105,7 +106,8 @@ angular.module('publicApp')
           }
         }
         else{
-          $(".storeDetails").css("display","inline-table");
+          // $(".storeDetails").css("display","inline-table");
+          $scope.showTable = true;
           $scope.pageshow = true;
           $scope.stores = api_data.StoreRefData.Stores;
           $scope.totalItems = api_data.Summary.TotalPages;
@@ -140,7 +142,8 @@ angular.module('publicApp')
         }
         else if(api_data.StoreRefData){
           $scope.pageshow = true;
-          $(".storeDetails").css("display","inline-table")
+          // $(".storeDetails").css("display","inline-table")
+          $scope.showTable = true;
           $scope.stores = api_data.StoreRefData.Stores;
           $scope.totalItems = api_data.Summary.TotalPages;
           $scope.maxSize = 10;
@@ -169,7 +172,8 @@ angular.module('publicApp')
           }
         }
         else{
-          $(".storeDetails").css("display","inline-table");
+          // $(".storeDetails").css("display","inline-table");
+          $scope.showTable = true;
           $scope.pageshow = true;
           $scope.stores = api_data.StoreRefData.Stores;
           $scope.totalItems = api_data.Summary.TotalPages;
@@ -200,15 +204,17 @@ angular.module('publicApp')
     });
     $scope.$watch('input.select_type',function(){
        $rootScope.select = $scope.input.select_type;
-       $(".storeDetails").css("display","none");
-       $scope.pageshow = false;
+       // $(".storeDetails").css("display","none");
+      // $scope.showTable = false;
+      $scope.pageshow = false;
        //$scope.input = '';
 
     })
     if($scope.viaRecentSearch) {
       if($scope.cache_response.StoreRefData){
         $scope.stores = $scope.cache_response.StoreRefData.Stores;
-        $(".storeDetails").css("display","inline-table");
+        // $(".storeDetails").css("display","inline-table");
+        $scope.showTable = true;
       }
       $scope.viaRecentSearch = false;
     }
@@ -218,12 +224,12 @@ angular.module('publicApp')
 
       if(newValue == oldValue) { return; }
       if($scope.cache_response.StoreRefData) {
-        $(".storeDetails").css("display","inline-table");
         $scope.stores = $scope.cache_response.StoreRefData.Stores;
         $scope.pageshow = true;
         $scope.totalItems = $scope.cache_response.Summary.TotalPages;
         $scope.maxSize = 10;
-        $(".storeDetails").css("display","inline-table");
+        // $(".storeDetails").css("display","inline-table");
+        $scope.showTable = true;
         //$scope.cache_response = {};
       }
     });
