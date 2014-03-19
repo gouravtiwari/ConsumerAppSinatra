@@ -70,7 +70,7 @@ function donutTip(options){
         });
 
     var div = d3.select("body").append("div")
-        .attr("class", "tooltip")
+        .attr("class", "tooltip-custom")
         .style("opacity", 0);
 
     var vis = d3.select(config.selector)

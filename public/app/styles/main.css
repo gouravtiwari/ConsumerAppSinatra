@@ -2,6 +2,7 @@
 
 body {
   font-family: 'Century Gothic';
+  background-color: #edf1f2;
 }
 
 header {
@@ -387,6 +388,22 @@ nav {
   .column{
     width: 130px;
   }
+
+  .column-split{
+    width: 200px;
+  }
+
+  .column-big{
+    width: 620px
+  }
+}
+
+.column-big{
+  width: 820px
+}
+
+.column-split{
+  width: 400px;
 }
 
 .column70 {
@@ -709,8 +726,8 @@ nav {
   margin-bottom: 20px;
 }
 
-/* Begin hand crafted tooltip taken from d3-tip */
-div.tooltip {
+/* Begin hand crafted tooltip-custom taken from d3-tip */
+div.tooltip-custom {
     position: absolute;
     text-align: center;
     line-height: 1.25;
@@ -721,7 +738,7 @@ div.tooltip {
     pointer-events: none;
     font-size: 16px;
 }
-div.tooltip:after {
+div.tooltip-custom:after {
   box-sizing: border-box;
   display: inline;
   font-size: 16px;
@@ -734,7 +751,7 @@ div.tooltip:after {
   top: 100%;
   left: 0%;
 }
-/* End hand crafted tooltip */
+/* End hand crafted tooltip-custom */
 
 .rotate60 {
 
@@ -1172,8 +1189,4 @@ text.textBottom{
 
 .main-view{
   top: 50px;
-}
-
-.row{
-  background-color: #edf1f2;
 }
