@@ -4,9 +4,7 @@ angular.module('publicApp')
   .controller('AdSpendCtrl', function ($scope, Data) {
     $scope.input.choices = ['brand','category'];
     $scope.sortByFields = [];
-    $scope.$watch('categories', function() {
-      $scope.doughnutsRedrawCategory();
-    });
+
     $scope.search = function(){
       var parameter_obj = {"choice": $scope.input.choice};
       if (parameter_obj.choice == 'category') {
@@ -95,12 +93,24 @@ angular.module('publicApp')
         $scope.netUsageData = '';
       } else {
         if($scope.input.choice == 'category'){
-          $scope.categories = $scope.categoriesByCategory($scope.cache_response.AdViews.ProductCategory);
+          if($scope.cache_response.AdViews){
+            $scope.categories = $scope.categoriesByCategory($scope.cache_response.AdViews.ProductCategory);
+            $scope.sortByFields = Data.fillSortByFields($scope.categories[0]);
+            Data.injectColorClass($scope.categories, $scope.sortByFields);
+          }else{
+            $scope.output.message = "No Record found for the provided input";
+            $scope.netUsageData = '';
+          }
         }else{
-          $scope.categories = $scope.categoriesByBrand($scope.cache_response.AdSpend.Brand);
+          if($scope.cache_response.AdSpend){
+            $scope.categories = $scope.categoriesByBrand($scope.cache_response.AdSpend.Brand);
+            $scope.sortByFields = Data.fillSortByFields($scope.categories[0]);
+            Data.injectColorClass($scope.categories, $scope.sortByFields);
+          }else{
+            $scope.output.message = "No Record found for the provided input";
+            $scope.netUsageData = '';
+          }
         }
-        $scope.sortByFields = Data.fillSortByFields($scope.categories[0]);
-        Data.injectColorClass($scope.categories, $scope.sortByFields);
         $scope.output.message = '';
       }
       $scope.viaRecentSearch = false;
@@ -132,6 +142,5 @@ angular.module('publicApp')
       if(!newvalue || newvalue == oldvalue) return;
       $scope.categories = Data.sortBy(newvalue, $scope.categories);
     });
-      //   $scope.dataCategorySyndicatedTVAdSpend = [];
 
   });
