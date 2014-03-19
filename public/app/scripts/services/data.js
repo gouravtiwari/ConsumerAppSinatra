@@ -67,11 +67,23 @@ angular.module('publicApp')
             } else {
                 promise = $http.get(url_calling).success(function(api_response){
                     window.recent_api_response = api_response
+                    console.log(typeof(api_response))
                     if(api_response.Message){
                         $rootScope.noDataText = true;
                         $rootScope.output.message = api_response.Message.errorMessage;
                         console.log(api_response.Message.errorMessage)
+                    } else 
+                    if(api_response.Summary){
+                        $rootScope.noDataText = true;
+                        $rootScope.output.message = api_response.Summary.Status;
+                        console.log($rootScope.output.message)
+                    } else 
+                    if(typeof(api_response) == 'string'){
+                        $rootScope.noDataText = true;
+                        $rootScope.output.message = api_response;
+                        console.log($rootScope.output.message)
                     }
+
                     else{
                         $rootScope.noDataText = false;
                         $rootScope.output.message = '';

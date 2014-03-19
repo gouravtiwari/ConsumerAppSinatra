@@ -133,13 +133,13 @@ angular.module('publicApp')
 
       Data.get_json('Stores/v1/Location', parameter_obj).success(function(api_data){
       //Data.get_local('scripts/jsons/product_by_desc.json').success(function(api_data){
-        if(api_data.StoreRefData == undefined){
+        if(api_data.StoreRefData == undefined && api_data.Summary){
           $scope.status_loc = api_data.Summary.Status;
           if($scope.status_loc!=""){
             $(".error").show();
           }
         }
-        else{
+        else if(api_data.StoreRefData){
           $scope.pageshow = true;
           $(".storeDetails").css("display","inline-table")
           $scope.stores = api_data.StoreRefData.Stores;
