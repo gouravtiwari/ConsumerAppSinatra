@@ -78,7 +78,7 @@ angular.module('publicApp')
                         'animate': false
                       };
         for (var i = 0; i < $scope.programs.length; i++) {
-          $scope.data.list[i] = {'label': '#'+(i+1)+'. '+$scope.programs[i].ProgramName + '<br>' + 
+          $scope.data.list[i] = {'label': $scope.programs[i].ProgramName + '<br>' + 
                                       "Originator: " + $scope.programs[i].Originator + '<br>' +
                                       "US AA %: " + $scope.programs[i].US_AA_PERC,
                             'value': parseInt($scope.programs[i].USProjection)};
