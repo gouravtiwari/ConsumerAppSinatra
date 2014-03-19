@@ -14,11 +14,11 @@ angular.module('publicApp')
         $scope.subCategoryName = $scope.subCategories[0];
         $scope.demographies = $scope.subCategories[0].Demographies;
         $scope.demography = $scope.demographies[0]
-        data_loader();
+        data_loader_top_ten();
       });  
     }
 
-    function data_loader(){
+    function data_loader_top_ten(){
       if ($scope.subCategories){
         for (var i=0; i<$scope.subCategories.length; i++){
           if($scope.subCategories[i].SubCategoryName == $scope.subCategoryName.SubCategoryName){
@@ -27,7 +27,7 @@ angular.module('publicApp')
                 $scope.items = $scope.subCategories[i].Demographies[j].Items;
                 if($scope.categoryName != 'Music' || $scope.categoryName != 'Twitter TV'){
                   console.log($scope.items)
-                  plot_graph($scope.items);
+                  plot_graph_top_ten($scope.items);
                 }
               }
             }
@@ -41,15 +41,15 @@ angular.module('publicApp')
     });
 
     $scope.$watch('demography', function() {
-      data_loader();
+      data_loader_top_ten();
     });
   
     $scope.$watch('subCategoryName', function() {
-      data_loader();
+      data_loader_top_ten();
     });
 
     //Pie Chart for top 10
-    var get_series_data = function(api_data, chosen_attr){
+    function get_series_data_top_ten(api_data, chosen_attr){
       var colorsArray = ['#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#AFA263', '#6AF9C4', '#25ADA7','#A1D87F','#FF453C','#EFC94C','#AF709A','#FFD530', '#0E229B', 'orange'];
       var series_data = []
       var total_this_stat = $.map(api_data, function(x){return +x.Sales}).reduce(function(previousValue, currentValue){ return previousValue + currentValue;})
@@ -68,12 +68,12 @@ angular.module('publicApp')
       return series_data;
     }
 
-    var plot_graph = function(data){
+    function plot_graph_top_ten(data){
       console.log(data)
       var chosen_attr = $scope.category_attribute[$scope.categories.indexOf($scope.categoryName)]
       var api_data = data;
 
-      var series_data = get_series_data(api_data,chosen_attr);
+      var series_data = get_series_data_top_ten(api_data,chosen_attr);
       var chart_data = angular.copy(PieChartOptions.simplePie);
       chart_data.series = [{name:'Data', type: 'pie', data:series_data}];
       console.log(chart_data.series);
