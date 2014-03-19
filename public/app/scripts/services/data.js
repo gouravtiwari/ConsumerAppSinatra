@@ -203,14 +203,14 @@ angular.module('publicApp')
           
         },
 
-        sortBy: function(field, array){
-          return _.sortBy(array, function(item){
-            if(!isNaN(parseFloat(item[field]))){
-                return -parseFloat(item[field]);
-            } else {
-                return item[field];
-            }
-          });
+        sortBy: function(sortBy, array, sortByFields){
+            return _.sortBy(array, function(item){
+                if(!isNaN(parseFloat(item[sortBy]))){
+                    return -parseFloat(item[sortBy]);
+                } else {
+                    return item[sortBy];
+                }
+            });
         }
 
 	}

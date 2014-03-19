@@ -5,6 +5,7 @@ angular.module('publicApp')
     
   	$scope.input.platforms = ['ios', 'android'];
     $scope.sortByFields = [];
+    $scope.sortBy = 'UniqueAudience';
 
   	$scope.search = function(){
   		var platform = $scope.input.platform.toLowerCase(),
@@ -37,7 +38,7 @@ angular.module('publicApp')
     $scope.$watch('sortBy', function(newvalue, oldvalue){
       console.log(newvalue)
       if(!newvalue || newvalue == oldvalue) return;
-      $scope.AppDetails = Data.sortBy(newvalue, $scope.AppDetails);
+      $scope.AppDetails = Data.sortBy(newvalue, $scope.AppDetails, $scope.sortByFields);
     });
 
   });

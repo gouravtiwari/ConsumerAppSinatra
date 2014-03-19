@@ -1156,3 +1156,7 @@ text.textBottom{
   position: relative;
   float: left;
 }
+
+.sorted {
+  background: rgba(100, 50, 200, .7);
+}
