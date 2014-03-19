@@ -42,6 +42,7 @@ angular.module('publicApp')
     $scope.$watch(function(){return $location.path()}, function(newvalue, oldvalue){
       if(!newvalue || newvalue == oldvalue) return;
       $scope.location = '';
+      $rootScope.output.message = '';
       $.each($scope.analyses, function(index, analysis){
         if(analysis.url == newvalue) {
           $scope.location = '/market_analysis';
