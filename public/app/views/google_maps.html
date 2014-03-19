@@ -5,7 +5,8 @@
 			<div class="head" ng-class="{headHover:hover}" ng-mouseenter="hover=true" ng-mouseleave="hover=false">
 				<img ng-src="{{retailer.icon.icon}}"/>
 				<div class="head-data">
-			  	{{retailer.RetailerName}}, {{retailer.Locations.Line1}}, {{retailer.Locations.City}}, {{retailer.Locations.State}}, {{retailer.Locations.Country}}
+			  	{{retailer.RetailerName}}, {{retailer.Locations.Line1}}, {{retailer.Locations.City}}, {{retailer.Locations.State}}, {{retailer.Locations.Country}}<br>
+			  	<i class="glyphicon glyphicon-earphone"></i>&nbsp;{{retailer.Locations.Phone}}
 				</div>
 			</div>
 		</li>

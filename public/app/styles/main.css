@@ -227,13 +227,16 @@ nav {
 }
 
 .retailer-info {
+  overflow: scroll;
   position: relative;
+  height: 550px;
   float: left;
   width: 30%;
 }
 
 .map-container {
   position: relative;
+  height: 600px;
   float: left;
   width: 69%;
   margin-left: 1%;
