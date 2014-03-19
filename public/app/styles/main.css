@@ -13,7 +13,10 @@ header {
   padding: 5px;
   font-size: 26px;
   line-height: 30px;
-  background: url('../images/headerIcon.jpg');
+  background: -webkit-linear-gradient(to bottom left, #6c5948, #000,#4a5f5c);
+  background: -o-linear-gradient(to bottom left, #6c5948, #000,#4a5f5c);
+  background: -moz-linear-gradient(to bottom left, #6c5948, #000,#4a5f5c);
+  background: linear-gradient(to bottom left, #6c5948, #000,#4a5f5c);
   background-size: 100% 100%;
   color: #fff;
 }
