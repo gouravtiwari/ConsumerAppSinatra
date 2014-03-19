@@ -5,27 +5,49 @@ angular.module('publicApp')
     
     $scope.categories = ['Movies', 'Television', 'Books', 'Mobile Apps', 'Video Games', 'Websites', 'Products', 'Music', 'Twitter TV'];
     $scope.category_attribute = ['Sales', 'Projection', 'SalesCount', 'UniqueAudience', 'UAFC', 'UniqueAudience', 'UniqueAudience']
-    $scope.categoryName = $scope.categories[0];
+    $scope.input.categoryName = $scope.input.categoryName || $scope.categories[0];
     categories_loader();
     
     function categories_loader(){
-      Data.get_json('TopTen/v1/'+$scope.categoryName).success(function(api_data){
+      Data.get_json('TopTen/v1/'+$scope.input.categoryName).success(function(api_data){
         $scope.subCategories =  api_data.Category[0].SubCategory;
-        $scope.subCategoryName = $scope.subCategories[0];
+        $scope.input.subCategoryName = $scope.subCategories[0];
         $scope.demographies = $scope.subCategories[0].Demographies;
-        $scope.demography = $scope.demographies[0]
+        $scope.input.demography = $scope.demographies[0]
         data_loader_top_ten();
       });  
     }
 
+    if($scope.viaRecentSearch) {
+      if($scope.cache_response.Category && $scope.cache_response.Category[0].SubCategory){
+        $scope.subCategories =  $scope.cache_response.Category[0].SubCategory;
+        $scope.input.subCategoryName = $scope.subCategories[0];
+        $scope.demographies = $scope.subCategories[0].Demographies;
+        $scope.input.demography = $scope.demographies[0]
+        data_loader_top_ten();
+      }
+      $scope.viaRecentSearch = false;
+    }
+
+    $scope.$watch('cache_response', function(newValue, oldValue){
+      if(newValue == oldValue) { return; }
+      if($scope.cache_response.Category && $scope.cache_response.Category[0].SubCategory) {
+        $scope.subCategories =  $scope.cache_response.Category[0].SubCategory;
+        $scope.input.subCategoryName = $scope.subCategories[0];
+        $scope.demographies = $scope.subCategories[0].Demographies;
+        $scope.input.demography = $scope.demographies[0]
+        data_loader_top_ten();
+      }
+    });
+
     function data_loader_top_ten(){
       if ($scope.subCategories){
         for (var i=0; i<$scope.subCategories.length; i++){
-          if($scope.subCategories[i].SubCategoryName == $scope.subCategoryName.SubCategoryName){
+          if($scope.subCategories[i].SubCategoryName == $scope.input.subCategoryName.SubCategoryName){
             for (var j = 0; j < $scope.subCategories[i].Demographies.length; j++) {
-              if ($scope.subCategories[i].Demographies[j].DemographyName == $scope.demography.DemographyName){
+              if ($scope.subCategories[i].Demographies[j].DemographyName == $scope.input.demography.DemographyName){
                 $scope.items = $scope.subCategories[i].Demographies[j].Items;
-                if($scope.categoryName != 'Music' || $scope.categoryName != 'Twitter TV'){
+                if($scope.input.categoryName != 'Music' || $scope.input.categoryName != 'Twitter TV'){
                   console.log($scope.items)
                   plot_graph_top_ten($scope.items);
                 }
@@ -36,15 +58,18 @@ angular.module('publicApp')
       } 
     }
     
-    $scope.$watch('categoryName', function() {
+    $scope.$watch('input.categoryName', function(newvalue, oldvalue) {
+      if(!newvalue || newvalue == oldvalue) return;
       categories_loader();
     });
 
-    $scope.$watch('demography', function() {
+    $scope.$watch('input.demography', function(newvalue, oldvalue) {
+      if(!newvalue || newvalue == oldvalue) return;
       data_loader_top_ten();
     });
   
-    $scope.$watch('subCategoryName', function() {
+    $scope.$watch('input.subCategoryName', function(newvalue, oldvalue) {
+      if(!newvalue || newvalue == oldvalue) return;
       data_loader_top_ten();
     });
 
@@ -70,7 +95,7 @@ angular.module('publicApp')
 
     function plot_graph_top_ten(data){
       console.log(data)
-      var chosen_attr = $scope.category_attribute[$scope.categories.indexOf($scope.categoryName)]
+      var chosen_attr = $scope.category_attribute[$scope.categories.indexOf($scope.input.categoryName)]
       var api_data = data;
 
       var series_data = get_series_data_top_ten(api_data,chosen_attr);

@@ -3,15 +3,15 @@
   <div class='col-md-12'>
     <div class='col-md-3'>
       <span>Select Category</span><br>
-      <select ng-model="categoryName" ng-options="category for category in categories"></select>
+      <select ng-model="input.categoryName" ng-options="category for category in categories"></select>
     </div>
     <div class='col-md-3'>
       <span>Select Sub Category</span><br>
-      <select ng-model="subCategoryName" ng-options="sub.SubCategoryName for sub in subCategories"></select>
+      <select ng-model="input.subCategoryName" ng-options="sub.SubCategoryName for sub in subCategories"></select>
     </div>
     <div class='col-md-3'>
       <span>Select Demography</span><br>
-      <select ng-model="demography" ng-options="sub.DemographyName for sub in demographies"></select>
+      <select ng-model="input.demography" ng-options="sub.DemographyName for sub in demographies"></select>
     </div>
   </div>
   <div class='row col-md-6 margin-button'>
