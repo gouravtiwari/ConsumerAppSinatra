@@ -125,11 +125,13 @@
     <div class="left">
       <button class="recommender-btn btn" ng-click="recommender()">Get Recommendation</button>
     </div>
+    <h3 class="redFont">{{output.message}}</h3>
 <!--     <div class="recommendation left" ng-hide="true" ng-show="recommendationScore">
       {{recommendationScore}} {{recommendationRating}}
     </div> -->
   </div>
   <div class="clear"></div>
+  <h3 class="redFont">{{output.message}}</h3>
   <div class="col-md-12">
     <div class="insight-text" >
       <div ng-hide="true" ng-show="totalUsers != 0 && totalUsers != undefined">
