@@ -1057,8 +1057,7 @@ text.textBottom{
   border-radius: 5px !important;
 }
 
-.unique-user-counts{
-  width: 100%;
+.insight-text{
   text-align: center;
   font-size: 20px;
   color: #e98e4e;
@@ -1068,6 +1067,7 @@ text.textBottom{
 .help-text{
   font-size: 14px;
   color: blue;
+  text-align: center;
 }
 
 /* google map autocomplete */

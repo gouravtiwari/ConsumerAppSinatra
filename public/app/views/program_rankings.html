@@ -7,8 +7,7 @@
   <select ng-model="input.demography" ng-options="demography for demography in demographies">
   </select>
   <b>Sort By :</b>
-  <select class="feature" ng-model="sortBy"
-    ng-options="field for field in sortByFields" ng-hide="true" ng-show="totalUSProjection != 0 && totalUSProjection != undefined">
+  <select class="feature" ng-model="sortBy" ng-options="field for field in sortByFields">
   </select>
 
   <!-- <input type="text" ng-model="input.demography" /> -->
@@ -49,13 +48,16 @@
   </div>
   <div class="left">
     <div>
-      <div ng-hide="true" ng-show="totalUSProjection != 0 && totalUSProjection != undefined">
+      <br>
+      <br>
+      <div ng-hide="true" ng-show="totalUSProjection != 0 && totalUSProjection != undefined" class = "insight-text">
         Total Projected Audience: {{totalUSProjection}}!
       </div>
       <div class="help-text" ng-hide="true" ng-show="totalUSProjection != 0 && totalUSProjection != undefined">
         (You can spend more on TV Program Ads with comparatively larger audience)<br>
         (Ranks are based on US AA ratings)
       </div>
+      <br>
     </div>
     <div>
       <doughnut chart-id="programRankingDoughnut" val="data" totalLabel="Projected Audience"></doughnut>
