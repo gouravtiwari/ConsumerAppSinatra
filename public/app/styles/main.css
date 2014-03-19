@@ -884,8 +884,11 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 }
 
 .fontTiny {
+  text-align: left;
+  color: #000;
   font-size: 11px;
-  background: #0A516d;
+  border: none;
+  //background: #0A516d;
 }
 
 .feature {
