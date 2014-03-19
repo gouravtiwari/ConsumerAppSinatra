@@ -12,12 +12,12 @@ angular.module('publicApp')
     $scope.analyses = [      
       // {name: 'Ad Spend Recommender', url: '/recommender', class: "feature"},
       // {name: 'Compare Smartly!', url: '/compare', class: "feature"},
-      {name: 'Ad <br/> Spend', url: '/ad_spend'},
-      {name: 'Online Audience', url: '/audience'},
-      {name: 'Mobile Audience', url: '/mobile-audience'},
-      {name: 'TV Programs Rankings', url: '/program_rankings'},
-      {name: 'Region Segmentation', url: '/segmentation'},
-      {name: 'Market <br/> Share', url: '/market_share'}
+      {name: 'Ad <br/> Spend', url: '/ad_spend', img: 'icon_aspendd'},
+      {name: 'Online Audience', url: '/audience', img: 'icon_onlineAudience'},
+      {name: 'Mobile Audience', url: '/mobile-audience', img: 'icon_mobileAudience'},
+      {name: 'TV Programs Rankings', url: '/program_rankings', img: 'icon_tvPrograms'},
+      {name: 'Region Segmentation', url: '/segmentation', img: 'icon_Recommender'},
+      {name: 'Market <br/> Share', url: '/market_share', img: 'icon_mktShare'}
     ];
 
     $scope.marketAnalysisUrls = [      
