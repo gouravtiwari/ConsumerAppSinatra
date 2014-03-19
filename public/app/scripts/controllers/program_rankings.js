@@ -3,6 +3,7 @@
 angular.module('publicApp')
   .controller('ProgramRankingsCtrl', function ($scope, Data) {
     $scope.sortByFields = [];
+    $scope.sortBy = 'US_AA_PERC';
     $scope.demographies = ['M2-11'];
     $scope.$watch('programs', function() {
       $scope.doughnutRedraw();

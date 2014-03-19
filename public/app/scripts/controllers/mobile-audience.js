@@ -5,13 +5,14 @@ angular.module('publicApp')
     
   	$scope.input.platforms = ['ios', 'android'];
     $scope.sortByFields = [];
+    $scope.sortBy = 'UniqueAudience';
 
   	$scope.search = function(){
   		var platform = $scope.input.platform.toLowerCase(),
   			parameter_obj = {"numberofresults": $scope.input.noofresults};
 
-      Data.get_json('EMM/v1/' + platform, parameter_obj).success(function(api_data){
-      //Data.get_local('scripts/jsons/mobile_audience_ios.json').success(function(api_data){
+      //Data.get_json('EMM/v1/' + platform, parameter_obj).success(function(api_data){
+      Data.get_local('scripts/jsons/mobile_audience_ios.json').success(function(api_data){
         $scope.AppDetails = api_data.AppResponse.AppDetails;
         $scope.sortByFields = Data.fillSortByFields($scope.AppDetails[0]);
         Data.injectColorClass($scope.AppDetails, $scope.sortByFields);
@@ -37,7 +38,7 @@ angular.module('publicApp')
     $scope.$watch('sortBy', function(newvalue, oldvalue){
       console.log(newvalue)
       if(!newvalue || newvalue == oldvalue) return;
-      $scope.AppDetails = Data.sortBy(newvalue, $scope.AppDetails);
+      $scope.AppDetails = Data.sortBy(newvalue, $scope.AppDetails, $scope.sortByFields);
     });
 
   });

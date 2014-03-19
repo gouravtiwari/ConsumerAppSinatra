@@ -19,12 +19,24 @@
     <h3>{{output.message}}</h3>
     <div ng-repeat="program in programs">
       <div ng-show="$first">
-        <span class="column90 vborder">Program Name</span>
-        <span class="column90 vborder">US AA%</span>
-        <span class="column90 vborder">Projected Audience</span>
-        <span class="column90 vborder">Originator</span>
-        <span class="column90 vborder">Total Duration in Minutes</span>
-        <span class="column90 vborder">Demography</span>
+        <span class="column90 vborder" ng-class="{sorted: sortBy == 'ProgramName'}">
+          Program Name
+        </span>
+        <span class="column90 vborder" ng-class="{sorted: sortBy == 'US_AA_PERC'}">
+          US AA%
+        </span>
+        <span class="column90 vborder" ng-class="{sorted: sortBy == 'USProjection'}">
+          Projected Audience
+        </span>
+        <span class="column90 vborder" ng-class="{sorted: sortBy == 'Originator'}">
+          Originator
+        </span>
+        <span class="column90 vborder" ng-class="{sorted: sortBy == 'TotalDuration'}">
+          Total Duration in Minutes
+        </span>
+        <span class="column90 vborder" ng-class="{sorted: sortBy == 'Demographic'}">
+          Demography
+        </span>
       </div>
       <div>
         <span class="column90 cell fontTiny"><b>{{program.ProgramName}}</b></span>

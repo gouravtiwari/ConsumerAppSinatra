@@ -7,6 +7,7 @@ angular.module('publicApp')
     // 	$scope.netUsageData = api_data.NetUsage[0].WebsiteCategory[0].WebSiteInfo;
     // });
     $scope.sortByFields = [];
+    $scope.sortBy = 'UniqueAudience';
 
     $scope.search = function(){
       var parameter_obj = {"numberofresults": $scope.input.numberofresults};
@@ -14,8 +15,8 @@ angular.module('publicApp')
         parameter_obj.websitecategory = $scope.input.websitecategory;
       }
 
-      Data.get_json('NetView/v1/', parameter_obj).success(function(api_data){
-      //Data.get_local('scripts/jsons/audience.json').success(function(api_data){
+      //Data.get_json('NetView/v1/', parameter_obj).success(function(api_data){
+      Data.get_local('scripts/jsons/audience.json').success(function(api_data){
         if(!api_data.NetUsage[0].WebsiteCategory) {
           $scope.output.message = "No Record found for the provided input";
           $scope.netUsageData = '';
