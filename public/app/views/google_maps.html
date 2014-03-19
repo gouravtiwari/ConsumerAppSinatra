@@ -1,8 +1,8 @@
-<div>
+<div class="market-analysis-section col-md-12">
 <div ng-show='haveOutlets'>
 	<div class="retailer-info">
 		<li ng-repeat='retailer in retailers'>
-			<div class="head">
+			<div class="head" ng-class="{headHover:hover}" ng-mouseenter="hover=true" ng-mouseleave="hover=false">
 				<img ng-src="{{retailer.icon.icon}}"/>
 				<div class="head-data">
 			  	{{retailer.RetailerName}}, {{retailer.Locations.Line1}}, {{retailer.Locations.City}}, {{retailer.Locations.State}}, {{retailer.Locations.Country}}

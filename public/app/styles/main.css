@@ -233,7 +233,8 @@ nav {
 .map-container {
   position: relative;
   float: left;
-  width: 70%;
+  width: 69%;
+  margin-left: 1%;
 }
 
 .retailer-info li {
@@ -249,6 +250,13 @@ nav {
   width: 100%;
   min-height: 20px;
   padding: 0 0 10px 10px;
+  border-bottom: 10px solid #ddd;
+}
+.headHover{
+  border: 1px solid #ddd;
+  border-radius: 4px;
+/*  zoom:1.5;
+*/  font-weight: bold;
 }
 
 .head-data {
