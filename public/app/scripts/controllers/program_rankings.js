@@ -58,7 +58,7 @@ angular.module('publicApp')
       console.log(newvalue)
       if(!newvalue || newvalue == oldvalue) return;
       $scope.programs = Data.sortBy(newvalue, $scope.programs);
-    })
+    });
 
     $scope.doughnutRedraw = function(){
       $scope.totalUSProjection = 0;

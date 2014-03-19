@@ -2,7 +2,7 @@
 	<!-- Inputs -->
 	<h2>Find out Ad Spend</h2>
   <div>
-    <input type="text" class="inputDesc left">
+    <input type="text" ng-model="input.searchCriteria" class="inputDesc left">
 		<div class='left'>
       <b class='left' style="height: 50px;padding: 10px 0;">Category/Brand:</b>
       <div class='left' style="height: 50px;padding: 10px 0;">
@@ -15,10 +15,17 @@
       </div>
     </div>
 	</div>
+  <div class="clear"></div>
+  <div class='example-text'>
+    (categories e.g. toothbrush, toothpaste OR brands e.g. aveeno)
+  </div>
+  <div class='clear'></div>
+  <div class="left">
+    <b>Sort By :</b>
+    <select class="feature" ng-model="sortBy" ng-options="field for field in sortByFields">
+    </select>
+  </div>
 	<div class="clear"></div>
-	<div class='example-text'>
-		(categories e.g. toothbrush, toothpaste OR brands e.g. aveeno)
-	</div>
 	<!-- Result -->
   <div class="resultHolder left">
     <h3>{{output.message}}</h3>
