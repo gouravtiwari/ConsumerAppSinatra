@@ -1,99 +1,70 @@
 <div class="market-analysis-section">
 	<!-- Inputs -->
-	<h2>Search Ad Spend by Category:</h2>
-	<div>
-		<input type="text" ng-model="input.category" class="inputDesc left">
-		<button ng-click="searchByCategory()" class="btn left">Search</button>
+	<h2>Find out Ad Spend</h2>
+  <div>
+    <input type="text" class="inputDesc left">
+		<div class='left'>
+      <b class='left' style="height: 50px;padding: 10px 0;">Category/Brand:</b>
+      <div class='left' style="height: 50px;padding: 10px 0;">
+        <select ng-model="input.choice" ng-required
+        ng-options="choice for choice in input.choices" class="left">
+      </select>
+      </div>
+      <div class='left' style="height: 50px;padding: 5px 2px;">
+        <button ng-click="search()" class="btn left brn-small">Search</button>
+      </div>
+    </div>
 	</div>
 	<div class="clear"></div>
 	<div class='example-text'>
-		(e.g. toothbrush, toothpaste)
+		(categories e.g. toothbrush, toothpaste OR brands e.g. aveeno)
 	</div>
 	<!-- Result -->
-	<!-- <div class="left">
-		<div ng-repeat="category in ProductCategory">
-			<h3><b>Products Category: </b>{{category.ProductCategoryName}}</h3>
-			<div class="resultHolder" ng-repeat="subcategory in category.PCCSubGroup">
-				<h4><b>Sub Category: </b>{{subcategory.PCCSubGroupName}}</h4>
-				<div class="product" ng-repeat="adspend in subcategory.AdSpend">
-					<b>Brand: </b><span class="productDesc">{{adspend.Brand}}</span><br>
-					<span class="label">NetworkTVAdSpend:</span> {{adspend.NetworkTVAdSpend}}<br>
-					<span class="label">SpotTVAdSpend:</span> {{adspend.SpotTVAdSpend}}<br>
-					<span class="label">CableTVAdSpend:</span> {{adspend.CableTVAdSpend}}<br>
-					<span class="label">NationalMagazineAdSpend:</span> {{adspend.NationalMagazineAdSpend}}<br>
-					<span class="label">SyndicatedTVAdSpend:</span> {{adspend.SyndicatedTVAdSpend}}<br>
-					<span class="label">NationalInternetAdSpend:</span> {{adspend.NationalInternetAdSpend}}<br>
-				</div>
-			</div>
-		</div>
-	</div> -->
+  <div class="resultHolder left">
+    <h3>{{output.message}}</h3>
+    <div ng-repeat="category in categories">
+      <div ng-show="$first">
+        <span class="column vborder">Category</span>
+        <span class="column vborder">SubCategory</span>
+        <span class="column vborder">Brand</span>
+        <span class="column vborder">NetworkTV</span>
+        <span class="column vborder">SpotTV</span>
+        <span class="column vborder">CableTV</span>
+        <span class="column vborder">SyndicatedTV</span>
+        <span class="column vborder">NationalMagazine</span>
+        <span class="column vborder">NationalInternet</span>
+      </div>
+      <div>
+        <span class="column cell fontTiny"><b>{{category.CategoryName}}</b></span>
+        <span class="column cell {{category.SubCategoryNameClass}}">
+          {{category.SubCategoryName}}
+        </span>
+        <span class="column cell {{category.BrandClass}}">
+          {{category.Brand}}
+        </span>
+        <span class="column cell {{category.NetworkTVAdSpendClass}}">
+          {{category.NetworkTVAdSpend}}
+        </span>
+        <span class="column cell {{category.SpotTVAdSpendClass}}">
+          {{category.SpotTVAdSpend}}
+        </span>
+        <span class="column cell {{category.CableTVAdSpendClass}}">
+          {{category.CableTVAdSpend}}
+        </span>
+        <span class="column cell {{category.SyndicatedTVAdSpendClass}}">
+          {{category.SyndicatedTVAdSpend}}
+        </span>
+        <span class="column cell {{category.NationalMagazineAdSpendClass}}">
+          {{category.NationalMagazineAdSpend}}
+        </span>
+        <span class="column cell {{category.NationalInternetAdSpendClass}}">
+          {{category.NationalInternetAdSpend}}
+        </span>
+      </div>
+    </div>
+  </div>
 	<div class="left">
     <doughnut chart-id="CategoryNetworkTVAdSpendDoughnut" val="dataCategoryNetworkTVAdSpend" totalLabel="Network TV Ad Spend"></doughnut>
   </div>
-  <div class="left">
-    <doughnut chart-id="CategorySpotTVAdSpendDoughnut" val="dataCategorySpotTVAdSpend" totalLabel="Spot TV AdSpend"></doughnut>
-  </div>
-  <div class="left">
-    <doughnut chart-id="CategoryCableTVAdSpendDoughnut" val="dataCategoryCableTVAdSpend" totalLabel="Cable TV AdSpend"></doughnut>
-  </div>
-  <div class="left">
-    <doughnut chart-id="CategoryNationalMagazineAdSpendDoughnut" val="dataCategoryNationalMagazineAdSpend" totalLabel="National Magazine AdSpend"></doughnut>
-  </div>
-  <div class="left">
-    <doughnut chart-id="CategorySyndicatedTVAdSpendDoughnut" val="dataCategorySyndicatedTVAdSpend" totalLabel="Syndicated TV AdSpend"></doughnut>
-  </div>
-  <div class="left">
-    <doughnut chart-id="CategoryNationalInternetAdSpendDoughnut" val="dataCategoryNationalInternetAdSpend" totalLabel="National Internet AdSpend"></doughnut>
-  </div>
-  
-	<div class="clear"></div>
-
-	<!-- Inputs -->
-	<h2>Search Ad Spend by Brand:</h2>
-	<div>
-		<input type="text" ng-model="input.brand" class="inputDesc left">
-		<button ng-click="searchByBrand()" class="btn left">Search</button>
-	</div>
-	<div class="clear"></div>
-	<div class='example-text'>
-		(e.g. aveeno)
-	</div>
-
-	<!-- Result -->
-	<div ng-repeat="brand in ProductBrand">
-		<h3><b>Brand: </b>{{brand.BrandName}}</h3>
-		<div class="resultHolder" ng-repeat="category in brand.ProductCategory">
-			<h4><b>Sub Category: </b>{{category.PCCSubgroup}}</h4>
-			<h3><b>Category: </b>{{category.ProductCategoryName}}</h3>
-			<div class="product">
-				<span class="label">NetworkTVAdSpend:</span> {{category.NetworkTVAdSpend}}<br>
-				<span class="label">SpotTVAdSpend:</span> {{category.SpotTVAdSpend}}<br>
-				<span class="label">CableTVAdSpend:</span> {{category.CableTVAdSpend}}<br>
-				<span class="label">NationalMagazineAdSpend:</span> {{category.NationalMagazineAdSpend}}<br>
-				<span class="label">SyndicatedTVAdSpend:</span> {{category.SyndicatedTVAdSpend}}<br>
-				<span class="label">NationalInternetAdSpend:</span> {{category.NationalInternetAdSpend}}<br>
-			</div>
-		</div>
-	</div>
-
-	<div class="left">
-    <doughnut chart-id="BrandNetworkTVAdSpendDoughnut" val="dataBrandNetworkTVAdSpend" totalLabel="Network TV Ad Spend"></doughnut>
-  </div>
-  <div class="left">
-    <doughnut chart-id="BrandSpotTVAdSpendDoughnut" val="dataBrandSpotTVAdSpend" totalLabel="Spot TV AdSpend"></doughnut>
-  </div>
-  <div class="left">
-    <doughnut chart-id="BrandCableTVAdSpendDoughnut" val="dataBrandCableTVAdSpend" totalLabel="Cable TV AdSpend"></doughnut>
-  </div>
-  <div class="left">
-    <doughnut chart-id="BrandNationalMagazineAdSpendDoughnut" val="dataBrandNationalMagazineAdSpend" totalLabel="National Magazine AdSpend"></doughnut>
-  </div>
-  <div class="left">
-    <doughnut chart-id="BrandSyndicatedTVAdSpendDoughnut" val="dataBrandSyndicatedTVAdSpend" totalLabel="Syndicated TV AdSpend"></doughnut>
-  </div>
-  <div class="left">
-    <doughnut chart-id="BrandNationalInternetAdSpendDoughnut" val="dataBrandNationalInternetAdSpend" totalLabel="National Internet AdSpend"></doughnut>
-  </div>
-  
 	<div class="clear"></div>
 </div>
