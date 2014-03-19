@@ -437,7 +437,6 @@ nav {
 .cell span {
   float: left;
   display: inline-block;
-  font-size: 11px;
   line-height: 25px;
   height: 100%;
 }
