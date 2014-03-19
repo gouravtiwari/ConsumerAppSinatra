@@ -27,10 +27,11 @@ angular.module('publicApp')
     		$scope.input.appname = $scope.appnames[0]
     		$scope.maindata = $scope.sorted_data[$scope.input.appname];   
         if($scope.maindata){
-          plot_graph();  
-          $scope.chart_data = draw_age_chart('AgeBreakPercentage');   
-          $scope.income_data = draw_age_chart('IncomePercentage_in_Dollar');
-          $scope.race_data = draw_age_chart('RacePercentage');
+          console.log(plot_graph_compare)
+          plot_graph_compare();  
+          $scope.chart_data = draw_age_chart_compare('AgeBreakPercentage');   
+          $scope.income_data = draw_age_chart_compare('IncomePercentage_in_Dollar');
+          $scope.race_data = draw_age_chart_compare('RacePercentage');
         }
         });
     });
@@ -38,18 +39,18 @@ angular.module('publicApp')
     $scope.$watch('input.appname', function() {
         $scope.maindata = $scope.sorted_data[$scope.input.appname];
         if($scope.maindata){
-          plot_graph();  
+          plot_graph_compare();  
         }
-        $scope.chart_data = draw_age_chart('AgeBreakPercentage');   
-        $scope.income_data = draw_age_chart('IncomePercentage_in_Dollar');
-        $scope.race_data = draw_age_chart('RacePercentage');
+        $scope.chart_data = draw_age_chart_compare('AgeBreakPercentage');   
+        $scope.income_data = draw_age_chart_compare('IncomePercentage_in_Dollar');
+        $scope.race_data = draw_age_chart_compare('RacePercentage');
     });
 
     $scope.get_diff = function(a, b){
         return parseFloat((a-b)/a*100).toFixed(2);
     }
 
-    var draw_age_chart = function(field){
+    function draw_age_chart_compare(field){
         var chart_data = $.extend(true, {}, StackChartOptions.stackChart);
         var colorsStack = ['#41a4c9', '#fdde7f']
         var i = 0;
@@ -68,7 +69,7 @@ angular.module('publicApp')
     }
 
     //Pie Chart for top 10
-    var get_series_data = function(api_data, chosen_attr){
+    function get_series_data_compare(api_data, chosen_attr){
       var colorsArray = ['#50B432', '#ED561B', '#DDDF00', '#24CBE5', '#64E572', '#FF9655', '#AFA263', '#6AF9C4', '#25ADA7','#A1D87F','#FF453C','#EFC94C','#AF709A','#FFD530', '#0E229B', 'orange'];
       var series_data = []
       var total_this_stat = $.map(api_data, function(x){return +x[chosen_attr]}).reduce(function(previousValue, currentValue){return previousValue + currentValue;})
@@ -86,14 +87,14 @@ angular.module('publicApp')
       return series_data;
     }
 
-    var plot_graph = function(){
+    function plot_graph_compare(){
       var api_data = [];
       for(var platform in $scope.maindata){
         api_data.push($scope.maindata[platform])
       }
       var chosen_attr = $scope.radioModel;
       if(api_data){
-        var series_data = get_series_data(api_data,chosen_attr);  
+        var series_data = get_series_data_compare(api_data,chosen_attr);  
       }
       var chart_data = angular.copy(PieChartOptions.simplePie);
       chart_data.series = [{name:'Data', type: 'pie', data:series_data}];
@@ -104,6 +105,6 @@ angular.module('publicApp')
 
     $scope.changeChart = function(model){
         $scope.radioModel = model;
-        plot_graph();
+        plot_graph_compare();
     }
   });
