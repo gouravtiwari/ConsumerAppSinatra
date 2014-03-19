@@ -27,7 +27,7 @@ angular.module('publicApp')
 
   .filter('racefilter', function () {
     return function (input) {
-      var finaldata = finaldata.split('_').join(' ');
+      var finaldata = input.split('_').join(' ');
       return finaldata;
     };
   })

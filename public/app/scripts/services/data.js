@@ -131,6 +131,10 @@ angular.module('publicApp')
             recentSearch.input.categoryName = url_split[2];
           } 
           else 
+          if(url_split[0] == 'AdView'){
+            url_split[0]  = 'Ad Spend';
+          } 
+          else 
           if(url_split[0] == 'NetView'){
             url_split[0]  = 'Online Audience';
           }
@@ -140,7 +144,7 @@ angular.module('publicApp')
           else if(url_split[0] == 'Products'){
             recentSearch.input.prod_type= $rootScope.prod_type;
             }
-          recentSearch.api = url_split[0] + (url_split[2] ? ' ' + url_split[2] : '');
+          recentSearch.api = url_split[0] + (url_split[2] != 'v1' ? ' ' + url_split[2] : '');
           
           for (var input in param_path){
             if(input == 'pageno') continue;
@@ -171,7 +175,8 @@ angular.module('publicApp')
           'Products': '/product_by_desc',
           'Online Audience': '/audience',
           'Stores' : '/store_by_name',
-          'TopTen': '/top_ten'
+          'TopTen': '/top_ten',
+          'Ad Spend': '/ad_spend'
         },
 
         fillSortByFields: function(viewObject){

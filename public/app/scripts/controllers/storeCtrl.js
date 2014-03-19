@@ -1,21 +1,20 @@
 angular.module('publicApp')
   .controller('StoreCtrl', function ($scope,$rootScope,$modal, Data) {
-	 $scope.input.storeName = '';
-   $scope.input.ownerName = '';
-   $scope.input.indicator = '';
-   $scope.input.scanTrackCode = '';
-   $scope.input.marketCode = '';
-   $scope.input.stateFIPS = '';
-   $scope.input.streetaddr = '';
-   $scope.input.city = '';
-   $scope.input.lat = '';
-   $scope.input.lng = '';
-   $scope.input.radius = '';
-   $scope.input.sizeCode = '';
-   $scope.input.spaceArea = '';
-   $scope.input.select_type = '';
+	 $scope.input.name = $scope.input.name || '';
+   $scope.input.owner = $scope.input.owner || '';
+   $scope.input.indicator = $scope.input.indicator || '';
+   $scope.input.scantrackcode = $scope.input.scantrackcode || '';
+   $scope.input.marketcode = $scope.input.marketcode || '';
+   $scope.input.statefipscode = $scope.input.statefipscode || '';
+   $scope.input.streetaddress = $scope.input.streetaddress || '';
+   $scope.input.city = $scope.input.city || '';
+   $scope.input.latitude = $scope.input.latitude || '';
+   $scope.input.longtitude = $scope.input.longtitude || '';
+   $scope.input.radius = $scope.input.radius || '';
+   $scope.input.sizecode = $scope.input.sizecode || '';
+   $scope.input.sellingspacearea = $scope.input.sellingspacearea || '';
+   $scope.input.select_type = $scope.input.select_type || '';
                 
-
    $scope.options = [
     "Store Name",
     "Owner Name",
@@ -33,16 +32,16 @@ angular.module('publicApp')
     "Pharmacy",
     "Wine"
    ]
-   $scope.input.select_type = $scope.options[0];
+   //$scope.input.select_type = $scope.options[0];
    $(".error").hide();
 
-   $scope.currentPage = 1;
+   $scope.input.pageno = 1;
 
     $scope.by_name = function(){
       if($scope.input.prevSearch != $scope.input.search){
         $scope.input.pageno = null;
       }
-        var parameter_obj = {'name' : $scope.input.storeName,
+        var parameter_obj = {'name' : $scope.input.name,
                             'pageno' : $scope.input.pageno || 1 };
         Data.get_json('Stores/v1', parameter_obj).success(function(api_data){
           if(api_data.StoreRefData == undefined){
@@ -65,10 +64,10 @@ angular.module('publicApp')
 
     $scope.by_owner = function(){
       
-        var parameter_obj = {'owner' : $scope.input.ownerName,
-                            'pageno' : $scope.currentPage};
+        var parameter_obj = {'owner' : $scope.input.owner,
+                            'pageno' : $scope.input.pageno};
         Data.get_json('Stores/v1', parameter_obj).success(function(api_data){
-          if(api_data.StoreRefData == undefined){
+          if(api_data.StoreRefData == undefined && api_data.Summary){
             $scope.status_owner = api_data.Summary.Status;
             if($scope.status_owner!=""){
             $(".error").show();
@@ -87,9 +86,9 @@ angular.module('publicApp')
 
     $scope.by_market = function(){
       var parameter_obj = {'indicator' : $scope.input.indicator,
-                          'scantrackcode':$scope.input.scanTrackCode,
-                          'marketcode':$scope.input.marketCode,
-                          'pageno' : $scope.currentPage
+                          'scantrackcode':$scope.input.scantrackcode,
+                          'marketcode':$scope.input.marketcode,
+                          'pageno' : $scope.input.pageno
                         };
        for(obj in parameter_obj){
         if(parameter_obj[obj]==''){
@@ -117,13 +116,13 @@ angular.module('publicApp')
 
     $scope.by_location = function(){
       
-      var parameter_obj = {'statefipscode' : $scope.input.stateFIPS,
-                          'streetaddress' : $scope.input.streetaddr,
+      var parameter_obj = {'statefipscode' : $scope.input.statefipscode,
+                          'streetaddress' : $scope.input.streetaddress,
                           'city' : $scope.input.city,
-                          'latitude' : $scope.input.lat,
-                          'longitude' : $scope.input.lng,
+                          'latitude' : $scope.input.latitude,
+                          'longitude' : $scope.input.longtitude,
                           'radius' : $scope.input.radius,
-                          'pageno' : $scope.currentPage
+                          'pageno' : $scope.input.pageno
                         };
       for(obj in parameter_obj){
         if(parameter_obj[obj]==''){
@@ -152,9 +151,9 @@ angular.module('publicApp')
 
     $scope.by_size = function(){
      
-        var parameter_obj = {'sizecode' : $scope.input.sizeCode,
-                          'sellingspacearea':$scope.input.spaceArea,
-                          'pageno' : $scope.currentPage};
+        var parameter_obj = {'sizecode' : $scope.input.sizecode,
+                          'sellingspacearea':$scope.input.sellingspacearea,
+                          'pageno' : $scope.input.pageno};
        for(obj in parameter_obj){
         if(parameter_obj[obj]==''){
           delete parameter_obj[obj]
@@ -209,10 +208,11 @@ angular.module('publicApp')
     if($scope.viaRecentSearch) {
       if($scope.cache_response.StoreRefData){
         $scope.stores = $scope.cache_response.StoreRefData.Stores;
+        $(".storeDetails").css("display","inline-table");
       }
-
-        $scope.viaRecentSearch = false;
+      $scope.viaRecentSearch = false;
     }
+
     $scope.$watch('cache_response', function(newValue, oldValue){
       console.log(' changed')
 
@@ -223,6 +223,7 @@ angular.module('publicApp')
         $scope.pageshow = true;
         $scope.totalItems = $scope.cache_response.Summary.TotalPages;
         $scope.maxSize = 10;
+        $(".storeDetails").css("display","inline-table");
         //$scope.cache_response = {};
       }
     });

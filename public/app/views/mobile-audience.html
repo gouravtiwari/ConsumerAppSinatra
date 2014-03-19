@@ -6,7 +6,7 @@
  		ng-options="platform for platform in input.platforms">
   </select>
   <b># of Top Apps * :</b> <input type="number" ng-model="input.noofresults" ng-required />
-  <button class="btn btn-primary" ng-click="search()">Search</button>
+  <button class="search_btn btn" ng-click="search()"><span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
   <b>Sort By :</b>
 	<select class="feature" ng-model="sortBy"
  		ng-options="field for field in sortByFields">
@@ -17,35 +17,35 @@
 	  <accordion-group  heading="Statistics" is-open="true">
 			<div ng-repeat="app in AppDetails">
 				<div class="marginBottom" ng-show="$first">
-					<span class="column vborder rotate60"
+					<span class="column vborder"
 						ng-class="{sorted: sortBy == 'AppName'}">
 						App<br>Name
 					</span>
-					<span class="column column70 vborder rotate60"
+					<span class="column column70 vborder"
 						ng-class="{sorted: sortBy == 'UniqueAudience'}">
 						Unique<br>Audience
 					</span>
-					<span class="column column70 vborder rotate60"
+					<span class="column column70 vborder"
 						ng-class="{sorted: sortBy == 'ActiveReach'}">
 						Active<br>Reach
 					</span>
-					<span class="column column70 vborder rotate60"
+					<span class="column column70 vborder"
 						ng-class="{sorted: sortBy == 'TotalDurationMin'}">
 						Total<br>Duration
 					</span>
-					<span class="column column70 vborder rotate60"
+					<span class="column column70 vborder"
 						ng-class="{sorted: sortBy == 'TotalVisits'}">
 						Total<br>Visits
 					</span>
-					<span class="column column70 vborder rotate60"
+					<span class="column column70 vborder"
 						ng-class="{sorted: sortBy == 'VisitsPerPerson'}">
 						Visits/<br>Person
 					</span>
-					<span class="column column70 vborder rotate60"
+					<span class="column column70 vborder"
 						ng-class="{sorted: sortBy == 'TimePerPerson'}">
 						Time/<br>Person
 					</span>
-					<span class="column vborder rotate60"
+					<span class="column vborder column-split"
 						ng-class="{sorted: sortBy == 'MalePercentage' || sortBy == 'FemalePercentage'}">
 						Male<br>Female %
 					</span>
@@ -83,11 +83,11 @@
 		<accordion-group  heading="Age Group" is-open="true">
 			<div ng-repeat="app in AppDetails">
 				<div class="marginBottom" ng-show="$first">
-					<span class="column vborder rotate60"
+					<span class="column vborder"
 						ng-class="{sorted: sortBy == 'AppName'}">
 						App<br>Name
 					</span>
-					<span class="column vborder rotate60">Age<br>Groups%</span>
+					<span class="column vborder">Age<br>Groups%</span>
 				</div>
 				<span class="column cell fontTiny"><b>{{app.AppName}}</b></span>
 				<span class="column column-big cell">
@@ -101,11 +101,11 @@
 		<accordion-group  heading="Income Group" is-open="true">
 			<div ng-repeat="app in AppDetails">
 				<div class="marginBottom" ng-show="$first">
-					<span class="column vborder rotate60"
+					<span class="column vborder"
 						ng-class="{sorted: sortBy == 'AppName'}">
 						App<br>Name
 					</span>
-					<span class="column vborder rotate60">Income<br>Groups%</span>
+					<span class="column vborder">Income<br>Groups%</span>
 				</div>
 				<span class="column cell fontTiny"><b>{{app.AppName}}</b></span>
 				<span class="column column-big cell">
@@ -119,16 +119,16 @@
 		<accordion-group  heading="Race Group" is-open="true">
 			<div ng-repeat="app in AppDetails">
 				<div class="marginBottom" ng-show="$first">
-					<span class="column vborder rotate60"
+					<span class="column vborder"
 						ng-class="{sorted: sortBy == 'AppName'}">
 						App<br>Name
 					</span>
-					<span class="column vborder rotate60">Race<br>Groups%</span>
+					<span class="column vborder">Race<br>Groups%</span>
 				</div>
 				<span class="column cell fontTiny"><b>{{app.AppName}}</b></span>
 				<span class="column column-big cell">
 					<span class="bar{{$index}}" style="width:{{Math.round(v)}}%"
-						ng-repeat="(k, v) in app.RacePercentage track by $index" tooltip='{{k}}'>
+						ng-repeat="(k, v) in app.RacePercentage track by $index" tooltip='{{k | racefilter}}'>
 						{{Math.round(v)}}%
 					</span>
 				</span>

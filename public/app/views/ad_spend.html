@@ -3,17 +3,18 @@
 	<h2>Find out Ad Spend</h2>
   <div>
     <div class='left'>
-      <input type="text" ng-model="input.searchCriteria" class="ng-pristine ng-valid" style="width:350px;">
+      <input type="text" ng-model="input.productcategory" class="ng-pristine ng-valid" style="width:350px;">
     </div>
 		<div class='left'>
       <b class='left' style="padding: 5px;">Category/Brand:</b>
       <div class='left' style="padding: 5px;">
         <select ng-model="input.choice" ng-required
-        ng-options="choice for choice in input.choices" class="left">
+        ng-options="choice for choice in choices" class="left">
       </select>
       </div>
+
       <div class='left' style="">
-        <button ng-click="search()" class="btn left">Search</button>
+        <button ng-click="search()" class="search_btn btn left"><span class="icon glyphicon glyphicon-search"></span>&nbsp;Search</button>
       </div>
       <div class="left" style="padding: 5px;">
         <b style="padding: 5px;">Sort By :</b>

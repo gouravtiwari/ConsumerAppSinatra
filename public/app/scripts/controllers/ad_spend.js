@@ -2,7 +2,10 @@
 
 angular.module('publicApp')
   .controller('AdSpendCtrl', function ($scope, Data) {
-    $scope.input.choices = ['brand','category'];
+    $scope.choices = ['brand','category'];
+    $scope.input.choice = $scope.input.choice || $scope.choices[1];
+    $scope.input.productcategory = $scope.input.productcategory || '';
+    $scope.input.productbrand = $scope.input.productbrand || '';
     $scope.sortByFields = [];
 
     $scope.search = function(){
@@ -10,6 +13,7 @@ angular.module('publicApp')
       if (parameter_obj.choice == 'category') {
         $scope.searchByCategory();
       } else{
+        $scope.input.productbrand = $scope.input.productcategory;
         $scope.searchByBrand();
       }; 
     }
