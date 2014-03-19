@@ -6,23 +6,62 @@
   <b>Demography:</b>
   <select ng-model="input.demography" ng-options="demography for demography in demographies">
   </select>
+  <b>Sort By :</b>
+  <select class="feature" ng-model="sortBy" ng-options="field for field in sortByFields">
+  </select>
+
   <!-- <input type="text" ng-model="input.demography" /> -->
   <button class="btn btn-primary" ng-click="search()">Search</button>
   <div class="clear"></div>
   <!-- Result -->
-  <div class="left">
-    <div class="program" ng-repeat="program in programs">
-      <h4><b>Program: </b>{{program.ProgramName}}</h4>
-      <span class="label">Demographic: </span>{{program.Demographic}}<br>
-      <span class="label">Originator: </span>{{program.Originator}}<br>
-      <span class="label">US AA PERC: </span>{{program.US_AA_PERC}}<br>
-      <span class="label">US Projection: </span>{{program.USProjection}}<br>
-      <span class="label">Total Duration: </span>{{program.TotalDuration}}<br>
+    <!-- Result -->
+  <div class="resultHolder left">
+    <h3>{{output.message}}</h3>
+    <div ng-repeat="program in programs">
+      <div ng-show="$first">
+        <span class="column90 vborder">Program Name</span>
+        <span class="column90 vborder">US AA%</span>
+        <span class="column90 vborder">Projected Audience</span>
+        <span class="column90 vborder">Originator</span>
+        <span class="column90 vborder">Total Duration in Minutes</span>
+        <span class="column90 vborder">Demography</span>
+      </div>
+      <div>
+        <span class="column90 cell fontTiny"><b>{{program.ProgramName}}</b></span>
+        <span class="column90 cell {{program.US_AA_PERCClass}}">
+          {{program.US_AA_PERC}}
+        </span>
+        <span class="column90 cell {{program.USProjectionClass}}">
+          {{program.USProjection}}
+        </span>
+        <span class="column90 cell {{program.OriginatorClass}}">
+          {{program.Originator}}
+        </span>
+        <span class="column90 cell {{program.TotalDurationClass}}">
+          {{program.TotalDuration}}
+        </span>
+        <span class="column90 cell {{program.DemographicClass}}">
+          {{program.Demographic}}
+        </span>
+      </div>
     </div>
   </div>
   <div class="left">
-    <doughnut chart-id="programRankingDoughnut" val="data" totalLabel="Projected Audience"></doughnut>
+    <div>
+      <br>
+      <br>
+      <div ng-hide="true" ng-show="totalUSProjection != 0 && totalUSProjection != undefined" class = "insight-text">
+        Total Projected Audience: {{totalUSProjection}}!
+      </div>
+      <div class="help-text" ng-hide="true" ng-show="totalUSProjection != 0 && totalUSProjection != undefined">
+        (You can spend more on TV Program Ads with comparatively larger audience)<br>
+        (Default ordering is based on US AA ratings)
+      </div>
+      <br>
+    </div>
+    <div>
+      <doughnut chart-id="programRankingDoughnut" val="data" totalLabel="Projected Audience"></doughnut>
+    </div>
   </div>
-  
   
 </div>

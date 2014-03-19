@@ -20,7 +20,8 @@
 // tipValue:    tipValue, for each bar, default is 'value'
 // tipText:     tipText which you want to display with 'label' and 'value', default is ''
 // totalLabel:  totalLabel to add a label for sum e.g. ' Views'
-// legend:     default set to true to show legends
+// legend:      default set to true to show legends
+// animate:     default set to true to animate donut
 
 function mergeConfigOptions(defaults,options){
     var mergedConfig = {};
@@ -53,10 +54,14 @@ function donutTip(options){
         tipValue:       'value',
         tipText:        '',
         totalLabel:     '',
-        legend:         true
+        legend:         true,
+        animate:        true
     };
 
     var config = (options) ? mergeConfigOptions(defaults,options) : defaults;
+
+    var animateDuration = config.animate ? 500 : 0;
+    var animateDelay    = config.animate ? 100 : 0;
 
     var width = config.width - config.margin.left - config.margin.right,
         height = config.height - config.margin.top - config.margin.bottom,
@@ -125,7 +130,7 @@ function donutTip(options){
                     .style("opacity", 0.9);
                     div.html(d.data.label + "<br><span style='color:red'>"+ config.tipLabel + ": " + d[config.tipValue] + config.tipLabelUnit+ "</span>")
                     .style("left", (d3.event.pageX - 17) + "px")
-                    .style("top", (d3.event.pageY - 100) + "px")
+                    .style("top", (d3.event.pageY - 120) + "px")
                     .style("z-index", 10000)
                 })
                 .on("mouseout", function (d) {
@@ -148,21 +153,21 @@ function donutTip(options){
         .attr("fill", function (d, i) {
             return config.color(i); //set the color for each slice to be chosen from the color function defined above
         })
-        .transition().delay(function(d, i) { return i * 500; }).duration(1000)
+        .transition().delay(function(d, i) { return i * animateDelay; }).duration(animateDuration)
         .attrTween('d', function(d) {
            var i = d3.interpolate(d.startAngle+0.1, d.endAngle);
            return function(t) {
                d.endAngle = i(t);
              return arc(d);
            }
-        }); 
+        });
 
         // .attr("d", arc); //this creates the actual SVG path using the associated data (pie) with the arc drawing function
     if(config.legend){
         var legend = d3.select(config.selector).append("svg")
             .attr("class", "legend")
             .attr("width", 200)
-            .attr("height", config.outerRadius * 2)
+            .attr("height", 400)
             .selectAll("g")
             .data(config.data.list)
             .enter().append("g")

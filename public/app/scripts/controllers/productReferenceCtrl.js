@@ -6,11 +6,11 @@ angular.module('publicApp')
     $scope.pageshow = false;
     
     $scope.checkSearch = function(){
+      $scope.products = [];
       if(isNaN($scope.input.search)){
         $scope.input.prod_type = 'description'
         $scope.by_desc();
         $rootScope.prod_type = $scope.input.prod_type;
-        $scope.pageshow = true;
       }
       else{
         $scope.input.prod_type = 'code';
@@ -21,7 +21,6 @@ angular.module('publicApp')
     }
 
     $scope.by_desc = function(){
-
       //$scope.input.search = $scope.input.search.split(' ').join('%20');      
       if($scope.input.prevSearch != $scope.input.search){
         $scope.input.pageno = null;
@@ -32,8 +31,10 @@ angular.module('publicApp')
       //Data.get_local('scripts/jsons/product_by_desc.json').success(function(api_data){
         if(api_data.ProductDetails == undefined){
           $scope.noData = true;
+          $scope.pageshow = false;
         }
         else{
+          $scope.pageshow = true;
           $scope.products = api_data.ProductDetails;
           $scope.totalItems = api_data.Summary.TotalPages;
           $scope.maxSize = 10;

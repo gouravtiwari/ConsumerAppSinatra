@@ -36,10 +36,28 @@ angular.module('publicApp')
 				parameter_obj.state = state;
 			}
 			
-			Data.get_json(api, parameter_obj).success(function(api_data){
-        console.log(api_data);
+			//Data.get_json(api, parameter_obj).success(function(api_data){
+			Data.get_local('scripts/jsons/segmentationData.json').success(function(api_data){
+        $scope.segments = api_data.Segments[0].SegmentDetails;
+        $.each($scope.segments, function(i, segment){
+        	for(var field in segment.DemographicsTraits){
+        		segment[field] = segment.DemographicsTraits[field];
+        	}
+        	delete segment.SegSystem;
+        	delete segment.SegmentCode;
+        });
+
+       	$scope.sortByFields = Data.fillSortByFields($scope.segments[0]);
+        Data.injectColorClass($scope.segments, $scope.sortByFields);
+        
       });
 			
 		}
+
+		$scope.$watch('sortBy', function(newvalue, oldvalue){
+      console.log(newvalue)
+      if(!newvalue || newvalue == oldvalue) return;
+      $scope.segments = Data.sortBy(newvalue, $scope.segments);
+    });
   
 });

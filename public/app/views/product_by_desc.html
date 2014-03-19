@@ -13,9 +13,9 @@
 			
 		</div>
 		<div class="col-md-10">
-			<span class='nodata' ng-show='noData'>Sorry! No data found</span>
+			<!-- <span class='nodata' ng-show='noDataText'>Sorry! No data found</span> -->
+			<h3>{{output.message}}</h3>
 			<div class="productSearch">
-				
 				<div ng-show="prod_type=='description'">
 					<div class="col-md-12 space" ng-repeat="product in products">
 						<div class='col-md-9'>

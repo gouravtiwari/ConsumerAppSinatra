@@ -13,6 +13,7 @@ angular.module('publicApp')
         },
 
         in_cache: function (base_url) {
+            $rootScope.noDataText = false;
             return this.cache[base_url] || null;
         },
 
@@ -66,12 +67,33 @@ angular.module('publicApp')
             } else {
                 promise = $http.get(url_calling).success(function(api_response){
                     window.recent_api_response = api_response
+                    console.log(typeof(api_response))
+                    if(api_response.Message){
+                        $rootScope.noDataText = true;
+                        $rootScope.output.message = api_response.Message.errorMessage;
+                        console.log(api_response.Message.errorMessage)
+                    } else 
+                    if(api_response.Summary){
+                        $rootScope.noDataText = true;
+                        $rootScope.output.message = api_response.Summary.Status;
+                        console.log($rootScope.output.message)
+                    } else 
+                    if(typeof(api_response) == 'string'){
+                        $rootScope.noDataText = true;
+                        $rootScope.output.message = api_response;
+                        console.log($rootScope.output.message)
+                    }
+
+                    else{
+                        $rootScope.noDataText = false;
+                        $rootScope.output.message = '';
+                    }
                 });   
                 var that = this;
                 promise.success(function(api_data){
                     if(base_url != '/api/bkg_progress') {
                         that.add_data_to_cache(url_calling, api_data);
-                        if(url_part){
+                        if(url_part && !api_data.Message){
                             that.add_to_recent_searches(url_part, param_path);
                         }
                     }
@@ -80,9 +102,8 @@ angular.module('publicApp')
              
             if(promise.error) {
                 promise.error(function(data, status){
-                    if(status == 303){
-                        console.log('Status 303, starting progress bar...')
-                        $rootScope.job_progress = true;
+                    if(status != 200){
+                        $rootScope.output.message = "Server not responding! Try after some time."
                     }
                 });
             }
@@ -162,9 +183,9 @@ angular.module('publicApp')
         injectColorClass: function(items, fields){
           var max = {};
           $.each(fields, function(index, field){
-            max[field] = _.max(items, function(item){
+            max[field] = parseFloat(_.max(items, function(item){
               return item[field];
-            })[field];
+            })[field]);
           });
           console.log(max);
           $.each(fields, function(index, field){
@@ -184,7 +205,7 @@ angular.module('publicApp')
 
         sortBy: function(field, array){
           return _.sortBy(array, function(item){
-            return -item[field];
+            return -parseFloat(item[field]);
           });
         }
 

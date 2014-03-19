@@ -375,7 +375,7 @@ nav {
 }
 
 .column {
-  width: 108px;
+  width: 75px;
   display: inline-block;
   text-align: center;
   font-size: 15px;
@@ -383,12 +383,20 @@ nav {
 
 @media(min-width: 1260px) {
   .column{
-    width: 150px;
+    width: 130px;
   }
 }
 
 .column70 {
   width: 70px;
+}
+
+.column90 {
+  width: 90px;
+  min-width: 90px;
+  display: inline-block;
+  text-align: center;
+  font-size: 15px;
 }
 
 .vborder {
@@ -939,6 +947,11 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   width: 100%;
   border-bottom: 1px solid #ccc;
 }
+
+.left-nav li:hover {
+  background: rgba(255, 255, 0, .7);
+}
+
 .left-nav li a{
   border-radius: 0px;
   border: none;
@@ -981,7 +994,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 /* market analysis left navigation - end */
 
 .market-analysis-section{
-  padding-left: 170px;
+  padding-left: 150px;
   margin-top: 20px;
 }
 
@@ -1057,8 +1070,7 @@ text.textBottom{
   border-radius: 5px !important;
 }
 
-.unique-user-counts{
-  width: 100%;
+.insight-text{
   text-align: center;
   font-size: 20px;
   color: #e98e4e;
@@ -1068,6 +1080,7 @@ text.textBottom{
 .help-text{
   font-size: 14px;
   color: blue;
+  text-align: center;
 }
 
 /* google map autocomplete */

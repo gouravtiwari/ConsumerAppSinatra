@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('publicApp')
-  .controller('MainCtrl', function ($scope, $location, Data) {
+  .controller('MainCtrl', function ($scope, $location, Data, $rootScope) {
 
     $scope.navTiles = [
       {title: 'Product <br/> Finder', url: '/product_by_desc', img: 'icon_findProducts.png'},
@@ -16,7 +16,7 @@ angular.module('publicApp')
       {name: 'Online Audience', url: '/audience'},
       {name: 'Mobile Audience', url: '/mobile-audience'},
       {name: 'TV Programs Rankings', url: '/program_rankings'},
-      {name: 'Lifestyle Segmentation', url: '/segmentation'},
+      {name: 'Region Segmentation', url: '/segmentation'},
       {name: 'Market <br/> Share', url: '/market_share'}
     ];
 
@@ -42,6 +42,7 @@ angular.module('publicApp')
     $scope.$watch(function(){return $location.path()}, function(newvalue, oldvalue){
       if(!newvalue || newvalue == oldvalue) return;
       $scope.location = '';
+      $rootScope.output.message = '';
       $.each($scope.analyses, function(index, analysis){
         if(analysis.url == newvalue) {
           $scope.location = '/market_analysis';
@@ -81,7 +82,7 @@ angular.module('publicApp')
     }
 
     //BELOW OUTPUT MODEL MUST BE USED FOR ERROR/NOT FOUND MESSAGES
-    $scope.output = {};
+    $rootScope.output = {};
 
     //Expose Math Object for rounding in {{}}
     $scope.Math = window.Math;
